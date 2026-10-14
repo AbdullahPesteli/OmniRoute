@@ -199,12 +199,16 @@ test("raw video transcript retention through HTTP and SQLite", { timeout: 120_00
     assert.equal(JSON.stringify(body), before, "caller-owned body stays intact");
     for (const value of sensitive)
       assert(upstreamBody.includes(value), "raw video transcript reaches model");
-    if (failDescription)
-      assert.deepEqual(
-        JSON.parse(upstreamBody).messages[0].content,
-        content,
-        "failed description preserves the exact live video part, including transcript fields"
-      );
+    const wireContent = JSON.parse(upstreamBody).messages[0].content;
+    for (const part of wireContent) {
+      if (part.type === "text") {
+        assert.deepEqual(Object.keys(part).sort(), ["text", "type"]);
+      } else {
+        assert.equal(part.type, "video_url");
+        assert.deepEqual(Object.keys(part).sort(), ["type", "video_url"]);
+        assert.deepEqual(Object.keys(part.video_url), ["url"]);
+      }
+    }
     const detail = await eventually(async () => {
       await logs.waitForCallLogSaves(10_000);
       const rows = await logs.getCallLogs({ correlationId, limit: 5 });
@@ -224,6 +228,7 @@ test("raw video transcript retention through HTTP and SQLite", { timeout: 120_00
       row,
       artifact,
       upstreamBody,
+      wireContent,
       descriptionCalls,
     };
   }
@@ -283,7 +288,7 @@ test("raw video transcript retention through HTTP and SQLite", { timeout: 120_00
   );
 
   await t.test(
-    "failed description with unknown native capability keeps raw transcript live but not retained",
+    "failed description sends untrusted transcript text and a valid video carrier, never retained cues",
     async () => {
       const transcript = "PRIVATE_FAILED_TRANSCRIPT_12430";
       const audio = "PRIVATE_FAILED_AUDIO_12430";
@@ -301,6 +306,16 @@ test("raw video transcript retention through HTTP and SQLite", { timeout: 120_00
         true
       );
       assert.equal(result.descriptionCalls, 1, "failure happened inside the real Video Bridge");
+      assert.deepEqual(result.wireContent[1], {
+        type: "video_url",
+        video_url: { url: "data:video/mp4;base64,QUJD" },
+      });
+      const fallback = result.wireContent.find(
+        (part) => part.type === "text" && part.text.includes(transcript)
+      );
+      assert(fallback, "transcript survives as supported text, not a metadata extension");
+      assert.match(fallback.text, /untrusted/);
+      assert.match(fallback.text, /source=client/);
       const leaked = ["snapshot", "detail", "artifact"].filter((sink) =>
         [transcript, audio].some((value) => result[sink].includes(value))
       );
@@ -338,9 +353,10 @@ test("raw video transcript retention through HTTP and SQLite", { timeout: 120_00
       assert.equal(result.descriptionCalls, 1, "maxVideos must prevent the second description");
       assert.deepEqual(
         JSON.parse(result.upstreamBody).messages[0].content[2],
-        rawPart,
-        "the over-limit part sent to the provider is not edited for logging"
+        { type: "video_url", video_url: { url: "data:video/mp4;base64,REVG" } },
+        "the over-limit video carrier survives without nonstandard transcript metadata"
       );
+      assert(result.wireContent.some((part) => part.type === "text" && part.text.includes(raw)));
       const leaked = ["snapshot", "detail", "artifact"].filter((sink) =>
         [rendered, raw].some((value) => result[sink].includes(value))
       );
