@@ -31,45 +31,45 @@ OmniRoute-ի ու վերին մակարդակի մատակարարների մի�
 | `20`              | `prompt-injection`  | `preCall`      | `promptInjection.ts`  |
 | `95`              | `credential-masker` | `pre` + `post` | `credentialMasker.ts` |
 
-Ավելի ցածր առաջնահերթության համար թվերը աշխատում են **առաջին**։
+Ավելի ցածր առաջնահերթության համարները աշխատում են **առաջին**։
 
 ### Vision Bridge (`visionBridge.ts`) — Մոդալիտետային կամուրջ PR-1
 
-Բռնում է պատկեր պարունակող հարցումները, որոնք ուղղված են **ոչ-տեսողական մոդելներին** և կամ
-վերադարձնում է ամբողջ հարցումը տեսողական կարողություններով մոդելին կամ փոխարինում է պատկեր
-պահանջները տեքստային նկարագրություններով, որոնք ստեղծվում են կարգավորվող տեսողական մոդելի կողմից, նախքան
-վերահսկող զանգը։ Սա թույլ է տալիս միայն տեքստային մատակարարներին թափանցիկ կերպով գործել
-մուլտիմոդալ բեռների հետ։
+Հետաքրքրված պատկերներ պարունակող հարցումները, որոնք ուղղված են **չտեսող մոդելներին**,Intercepts և կամ
+վերադարձնում է ամբողջ հարցումը տեսողական մոդելին կամ փոխարինում է պատկերային
+մասերը տեքստային նկարագրություններով, որոնք ստեղծվում են կարգավորելի տեսողական մոդելի կողմից, նախքան
+վերահսկող զանգը։ Սա թույլ է տալիս միայն տեքստային մատակարարներին թափանցիկ կերպով մշակել
+բազմամոդալ բեռներ։
 
 Հոսք:
 
-1. Թողնել, եթե նպատակային մոդելը արդեն աջակցում է տեսողությանը (եթե այն չի հայտնվում
-   պարտադիր-կամուրջի ցուցակում `isVisionBridgeForcedModel`).
-2. Հանել պատկերային մասերը `extractImageParts(messages)`
+1. Դադարեցնել, եթե նպատակային մոդելը արդեն աջակցում է տեսողությանը (բացառությամբ, եթե այն հայտնվում է
+   պարտադիր կամուրջի ցուցակում `isVisionBridgeForcedModel`).
+2. Հանել պատկերային մասերը `extractImageParts(messages)`-ի միջոցով
    (`visionBridgeHelpers.ts`), որը պատվիրում է **միավորված մեդիա
-   հայտնաբերիչին** `detectMediaParts()` `open-sse/utils/mediaParts.ts`-ում — ճշգրիտ
-   աղբյուրը, որը կիսվում է համադրության համատեղելիության ֆիլտրի հետ։
-   Հանումը թույլատրվում է միայն ձևերի վերին մակարդակի մասերի համար,
-   որոնք կարող են վերականգնվել `replaceImageParts`-ի միջոցով (հանել↔փոխարինել պայմանագիր): OpenAI
+   հայտնաբերիչին** `detectMediaParts()`-ին `open-sse/utils/mediaParts.ts`-ում՝
+   ճշգրիտ աղբյուր, որը կիսվում է համադրության համատեղելիության ֆիլտրի հետ։
+   Հանումը թույլատրվում է միայն ձևերի վերին մակարդակի մասերի համար, որոնք
+   `replaceImageParts`-ը կարող է վերադարձնել (հանել↔փոխարինել պայմանագիր): OpenAI
    `image_url`, Anthropic base64 `source.type:"base64"`, Anthropic URL
    `source.type:"url"`, և Responses API `input_image`։ Ներսում գտնվող հարվածները և
    միայն ցուցիչ ձևերը համադրության ֆիլտրի նյութ են և երբեք չեն հանվում։
-   Թողնել, եթե ոչինչ չի գտնվել։
+   Դադարեցնել, եթե ոչինչ չի գտնվել։
 3. Հարթակային կարգավորումը լուծել `resolveVisionBridgeRuntimeSettings()`
    (`src/shared/constants/modalityBridgeDefaults.ts`): նոր `modalityBridge*`
-   կարգավորումների բանալիները հաղթում են; հին `visionBridge*` բանալիները մնում են **մեկ-ցիկլային
-   հետադարձ** (հետադարձ պատուհան)։ Թողնել ցանկացած մեդիա անցումից առաջ, երբ
+   կարգավորումների բանալիները հաղթում են; հին `visionBridge*` բանալիները մնում են **մեկ-ցիկլ
+   հետադարձ** (հետադարձ պատուհան): Դադարեցնել ցանկացած մեդիա անցումից առաջ, երբ
    կամուրջը անջատված է։
 4. Մոդի ընտրիչը (`modalityBridgeVisionMode`, տես ստորև ներկայացված աղյուսակը) որոշում է
-   վերափոխել կամ նկարագրել։ Վերափոխումը վերադարձնում է `modifiedPayload` միայն `model`
-   փոխարինված, plus meta `{ rerouted, fromModel, toModel, imagesKept }`։
-5. Նկարագրելու ճանապարհը. սահմանափակել պատկերները `maxImages`-ով, կազմել խնդրի գիտակից հրահանգը,
-   խորհրդակցել նկարագրության cache-ի հետ, զանգահարել տեսողական մոդելը **պարալել**
+   վերափոխել կամ նկարագրել։ Վերափոխումը վերադարձնում է `modifiedPayload`, որտեղ միայն `model`
+   փոխվում է, plus meta `{ rerouted, fromModel, toModel, imagesKept }`։
+5. Նկարագրելու ճանապարհը. սահմանափակել պատկերները `maxImages`-ով, կազմել առաջադրանքին
+   համապատասխան հրահանգը, խորհրդակցել նկարագրության caches, զանգահարել տեսողական մոդելը **պարալել**
    (`Promise.allSettled`), և ներարկել `[Image N]: <description>` տեքստային մասերը իրենց տեղում։
-   Նկարագրելու ձախողումը վերադարձնում է `null` և սկզբնական պատկերային մասը
+   Նկարագրելու ձախողումը վերադարձնում է `null`, և սկզբնական պատկերային մասը
    **պահպանվում է** (#4012) — բացառությամբ համադրության նկարագրության ճանապարհի, երբ յուրաքանչյուր
-   նկարագրություն ձախողվել է, որտեղ հաստատված ոչ-տեսողական վերին մակարդակը ստանում է
-   `(unavailable — no vision-capable provider connected)` կաղապար (#8430)։
+   նկարագրություն ձախողվել է, որտեղ հաստատված ոչ տեսողական վերին մասը ստանում է
+   `(unavailable — no vision-capable provider connected)` stub փոխարեն (#8430)։
 6. Վերադարձնել `modifiedPayload` + meta (`imagesProcessed`, `descriptions`,
    `processingTimeMs`, `visionModel`)։
 
@@ -77,458 +77,628 @@ OmniRoute-ի ու վերին մակարդակի մատակարարների մի�
 
 | Մոդ        | Դեֆոլտ | վարքագիծ                                                                                                                                                                                                                                                |
 | ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `auto`     | ✔      | Հին հիպոթեզ, անփոփոխ (#6640/#7204): ոչ-համադրություն/`auto/` մոդելները վերափոխվում են լավագույն տեսողական մոդելին, եթե սկզբնական մոդելը արդեն ունի օգտագործելի հավատարմագրեր (այն ժամանակ նկարագրում); համադրության նպատակները միշտ նկարագրում են։      |
+| `auto`     | ✔      | Հին հիպոթեզ, անփոփոխ (#6640/#7204): ոչ համադրություն/`auto/` մոդելները վերափոխվում են լավագույն տեսողական մոդելին, եթե սկզբնական մոդելը արդեն ունի օգտագործելի հավատարմագրեր (այն ժամանակ նկարագրել); համադրության նպատակները միշտ նկարագրում են։       |
 | `describe` |        | Always describe — the reroute block is skipped entirely; the user's chosen model always answers.                                                                                                                                                        |
 | `reroute`  |        | Force reroute: the keep-credentialed-model guard is bypassed. The reroute-**target** credential guard still applies — when no usable vision target exists, the request falls through to describe so raw images never reach a text-only backend (#8430). |
 
-Պարտադիր մոդերը կարճացնում են **առաջ** ավտո հիպոթեզը գործի մեջ; `auto` վարքը
+Պարտադիր մոդերը կարճացնում են **առաջ** ավտո հիպոթեզը աշխատում է; `auto` վարքը
 բայթ-հավասար է նախորդ PR-1 պաշտպանիչ միջոցին։
 
-#### Պատասխանատու նկարագրության հրահանգ (`modalityBridgeVisionTaskAware`)
+#### API-հիմնաբառի շրջանակ (`visionBridgeKeyScope.ts`)
 
-Դեֆոլտ **ճիշտ**։ `composeVisionPrompt()` (`visionBridgeHelpers.ts`) ավելացնում է
-**վերջին օգտագործողի հաղորդագրության** (կրճատված 500 նիշ) տեքստը հիմք
-նկարագրական հրահանգին, ուղղորդելով նկարագրությունը դեպի այն, ինչ իրականում հարցնում է օգտագործողը
-(codex-vision-proxy pattern) և խնդրելով տեսողական մոդելին՝ տեքստը վերագրել։
-Flag-ը անջատված է — կամ օգտագործողի տեքստ չկա — հիմք հրահանգը օգտագործվում է անփոփոխ։
+Երբ զանգահարողի API հիմնաբառը սահմանափակում է `allowedConnections`, քվոտայի ավազակներ
+(`allowedQuotas`) կամ մոդելներ (`allowedModels` / `blockedModels` /
+`modelAccessMode: "restricted"` / `disableNonPublicModels`), կամուրջը միայն
+ընտրում է վերափոխել և նկարագրել մոդելներ, որոնք հիմնաբառը կարող է օգտագործել, այն կապերում, որոնք հիմնաբառը կարող է
+օգտագործել։ Նկարագրելու զանգը ապա միշտ անցնում է OmniRoute ինքնամուտքի միջոցով
+`x-omniroute-self-loop-key-id` գլխագրով, այնպես որ ստացող զրույցի հարցումը
+կրկին պարտադրում է այդ հիմնաբառի կապի և մոդելի քաղաքականությունը։ `enforceApiKeyPolicy()`
+հարգում է այդ գլխագիրը միայն ինքնամուտքի կրողի հետ միասին, այնպես որ այն կարող է միայն
+սահմանափակել մուտքը, և լուծվող ID-ն մերժվում է։
 
-Նկարագրել ինքնապտույտի սեփական OpenAI-համատեղելի հարցումը (`callVisionModelSingle()`
-`visionBridgeHelpers.ts`-ում) միշտ պահանջում է `image_url.detail: "high"` —
-անհրաժեշտորեն, յուրաքանչյուր զանգահարողի/մատակարարի համար, առանց որևէ հաճախորդի ազդանշանի վրա փակվելու:
-Low-detail sampling-ը նվազեցնում է OCR ճշգրտությունը հենց այն տեքստի-փոխանցման
-աշխատանքի համար, որը այս հրահանգը պահանջում է, այնպես որ նկարագրել զանգը միշտ պահանջում է բարձր
-ճշգրտություն, անկախ նրանից, թե ինչ մանրամասնության մակարդակ է օգտագործվել սկզբնական inbound հարցման մեջ: Սա
-միայն ազդում է ներքին նկարագրության հարցման մարմնի վրա; դա չի փոխում, թե ինչպես
-OmniRoute-ը փոխանցում է զանգահարողի սեփական `image_url.detail` հիմնական հարցման վրա —
+Եթե հիմնաբառի համար թույլատրված տեսողական մոդել չկա, նկարագրելու ճանապարհը կողք է
+անցնում, և հարցումը անցնում է անփոփոխ, նույն ձախողման բաց վարքը, ինչպես անջատված
+պաշտպանիչ միջոցը (meta `{ skipped: true, reason: "no_permitted_vision_model" }`)։
+Հարցումները առանց հիմնաբառի, և հիմնաբառերը առանց այս սահմանափակումների, գործում են նույն կերպ, ինչպես
+նախկինում։
+
+#### Առաջադրանքին համապատասխան նկարագրող հրահանգ (`modalityBridgeVisionTaskAware`)
+
+Default **ճիշտ**։ `composeVisionPrompt()` (`visionBridgeHelpers.ts`) ավելացնում է
+**վերջին օգտվողի հաղորդագրության** (կրճատված 500 նիշի) տեքստը հիմք
+նկարագրելու հրահանգին, ուղղորդելով նկարագրությունը դեպի այն, ինչ օգտվողը իրականում հարցնում է
+(codex-vision-proxy ձևաչափ) և խնդրում է տեսողական մոդելին՝ տեքստը վերագրել։ Եթե դրոշակը անջատված է՝ կամ օգտվողի տեքստ չկա՝ հիմք
+հրահանգը օգտագործվում է անփոփոխ։
+
+Նկարագրելու ինքնաբառի OpenAI-համատեղելի հարցումը (`callVisionModelSingle()`
+`visionBridgeHelpers.ts`-ում) միշտ խնդրում է `image_url.detail: "high"` —
+անպայման, յուրաքանչյուր զանգահարողի/մատակարարի համար, ոչ թե կախված որևէ հաճախորդի ազդանշանից։
+Ցածր-մանրամասն sampling-ը նվազեցնում է OCR-ի ճշգրտությունը հենց այն տեքստի վերագրության
+աշխատանքին, որը այս հրահանգը խնդրում է, այնպես որ նկարագրելու զանգը միշտ խնդրում է բարձր
+մանրամասնություն՝ անկախ նրանից, թե ինչ մանրամասնության մակարդակ է օգտագործվել սկզբնական inbound հարցման մեջ։ Սա
+միայն ազդում է ներքին նկարագրելու հարցման մարմնի վրա; դա չի փոխում, թե ինչպես
+OmniRoute-ը փոխանցում է զանգահարողի սեփական `image_url.detail`-ը հիմնական հարցման ժամանակ —
 այս նախնականը կիրառվում է առանձին, և միայն հայտնաբերված OpenCode հաճախորդների համար,
-`defaultImageDetail()`-ում (`open-sse/handlers/chatCore/upstreamBody.ts`).
-Anthropic-ի wire-format ճյուղը նկարագրել ինքնապտույտի համար չունի `detail` դաշտ
-և չի ազդում որևէ նախնականի վրա:
+`defaultImageDetail()`-ում (`open-sse/handlers/chatCore/upstreamBody.ts`)։
+Anthropic-ի մալուխային ձևաչափի նկարագրության ինքնաբառը չունի `detail` դաշտ
+և չի ազդում որևէ նախնականի վրա։
 
-#### Նկարագրել ելքային սահմանափակում (`modalityBridgeVisionMaxChars`)
+#### Նկարագրելու ելքային սահմանափակում (`modalityBridgeVisionMaxChars`)
 
 | Կի                             | Նախնական | Տիրույթ           |
 | ------------------------------ | -------- | ----------------- |
 | `modalityBridgeVisionMaxChars` | `0`      | `0` կամ 100–50000 |
 
 `0` (նախնական) նշանակում է **ոչ սահմանափակում** — `callVisionModel()`-ի կողմից վերադարձված նկարագրությունը
-անցնում է առանց փոփոխության, պահպանելով առկա վարքագիծը: 100–50000 տիրույթում գտնվող ցանկացած արժեք կտրում է
-նկարագրությունը `…` հավելվածով, նախքան այն վերամիավորվելն `[Image N]: <description>`-ի հետ
-(`VisionBridgeGuardrail.preCall()`-ում `src/lib/guardrails/visionBridge.ts`-ում).
-Ավելի բարձրացրեք սա մանրամասն-ծանր OCR աշխատանքների համար, որտեղ ստորին մոդելը պետք է
-լրիվ փոխանցում; նվազեցրեք այն, որպեսզի սահմանափակեք նշանների օգտագործումը խոսուն տեսողական մոդելների վրա.
+անցնում է անփոփոխ, պահպանելով առկա վարքը։ 100–50000 տիրույթում ցանկացած արժեք կկրճատի նկարագրությունը
+`…` հավելվածով, նախքան այն կրկին միացնելը որպես `[Image N]: <description>`
+(`VisionBridgeGuardrail.preCall()` `src/lib/guardrails/visionBridge.ts`-ում)։
+Ավելացրեք սա մանրամասն-ծանր OCR աշխատանքների համար, որտեղ ստորին մոդելը պետք է ունենա
+ամբողջ վերագրությունը; նվազեցրեք այն՝ սահմանափակելու համար նշանների օգտագործումը խոսուն տեսողական մոդելների վրա։
 Dashboard դաշտը գտնվում է Vision թաբի Advanced պանելում
-(`modality-bridge-max-chars`-ում `ModalityBridgeVisionTab.tsx`) և սահմանափակում է ցանկացած
-արժեք 1-ից 99 մինչև 100 հատակը, մինչդեռ թողնելով բացահայտ `0`-ը անփոփոխ — `0`-ը
-իր հերթին վավեր Zod արժեք է
+(`modality-bridge-max-chars` `ModalityBridgeVisionTab.tsx`-ում) և սահմանափակում է ցանկացած
+արժեք 1-ից 99-ը մինչև 100 հատակ, մինչդեռ թողնելով բացահայտ `0`-ը անփոփոխ — `0`-ը
+իրենց իսկ իրավունքով վավեր Zod արժեք է
 (`z.union([z.literal(0), z.number().int().min(100).max(50000)])`), ոչ միայն
-"չսահմանված" նախնական:
+"չսահմանված" նախնական։
 
-#### Նկարագրել կոշտ (cache) (`modalityBridge/bridgeCache.ts`)
+#### Նկարագրելու կոշտ պահոց (`modalityBridge/bridgeCache.ts`)
 
-Հիշողության մեջ LRU + TTL կոշտ նկարագրությունների ելքերի համար, կիսված գործընթացի լայնությամբ:
-Կի = `sha256(imageRef + composedPrompt + configuredBridgeModel)` երկարության-prefix շրջանակով
-(ոչ դաշտ-սահմանի բախումներ): Մոդելի բաղադրիչը
-**կարգավորված** կամուրջի մոդելն է, ոչ թե այն մոդելը, որը իրականում պատասխանեց —
-`callVisionModel`-ը կարող է ներքին կերպով հետադարձվել, և յուրաքանչյուր փորձի համար բանալին
-կոտրում է կոշտը: Անհաջող նկարագրությունները երբեք չեն պահվում: Կարգավորումներ:
+Հիշողության մեջ LRU + TTL պահոց նկարագրելու ելքերի համար, կիսված գործընթացի լայնությամբ։
+Կի = `sha256(imageRef + composedPrompt + configuredBridgeModel)` երկարության-նախանշանի շրջանակով (ոչ դաշտ-սահմանային բախումներ)։
+Մոդելի բաղադրիչը **կարգավորված** կամուրջի մոդելն է, ոչ թե այն մոդելը, որը իրականում պատասխանեց —
+`callVisionModel`-ը կարող է ներքին կերպով հետ գնալ, և յուրաքանչյուր փորձի համար բանալին
+կոտրում է պահոցը։ Աջակցված նկարագրությունները երբեք չեն պահվում։ Կարգավորումներ.
 
 | Կի                              | Նախնական | Տիրույթ |
 | ------------------------------- | -------- | ------- |
-| `modalityBridgeCacheEnabled`    | `true`   | —       |
+| `modalityBridgeCacheEnabled`    | `ճիշտ`   | —       |
 | `modalityBridgeCacheTtlMinutes` | `60`     | 1–1440  |
 | `modalityBridgeCacheMaxEntries` | `200`    | 10–5000 |
 
 #### Remote image normalization (self-loop describe/base64 fetch)
 
-Երբ կամուրջը ինքնուրույն բերում է **remote** պատկեր — Anthropic նկարագրել
-ինքնահավաքը և claude-wire-format base64 փոխարկումը
-(`ensureBase64ImagesForClaudeWire`), երկուսն էլ
-`fetchRemoteImageAsDataUri()`-ի միջոցով `visionBridgeHelpers.ts`-ում — արդյունքի տվյալ URI-ն
-անցնում է `normalizeDataUri()`-ի միջոցով
-(`open-sse/utils/imageNormalize.ts`) նախքան այն ներդրվի տեսողական մոդելի
-հարցման մեջ: Oversized պատկերները նվազեցվում են **2048px երկար եզրին** (համապատասխանելով
-resize cap-ին, որը OpenAI/Anthropic արդեն կիրառում է սերվերային կողմում), ինչը կրճատում է
-բեռնումի բիթ/լատենտությունը առանց փոխելու այն, ինչ տեսնում է տեսողական մոդելը:
-Resize-ը օգտագործում է `sharp`, որը բեռնվում է դինամիկ ներմուծմամբ:
-Այդ հարթակում, որտեղ դրա բնիկ
-բայները չի բեռնվում, `normalizeDataUri()` **չի նետում** — այն հետադարձվում է
-առաջին բիթերի փոխանցմամբ, այնպես որ նկարագրել/base64-փոխարկման
-ուղին միշտ շարունակում է աշխատել: Ոչ-պատկերային բիթերը (մի fetch, որը չի վերադարձրել
-կոդավորվող պատկեր) նույնպես անցնում են անփոփոխ: Այս նորմալացումը սահմանափակվում է
-պատկերներին, որոնք կամուրջը բերում է իր սեփական ինքնահավաքի համար — այն երբեք
-չի կիրառվում զանգահարողի خام passthrough բեռի վրա, համաձայն
-ընտրովի միայն մուտացիայի սկզբունքի (Hard Rule #20).
+Երբ կամուրջը ինքնուրույն **remote** պատկեր է բերում — Anthropic նկարագրելու
+ինքնազանգը և claude-wire-format base64 փոխարկումը
+(`ensureBase64ImagesForClaudeWire`), երկուսն էլ՝
+`fetchRemoteImageAsDataUri()`-ի միջոցով `visionBridgeHelpers.ts`-ում — արդյունք
+URI-ն անցնում է `normalizeDataUri()`
+(`open-sse/utils/imageNormalize.ts`) նախքան այն ներմուծվում է տեսողական մոդելի
+հարցման մեջ։ Oversized պատկերները նվազեցվում են **2048px երկար եզր** (համապատասխանելով
+OpenAI/Anthropic-ի կողմից արդեն կիրառվող վերափոխման սահմանափակմանը), ինչը կրճատում է
+բեռնումի բիթ/լատենտությունը՝ առանց փոխելու այն, ինչ տեսնում է տեսողական մոդելը։
+Վերափոխումը օգտագործում է `sharp`, որը բեռնվում է դինամիկ ներմուծմամբ։
+Այդ պլատֆորմում, որտեղ դրա բնիկ
+բայթը չի բեռնվում, `normalizeDataUri()` **չի նետում** — այն հետ է գնում
+մասնակիորեն սկզբնական բիթերի փոխանցմանը, այնպես որ նկարագրելու/base64-փոխարկման
+ուղին միշտ շարունակում է աշխատել։ Ոչ-պատկերային բիթերը (բեռնում, որը չի վերադարձրել
+կոդավորվող պատկեր) նույնպես անցնում են անփոփոխ։ Այս նորմալացումը սահմանափակվում է այն պատկերներին, որոնք կամուրջը բերում է իր սեփական ինքնազանգի համար — այն երբեք
+չի կիրառվում զանգահարողի خام փոխանցման բեռի վրա, համաձայն
+ընտրովի միայն մուտացիայի սկզբունքին (Hard Rule #20)։
 
 #### Կարգավորումների սխեմա + միգրացիա
 
-Նոր `modalityBridge*` բանալիները Zod-ով վավերացված են `updateSettingsSchema`-ում
+Նոր `modalityBridge*` բանալիները Zod-ով վավերացված են `updateSettingsSchema`
 (`src/shared/validation/settingsSchemas.ts`): `modalityBridgeVisionEnabled`,
 `modalityBridgeVisionMode`, `modalityBridgeVisionModel`,
 `modalityBridgeVisionTaskAware`, `modalityBridgeVisionPrompt`,
 `modalityBridgeVisionTimeout`, `modalityBridgeVisionMaxImages`,
 `modalityBridgeVisionMaxChars`, `modalityBridgeCache*` եռյակը, և
-`modalityBridgeAudio*` խումբը, որը օգտագործվում է Audio Bridge-ի կողմից:
+`modalityBridgeAudio*` խումբը, որը օգտագործվում է Audio Bridge-ի կողմից։
 Միգրացիա `141_modality_bridge_settings.sql`-ը պատճենում է առկա ժառանգական
-`visionBridge*` արժեքները համապատասխան նոր բանալիներին (իդեմպոտենտ, երբեք չի փոխում
-օպերատորի սահմանված `modalityBridge*` արժեքը); ժառանգական բանալիները մնում են ընդունված
-որպես ընթերցմանFallback մեկ թողարկման ցիկլի համար:
+`visionBridge*` արժեքները համապատասխան նոր բանալիներին (իդեմպոտենտ, երբեք չի überschreibt
+օպերատոր-կարգավորված `modalityBridge*` արժեք); ժառանգական բանալիները մնում են ընդունված որպես
+կարդալուFallback մեկ թողարկման ցիկլի համար։
 
-#### Թափանցիկության գլխիկ + վիճակագրություն
+#### Թափանցիկության գլխարկ + վիճակագրություն
 
-Նկարագրել-փոխված պատասխանները կրում են
+Նկարագրելու-փոխված պատասխանները կրում են
 `x-omniroute-modality-bridge: image->text;model=<visionModel>;parts=<n>`
 (կառուցված `buildModalityBridgeHeader()`-ի միջոցով `modalityBridge/bridgeStats.ts`-ում,
-նշանակված `withModalityBridgeHeader()`-ի միջոցով `src/sse/handlers/chatHelpers.ts`-ում).
-Վերահասցեավորված հարցումները **չեն** ստանում գլխիկ — բեռը անփոփոխ էր, և մոդելի
-փոխարինումը արդեն տեսանելի է պատասխան մարմնի `model` դաշտում:
+նշանակված `withModalityBridgeHeader()`-ի միջոցով `src/sse/handlers/chatHelpers.ts`-ում)։
+Վերափոխված հարցումները **չեն** կրում գլխարկ — բեռը անփոփոխ էր, և մոդելի
+փոխարինումը արդեն տեսանելի է պատասխան մարմնի `model` դաշտում։
 
-`GET /api/modality-bridge/stats` (կառավարման հեղինակություն, նույն մակարդակում, ինչ
-`GET /api/settings`) վերադարձնում է հիշողության մեջ յուրաքանչյուր մոդալության համար
-հաշվիչները `{ attempts, successes, bridged, cacheHits, failures, totalLatencyMs,
+`GET /api/modality-bridge/stats` (կառավարման հեղինակություն, նույն մակարդակում ինչպես
+`GET /api/settings`) վերադարձնում է հիշողության մեջ գտնվող յուրաքանչյուր մոդալիտետի հաշվիչները
+`{ attempts, successes, bridged, cacheHits, failures, totalLatencyMs,
 latencySamples, averageLatencyMs, lastUsedAt }` `vision`, `audio`, և
-`video` համար: `averageLatencyMs` օգտագործում է `latencySamples`, ոչ թե բոլոր փորձերը, որպես
-իր բաժանորդը; ժամանակի առանց գործողություն չունեցող գործողությունը չի ստեղծում զրո-միլիսեկունդ
-օրինակ: `bridged` մնում է հետադարձ-համատեղելի այլ անուն հաջողված
+`video` համար: `averageLatencyMs` օգտագործում է `latencySamples`, ոչ բոլոր փորձերը, որպես
+հաշվիչ; ժամանակի բացակայությամբ գործողությունը չի ստեղծում զրո-միլիսեկունդի
+օրինակ: `bridged` մնում է հետադարձ համատեղելի ալիաս հաջողված
 փոխարկումների համար; անհաջող փորձերը չեն ավելացնում այն:
-Հաշվիչները վերականգնվում են գործընթացի վերագործարկման ժամանակ նախագծով
-(տելեմետրիա, ոչ հաշվապահություն).
+Հաշվիչները վերականգնվում են գործընթացի վերագործարկման ժամանակ
+(հեռանկարային, ոչ հաշվապահական):
 
-#### Dashboard կարգավորում
+#### Դաշտի կարգավորում
 
-Նվիրված վահանակի էջը է
-`/dashboard/settings/modality-bridge`։ Նրա URL հասցեով `Vision`, `Audio`
-և `Video` ներդիրները պահպանում են հարցման պարամետրերը, երբ փոխում են `tab` արժեքը։
-Vision ներդիրը բացահայտում է ակտիվացման, ռեժիմի, մոդելի ընտրության (ներառյալ ավտոմատ
-հիմնականը), առաջադրանքի-aware հրահանգման, առաջադեմ ժամանակի/պատկեր/նկարագրության երկարության/քեշի
-սահմանափակումները, գործառնական
-հաշվիչները և պաշտպանված նմուշի հարցումը։ Audio ներդիրը նույնպես կենդանի է. այն բացահայտում է
-ակտիվացումը, STT-ով մոդելի ընտրիչը Auto-ով, ժամանակի/մաքսիմալ կտորների սահմանափակումները, աուդիո
-հաշվիչները և `input_audio` նմուշի փորձարկումը։ Video ներդիրը գործառնական է. այն հաղորդում է
-FFmpeg/ffprobe գործառնական վիճակը՝ չորս հստակ UI վիճակներից մեկը (`unknown`, երբ
+Հատուկ դաշտի էջը
+`/dashboard/settings/modality-bridge` է: Նրա URL-ով հասանելի `Vision`, `Audio`,
+և `Video` թաբերը պահպանվում են հարցման պարամետրերը `tab` արժեքը փոխելու ժամանակ:
+Vision թաբը բացահայտում է ակտիվացումը, ռեժիմը, մոդելի ընտրությունը (ներառյալ ավտոմատ
+հիմնականը), առաջադրանք-գիտակից հրահանգները, առաջադեմ ժամանակի/պատկեր/նկարագրության երկարության/քեշի
+սահմանները, գործառնական
+հաշվիչները, և պաշտպանված օրինակների հարցում: Audio թաբը նույնպես կենդանի է. այն բացահայտում է
+ակտիվացումը, STT-մոդելի ընտրիչը Auto-ով, ժամանակի/մաքսիմալ կտորների սահմանները, աուդիո
+հաշվիչները, և `input_audio` օրինակների փորձարկում: Video թաբը գործառնական է. այն հաղորդում է
+FFmpeg/ffprobe գործառնական վիճակը — չորս հստակ UI վիճակներից մեկը (`unknown` երբ
 հետազոտությունը օդում է կամ չի կարող ավարտվել, `restricted` ոչ-լուպբեք
-վահանակի հյուրընկալողում, որտեղ հետազոտությունը բաց է թողնվում հաճախորդի կողմից, `unavailable` երբ
-հետազոտվել է և հաստատվել է բացակայությունը, կամ `available` FFmpeg/ffprobe տարբերակներով)՝
-պահպանելով ակտիվ/մոդել/ֆրեյմ/վիդեո/ժամանակի սահմանափակումները, մոդելի ընտրիչը ֆիլտրելով
-տեսողական կարողություններով մոդելների համար և բացահայտելով վիդեո հաշվիչները։
+դաշտի հյուրընկալողում, որտեղ հետազոտությունը բաց է թողնվում հաճախորդի կողմից, `unavailable` երբ հետազոտվել է
+և հաստատվել է բացակայությունը, կամ `available` FFmpeg/ffprobe տարբերակներով) — պահպանվում է
+ակտիվ/մոդել/ֆրեյմ/վիդեո/ժամանակի սահմանները, ֆիլտրում է մոդելի ընտրիչը տեսողական
+կարողություններով մոդելների համար, և բացահայտում է վիդեո հաշվիչները:
 
-AI կարգավորումների ներքո նախկին Vision Bridge քարտը համատեղելիության հղում է
-նոր էջին. այն այլևս չի տիրապետում ձևի երկրորդ պատճենին։ Մեդիա մատակարարները նույնպես
-հղում են անում Image-to-Text և Speech-to-Text աշխատանքային հոսքերին համապատասխան
-Modality Bridge ներդիրներին, առանց գոյություն ունեցող Speech-to-Text խաղահրապարակը հեռացնելու։
+AI կարգավորումներում նախկին Vision Bridge քարտը համատեղելիության հղում է
+նոր էջին; այն այլևս չի տիրապետում ձևի երկրորդ պատճենին: Մեդիա մատակարարները նույնպես
+հղում են Image-to-Text և Speech-to-Text աշխատանքային հոսքերը համապատասխան Modality
+Bridge թաբերին առանց հեռացնելու գոյություն ունեցող Speech-to-Text խաղահրապարակը:
 
-**Self-loop ընդունման շրջանցում:** երբ նկարագրել զանգը անցնում է OmniRoute-ի
+**Self-loop ընդունման շրջանցում:** երբ նկարագրելու զանգը անցնում է OmniRoute-ի
 իր սեփական `/v1` self-loop (ոչ ստանդարտ մատակարարի մոդել), ենթահարցումը ուղարկում է
 `x-omniroute-admission-bypass: internal` և հաստատվում է լուծված
-self-loop հավատարմագրով՝ տեղական `sk_omniroute` պահապանով տեղական ռեժիմում, կամ
-օպերատորի կողմից կարգավորված `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` env բանալիով (#1350), որպեսզի
-`REQUIRE_API_KEY=true` տեղադրումները դեռ կարողանան իրականացնել նկարագրել զանգը։ Շրջանցումը
+self-loop հավատարմագրով — տեղական `sk_omniroute` պահապանը տեղական ռեժիմում, կամ
+օպերատորի կողմից կարգավորված `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` env բանալին (#1350) այնպես,
+որ `REQUIRE_API_KEY=true` տեղադրումները դեռ կարող են գործարկել նկարագրելու զանգը: Շրջանցումը
 ընդունվում է միայն այդ կոնկրետ հավատարմագրերի համար, այնպես որ արտաքին հաճախորդները չեն կարող
-օգտագործել վերնագիրը ընդունումը շրջանցելու համար։
+օգտագործել գլխիկը ընդունումը շրջանցելու համար:
 
-Հին նախնական պարամետրերը գտնվում են `src/shared/constants/visionBridgeDefaults.ts`-ում։
-Նոր ռեժիմի/առաջադրանքի-aware/cache նախնական պարամետրերը և կարգավորումների լուծիչը գտնվում են
-`src/shared/constants/modalityBridgeDefaults.ts`-ում։ Պաշտպանիչը բացահայտում է
-`deps` կոնստրուկտորի տարբերակ, որպեսզի թեստերը կարողանան ներարկել կեղծ `getSettings` և
-`callVisionModel` իրականացմաններ։
+Հին նախնական կարգավորումները գտնվում են `src/shared/constants/visionBridgeDefaults.ts`;
+նոր ռեժիմ/աշխատանք-գիտակից/քեշի նախնական կարգավորումները և կարգավորման լուծիչը գտնվում են
+`src/shared/constants/modalityBridgeDefaults.ts`-ում: Պաշտպանիչը բացահայտում է
+`deps` կառուցողի տարբերակը, որպեսզի փորձարկումները կարողանան ներարկել կեղծ `getSettings` և
+`callVisionModel` իրականացմանները:
 
 ### Audio Bridge (`audioBridge.ts`) — Modality Bridge PR-3
 
-Անցկացնում է աուդիո պարունակող զրույցի հարցումները, նախքան դրանք հասնում են նպատակին, որը հայտնի չէ
-ընդունելու աուդիո մուտք։ Այն երբեք չի վերափոխում զրույցի հարցումը. աուդիո մասերը
-գրանցվում են գոյություն ունեցող OpenAI-համատեղելի բազմամասային վերջնակետով, և ընտրված զրույցի մոդելը
-շարունակում է տեքստային գրառումները։
+Խափանում է աուդիո պարունակող զրույցի հարցումները, նախքան դրանք հասնում են նպատակին, որը հայտնի չէ
+ընդունելու աուդիո մուտք: Այն երբեք չի վերափոխում զրույցի հարցումը. աուդիո մասերը
+գրանցվում են գոյություն ունեցող OpenAI-համատեղելի բազմամասային վերջնակետով, և
+ընտրված զրույցի մոդելը շարունակվում է տեքստային գրանցումներով:
 
 Հոսք:
 
-1. Լուծել `supportsAudio` միջոցով `getResolvedModelCapabilities()`։ Հստակ
+1. Լուծել `supportsAudio` `getResolvedModelCapabilities()` միջոցով: Հստակ
    մատակարարի գրանցման մետադատան հաղթում է, ապա ստատիկ մոդելի մետադատան, ապա սինխոնիզացված
-   `modalities_input`։ `audio`-ի բացակայությամբ հայտարարված մուտքի ցանկը `false` է; ոչ
-   կարողության ապացույցը մնում է `null`։ Ինչպես `false`, այնպես էլ `null` ակտիվացնում են
-   պահպանողական կամուրջը, մինչդեռ `true`-ն շրջանցում է այն։
-2. Լուծել `modalityBridgeAudio*` կարգավորումները և յուրաքանչյուր հաղորդագրությունից
-   դուրս բերել կտրվող վերին մակարդակի աուդիո մասերը՝ օգտագործելով ընդհանուր `detectMediaParts()`
-   հայտնաբերման գործիքը։ Supported wire shapes-ը OpenAI `input_audio`, `audio_url`, և
-   `source.media_type: "audio/*"` են։ Nested աուդիոն հայտնաբերվում է ուղղորդման համար, բայց
-   չի հեռացվում կտրման ճանապարհով։ Աշխատանքը սահմանափակվում է `modalityBridgeAudioMaxClips`-ով;
-   հետագա մասերը մնում են անփոփոխ։
+   `modalities_input`: `audio`-ի բացակայությամբ հայտարարված մուտքի ցանկը `false` է; ոչ
+   կարողության ապացույցը մնում է `null`: Երկու `false` և `null` ակտիվացնում են
+   պահպանողական կամուրջը, մինչդեռ `true` շրջանցում է այն:
+2. Լուծել `modalityBridgeAudio*` կարգավորումները և յուրաքանչյուր հաղորդագրությունից դուրս բերել
+   կտրվող բարձր մակարդակի աուդիո մասերը `detectMediaParts()` ընդհանուր հայտնաբերիչի միջոցով:
+   Աջակցվող մալուխի ձևերը OpenAI `input_audio`, `audio_url`, և
+   `source.media_type: "audio/*"` են: Ներսում գտնվող աուդիոն հայտնաբերվում է երթուղի
+   համար, բայց չի հեռացվում կտրման ճանապարհով: Աշխատանքը սահմանափակվում է `modalityBridgeAudioMaxClips`-ով;
+   հետագա մասերը մնում են անփոփոխ:
 3. Հարգել կարգավորված `provider/model`, կամ թողնել `selectAudioBridgeModel()`-ը քայլել
-   `AUDIO_TRANSCRIPTION_PROVIDERS` կայուն կատալոգի կարգով և ընտրել առաջին մոդելը
-   օգտագործելի ակտիվ մատակարարի հավատարմագրով։
-4. `callAudioTranscription()`-ը փոխարկում է base64/data-URI աուդիոն բազմամասային
-   `file`-ի, կամ ներբեռնում է հեռավոր `audio_url`-ը հանրային միայն outbound
-   պաշտպանությամբ DNS pinning-ով և 25 MB սահմանով։ Այնուհետև POST-ով ուղարկում է ֆայլը և ընտրված
-   մոդելը տեղական `/v1/audio/transcriptions` self-loop-ին, հաստատված `resolveSelfLoopBearer()`-ով։ Գոյություն ունեցող
-   գրանցման ուղին իրականացնում է սովորական հավատարմագրերի որոնում, cooldown/rate-limit
-   մշակումը և մատակարարի ուղարկումը։
-5. Հաջող զանգերը փոխարինում են իրենց մասերը `[Audio N]: <transcript>`-ով։ Զանգերը
-   աշխատում են `Promise.allSettled`-ով. անհատական ձախողումը պահպանում է այդ սկզբնական
-   աուդիո մասը (#4012 պայմանագիր)։ Եթե յուրաքանչյուր զանգ ձախողում է, և նպատակն ապացուցվում է
+   `AUDIO_TRANSCRIPTION_PROVIDERS` կայուն կատալոգի կարգով և ընտրել առաջին
+   մոդելը, որը ունի օգտագործելի ակտիվ մատակարարի հավատարմագիր:
+4. `callAudioTranscription()` փոխարկում է base64/data-URI աուդիոն բազմամասային
+   `file`, կամ ներբեռնում է հեռավոր `audio_url` հանրային-միայն դուրս գալու
+   պաշտպանությամբ DNS-ով և 25 MB սահմանով: Այնուհետև POST անում է ֆայլը և ընտրված
+   մոդելը տեղական `/v1/audio/transcriptions` self-loop, հաստատված `resolveSelfLoopBearer()`-ով:
+   Գոյություն ունեցող գրանցման երթուղին իրականացնում է սովորական
+   հավատարմագրերի որոնում, սառեցման/տեմպի սահմանափակումների կառավարում, և մատակարարի ուղարկում:
+5. Հաջող զանգերը փոխարինում են իրենց մասերը `[Audio N]: <transcript>`. Զանգերը
+   աշխատում են `Promise.allSettled`-ով. անհատական անհաջողությունը պահպանվում է այդ սկզբնական
+   աուդիո մասի համար (#4012 պայմանագիր): Եթե յուրաքանչյուր զանգ անհաջողվում է, և նպատակն ապացուցվում է
    `supportsAudio === false`, մասերը դառնում են
-   `[Audio N]: (unavailable — no STT provider connected)` (#8430 պայմանագիր)։ Անհայտ նպատակին (`null`)
-   բոլոր ձախողման արդյունքը մնում է անփոփոխ։ Ապացուցված տեքստային միայն նպատակ, որը չունի
-   օգտագործելի STT հավատարմագիր, ստանում է նույն հստակ stub-ը առանց ցանցային զանգի կատարելու։
+   `[Audio N]: (unavailable — no STT provider connected)` (#8430 պայմանագիր): Անհայտ նպատակների համար (`null`),
+   բոլոր անհաջողությունների արդյունքը մնում է անփոփոխ: Ապացուցված տեքստային նպատակ, որը չունի
+   օգտագործելի STT հավատարմագիր, ստանում է նույն հստակ
+   ստաբ առանց ցանցային զանգ կատարելու:
 
-Հաջող գրառումները օգտագործում են գործընթացի լայնածավալ Modality Bridge LRU/TTL քեշը։
-Բանալիի համադրությունը աուդիո հղման, կայուն `audio-transcription` գործողության
-լեյբլի և ընտրված STT մոդելի միջև է; ձախողումները երբեք չեն քեշավորվում։ Աուդիո փորձերը թարմացնում են
-համատեղ `bridged`, `cacheHits`, `failures`, և `lastUsedAt` հաշվիչները։
+Հաջող գրանցումները օգտագործում են գործընթացի լայնությամբ Modality Bridge LRU/TTL քեշը:
+Բանալիի մեջ համակցվում են աուդիո հղումը, կայուն `audio-transcription` գործողության
+պիտակը, և ընտրված STT մոդելը; անհաջողությունները երբեք չեն քեշավորվում: Աուդիո փորձերը թարմացնում են
+համօգտագործվող `bridged`, `cacheHits`, `failures`, և `lastUsedAt` հաշվիչները:
 Փոխարկված պատասխանները կրում են
 `x-omniroute-modality-bridge: audio->text;model=<sttModel>;parts=<n>`; անփոփոխ
-հարցումները չեն ստանում Audio Bridge հատված։
+հարցումները չեն ստանում Audio Bridge հատված:
 
-Գործառնական կարգավորումները DB-ով աջակցված են և Zod-ով վավերացված։
+Գործառնական կարգավորումները DB-հենված են և Zod-ով վավերացված:
 
-| Բանալի                        | Նախնական | Տիրույթ         |
-| ----------------------------- | -------- | --------------- |
-| `modalityBridgeAudioEnabled`  | `true`   | —               |
-| `modalityBridgeAudioModel`    | `""`     | Auto կամ STT ID |
-| `modalityBridgeAudioTimeout`  | `60000`  | 1000–300000     |
-| `modalityBridgeAudioMaxClips` | `3`      | 1–10            |
+| Կոդ                           | Դեֆոլտ  | Տիրույթ         |
+| ----------------------------- | ------- | --------------- |
+| `modalityBridgeAudioEnabled`  | `true`  | —               |
+| `modalityBridgeAudioModel`    | `""`    | Auto կամ STT ID |
+| `modalityBridgeAudioTimeout`  | `60000` | 1000–300000     |
+| `modalityBridgeAudioMaxClips` | `3`     | 1–10            |
 
-Համատեղ քեշը մնում է վերահսկվող `modalityBridgeCacheEnabled`,
-`modalityBridgeCacheTtlMinutes`, և `modalityBridgeCacheMaxEntries`-ով։
+Կիսված կոշտ հիշողությունը մնում է վերահսկվող `modalityBridgeCacheEnabled`,
+`modalityBridgeCacheTtlMinutes`, և `modalityBridgeCacheMaxEntries` միջոցով:
 
 ### Video Bridge (`videoBridge.ts`, `videoBridgePipeline.ts`)
 
-Intercepts top-level video parts in Chat Completions `messages` and Responses API `input` before a target without known native video support is called. Supported shapes are `input_video`, `video_url`, `video_source`, HTTPS URLs, and `data:video/*;base64,...` data URIs. Plain filenames in text are not treated as video.
+Համապատասխանեցնում է բարձր մակարդակի տեսանյութի մասերը Chat Completions `messages` և Responses
+API `input`-ին, նախքան թիրախը, որի համար հայտնի բնիկ տեսանյութի աջակցություն չկա, կոչվում է:
+Աջակցվող ձևերը `input_video`, `video_url`, `video_source`, HTTPS URLs,
+և `data:video/*;base64,...` տվյալ URI-ներն են: Տեքստում պարզ ֆայլի անունները չեն դիտվում
+տեսանյութի նման:
 
-`VideoBridgeGuardrail.preCall` (`videoBridge.ts`) owns request traversal, the capability/policy check, per-request aggregation, and the response payload. Per-video work — acquisition, the whole-result cache, describing a frame sequence (which fuses any caller-declared audio transcript), and per-attempt metrics/abort/cleanup — is hidden behind `processVideoPart` in `videoBridgePipeline.ts`, called once per video part inside `preCall`'s loop. That module also defines the explicit port boundaries `VideoMediaBrokerPort` (acquiring bytes and extracting sampled frames), `VideoAudioTranscriptionPort` (fusing a caller-declared audio transcript with the sampled captions), and `VideoDrilldownPort` (the legacy raw-store shape). Production STT and frame retention are composed around the describing port through `createVideoSttAdapter` and `createVideoDrilldownAdapter`; the latter uses the shared opaque-handle lifecycle.
+`VideoBridgeGuardrail.preCall` (`videoBridge.ts`) պատկանում է հարցման անցմանը,
+հնարավորության/քաղաքականության ստուգմանը, յուրաքանչյուր հարցման հավաքագրմանը, և պատասխանային բեռին:
+Յուրաքանչյուր տեսանյութի աշխատանք — ձեռքբերում, ամբողջ արդյունքի կոշտ հիշողություն, շրջանակի
+հաջորդականության նկարագրություն (որը միավորում է ցանկացած զանգահարողի կողմից հայտարարված աուդիո տեքստը), և յուրաքանչյուր փորձի
+մետրանոցներ/դադար/մաքրում — թաքնված է `processVideoPart`-ի հետևում
+`videoBridgePipeline.ts`-ում, որը կոչվում է մեկ անգամ յուրաքանչյուր տեսանյութի մասի համար `preCall`-ի ցիկլի ներսում:
+Այդ մոդուլը նաև սահմանում է հստակ պորտային սահմանները `VideoMediaBrokerPort`
+(բեռների ձեռքբերում և նմուշավորված շրջանակների հանման), `VideoAudioTranscriptionPort`
+(միավորելով զանգահարողի կողմից հայտարարված աուդիո տեքստը նմուշավորված ենթագրերի հետ), և
+`VideoDrilldownPort` (հին خام-պահեստի ձևը): Արտադրական STT և շրջանակի պահպանում
+կազմված են նկարագրող պորտի շուրջ `createVideoSttAdapter` և
+`createVideoDrilldownAdapter`-ի միջոցով; վերջինս օգտագործում է կիսված անթափանց-ձեռքբերման կյանքի ցիկլը:
 
-The public `/v1` request path never imports or invokes a subprocess. Remote videos are downloaded under a 50 MiB bound; inline base64 videos have a conservative 36 MiB decoded per-video cap so the model/messages/framing envelope can remain inside the public JSON request admission limit of 50 MiB. Inline length and decoded-size estimates are checked before allocation. HTTPS is required on the initial remote URL and every redirect, using the existing public-only outbound guard with DNS pinning. The bytes then cross the exact internal `POST /api/modality-bridge/video/extract` broker boundary. That route is both `LOCAL_ONLY` and `SPAWN_CAPABLE`, accepts only a per-process authenticated, trusted-loopback request, and never accepts a URL, filesystem path, executable, or argument list. The API body-size pipeline and the handler's incremental body reader independently enforce a 50 MiB broker input cap. Its bounded queue runs one extraction at a time, allows four pending jobs, and caps pending input at 100 MiB.
+Հանրային `/v1` հարցման ուղին երբեք չի ներմուծում կամ չի հրավիրում ենթածրագրեր: Հեռավոր
+տեսանյութերը ներբեռնվում են 50 MiB սահմանով; inline base64 տեսանյութերը ունեն
+պահպանողական 36 MiB բացահայտված յուրաքանչյուր տեսանյութի սահման, որպեսզի մոդելը/հաղորդագրությունները/կ框ավորումը
+կարողանան մնալ հանրային JSON հարցման ընդունման սահմանում 50 MiB: Inline
+երկայնքի և բացահայտված չափերի գնահատումները ստուգվում են նախքան հատկացումը: HTTPS-ը
+պահանջվում է սկզբնական հեռավոր URL-ում և յուրաքանչյուր վերափոխման ժամանակ, օգտագործելով առկա
+հանրային միայն outbound պաշտպանությունը DNS pinning-ով: Բիթերը հետո անցնում են ճշգրիտ ներքին
+`POST /api/modality-bridge/video/extract` բրոքերի սահմանը: Այդ երթուղին
+և `LOCAL_ONLY`, և `SPAWN_CAPABLE` է, ընդունում է միայն մեկ գործընթացի վավերացված,
+հուսալի-լուպի հարցում, և երբեք չի ընդունում URL, ֆայլային համակարգի ուղի, executable,
+կամ փաստարկների ցանկ: API մարմնի չափի pipeline-ը և մշակողի աստիճանական մարմնի
+կարդացողը անկախ կերպով պարտադրում են 50 MiB բրոքերի մուտքի սահման: Նրա սահմանափակ հերթը
+անցկացնում է մեկ հանման միաժամանակ, թույլ է տալիս չորս սպասող աշխատանքներ, և սահմանափակում է սպասող մուտքը 100 MiB:
 
-Inside the broker, `ffprobe` reads a private local file; the fixed format allowlist excludes playlist and manifest formats. For allowed MOV-family containers, external MOV data references remain disabled by default, and the fixed command does not opt in to them. Both `ffprobe` and `ffmpeg` use the `file`-only protocol whitelist, one thread, fixed argument arrays, no shell, and executables resolved from `PATH`. Attached-picture cover streams are not playable candidates. All playable streams must satisfy the limits, and an explicit default stream is preferred before the deterministic lowest-index fallback. Videos are limited to 600 seconds, 8,192 pixels per dimension, and 33,554,432 source pixels. FFmpeg samples 1–16 midpoint JPEG frames, scales down the long edge to at most 1,024 pixels without upscaling smaller inputs, and never receives a URL. Sampling is `uniform` by default. The optional `scene_aware` and experimental `segment_aware` policies perform one additional fixed FFmpeg pass over the already validated local stream, select bounded `showinfo` scene timestamps, and fall back deterministically to the same uniform midpoints on detector failure, timeout, malformed output, or an empty candidate set. Segment-aware mode allocates midpoint samples proportionally to the validated scene intervals; segment-aware evidence and fallback behavior are detailed below. The hard 16-frame cap is applied after selection in every policy. When a scene-aware request has only a one-frame budget, it uses the uniform midpoint of the active full-video or focus window and reports `policyEffective: uniform`: a single selected scene frame cannot preserve both temporal ends. A caller may optionally provide a finite focus window (`start`/`end` seconds); bounds are clamped to the media duration, reversed or non-finite windows are rejected, and all sampling policies are performed only inside the normalized interval. The resulting window is included in sampling metadata and in the untrusted description prefix so downstream models can distinguish a focused excerpt from the full timeline.
+Բրոքերի ներսում `ffprobe`-ը կարդում է մասնավոր տեղական ֆայլ; ֆիքսված ձևաչափի
+թույլտվությունը excludes playlist և manifest ձևաչափերը: Թույլատրված MOV-ընտանիքների համար
+արտաքին MOV տվյալների հղումները մնանում են անջատված ըստ կանխորոշման, և ֆիքսված հրամանը չի
+ընտրում դրանք: Երկու `ffprobe` և `ffmpeg` օգտագործում են `file`-միայն պրոտոկոլի սպիտակ ցուցակը, մեկ թել, ֆիքսված
+հրամանների զանգվածներ, առանց shell-ի, և executable-ներ, որոնք լուծվում են `PATH`-ից: Կցված-պատկերային ծածկող հոսքերը չեն
+խաղարկելի թեկնածուներ: Բոլոր խաղարկելի հոսքերը պետք է բավարարեն սահմանները, և մի հստակ
+դեֆոլտ հոսք նախընտրելի է նախքան որոշիչ ամենացածր-հաշվարկի
+հետադարձումը: Տեսանյութերը սահմանափակվում են 600 վայրկյան, 8,192 պիքսել յուրաքանչյուր չափի, և
+33,554,432 աղբյուրի պիքսել: FFmpeg-ը նմուշավորում է 1–16 միջանկյալ JPEG շրջանակներ, նվազեցնում
+երկար եզրը առավելագույնը 1,024 պիքսել առանց փոքր մուտքերի մեծացման, և
+երբեք չի ստանում URL: Նմուշավորումը `uniform` է ըստ կանխորոշման: Ընտրովի
+`scene_aware` և փորձնական `segment_aware` քաղաքականությունները կատարում են մեկ լրացուցիչ
+ֆիքսված FFmpeg անցում արդեն հաստատված տեղական հոսքի վրա, ընտրում են սահմանափակ
+`showinfo` տեսարանների ժամանակագրությունները, և որոշիչ ձախողման, ժամկետի, սխալ ձևաչափի կամ դատարկ
+թեկնածուի հավաքածուի դեպքում վերադարձնում են որոշիչորեն նույն
+միօրինակ միջանկյալներին: Segment-aware ռեժիմը հատկացնում է միջանկյալ նմուշներ
+համաչափորեն հաստատված տեսարանների միջակայքներին; segment-aware ապացույցը և հետադարձ վարքը
+բացատրվում են ստորև: Hard 16-շրջանակի սահմանը
+կիրառվում է ընտրությունից հետո յուրաքանչյուր քաղաքականության մեջ: Երբ տեսարան-հայտարարության հարցումը ունի միայն մեկ
+շրջանակի բյուջե, այն օգտագործում է ակտիվ ամբողջ-տեսանյութի կամ կենտրոնացման
+חל窗口ի միօրինակ միջանկյալը և հաղորդում է `policyEffective: uniform`: մեկ ընտրված տեսարանային շրջանակը
+չի կարող պահպանել երկու ժամանակային ծայրերը: Զանգահարողը կարող է ընտրովի կերպով տրամադրել
+սահմանափակ կենտրոնացման窗口 (`start`/`end` վայրկյան); սահմանները կսահմանափակվեն մեդիայի
+տևողությանը, հակառակ կամ ոչ սահմանափակ窗口ները մերժվում են, և բոլոր նմուշավորման
+քաղաքականությունները կատարվում են միայն նորմալացված միջակայքում: Ստացված
+համալիրն ընդգրկվում է նմուշավորման մետատվյալներում և անհուսալի նկարագրության
+նախորդում, որպեսզի ներքևի մոդելները կարողանան տարբերակել կենտրոնացված հատվածը ամբողջ
+ժամանակային գծից:
 
-Semantic caption focus is a separate, explicit setting. The default `full` analysis mode preserves the existing frame prompt and never forwards request text to the caption model. In `focused` mode, the bridge reads only the latest non-empty user-authored `text`/`input_text` from the same Chat or Responses container, normalizes it to NFC, collapses control characters and whitespace, and limits it to 500 Unicode code points. An empty result falls back to the exact `full` prompt. A usable hint is serialized as JSON in a dedicated untrusted-user-context block and may only prioritize observable details; it cannot override the separate warning against following instructions visible or audible in the media. Textual focus never infers `start`/`end` or changes the temporal sampler.
+Սեմանտիկ ենթագրի կենտրոնացումը առանձին, հստակ կարգավորում է: Դեֆոլտ `full`
+վերլուծության ռեժիմը պահպանվում է առկա շրջանակի հրահանգը և երբեք չի փոխանցում հարցման
+տեքստը ենթագրի մոդելին: `focused` ռեժիմում, կամուրջը կարդում է միայն վերջին
+ոչ դատարկ օգտվողի կողմից ստեղծված `text`/`input_text` նույն Chat կամ Responses
+հավաքածուից, նորմալացնում է այն NFC, կրճատում վերահսկողության նշանները և whitespace-ը,
+և սահմանափակում է 500 Unicode կոդային կետերով: Դատարկ արդյունքը վերադարձնում է
+ճիշտ `full` հրահանգը: Օգտագործելի հուշումը սերիալացվում է JSON-ով հատուկ
+անհուսալի-օգտագործողի-համ-context բլոկում և կարող է միայն առաջնահերթություն տալ տեսանելի մանրամասներին; այն
+չի կարող շրջանցել առանձին նախազգուշացումը, որը տեսանելի կամ լսելի է մեդիայում: Տեքստային կենտրոնացումը երբեք չի ենթադրում `start`/`end` կամ չի փոխում
+ժամանակային նմուշավորիչը:
 
 #### FU-07 կառուցվածքային հատվածի ապացույց
 
-`segment_aware` uses one bounded pre-analysis pass over the already validated local video stream. The fixed filter chain first scales to at most 320 pixels wide, detects scene changes and frozen intervals, then samples at 1 frame per second for blur, average luma, and spatial/temporal information. The pass is limited to 600 structural samples, one FFmpeg/filter thread, the same `file`-only protocol and container allowlists, a 1 MiB process-output bound, and at most 30 seconds inside the broker's shared abort/deadline. It never accepts a command, filter, path, or URL from the request.
+`segment_aware` օգտագործում է մեկ սահմանափակ նախնական վերլուծության անցում արդեն վավերացված տեղական տեսանյութի հոսքի վրա: 固定 фильтр цепочка сначала масштабирует до максимум 320 пикселей шириной, обнаруживает изменения сцены и замороженные интервалы, затем выбирает 1 кадр в секунду для размытия, среднего яркости и пространственной/временной информации: անցումը սահմանափակված է 600 կառուցվածքային նմուշներով, մեկ FFmpeg/filter թել, նույն `file`- միայն պրոտոկոլ և կոնտեյների թույլտվություններ, 1 MiB գործընթացի-արտադրանքի սահման, և առավելագույնը 30 վայրկյան բրոքերի ընդհանուր չեղարկման/ժամկետում: Այն երբեք չի ընդունում հրաման, ֆիլտր, ուղի կամ URL հարցումից:
 
-Struktural արժեքները որոշիչ նմուշավորման ապացույցներ են, ոչ թե սեմանտիկ տեսանյութի
-հասկացում: Դրանք չեն ենթադրում առարկաներ, գործողություններ, վերնագրեր, խոսք կամ օգտվողի
-նպատակ: տեսարանի և սառեցման սահմանները ձևավորում են հատվածներ; սառեցման ծածկույթը, մառախուղը,
-լուսավորությունը, տարածքային մանրամասնությունը և ժամանակային փոփոխությունը միայն ազդում են
-կայացած 1–16 շրջանակների բյուջեի բաշխման վրա: Լրիվ սառեցված հատվածը սահմանափակվում է մեկ
-շրջանակով, մինչդեռ ոչ սառեցված հատվածները մրցում են մնացած բյուջեի համար: Երբ սահմանները
-շրջանակներից ավելի շատ են, պահպանվում է միատեսակ ժամանակային ծածկույթ, որպեսզի արագ
-առաջին կտրումները չկարողանան թաքցնել երկար հետևող հատվածը: Սառեցման սահմանների
-մեջ 1 վայրկյան վերլուծության լուծման շրջանակներում համախմբվում են:
+Կառուցվածքային արժեքները որոշիչ նմուշավորման ապացույցներ են, ոչ սեմանտիկ տեսանյութի հասկացում: Նրանք չեն ենթադրում առարկաներ, գործողություններ, վերնագրեր, խոսք կամ օգտվողի մտադրություն: Սցենայի և սառեցման սահմանները ձևավորում են հատվածներ; սառեցման ծածկույթը, մթագնումը, լուսավորությունը, տարածական մանրամասները և ժամանակային փոփոխությունը միայն ազդում են այն, թե ինչպես է գոյություն ունեցող 1–16 կադրերի բյուջեն բաշխվում: Լրիվ սառեցված հատվածը սահմանափակվում է մեկ կադրով, մինչդեռ ոչ սառեցված հատվածները մրցում են մնացած բյուջեի համար: Երբ սահմանները գերազանցում են կադրերը, պահպանվում է միատեսակ ժամանակային ծածկույթ, որպեսզի արագ վաղ կտրվածքները չկարողանան թաքցնել երկար հետևողական հատվածը: Սցենայի սահմանները 1 վայրկյան վերլուծության լուծման մեջ սառեցման սահմանների ներսում համախմբվում են:
 
-Կորած ֆիլտրերը, սխալ ձևավորված/ դատարկ ապացույցները, հայտնաբերման սխալը կամ սահմանափակ
-նախնական վերլուծության ժամանակը բաց են թողնում ճշգրիտ միատեսակ միջին քաղաքականությանը:
-Հեռախոսահամարի դադարեցումը կամ միջնորդի ժամկետը չեն բաց թողնում. այն ավարտում է
-թռիչքի մեջ գտնվող ենթածրագրերը, կանխում հետագա շրջանակների հանումը, և մասնավոր
-ժամանակավոր ծառը հեռացվում է `finally`-ում:
+Կորած ֆիլտրերը, սխալ ձևավորված/ դատարկ ապացույցները, հայտնաբերման սխալը կամ սահմանափակ նախնական վերլուծության ժամկետը բաց են մնում ճշգրիտ միատեսակ միջին քաղաքականության համար: Հրահանգող չեղարկումը կամ բրոքերի ժամկետը չեն բացվում: Այն ավարտում է ընթացիկ ենթածրագրերը, կանխում հետագա կադրերի հանումը, և մասնավոր ժամանակավոր ծառը հեռացվում է `finally`-ում:
 
-`scripts/perf/video-bridge-fu07-eval.ts` ստեղծում է որոշիչ իրական FFmpeg
-հիմքեր՝ հետագա կրկնօրինակման վերնագրերի խնայողությունների, խիտ-շարժման բյուջեի
-բաշխման, մառախուղի/լուսավորության/SI-TI ապացույցների, արագ կտրումների երկար хвостով և
-հաստատված-մարող կեղծ դրականների համար: Այն գրանցում է նախնական վերլուծության պատի
-ժամանակը և, որտեղ `/usr/bin/time` հասանելի է, երեխայի CPU և առավելագույն RSS: Նրա որակի
-ստուգումները կառուցվածքային օրակլներ են միայն: Իրական վերնագրի մոդելի որակը մնում է
-`HOLD`, քանի որ այս սարքը չունի լիազորված վերջնակետ կամ սառեցված դատավոր: Դրամական
-խնայողությունները նույնպես մնում են `HOLD`, եթե `--caption-cost-per-call-usd` չի
-մատակարարում բացահայտ դրական մեկ զանգի գնահատում; սցենարը երբեք չի ստեղծում ոչ
-մեկ արդյունք:
+`scripts/perf/video-bridge-fu07-eval.ts` ստեղծում է որոշիչ իրական FFmpeg սարքեր հետագա կրկնօրինակման վերնագրերի խնայողությունների, խիտ-շարժման բյուջեի բաշխման, մթագնումի/լուսավորության/SI-TI ապացույցների, արագ կտրվածքների երկար хвостով և աստիճանական-մարելու կեղծ դրականների համար: Այն գրանցում է նախնական վերլուծության պատի ժամանակը և, որտեղ `/usr/bin/time` հասանելի է, երեխայի CPU և գագաթային RSS: Նրա որակի ստուգումները միայն կառուցվածքային օրհնություններ են: Իրական վերնագրերի մոդելի որակը մնում է `HOLD`, քանի որ այս սարքը չունի լիազորված վերջնակետ կամ սառեցված դատավոր: Ֆինանսական խնայողությունները նույնպես մնում են `HOLD`, եթե `--caption-cost-per-call-usd` չի տրամադրում բացահայտ դրական յուրաքանչյուր զանգի գնահատական; սցենարը երբեք չի ստեղծում ոչ մի արդյունք:
 
-Յուրաքանչյուր շրջանակը սահմանափակվում է 4 MiB-ով, բոլոր خام շրջանակները միասին 23 MiB-ով,
-և սերիալացված միջնորդի պատասխանն 32 MiB-ով: Մասնավոր ժամանակավոր կատալոգը
-հեռացվում է `finally`-ում: OmniRoute-ը չի փաթեթավորում FFmpeg և չի ընդունում
-հատուկ գործառնական ճանապարհ: Վերնագրումից առաջ, կամուրջը կիրառում է պահպանողական
-տեսողական կրկնօրինակման անցք. յուրաքանչյուր JPEG-ը նվազեցվում է 16×16 մոխրագույն
-բուֆերի և համեմատվում է միայն վերջին պահպանված շրջանակի հետ: Մեկ շրջանակից
-վերև պահանջվող վերնագրի բյուջեի համար, հանումը մատակարարում է
-սահմանափակ թեկնածուների պուլ մինչև այդ բյուջեի կրկնակի և երբեք ավելի քան 16 շրջանակ:
-Պահանջվող սահմանը կիրառվում է միայն կրկնօրինակման հետո, առաջին և վերջնական
-ընտրված թեկնածուները պահպանվում են վերջնական նոսրացման ժամանակ, երբ բյուջեն
-պակասագույնը երկու է: Վարկանիշային
-`grayscale-16x16-mean-cells-v2` քաղաքականությունը օգտագործում է միջին լումայի դելտայի և
-thumbnail բջիջների հարաբերությունը, որոնց նորմալացված դելտան առնվազն 0.05 է:
-Կրկնօրինակման շեմը մշտական 0.04 է, ընտրված է կանխատեսելիության համար, այլ ոչ թե
-գործողության կարգավորում որպես բացահայտ: Այս երկրորդական
-բարձր-հակապատկերային ազդանշանը պահպանվում է փոքր շարժման և տեսանելի-տեքստի
-փոփոխությունների համար, որոնք կարող են թաքցնել միայն միջին համեմատությունը: Համեմատիչի
-կամ դեկոդերի սխալները բաց են թողնում և պահպանում են ծածկույթը: Արտադրողական
-մետադատները բաժանում են հանված թեկնածուները, հաջողությամբ օգտագործված շրջանակները և
-տեսողական կրկնօրինակները, որոնք հեռացվել են:
+Յուրաքանչյուր կադր սահմանափակվում է 4 MiB-ով, բոլոր خام կադրերը միասին 23 MiB-ով, և սերիալացված բրոքերի պատասխան 32 MiB-ով: Մասնավոր ժամանակավոր կատալոգը հեռացվում է `finally`-ում: OmniRoute-ը չի փաթեթավորում FFmpeg և չի ընդունում հարմարեցված գործառնական ուղի: Վերնագրելուց առաջ, կամուրջը կիրառում է պահպանողական տեսողական կրկնօրինակման անցում: Յուրաքանչյուր JPEG-ը նվազեցվում է 16×16 մոխրագույն բուֆեր և համեմատվում է միայն վերջին պահպանված կադրի հետ: Խնդրված վերնագրի բյուջեի համար, որը գերազանցում է մեկ կադր, հանումը տրամադրում է սահմանափակ թեկնածուների խումբ, որը կարող է լինել այդ բյուջեի կրկնակի չափով և երբեք ավելի քան 16 կադր: Խնդրված սահմանը կիրառվում է միայն կրկնօրինակման հետո, առաջին և վերջնական ընտրված թեկնածուները պահպանվում են վերջնական նոսրացման ժամանակ, երբ բյուջեն առնվազն երկու է: Վարկանիշային `grayscale-16x16-mean-cells-v2` քաղաքականությունը օգտագործում է միջին լումայի դելտայի և մինի բջիջների հարաբերությունը, որոնց նորմալացված դելտան առնվազն 0.05 է: Կրկնօրինակման շեմը 0.04 մշտական է, ընտրված է կանխատեսելիության համար, այլ ոչ թե որպես գործառնական կարգավորում: Այս երկրորդային բարձր-հակադրային ազդանշանը պահպանվում է փոքր շարժման և տեսանելի-տեքստի փոփոխությունների համար, որոնք կարող են թաքցնել միայն միջին համեմատությունը: Համեմատիչի կամ դեկոդերի սխալները բաց են մնում և պահպանում են ծածկույթը: Արտադրանքի մետադատները բաժանում են հանված թեկնածուները, հաջողությամբ օգտագործված կադրերը և տեսողական կրկնօրինակները:
 
-Բացահայտորեն նշված տեսանյութի մասը կարող է պահանջել ժամանակակետային կոնտակտային թերթիկ:
-Կամուրջը կառուցում է առավելագույնը 4-թյուն, 16-շրջանակ JPEG ցանց: Յուրաքանչյուր 512-պիքսել
-բջիջը այրում է իր աղբյուրի ժամանակակետը բարձր հակապատկերային ստորին գոտում, մինչդեռ
-նույն ժամանակակետերը մնում են տեքստային մետադատներում հետագա ասոցիացիայի և աուդիտի համար:
-Ամբողջ JPEG-ը մնում է սահմանափակված 32 MiB-ով: Եթե `sharp` չի կարող դեկոդել կամ
-կազմել ցանցը, կամուրջը վերադառնում է անհատական JPEG շրջանակներին; հաճախորդի
-դադարեցումը դեռ տարածվում է թերթիկի գործողության միջոցով:
+Բացահայտորեն նշված տեսանյութի մասը կարող է խնդրել ժամանակակետով կոնտակտային թերթիկ: Կամուրջը կառուցում է առավելագույնը 4-սյունակ, 16-կադր JPEG ցանց: Յուրաքանչյուր 512-պիքսել բջիջը այրում է իր աղբյուրի ժամանակակետը բարձր հակադրության ստորին գոտում, մինչդեռ նույն ժամանակակետերը մնում են տեքստային մետադատներում հետագա ասոցիացիայի և աուդիտի համար: Completa JPEG-ը մնում է սահմանափակված 32 MiB-ով: Եթե `sharp` չի կարող դեկոդել կամ կազմել ցանցը, կամուրջը վերադառնում է անհատական JPEG կադրերին; հաճախորդի չեղարկումը դեռ տարածվում է թերթիկի գործողության միջոցով:
 
-Հրապարակման ապացույցը դիտավորյալ առանձին է սինթետիկ կազմի
-միկրոբենչմարկից: `scripts/perf/video-bridge-contact-sheet-eval.ts` սահմանում է
-սխեմա-վարկանիշային A/B սարքավորում իրական OpenAI-համատեղ տեսողական մոդելների համար:
-Այն չափում է մատակարարի հաղորդած նշանները, վերջից վերջի պատի ուշացումը (ներառյալ
-թերթիկի կազմումը), մոդելի զանգերի քանակը և մանիֆեստ-սահմանված փաստերի պահպանումը:
-خام մոդելի պատասխանները չեն գրանցվում հաշվետվությունում; միայն SHA-256 խտացումները և
-համապատասխան փաստերի ID-ները պահպանվում են: Սարքը չի կատարում որևէ ցանցային կամ
-վճարված մոդելի զանգ, եթե `--execute-real` չի փոխանցվում և `--model`,
-`OMNIROUTE_BASE_URL` և `OMNIROUTE_API_KEY` չեն կարգավորվում: Այդ բացահայտ իրական
-գործողության բացակայության դեպքում, նրա մեքենայով ընթերցվող վճիռը մնում է `HOLD`;
-սինթետիկ բեռի/զանգերի քանակի չափումները միայն չեն հանդիսանում հրապարակման ապացույց:
+Գովազդի ապացույցը դիտավորյալ առանձին է սինթետիկ կազմի միկրոքննարկումից: `scripts/perf/video-bridge-contact-sheet-eval.ts` սահմանում է սխեմայի տարբերակված A/B սարքավորում իրական OpenAI-համատեղելի տեսողական մոդելների համար: Այն չափում է մատակարարի հաղորդած տոքենները, վերջից վերջի պատի ուշացումը (ներառյալ թերթիկի կազմումը), մոդելի զանգերի քանակը և մանիֆեստով սահմանված փաստերի պահպանումը: خام մոդելի պատասխանները չեն գրանցվում հաշվետվությունում; միայն SHA-256 խտացումները և համապատասխան փաստերի ID-ները պահպանվում են: Սարքը չի կատարում ցանցային կամ վճարված մոդելի զանգ, եթե `--execute-real` չի փոխանցվում և `--model`, `OMNIROUTE_BASE_URL`, և `OMNIROUTE_API_KEY` չեն կարգավորվում: Առանց այդ բացահայտ իրական գործառույթի, նրա մեքենայաբար ընթերցվող վճիռը մնում է `HOLD`; սինթետիկ բեռի/զանգերի քանակի չափումները միայն չեն հանդիսանում գովազդի ապացույց:
 
-Ազատ `scripts/perf/video-bridge-promotion-eval.ts` սպառում է FU-07 կամ
-FU-09 դիտարկումներ: Հրապարակման ընդունումը պահանջում է բոլոր ութ սինթետիկ
-սցենարի տեսակները, ինչպես նաև մաքրված իրական կլիպ, առնվազն երեք չափված կրկնություններ
-ամեն դեր և դեպքի համար, բոլոր տասը հայտարարված մետրիկաները, սառեցված մեդիա/խթան/սպասվող-փաստ/կարգավորումների
-խտացումները, եզակի դիտարկման ID-ները և հաստատված սերմավորված A/B կարգը: Գործողության
-թերթիկը կապում է կորպուսի խտացումը, ճշգրիտ թեկնածու SHA-ն և մոդելի տարբերակը:
-Կորած կամ անվավեր չափումները մնում են `HOLD`, ներառյալ CPU-ն 30 վայրկյանից
-վերև, առավելագույն RSS 512 MiB-ից վեր կամ նախնական վերլուծություն 30 վայրկյանից
-վեր: Սա ապացույց-ընդունման սահմանափակումներ են, ոչ թե նոր
-գործողության RSS-ի պարտադիր երաշխիք:
+Անհատական `scripts/perf/video-bridge-promotion-eval.ts` սպառում է FU-07 կամ FU-09 դիտարկումներ: Գովազդի ընդունումը պահանջում է բոլոր ութ սինթետիկ սցենարի տեսակները, ինչպես նաև մաքրված իրական կադր, առնվազն երեք չափված կրկնություններ յուրաքանչյուր դերի և դեպքի համար, բոլոր տասը հայտարարագրված մետրիկաները, սառեցված մեդիա/խթան/սպասվող-փաստ/կարգավորումների խտացումները, եզակի դիտարկման ID-ները և հաստատված սերմավորված A/B կարգը: Գործողության վկայականը կապում է կորպուսի խտացումը, ճշգրիտ թեկնածու SHA-ն և մոդելի տարբերակը: Կորած կամ անվավեր չափումները մնում են `HOLD`, ներառյալ CPU-ն 30 վայրկյանից բարձր, գագաթային RSS 512 MiB-ից բարձր կամ նախնական վերլուծությունը 30 վայրկյանից բարձր: Սա ապացույց-ընդունման սահմաններ են, ոչ թե նոր գործառնական RSS-ի պարտադիր երաշխիք:
 
-FU-07 պահանջում է առնվազն 98% որակի պահպանություն և p95 ուշացում ոչ ավելի քան 1.2x
-հիմնական, ինչպես նաև կամ 0.05 բացարձակ դեպքի հավասարակշռված միջին հիշողության
-բարելավում հավասար միջին վերնագրերի զանգերի դեպքում, կամ առնվազն 10% ավելի քիչ
-միջին հետկրկնօրինակման վերնագրերի զանգեր: FU-09 պահանջում է առնվազն 0.85 որակ,
-95% պահպանություն, 20% p95 ուշացման նվազեցում և 10% նշանի նվազեցում: Կրիտիկական-փաստի
-կորուստը, ներարկման համապատասխանությունը կամ կորած օգտագործումը կանխում են
-հրապարակումը: Մի գործողություն չի կարող առաջադրել ոչինչ: `--previous-report` հաստատում է
-երկու տարբեր, ոչ-համընկնող, հաջորդականորեն իրավասու գործողություններ նույն քաղաքականության/մոդելի
-տարբերակի/թեկնածուի/կորպուսի համար: Նմուշավորման փորձը չի կարող հաստատել
-կոնտակտային թերթիկի փորձը:
+FU-07 պահանջում է առնվազն 98% որակի պահպանություն և p95 ուշացում ոչ ավելի, քան 1.2x
+հիմնական, ինչպես նաև կամ 0.05 բացարձակ դեպքերի հավասարակշռված միջին հիշողության բարելավում
+համարժեք միջին վերնագրերի զանգերի դեպքում, կամ առնվազն 10% ավելի քիչ միջին հետադարձ
+վերնագրերի զանգեր: FU-09 պահանջում է առնվազն 0.85 որակ, 95% պահպանություն, 20% p95 ուշացման
+կրճատում և 10% նշանների կրճատում: Կրիտիկական փաստերի կորուստը, ներարկման համապատասխանությունը կամ
+կորցրած օգտագործումը կանխում են առաջխաղացումը: Մի կատարում չի կարող առաջխաղացնել ոչինչ:
+`--previous-report` հաստատում է նույն քաղաքականության/մոդելի վերանայման/դիտարկման
+երկու տարբեր, չհամընկնող, հաջորդականորեն իրավասու կատարումների առկայությունը:
+Նմուշառման փորձարկումը չի կարող հաստատել կոնտակտային թերթիկի փորձարկումը:
 
-Հավաքողները պետք է գնահատեն պատասխանները հիշողության մեջ և պահպանեն `responseDigest`-ը, ինչպես նաև մետրիկաներն ու դիտարկման կապերը, երբեք պատասխանային տեքստը: Օգտագործողը նաև ընթերցում է հին خام դիտարկումները, բայց երբեք չի պատճենում այդ տեքստը իր հաշվետվություններում: Յուրաքանչյուր դիտարկման համար ընդունվում է միայն մեկ `responseDigest` կամ `rawResponseText`. Վարկանիշային թույլտվությունը մնում է դատարկ անփոփոխ `hold` նախնական արժեքով: Հարմարավետ մուտքը պահանջում է իր ապացույցի հղումը, քաղաքականությունը, մոդելի վերանայումը, ճշգրիտ թեկնածուի SHA-ն, մանիֆեստի դիգեստը և երկու տարբեր գործարկման ID-ներ; հակասական համատեքստերը մերժվում են: Այս մետադատները աուդիտի պայմանագիր են, ոչ թե ապացույց, որ հղված ֆայլը պարունակում է իսկական չափումներ: Նախքան ցանկացած մուտք ավելացնելը, վերանայեք իրական ստացումները: Կառավարման վիճակագրության վերջնակետը և Տեսանյութի վահանակը բացահայտում են պահպանողական պատրաստակամություն: Միայն կարգավորված մոդելի ալիասը չի հաստատում իր վերանայումը կամ գործող թեկնածուի SHA-ն, այնպես որ, ներկայիս վահանակը հաղորդում է `HOLD`, այլ ոչ թե օգտագործում է հարմարավետությունը այլ գործարկման համատեքստից: Բացահայտ փորձնական ընտրությունը մնում է առանձին առաջխաղացումից; ոչ մի նախնական արժեք ավտոմատ կերպով չի փոխվում:
+Հավաքողները պետք է գնահատեն պատասխանները հիշողության մեջ և պահպանեն `responseDigest`
+և մետրիկներ ու դիտարկման կապեր, երբեք պատասխանային տեքստը: Օգտագործողը նաև ընթերցում է
+հին خام դիտարկումները, բայց երբեք չի պատճենում այդ տեքստը իր հաշվետվություններում:
+Հստակ մեկ `responseDigest` կամ `rawResponseText` ընդունվում է յուրաքանչյուր դիտարկման համար:
+Վարկանիշային թույլտվությունը մնում է դատարկ անշարժ `hold` նախնականով:
+Իրավասու մուտքը պահանջում է իր ապացույցի հղումը, քաղաքականություն, մոդելի վերանայում,
+ճիշտ թեկնածու SHA, մանիֆեստի հումք և երկու տարբեր կատարումների ID-ներ; հակասական
+համատեքստերը մերժվում են: Այս մետադատները աուդիտի պայմանագիր են, ոչ թե ապացույց, որ
+հղված ֆայլը պարունակում է իսկական չափումներ: Ավելացնել ցանկացած մուտք առաջ
+հաստատելուց առաջ դիտեք իրական ստացումները: Կառավարման վիճակագրության վերջնակետը
+և Video վահանակը բացահայտում են պահպանողական պատրաստակամություն:
+Կոնֆիգուրացված մոդելի ալիասը միայնակ չի հաստատում իր վերանայումը կամ
+գործող թեկնածու SHA-ն, այնպես որ ներկայիս վահանակը հաղորդում է `HOLD`
+հակառակ դեպքում այլ կատարողական համատեքստից իրավասություն վերօգտագործելու:
+Հստակ փորձնական ընտրությունը մնում է առանձին առաջխաղացումից;
+ոչ մի նախնական կարգավիճակ ավտոմատ կերպով չի փոխվում:
 
-Զանգահարողները կարող են միացնել ընտրովի `transcript.cues` զանգվածը աջակցվող տեսանյութի մասի, երբ նրանք արդեն ունեն համընկնող տեքստ: Յուրաքանչյուր ազդակ պետք է պարունակի `text`, սահմանափակ `start`/`end` միջակայք փորձարկված տևողության մեջ, և սպիտակ ցուցակում ընդգրկված `source` (`client`, `embedded`, կամ `audio-bridge`); `confidence`-ը նախնական արժեքով `1` է և պետք է մնա `0` և `1` միջև: Ցանկացած կրկնվող ազդակներ խտացվում են: OmniRoute երբեք չի սկսում տեքստագրություն այս մետադատներից. վավերացված ազդակները պատճենվում են նկարագրված արդյունքին `source`, `confidence`, և միջակայքով, և ներկայացվում են որպես անվստահ դիտարկումներ կողքի վերնագրերի հետ: Անվավեր, սահմաններից դուրս կամ ծագման բաց տեքստը մերժվում է, այլ ոչ թե խառնվում վերնագրերի հոսքին: Երկու խնդրանք-մարմնի տեքստագրության ալիքները նորմալացնում են տրամադրված ծագումը `client`, ներառյալ ինքնա-հաստատված `embedded` կամ `audio-bridge` պիտակները: Միայն սերվերի սեփական ադապտերը կարող է նշանակել այդ վստահված պիտակները `trustedSource` արգումենտի միջոցով; խնդրանքի JSON դաշտը չի կարող հասնել այդ արգումենտին: Տեքստագրության տեքստը մնում է անվստահ մեդիա-առաջացած բովանդակություն, անկախ իր ծագումից, և երբեք չի պետք է որոշի լիազորումը:
+Զանգահարողները կարող են միացնել ընտրովի `transcript.cues` զանգված
+աջակցվող տեսանյութի մասի, երբ նրանք արդեն ունեն համընկնող տեքստ:
+Յուրաքանչյուր ազդանշան պետք է պարունակի `text`, սահմանափակ `start`/`end`
+ժամանակահատված ներսում փորձարկված տևողության, և սպիտակ ցուցակում
+գտնվող `source` (`client`, `embedded`, կամ `audio-bridge`);
+`confidence`-ը նախնական է `1` և պետք է մնա `0` և `1` միջև:
+Հստակ կրկնվող ազդանշանները կրճատվում են:
+OmniRoute երբեք չի սկսում տեքստագրություն այս մետադատներից.
+հաստատված ազդանշանները պատճենվում են նկարագրված արդյունքին
+հետ միասին աղբյուրի, վստահության և ժամանակահատվածի,
+և ներկայացվում են որպես անվստահ դիտարկումներ կողքի վերնագրերի հետ:
+Անվավեր, սահմաններից դուրս կամ ծագման բաց տեքստը մերժվում է,
+այլ ոչ թե խառնվում վերնագրերի հոսքին: Երկու խնդրանք-մարմնի
+տեքստագրության ալիքները նորմալացնում են տրամադրված ծագումը
+`client`, ներառյալ ինքնահաստատված `embedded` կամ `audio-bridge`
+պիտակները: Միայն սերվերի սեփական ադապտերը կարող է
+հանձնարարել այդ վստահ պիտակները `trustedSource`
+արգումենտի միջոցով միայն կոդի միջոցով;
+խնդրանքի JSON դաշտը չի կարող հասնել այդ արգումենտին:
+Տեքստագրության տեքստը մնում է անվստահ մեդիա-առաջացած բովանդակություն,
+անկախ իր ծագումից, և երբեք չի պետք է որոշի
+հեղինակությունը:
 
-Նախ avanzado զանգահարողը կարող է տրամադրել `audioTranscript` ուղի նույն տեսանյութի համար; այն դիտվում է որպես հաճախորդի տրամադրված տեքստ, ոչ թե սերվերի տեքստագրության ապացույց: Միաձուլման սոսինքը վիզուալ և աուդիո դիտարկումները վարում է մեկ ժամկետ և ընդհատման ազդանշան, կարգավորում է դրանք ընդհանուր ժամանակային գծով, խտացնում է ճշգրիտ կրկնությունները և հաղորդում է մասնակի արդյունք, երբ միայն մեկ կողմը հաջողվում է: Անվավեր `audioTranscript`-ը նվազում է այդ մասնակի արդյունքին՝ վիզուալ նկարագրությունը պահպանվում է, իսկ աուդիո ճյուղը գրանցում է մաքրված ձախողման կոդ՝ փոխարենը ամբողջ տեսանյութը ձախողելու: Յուրաքանչյուր ճյուղի հասանելիությունը, մասնակի դրոշը և մաքրված ձախողման կոդերը պահպանվում են նկարագրված արդյունքում, պաշտպանիչ մետադատներում (`audioFusionRuns`/`audioFusionPartials`/`audioFusionFailureCodes`), արդյունքի-քեշի մետադատներում և կամուրջի միաձուլման հաշվումներում: Դեֆոլտ Տեսանյութի Կամուրջի ուղին չի հրավիրում խոսքից տեքստ կամ ներբեռնում երկրորդ մեդիա պատճեն; առանց այդ բացահայտ ուղու, այն մնում է միայն տեսանյութ:
+Ավելի առաջադեմ զանգահարողը կարող է տրամադրել `audioTranscript`
+ուղի նույն տեսանյութի համար; այն դիտվում է որպես հաճախորդի կողմից
+տրամադրված տեքստ, ոչ թե սերվերի տեքստագրության ապացույց:
+Ֆուզիոնի սոսնձը վիզուալ և աուդիո դիտարկումները
+ընթացքում մեկ վերջնաժամկետ և դադարեցման ազդանշանի տակ,
+պատվիրում է դրանք ընդհանուր ժամանակային գծում,
+կրճատում է հստակ կրկնությունները, և հաղորդում է մասնակի արդյունք,
+երբ միայն մեկ կողմը հաջողվում է:
+Անվավեր `audioTranscript`-ը վատթարանում է այդ մասնակի արդյունքին
+— վիզուալ նկարագրությունը պահպանվում է, իսկ աուդիո ճյուղը
+գրանցում է մաքրված ձախողման կոդ —
+փոխարենը ամբողջ տեսանյութը ձախողելու:
+Յուրաքանչյուր ճյուղի հասանելիությունը, մասնակի դրոշը
+և մաքրված ձախողման կոդերը պահպանվում են նկարագրված արդյունքում,
+պաշտպանիչ մետադատներում (`audioFusionRuns`/`audioFusionPartials`/
+`audioFusionFailureCodes`), արդյունքի-քեշի մետադատներում,
+և կամուրջի ֆուզիոնի հաշվումներում:
+Նախնական Video Bridge ուղին չի հրավիրում խոսքից տեքստ
+կամ երկրորդ մեդիա պատճեն ներբեռնելու;
+այս հստակ ուղու բացակայության դեպքում, այն մնում է
+տեսանյութ-միայն:
 
-**Տեքստագրության պահպանման (#12150 P1):** Սա ավտոմատ կերպով կիրառվում է, երբ Տեսանյութի Կամուրջը (նաև ընտրովի) ներկայացնում է տեքստագրության ազդակ — առանձին պահպանման դրոշ չկա: Երբ որևէ խնդրանք ներկայացնում է ցանկացած տեքստագրության ազդակ (զանգահարողի հայտարարած `transcript` կամ միաձուլված `audioTranscript`), պաշտպանիչը նշում է այն `videoBridgeObserved` և արտադրում է տեսանյութի նկարագրության մաքրված ստվեր — նույնական ներկայացում, որտեղ յուրաքանչյուր ազդակի ազատ տեքստի մարմինը փոխարինվում է `[redacted-video-transcript]`-ով, որը կառուցվում է կառուցվածքային ազդակի դաշտը փոխարինելով նախքան տողը հավաքելը (երբեք չհավաքելով հարթեցված տեքստը, այնպես որ, որևէ ազդակի բովանդակություն — հակառակորդ կամ սովորական, ներառյալ մարմինները, որոնք պարունակում են `]`, ինչպիսիք են `[inaudible]`/`[music]` — չեն կարող գոյատևել): Պահպանված զանգի-լոգի խնդրանքի մարմինը փոխում է յուրաքանչյուր տեսանյութից առաջացած տեքստի մասը այդ մաքրված ստվերի համար, բովանդակության հավասարության միջոցով; `fullText` ակցենտը կրկին ընթերցվում է ավարտված նախքան-զանգի պաշտպանիչ բեռից, այնպես որ, համընկնումը դեռ հաջողվում է հետո ուշ շղթայի պաշտպանիչները (PII և հավատարմագրերի մաքրողներ, առաջնահերթություններ 10/95) վերագրում են նկարագրության տեքստը տեղում և հետո համակարգի-խթան/հանձնում/հիշողության ներարկումը ձևափոխում է հաղորդագրության զանգվածը: Մոդելին ուղարկված մարմինը չի փոխվում: Նկատված խնդրանքը նույնպես չի բնակեցնում որևէ կայուն Հիշողություն (երկու խնդրանքի և պատասխանների-derived հանման գործընթացները բաց են թողնվում), այնպես որ, մոդելի սեփական պատասխանն չի կարող կրկնել տեքստագրության տեքստը Հիշողության մեջ:
+**Տեքստագրության պահպանություն (#12150 P1).** Սա ավտոմատ կերպով կիրառվում է,
+երբ Video Bridge-ը (ինքնին ընտրովի) ստեղծում է
+տեքստագրության ազդանշան — առանձին պահպանման դրոշ չկա:
+Երբ խնդրանքը ստեղծում է ցանկացած տեքստագրության ազդանշան
+(զանգահարողի կողմից հայտարարված `transcript` կամ
+ֆուզավորված `audioTranscript`), պաշտպանիչը նշում է այն
+`videoBridgeObserved` և արտադրում է տեսանյութի նկարագրության
+կարմիրացված ստվեր — նույնական ներկայացում,
+որտեղ յուրաքանչյուր ազդանշանի ազատ տեքստի մարմինը
+փոխարինվում է `[redacted-video-transcript]`-ով,
+որը կառուցվում է կառուցվածքային ազդանշանի դաշտը
+փոխարինելով նախքան տողը հավաքելը (երբեք չհավաքելով
+հարթեցված տեքստը, այնպես որ ոչ մի ազդանշանի բովանդակություն
+— հակառակորդ կամ սովորական, ներառյալ մարմինները,
+որոնք պարունակում են `]`, ինչպիսիք են `[inaudible]`/`[music]` —
+չեն կարող գոյատևել):
+Պահպանված զանգվածի խնդրանքի մարմինը փոխում է
+ամեն տեսանյութ-առաջացած տեքստի մասը այդ կարմիրացված ստվերի
+համար, համապատասխանելով բովանդակության հավասարությանը;
+`fullText` ակցիան կրկին ընթերցվում է ավարտված նախքան-զանգի
+պաշտպանիչ բեռից, այնպես որ համընկնումը դեռ հաջողվում է
+հետագայում շղթայական պաշտպանիչները (PII և
+հավաստագրերի մաքրողներ, առաջնահերթություններ 10/95)
+վերաշարադրում են նկարագրության տեքստը տեղում և
+հետո համակարգի-խթան/հանձնում/հիշողության ներարկում
+վերափոխում են հաղորդագրության զանգվածը:
+Մոդելին ուղարկված մարմինը չի փոխվում:
+Դիտարկված խնդրանքը նույնպես չի բնակեցնում
+պայմանավորված հիշողություն (երկու խնդրանքի և
+պատասխանի-derived հանումները բաց են թողնվում),
+այսպես մոդելի սեփական պատասխանն
+չի կարող կրկնել տեքստագրության տեքստը
+հիշողության մեջ:
 
-**خام տեսանյութի դաշտեր (#12430):** Երբ կամուրջը ակտիվ է, և բնիկ տեսանյութի աջակցությունը հայտնի կամ բացակայում է, սահմանված `transcript`/`audioTranscript` դաշտերը նույնպես ակտիվացնում են `videoBridgeObserved`, նույնիսկ նկարագրության ձախողման կամ `maxVideos` սահմանափակման դեպքում: `null` և դատարկ տողերը հաշվում են; բացակայող դաշտերը և ոչ-տեսանյութի մետադատները չեն հաշվում: Պահպանված պատճենները մաքրում են այս դաշտերը կամ բաց թողնում խնդրանքը, և քեշերը/Հիշողությունը շրջանցվում են: Տրամադրողի բեռը մնում է անփոփոխ:
+**خام տեսանյութի դաշտեր (#12430).** Երբ կամուրջը ակտիվացված է
+և բնօրինակ տեսանյութի աջակցությունը հայտնի կամ բացակայում է,
+որոշված `transcript`/`audioTranscript` դաշտերը նույնպես ակտիվացնում են
+`videoBridgeObserved`, նույնիսկ նկարագրության ձախողման կամ
+`maxVideos` սահմանափակման դեպքում: `null` և դատարկ տողերը
+հաշվում են; բացակայող դաշտերը և ոչ-տեսանյութի մետադատները չեն:
+Պահպանված պատճենները կարմիրացնում են այս դաշտերը կամ
+թողնում են խնդրանքը, և քեշերը/Հիշողությունը
+անցնում են: Տրամադրողի բեռը մնում է անփոփոխ.
 
-Ավելորդ պահպանված պատճենները օգտագործում են նույն դիտված-խնդրանքի ազդանշանը: خام նախապաշտպանող հաճախորդի-խնդրանքի լուսանկար, հիշողության մեջ սպասող խնդրանքը և վաղ մերժված-խնդրանքի լոգը կառուցվածքային կերպով փոխարինում են տեքստագրության դաշտերը տեսանյութի մասերում; տողային հրահանգները, որոնք սինթեզվում են խողովակաշարի փուլերով և համատեքստի փոխանցմամբ, մաքրում են պահպանված-խնդրանքի մարմնի խողովակում: Պահպանված `video_content_removed` նշանը ստիպում է `previous_response_id` շարունակությունը փակ ձախողել, այլ ոչ թե վերականգնել տեքստը, որը դիտավորյալ մերժվել է: Եթե դիտված խնդրանքը կորցնում է իր յուրաքանչյուր մասի մաքրող ստվերը նախքան գրանցումը, կամ նույնիսկ մի քանի տեսանյութի ստվերներից մեկը չի համապատասխանում հետո ուշ խնդրանքի փոփոխություններին, պահպանված խնդրանքի մարմինը ամբողջությամբ բաց է թողնվում, այլ ոչ թե պահպանվում է մասնակի մաքրված տեքստագրություն:
+Ավելացված պահված պատճենները օգտագործում են նույն դիտված-հարցման ազդանշանը: خام
+նախնական-պաշտպանիչ հաճախորդի-հարցման լուսանկար, հիշողության մեջ սպասող հարցումը և վաղ
+հրաժարված-հարցման օրագիրը կառուցվածքայինորեն փոխարինում են վիդեո մասերի տրանսկրիպտի դաշտերը;
+խոսքային հրահանգները, որոնք սինթեզվում են խողովակաշարի փուլերով և համատեքստի փոխանցմամբ, մաքրվում են
+պահված-հարցման-մարմնի խողովակում: Պահված `video_content_removed` նշանը
+դարձնում է `previous_response_id` շարունակությունը փակ, այլ ոչ թե վերակառուցել
+տեքստը, որը դիտավորյալ հեռացվել է: Եթե դիտված հարցումը կորցնում է իր
+մաս-մաս մաքրման ստվերը նախքան օրագրումը, կամ նույնիսկ մի քանի վիդեո ստվերներից մեկը
+չի համապատասխանում հետագա հարցումների փոփոխություններից հետո, պահված հարցման մարմինը
+ամբողջությամբ բացակայում է, այլ ոչ թե պահվում է մասնակի մաքրված տրանսկրիպտ:
 
-Հետազոտված հարցման համար մոդելի պատասխանն կարող է մեջբերել տրանսկրիպտի ցանկացած հատված առանց կառուցվածքային ազդանշանի սահմանագծի: Դրա պահպանված զանգի օրագրի `responseBody`-ը, հետևաբար, փոխարինվում է բաց թողնման նշանով; մանրամասն pipeline արհեստական օբյեկտը (որը կարող է ներառել վերին/հաճախորդի մարմիններ և հոսքային կտորներ) չի պահպանվում: Սեմանտիկ, իդեմպոտենտություն և պատճառաբանման-վերադարձի կեշերը շրջանցում են ընթերցումները և գրառումները այդ հարցման համար: Մատակարարի հարցումն ու հաճախորդի տեսանելի պատասխանն անփոփոխ են մնում: Նախնական keepalive բայթերը դուրս են հանվում ժամանակավոր բուֆերից, երբ մանրամասն արհեստական օբյեկտը բաց է թողնվում: Kiro-ի սխալ EventStream զգուշացումը հաղորդում է միայն բեռի բայթերի քանակը, երբեք դրա պարունակությունը կամ JSON վերլուծիչի خام սխալը:
-Սա չի պնդում, որ յուրաքանչյուր անկապ մատակարարի/պլագինի ախտորոշում audited է; ավելի լայն պահպանված-ջրահեռացման մաքրումը հետևվում է #11658-ում:
+Դիտված հարցման համար մոդելի պատասխանն կարող է մեջբերել տրանսկրիպտի ցանկացած հատված
+առանց կառուցվածքային ազդանշանի սահման: Այնպես որ, դրա պահված զանգի-օրագիր
+`responseBody` փոխարինվում է բացակայության նշանով; մանրամասն
+խողովակաշարի արհեստական (որը կարող է ներառել վերին/հաճախորդի մարմիններ և հոսքի կտորներ)
+չի պահվում: Սեմանտիկ, իդեմպոտենտություն և մտածման-վերադարձման կոշտերը շրջանցում են
+դիտումները և գրառումները այդ հարցման համար: Մատակարարի հարցումը և հաճախորդի տեսանելի
+պատասխանը մնում են անփոփոխ: Վաղ պահպանումը հեռացվում է ժամանակավոր
+բուֆերից, երբ մանրամասն արհեստականը բացակայում է: Կիրոյի սխալ ձևավորված EventStream
+հայտարարությունը հաղորդում է միայն բեռի բիթերի քանակը, երբեք դրա պարունակությունը կամ JSON
+վերլուծողի خام սխալը:
+Այսը չի պնդում, որ յուրաքանչյուր անկապ մատակարարի/պլագինի ախտորոշում է ստուգվել; ավելի լայն
+պահված-խողովակի մաքրումը հետևվում է #11658-ում:
 
-Արտաքին `/api/modality-bridge/video/drilldown` կյանքի ցիկլը առանձին, շրջադարձային/թոքեն-ավտորիզացված կեշի ենթակառուցվածք է: Յուրաքանչյուր գործողություն նաև պահանջում է կանոնական անթափանց սկզբնական ID: Նախքան արտադրական զանգահարողի ակտիվացումը, այն պետք է ստանա այդ ID-ն վավերացված վարձակալից և երբեք չպետք է փոխանցի հաճախորդի ընտրած արժեքը: Կեշի բանալիները կապում են այդ սկզբնական ID-ն կանոնական նստաշրջանի և տեսանյութի-հղման ID-ների հետ, պահում են միայն նրանց SHA-256-ով ստացված բանալիները և սահմանափակում են ինչպես ընթերցումները, այնպես էլ ջնջումը նույն սկզբնական ID-ի համար: Կեշը պահում է առավելագույնը 16 ստացված JPEG շրջանակներ յուրաքանչյուր գրառման համար, ավարտվում է տասը րոպե հետո և աջակցում է սահմանափակ `start`/`end` ընթերցումներին կամ հստակ նստաշրջանի ջնջմանը:
+Ներքին `/api/modality-bridge/video/drilldown` կյանքի ցիկլը առանձին,
+կրկնակի/թոքեն-հավաստագրված կոշտի ենթահող է: Յուրաքանչյուր գործողություն նաև պահանջում է
+կանոնական անթափանց հիմնական ID: Նախքան արտադրական զանգահարողը ակտիվացվի, այն պետք է
+ստանա այդ ID-ն հավաստագրված վարձակալից և երբեք չպետք է փոխանցի
+հաճախորդի ընտրած արժեքը: Կոշտի բանալիները կապում են այդ հիմնականը կանոնական նստաշրջանի և
+վիդեո-հղման ID-ների հետ, պահում են միայն նրանց SHA-256-ով ստացված բանալիները, և սահմանում
+ինչպես ընթերցումները, այնպես էլ ջնջումը նույն հիմնականի համար: Կոշտը պահում է առավելագույնը 16
+ստացված JPEG շրջանակ յուրաքանչյուր գրառման համար, սպառում է դրանք տասը րոպե հետո, և աջակցում է սահմանափակ
+`start`/`end` ընթերցումներին կամ բացահայտ նստաշրջանի ջնջմանը:
 
-Յուրաքանչյուր սկզբնական ID-ն սահմանափակված է 16 գրառումներով և 64 MiB կանոնական JPEG տվյալներով: Այդ սահմանափակումները անկախ են գլոբալ 64-գրառման/256 MiB առաստաղից. սկզբնական քվոտայի ճնշումը դուրս է մղում միայն այդ սկզբնական ID-ի ամենաքիչ-վերջին օգտագործված գրառումները, նախքան գլոբալ LRU դուրս մղումը դիտարկելը: Վավերացված գրառումները մաքրվում են ինչպես սկզբնական, այնպես էլ գլոբալ հաշվարկից կեշի ակտիվության ժամանակ, մինչդեռ չեղարկումը և վավերացման ձախողումը չեն կատարում մասնակի փոխարինում:
+Յուրաքանչյուր հիմնականը սահմանափակվում է 16 գրառմամբ և 64 MiB կանոնական JPEG տվյալներով: Այդ
+սահմանափակումները անկախ են համաշխարհային 64-գրառման/256 MiB վերին սահմանից. հիմնականի քվոտայի
+ճնշումը հեռացնում է միայն այդ հիմնականի ամենաքիչ-վերջերս-օգտագործված գրառումները, նախքան համաշխարհային
+LRU հեռացումը դիտարկելը: Վերջացած գրառումները հեռացվում են ինչպես հիմնականի, այնպես էլ
+համաշխարհային հաշվարկից կոշտի գործունեության ժամանակ, մինչդեռ չեղարկումը և վավերացման ձախողումը
+չեն կատարում մասնակի փոխարինում:
 
-Կեշը մերժում է ոչ-կանոնական Base64, ավելորդ padding, ոչ-JPEG մեդիա, սխալ կամ կրճատված JPEG-ներ և JPEG-ներ, որոնք առաջացնում են զգուշացում սահմանափակ ամբողջական պատկեր `sharp` վերծանման ժամանակ: Այն վերակոդավորում է յուրաքանչյուր ընդունված պատկեր որպես կանոնական JPEG, ստանում է լայնությունը և բարձրությունը վերծանված բայթերից, այլ ոչ թե վստահում զանգահարողի դաշտերին, և մերժում է ցանկացած հետագա պոլիգլոտ բայթեր, այլ ոչ թե պահում դրանք: Միայն սահմանափակ կանոնական սեղմված բուֆերը հաշվարկվում է երկու քվոտաների համար: JSON մալուխի սահմանը ներառում է Base64-ի ավելցուկը 32 MiB վերծանված-մուտքային առաստաղի համար: Յուրաքանչյուր պահված ստացում գրանցում է իր վավերացված JPEG ձևաչափը/լուծումը, նմուշավորման քաղաքականությունը, ստացման տարբերակը, ստեղծման ժամանակը, սերվերի կողմից հաշվարկված բովանդակության հեշը և հեշավորված ծնողական հղումը, ինչպես նաև վստահված զանգահարողի ծնողական բովանդակության հեշը: Չեղարկումը ստուգվում է ասինխրոն վերծանման/հեշավորման փուլերի միջև, նախքան ատոմիկ կեշի հանձնումը:
+Կոշտը մերժում է ոչ-կանոնական Base64, ավելորդ padding, ոչ-JPEG մեդիա, սխալ ձևավորված կամ
+կրճատված JPEG-ներ, և JPEG-ներ, որոնք առաջացնում են նախազգուշացում սահմանափակ լի-պատկեր `sharp`
+վերծանման ժամանակ: Այն վերածնում է յուրաքանչյուր ընդունված պատկերն որպես կանոնական JPEG, ստանում է լայնությունը և բարձրությունը
+վերծանված բիթերից, այլ ոչ թե վստահելով զանգահարողի դաշտերին, և հեռացնում է ցանկացած հետևող
+պոլիգլոտ բիթեր, այլ ոչ թե պահում դրանք: Միայն սահմանափակ կանոնական սեղմված բուֆերը
+հաշվարկվում է երկու քվոտաների համար: JSON-ի մալուխի սահմանը ներառում է Base64-ի ավելցուկը 32 MiB
+վերծանված-մտածված վերին սահմանին: Յուրաքանչյուր
+պահված ստացում գրանցում է իր վավերացված JPEG ձևաչափը/լուծումը, նմուշավորման քաղաքականությունը,
+ստացման տարբերակը, ստեղծման ժամանակը, սերվեր-հաշվարկված բովանդակության հեշը, և հեշավորված ծնողական
+հղումը, ինչպես նաև վստահված զանգահարողի ծնողական-բովանդակության հեշը: Չեղարկումը ստուգվում է
+ասինխրոն վերծանման/հեշավորման փուլերի միջև, նախքան ատոմային կոշտի հանձնումը:
 
-Արտադրական արտադրողը կրկին օգտագործում է արդեն ստացված բրոքերային շրջանակները միայն հաջող տեսողական վերլուծությունից հետո, առանց երկրորդ տեսանյութի ներբեռնում/հանում: Այն պահանջում է օպերատորի `modalityBridgeVideoDrilldownEnabled=true`, խիստ յուրաքանչյուր մասի `drilldown: true` և վավերացված API-հիմք գրառման ID: Հաճախորդի կողմից հայտարարված սկզբնական/նստաշրջանի արժեքները երբեք չեն հաստատում սեփականությունը: Բոլոր երեք պայմանները չունենալու դեպքում այն չի հեշավորում, չի չափում կամ չի պահում լրացուցիչ շրջանակներ: Պահպանման ձախողումը պահպանվում է օգտագործելի տեսողական պատասխանով: Համաձայնեցված հարցումները շրջանցում են ամբողջ-տեսանյութի արդյունքների կեշը, այնպես որ կեշավորված արդյունքները երբեք չեն վերարտադրում ձեռքեր:
+Արտադրական արտադրողը կրկին օգտագործում է արդեն ստացված բրոքերային շրջանակները միայն հաջող
+տեսողական վերլուծությունից հետո, առանց երկրորդ վիդեո ներբեռնում/հեռացման: Այն պահանջում է օպերատոր
+`modalityBridgeVideoDrilldownEnabled=true`, խիստ մաս-մաս `drilldown: true`, և
+հավաստագրված API-հիմնավորման գրանցման ID: Հաճախորդի հայտարարած հիմնական/նստաշրջանի արժեքները երբեք
+չեն հաստատում սեփականությունը: Բոլոր երեք պայմանները չունենալու դեպքում այն չի հեշավորում, չի չափում կամ չի պահում
+ավելորդ շրջանակներ: Պահպանումի ձախողումը պահպանել է օգտագործելի տեսողական պատասխան: Համաձայնեցված
+հարցումները շրջանցում են ամբողջ-վիդեո արդյունքի կոշտը, այնպես որ պահված արդյունքները երբեք չեն վերարտադրում ձեռքեր:
 
-Հաջող JSON և SSE պատասխանները բացահայտում են առավելագույնը չորս անթափանց ձեռքեր սահմանափակ `x-omniroute-video-drilldown` գլխում: Արդյունավետ բրաուզերի աղբյուրները կարող են կարդալ այդ գլխիկը առանց CORS աղբյուրի քաղաքականության ընդլայնման: Նոր ձեռքեր օգտագործում են `v1.<32-byte random base64url token>`, և գրանցամատյանը պահում է միայն նրանց SHA-256 հեշերը: Ընթերցող/գլխիկի վերլուծիչը նաև ընդունում է հին 64-hex ձեռքեր: Վավերացված հանրային սպառողը
-`GET /api/v1/video-bridge/drilldown?handle=...`, անկախորեն փակված է
-`modalityBridgeVideoDrilldownRemoteEnabled=true`. Հստակ պահպանված կեղծը վերացնում է մուտքը նույնիսկ այն դեպքում, երբ հին `OMNIROUTE_VIDEO_BRIDGE_DRILLDOWN_REMOTE_ENABLED` env
-հետադարձումը ակտիվ է: Արտադրական պահպանման համար կա համանման հին
-`OMNIROUTE_VIDEO_BRIDGE_DRILLDOWN_ENABLED` հետադարձումը: Երկու հետադարձումները ըստ կանխորոշման անջատ են:
+Հաջող JSON և SSE պատասխանները բացահայտում են առավելագույնը չորս անթափանց ձեռքեր սահմանափակ
+`x-omniroute-video-drilldown` գլխում: Հավաստագրված բրաուզերի աղբյուրները կարող են կարդալ այդ գլխիկը
+առանց CORS աղբյուրի քաղաքականության ընդլայնման: Նոր ձեռքեր օգտագործում են `v1.<32-byte random base64url
+token>`, և գրանցամատյանը պահում է միայն
+նրանց SHA-256 հեշերը: Ընթերցող/գլխիկի վերլուծողը նաև ընդունում է ժառանգական 64-հեքս բանալիներ:
+Հավաստագրված հանրային սպառողը
+`GET /api/v1/video-bridge/drilldown?handle=...`, անկախորեն փակված
+`modalityBridgeVideoDrilldownRemoteEnabled=true`-ով: Բացահայտ պահված կեղծը
+հրաժարում է մուտքը նույնիսկ երբ ժառանգական `OMNIROUTE_VIDEO_BRIDGE_DRILLDOWN_REMOTE_ENABLED` env
+հետադարձումը ակտիվ է: Արտադրական պահպանումը ունի համանման ժառանգական
+`OMNIROUTE_VIDEO_BRIDGE_DRILLDOWN_ENABLED` հետադարձում: Երկու հետադարձումները ըստ կանխորոշման выключены:
 
-Սպառողը ստանում է սեփականությունը վավերացված բանալուց, կիրառելով բանալիի քաղաքականությունը և վերադարձնում նույն 404-ը անհայտ, ավարտված և այլ բանալիների ձեռքերով: Այն ընդունում է
+Սպառողը ստանում է սեփականությունը հավաստագրված բանալուց, կիրառելով բանալիի քաղաքականությունը, և
+վերադարձնում է նույն 404 անհայտ, ավարտված և այլ բանալիների ձեռքեր համար: Այն ընդունում է
 `variant=preview|standard|detail` (ամենամեծ JPEG չափը 320/640/1280, երբեք չի մեծացվում),
-`limit=1..8` (կամ հին `frames` այլ անունը, երբեք երկուսն էլ), զրոյական հիմքով `page`, և ընտրովի
-`start`/`end` կենտրոնացման վայրկյաններ: կրկնակի
-հարցման բանալիները և հակառակ կենտրոնացման պատուհանները մերժվում են: Յուրաքանչյուր վերադարձված տարբերակը ունի իր իրական բովանդակության և իրական լուծման մետադատա հեշը, կապված պահպանված աղբյուրի հետ: Տարբերակները ստացվում են ընթերցման ժամանակ, այլ ոչ թե պահվում որպես լրացուցիչ պահպանված պատճեններ: JSON պատասխանն, ներառյալ Base64/փաթեթը, սահմանափակվում է 32 MiB; չափազանց մեծ էջը վերադարձնում է 413, և հաճախորդը պետք է խնդրի ավելի քիչ շրջանակներ: Ընթերցումները ստուգում են չեղարկումը յուրաքանչյուր չափման շուրջ և կրկին ստուգում են ձեռքի վավերությունը, նախքան վերադարձնելը: `DELETE` սեփականատիրոջ կողմից իդեմպոտենտ է; ջնջումը կամ TTL-ի ժամկետի ավարտը ազատում է պահպանված աղբյուրը և օգտագործման հաշվարկը:
+`limit=1..8` (կամ ժառանգական `frames` այլընտրանքը, երբեք երկուսն էլ), զրոյական-հիմնված `page`, և ընտրովի
+`start`/`end` կենտրոնացման վայրկյաններ: Դuplicated
+հարցման բանալիները և հակառակ կենտրոնացման պատուհանները մերժվում են: Յուրաքանչյուր վերադարձված տարբերակը ունի իր իրական բովանդակության և իրական լուծման մետադատա, կապված պահված աղբյուրի հետ:
+Տարբերակները ստացվում են ընթերցման ժամանակ, այլ ոչ թե պահվում որպես լրացուցիչ պահված պատճեններ: JSON
+պատասխանը, ներառյալ Base64/փաթեթը, սահմանափակվում է 32 MiB; չափազանց մեծ էջը վերադարձնում է
+413 և հաճախորդը պետք է խնդրի ավելի քիչ շրջանակներ: Ընթերցումները ստուգում են չեղարկումը յուրաքանչյուր
+չափման շուրջ և կրկին ստուգում են ձեռքի վավերությունը նախքան վերադարձնելը: `DELETE` սեփականատիրոջ կողմից իդեմպոտենտ է;
+ջնջումը կամ TTL-ի ավարտը ազատում է պահված աղբյուրը և օգտագործման հաշվարկը.
 
-Համատեղ խանութը գործընթացի տեղական է. ձեռքերն ավարտվում են վերագործարկման ժամանակ և չեն փոխանցվում անկախ OmniRoute գործընթացների միջև: Կառավարման վիճակագրությունները բացահայտում են արդյունավետ պահպանման/հեռավոր քաղաքականությունը և միայն հավաքական պահպանված գրառումները/բայթերը, երբեք մեդիա, հղումներ, սկզբնական ID-ներ կամ ձեռքեր: Տեսանյութի կարգավորումների պանելն ցույց է տալիս այդ արժեքները և կարող է պահպանել ինչպես համաձայնության switches-ը: Այս իրականացման փաստաթուղթը չի հանդիսանում կենդանի տեղադրում կամ առաջխաղացման ապացույց; իրական մոդելի ընդունումը հետևվում է առանձին:
+Համատեղ խանութը գործընթաց-տեղական է. ձեռնարկները սպառվում են վերագործարկման ժամանակ և չեն փոխանցվում անկախ OmniRoute գործընթացների միջև: Կառավարման վիճակագրությունը բացահայտում է արդյունավետ պահպանում/հեռավոր քաղաքականություն և միայն հավաքված պահված գրառումներ/բայթ, երբեք մեդիա, հղումներ, հիմնական ID-ներ կամ ձեռնարկներ: Տեսանյութի կարգավորումների պանելն ցույց է տալիս այդ արժեքները և կարող է պահպանել համաձայնության երկու переключатели: Այս իրականացման փաստաթուղթը չի հանդիսանում կենդանի տեղադրում կամ առաջխաղացման ապացույց; իրական մոդելի ընդունումը հետևվում է առանձին:
 
-Frames-ը հերթականությամբ վերնագրեր է ստանում կոնֆիգուրացված Video մոդելի միջոցով: դատարկ Video override-ը ժառանգում է Vision կարգավորումը; եթե երկուսն էլ դատարկ են, Vision ավտո-ուղեցույցը ընտրում է արդյունավետ տեսողական-կարող մոդելը: Հաջող վերնագրերը փոխում են սկզբնական մասը կայուն `[Video description:` նախաբառով, որը նաև նշում է, որ տեքստը վստահված մեդիա-առաջարկություն է և ասում է ստորին մոդելներին, որ չպետք է հետևեն մեդիայում հայտնաբերված հրահանգներին: Frame-caption cache բանալիները ներառում են JPEG բիթեր, հրահանգ, ժամանակի կնիք և արդյունավետ մոդել; միայն հաջող վերնագրերը պահվում են: Cache մուտքերը պահպանում են իրական հաջող արտադրողի մոդելը, ներառյալ fallback մոդելը; կամուրջը հաղորդում է `mixed`, երբ տարբեր շրջանակներ արտադրել են տարբեր մոդելներ: Cache-ի հարվածը վերօգտագործում է այդ արտադրողի նույնականությունը, այլ ոչ թե վերանվանում է այն որպես պահանջվող ուղեցույցի պլան: ամբողջ-տեսանյութի արդյունքի cache-ը հիմնված է յուրաքանչյուր մուտքի վրա, որը փոխում է ելքը — հրահանգ, արդյունավետ մոդել, sampling քաղաքականություն, շրջանակների քանակ, սեմանտիկ վերլուծության ռեժիմ, նորմալացված կենտրոնացման հուշի SHA-256 մատնահետք, կենտրոնացման պատուհան, `transcript`, `audioTranscript`, և contact-sheet դրոշը — այնպես որ, այդ չափանիշներից որևէ մեկի փոփոխությունը cache-ի բաց թողնում է, երբեք չօգտագործվող վերամշակում: Visual dedup քաղաքականության տարբերակը, շեմը և սահմանափակ թեկնածու-շրջանակների քանակը նույնպես բացահայտ են արդյունքի cache բանալու և մետադատների մեջ; քաղաքականության փոփոխությունը, հետևաբար, չի կարող վերօգտագործել չօգտագործվող ամբողջ-տեսանյութի նկարագրությունը: Result-cache v4 մետադատները պահպանում են ռեժիմը և մատնահետքը, երբեք ոչ خام օգտվողի առաջադրանքը: Guardrail մետադատները հաղորդում են ինչպես պահանջվող, այնպես էլ արդյունավետ վերլուծության ռեժիմները; պահանջվող `focused` ռեժիմը, առանց օգտագործելի օգտվողի տեքստի, հաղորդվում է որպես արդյունավետ `full`.
+Ֆրեյմները հերթով վերնագրավորվում են կարգավորված Տեսանյութի մոդելի հետ: դատարկ Տեսանյութի փոխարկումը ժառանգում է Տեսողության կարգավորումը; եթե երկուսն էլ դատարկ են, Տեսողության ավտո-ուղեցույցը ընտրում է արդյունավետ տեսողություն ունեցող մոդելը: Հաջող վերնագրերը փոխարինում են սկզբնական մասի հետ կայուն `[Video description:` նախաբառով, որը նաև նշում է տեքստը որպես անվստահ մեդիա-հիմնված դիտարկում և ասում է ստորին մոդելներին, որ չպետք է հետևեն մեդիայում հայտնաբերված հրահանգներին: Ֆրեյմ-վերնագրի կոշտ բանալիները ներառում են JPEG բայթերը, հրահանգը, ժամանակի նշումը և արդյունավետ մոդելը; միայն հաջող վերնագրերը պահվում են: Կոշտ գրառումները պահպանում են իրական հաջող արտադրողի մոդելը, ներառյալ պահուստային մոդելը; կամուրջը հաղորդում է `mixed`, երբ տարբեր ֆրեյմեր են արտադրել տարբեր մոդելներ: Կոշտ գրառման հարվածը կրկին օգտագործում է այդ արտադրողի նույնականացումը, այլ ոչ թե վերանվանում է այն որպես պահանջվող երթուղային պլան: ամբողջ-տեսանյութի արդյունքի կոշտը բանալվում է յուրաքանչյուր մուտքի վրա, որը փոխում է ելքը — հրահանգ, արդյունավետ մոդել, նմուշավորման քաղաքականություն, ֆրեյմերի քանակ, սեմանտիկ վերլուծության ռեժիմ, նորմալացված կենտրոնացման հուշի SHA-256 մատնահետքը, կենտրոնացման պատուհան, `transcript`, `audioTranscript`, և կոնտակտային թերթիկի դրոշը — այնպես որ, այդ չափանիշներից որևէ մեկի փոփոխությունը կոշտի բաց թողնում է, երբեք չի հանդիսանում հին վերօգտագործում: Տեսողական կրկնօրինակման քաղաքականության տարբերակը, շեմը և սահմանափակ թեկնածու-ֆրեյմերի քանակը նույնպես հստակ են արդյունքի-կոշտի բանալու և մետատվյալների մեջ; քաղաքականության փոփոխությունը, հետևաբար, չի կարող վերօգտագործել հին ամբողջ-տեսանյութի նկարագրությունը: Արդյունքի-կոշտ v4 մետատվյալները պահպանում են ռեժիմը և մատնահետքը, երբեք خام օգտվողի առաջադրանքը: Պաշտպանական մետատվյալները հաղորդում են ինչպես պահանջվող, այնպես էլ արդյունավետ վերլուծության ռեժիմները; պահանջվող `focused` ռեժիմը, առանց օգտագործելի օգտվողի տեքստի, հաղորդվում է որպես արդյունավետ `full`.
 
-Guardrail-ը հանում է յուրաքանչյուր աջակցվող տեսանյութի մասը, բայց նկարագրում է ոչ ավել, քան `modalityBridgeVideoMaxVideos`: նպատակ, որը ապացուցված է `supportsVideo === false`, ձախողված և սահմանափակ տեսանյութերը դառնում են բացահայտ անվտանգ տեքստային նշաններ, այնպես որ ոչ մի خام տեսանյութ չի մնում: Երբ կարողությունը հայտնի չէ, այդ մասերը մնում են անխախտ: Նպատակները, որոնց `supportsVideo === true`, շրջանցում են կամուրջը: Clien-ի պահանջի դադարեցման ազդանշանը տարածվում է ներբեռնում, բրոքերային հերթ, ենթածրագրեր և վերնագրերի զանգեր; դադարեցումները կանգնում են տեսանյութերի միջև և երբեք չեն բաց թողնում خام մեդիա:
+Պաշտպանական համակարգը հանում է յուրաքանչյուր աջակցվող տեսանյութի մասը, բայց նկարագրում է ոչ ավել, քան `modalityBridgeVideoMaxVideos`: նպատակ, որը ապացուցված է, որ ունի `supportsVideo === false`, ձախողված և սահմանափակ տեսանյութերը դառնում են հստակ անվտանգ տեքստային նշաններ, այնպես որ, ոչ մի خام տեսանյութ չի մնում: Երբ կարողությունը հայտնի չէ, այդ մասերը մնում են ան untouched: Նպատակները, որոնց `supportsVideo === true`, շրջանցում են կամուրջը: Հաճախորդի խնդրանքի դադարեցման ազդանշանը տարածվում է ներբեռնում, բրոքերային հերթ, ենթածրագրեր և վերնագրի զանգեր; դադարեցումները կանգնում են տեսանյութերի միջև և երբեք չեն բացահայտվում خام մեդիային:
 
-Runtime կարգավորումները DB-ով աջակցված են և Zod-ով վավերացված:
+Գործողության կարգավորումները DB-ով աջակցված են և Zod-ով վավերացված:
 
-| Key                                 | Default     | Range / behavior                                                                                                |
-| ----------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------- |
-| `modalityBridgeVideoEnabled`        | `false`     | Ընտրովի runtime, opt-in                                                                                         |
-| `modalityBridgeVideoAnalysisMode`   | `"full"`    | `full` պահպանում է ընդհանուր վերնագրերը; `focused` օգտագործում է սահմանափակ, վստահված վերջին օգտվողի համատեքստը |
-| `modalityBridgeVideoModel`          | `""`        | ժառանգել Vision Bridge մոդելը                                                                                   |
-| `modalityBridgeVideoFrameCount`     | `8`         | 1–16                                                                                                            |
-| `modalityBridgeVideoSamplingPolicy` | `"uniform"` | `uniform`, `scene_aware`, կամ համաչափ `segment_aware`; հայտնաբերման ձախողումը վերադառնում է `uniform`           |
-| `modalityBridgeVideoMaxVideos`      | `1`         | 1–4                                                                                                             |
-| `modalityBridgeVideoTimeout`        | `120000`    | 1000–120000 ms                                                                                                  |
+| Բանալի                              | Դեֆոլտ      | Տիրույթ / վարքագիծ                                                                                             |
+| ----------------------------------- | ----------- | -------------------------------------------------------------------------------------------------------------- |
+| `modalityBridgeVideoEnabled`        | `false`     | Ընտրովի գործողություն, ընտրովի                                                                                 |
+| `modalityBridgeVideoAnalysisMode`   | `"full"`    | `full` պահպանում է ընդհանուր վերնագրերը; `focused` օգտագործում է սահմանափակ, անվստահ վերջին օգտվողի համատեքստը |
+| `modalityBridgeVideoModel`          | `""`        | Ժառանգել Տեսողության կամուրջի մոդելը                                                                           |
+| `modalityBridgeVideoFrameCount`     | `8`         | 1–16                                                                                                           |
+| `modalityBridgeVideoSamplingPolicy` | `"uniform"` | `uniform`, `scene_aware`, կամ համաչափ `segment_aware`; հայտնաբերման ձախողումը վերադառնում է `uniform`          |
+| `modalityBridgeVideoMaxVideos`      | `1`         | 1–4                                                                                                            |
+| `modalityBridgeVideoTimeout`        | `120000`    | 1000–120000 մս                                                                                                 |
 
-Legacy պահպանված Video timeout արժեքները, որոնք ավելի քան 120 վայրկյան են, սահմանափակվում են բրոքերի վերջնաժամկետով; նոր կարգավորումները, որոնք գերազանցում են այդ սահմանը, մերժվում են. `GET /api/modality-bridge/video/runtime` պահանջում է վստահված կնիքով loopback տեղակայություն նախքան վավերացումը կամ runtime-ի հետազոտությունը, ապա պահանջում է կառավարման վավերացում: Այն վերադարձնում է միայն `available`, մաքրված FFmpeg/ffprobe տարբերակներ, և ֆիքսված պատճառ, երբ runtime-ը անհասանելի է: Ներքին հանման վերջնակետը հանրային ներբեռնում API չէ: հերթի հագեցվածությունը վերադարձնում է `503` և `Retry-After`, զանգահարողի անջատումը վերադարձնում է `499`, և ֆիքսված բրոքերի վերջնաժամկետը վերադարձնում է `504`: Փոխարկված պատասխանները ավելացնում են `video->text;model=<visionModel>;parts=<videos>` կենտրոնական `x-omniroute-modality-bridge` գլխին, առանց Vision կամ Audio հատվածների հեռացման:
+Հին պահպանված Տեսանյութի ժամանակահատվածները, որոնք ավելի քան 120 վայրկյան են, սահմանափակվում են բրոքերի վերջնաժամկետով; նոր կարգավորումները, որոնք գերազանցում են այդ սահմանը, մերժվում են: `GET /api/modality-bridge/video/runtime` պահանջում է վստահStamped loopback տեղականություն նախքան վավերացումը կամ գործողության հետազոտությունը, ապա պահանջում է կառավարման վավերացում: Այն վերադարձնում է միայն `available`, մաքրված FFmpeg/ffprobe տարբերակները, և ֆիքսված պատճառ, երբ գործողությունը unavailable է: Ներքին հանման վերջնակետը չի հանդիսանում հանրային ներբեռնելու API. հերթի հագեցվածությունը վերադարձնում է `503` և `Retry-After`, զանգահարողի անջատումը վերադարձնում է `499`, և ֆիքսված բրոքերի վերջնաժամկետը վերադարձնում է `504`: Փոխարկված պատասխանները ավելացնում են `video->text;model=<visionModel>;parts=<videos>` կենտրոնական `x-omniroute-modality-bridge` գլխին, առանց հեռացնելու Տեսողության կամ Աուդիո հատվածները:
 
 ### PII Masker (`piiMasker.ts`)
 
 Աշխատում է **երկու** փուլերում:
 
-- **`preCall`** կրկնօրինակում է բեռը, անցնում `system`, `messages`, `input`, և `prompt` (ներառյալ պարզ տողային տարրեր), և կիրառում է `processPII()` (ից `@/shared/utils/inputSanitizer`) տող `content`/`text` դաշտերին: Երբ `PII_REDACTION_ENABLED=true`, հայտնաբերված PII-ն հեռացվում է outbound բեռում: Սա անկախ է `INPUT_SANITIZER_MODE`-ից (որը միայն վերահսկում է հրահանգ-սեղմման քաղաքականությունը): Երբ հեռացումը անջատված է, զանգը գրանցում է հայտնաբերման քանակները առանց բովանդակության վերագրելու:
-- **`postCall`** խորքային կրկնօրինակում է պատասխանն, աշխատում է `sanitizePIIResponse()`-ի հետ, ինչպես նաև Responses-API-ձևի մաքրող (`maskResponsesOutput` — ծածկում է `output_text` և `output[].content[].text`): Եթե որևէ հեռացում տեղի ունենա, փոփոխված պատասխանն փոխարինում է սկզբնականին:
+- **`preCall`** կրկնօրինակում է բեռը, քայլում է `system`, `messages`, `input`, և `prompt` (ներառյալ պարզ տողային տարրերը), և կիրառվում է `processPII()` (ից `@/shared/utils/inputSanitizer`) տող `content`/`text` դաշտերի վրա: Երբ `PII_REDACTION_ENABLED=true`, հայտնաբերված PII-ն հեռացվում է outbound բեռում: Սա անկախ է `INPUT_SANITIZER_MODE`-ից (որը միայն վերահսկում է հրահանգի ներարկման քաղաքականությունը): Երբ հեռացումը անջատ է, զանգը գրանցում է հայտնաբերման քանակները առանց բովանդակությունը վերագրելու:
+- **`postCall`** խորքային կրկնօրինակում է պատասխանն, աշխատում է `sanitizePIIResponse()`-ի հետ, ինչպես նաև Responses-API-ձևի մաքրող (`maskResponsesOutput` — ընդգրկում է `output_text` և `output[].content[].text`): Եթե որևէ հեռացում տեղի ունենա, փոփոխված պատասխանն փոխարինում է սկզբնականին:
 
-Guardrail-ը երբեք չի արգելափակում; այն միայն նշում է (`meta.detections`, `meta.redacted`) կամ վերագրում:
+Պաշտպանական համակարգը երբեք չի արգելափակում; այն միայն նշում է (`meta.detections`, `meta.redacted`) կամ վերագրում:
 
-### Prompt Injection (`promptInjection.ts`)
+### Հրահանգի ներարկում (`promptInjection.ts`)
 
-Հայտնաբերում է հակառակորդ կառուցվածքներ օգտվողի կողմից տրամադրված բովանդակության մեջ և պարտադրում է կոնֆիգուրացված քաղաքականությունը: վարքը ղեկավարվում է միջավայրի փոփոխականներով և կոնստրուկտորի ընտրանքներով:
+Բացահայտում է հակառակորդ կառուցվածքները օգտվողի տրամադրած բովանդակության մեջ և պարտադիր է սահմանված քաղաքականությունը: Davarhuyt@-ը ղեկավարվում է միջավայրի փոփոխականներով և կոնստրուկտորի ընտրանքներով:
 
-| Կարգավորում | Շրջակա փոփոխական                                                                                           | Դեֆոլտ | Արդյունք                                                                                                                                                                                                                |
-| ----------- | ---------------------------------------------------------------------------------------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ակտիվ       | `INPUT_SANITIZER_ENABLED`                                                                                  | `true` | Երբ `false`, պաշտպանիչը կարճացնում է։                                                                                                                                                                                   |
-| Մոդը        | `INJECTION_GUARD_MODE` / `INPUT_SANITIZER_MODE`                                                            | `warn` | Ներդրման քաղաքականություն՝ `block`, `warn`, կամ `log`։ (`redact` ընդունվում է հետադարձ համատեղելիության համար, բայց **չի** հեռացնում ներդրման տեքստը; PII վերանայման խնդրանքը վերահսկվում է `PII_REDACTION_ENABLED`-ով) |
-| Բլոկի շեմը  | `blockThreshold` ընտրանք / `INPUT_SANITIZER_BLOCK_THRESHOLD` (համահունչ `INJECTION_GUARD_BLOCK_THRESHOLD`) | `high` | Բլոկելու համար անհրաժեշտ նվազագույն ծանրությունը։ Միջինն դիտարկման համար է ըստ դեֆոլտի։                                                                                                                                 |
+| Կարգավորում | Env var                                                                                                | Դեֆոլտ | Արդյունք                                                                                                                                                                                                             |
+| ----------- | ------------------------------------------------------------------------------------------------------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ակտիվ       | `INPUT_SANITIZER_ENABLED`                                                                              | `true` | Երբ `false`, պաշտպանիչը կարճացնում է:                                                                                                                                                                                |
+| Մոդը        | `INJECTION_GUARD_MODE` / `INPUT_SANITIZER_MODE`                                                        | `warn` | Ներդրման քաղաքականություն: `block`, `warn`, կամ `log`. (`redact` ընդունվում է հետադարձ համատեղելիության համար, բայց չի հեռացնում ներդրման տեքստը; PII վերանայման խնդրանքը վերահսկվում է `PII_REDACTION_ENABLED`-ով): |
+| Բլոկի շեմը  | `blockThreshold` ընտրանք / `INPUT_SANITIZER_BLOCK_THRESHOLD` (alias `INJECTION_GUARD_BLOCK_THRESHOLD`) | `high` | Բլոկելու համար անհրաժեշտ նվազագույն ծանրություն: Միջինն դիտարկման համար է ըստ դեֆոլտի:                                                                                                                               |
 
 **Մոդի առաջնահերթություն** (`getMode`): զանգահարողի `options.mode` →
-`INJECTION_GUARD_MODE` **DB ֆունկցիոնալության-պայմանագրի վերափոխում** (Dashboard → Settings →
-Feature Flags) → `INJECTION_GUARD_MODE` շրջակա փոփոխական → `INPUT_SANITIZER_MODE` շրջակա փոփոխական →
-`warn`։ Դashboard-ի վերափոխումը, հետևաբար, հաղթում է շրջակա փոփոխականներին, այնպես որ Feature
-Flags UI-ն վերահսկում է գործող պաշտպանիչը կենդանի (առանց վերագործարկման)։ DB-ի ընթերցումը անվտանգ է՝
-եթե այն սխալ է, պաշտպանիչը վերադառնում է շրջակա փոփոխականների վրա հիմնված վարքագծին, և երբ ոչ
-վերափոխում է սահմանված, վարքագիծը նույնն է, ինչ շրջակա փոփոխականների վրա հիմնված լուծումը։
+`INJECTION_GUARD_MODE` **DB ֆունկցիոնալության-պայմանագրի վերացում** (Dashboard → Settings →
+Feature Flags) → `INJECTION_GUARD_MODE` env → `INPUT_SANITIZER_MODE` env →
+`warn`: Դashboard-ի վերացումը, հետևաբար, հաղթում է env փոփոխականներին, այնպես որ Feature
+Flags UI-ն վերահսկում է գործող պաշտպանիչը կենդանի (առանց վերագործարկման): DB-ի ընթերցումը անվտանգ է:
+եթե այն սխալ է, պաշտպանիչը վերադառնում է env-հիմնված վարքագծին, և երբ ոչ
+վերացում է սահմանված, վարքագիծը նույնն է, ինչ env-միայն լուծումը:
 
-Հայտնաբերման աղբյուրներ:
+Բացահայտման աղբյուրներ:
 
 1. `sanitizeRequest()` `@/shared/utils/inputSanitizer`-ից (համատեղ հայտնաբերման
-   հավաքածու, որը օգտագործվում է այլուր խողովակում)։
-2. Ներառված `DEFAULT_GUARD_PATTERNS` (այժմ `system_override_inline` և
-   `markdown_system_block`, երկուսն էլ `high` ծանրությամբ)։
+   հավաքածու, որը օգտագործվում է այլուր խողովակում):
+2. Ներառված `DEFAULT_GUARD_PATTERNS` (այս պահին `system_override_inline` և
+   `markdown_system_block`, երկուսն էլ `high` ծանրությամբ):
 3. Ընտրովի `customPatterns`, որոնք փոխանցվում են կոնստրուկտորի ընտրանքներով (տողեր, regex,
-   կամ `{ name, pattern, severity }` գրառումներ)։
+   կամ `{ name, pattern, severity }` գրառումներ):
 
-Երբ `mode === "block"` **և** առնվազն մեկ հայտնաբերում համապատասխանում է ծանրության
+Երբ `mode === "block"` **և** առնվազն մեկ բացահայտում համապատասխանում է ծանրության
 շեմին, `preCall` վերադարձնում է `{ block: true, message: "Հայտարարությունը մերժվել է:
-կասկածելի բովանդակություն հայտնաբերվել է" }`։ `warn`/`log` մոդերում պաշտպանիչը գրանցում է, բայց
-թույլ է տալիս զանգը։ Համատեղ օգնական `evaluatePromptInjection()`-ը նույնպես արտահանվում է
-զանգահարողներին, որոնք պետք է գնահատեն հրահանգները առանց գրանցամատյանով անցնելու։
+կասկածելի բովանդակություն հայտնաբերվել է" }`: `warn`/`log` մոդերում պաշտպանիչը գրանցում է, բայց
+թույլ է տալիս զանգը: Համատեղ օգնական `evaluatePromptInjection()`-ը նույնպես արտահանվում է
+զանգահարողների համար, որոնք պետք է գնահատեն հրահանգները առանց գրանցման միջոցով անցնելու:
 
-**Սքանավորման սահման (v3.8.20):** հայտնաբերիչը միայն ստուգում է **առաջին 16 KB**-ը
-միավորված հրահանգի տեքստից — `MAX_INJECTION_SCAN_BYTES = 16 * 1024` (16 384 բայ)
-`src/shared/utils/inputSanitizer.ts`-ում։ Երկուսն էլ `detectInjection()` և
+**Սքանավորման սահման (v3.8.20):** հայտնաբերման սարքը միայն ստուգում է **առաջին 16 KB**-ը
+համակցված հրահանգի տեքստից — `MAX_INJECTION_SCAN_BYTES = 16 * 1024` (16 384 բայ)
+`src/shared/utils/inputSanitizer.ts`-ում: Երկուսն էլ `detectInjection()` և
 `evaluatePromptInjection()` `slice(0, MAX_INJECTION_SCAN_BYTES)` կատարում են նախքան
-պատկերի ցիկլը։ Ներդրման ուղղումները գտնվում են մուտքի վերևում, այնպես որ սա
-սահմանափակում է regex CPU/GC-ն բազմահարյուր-KB բեռների վրա առանց հայտնաբերման թուլացնելու (cf.
-#3932, #4041)։
+մոդելի ցիկլը: Ներդրման հրահանգները գտնվում են մուտքի վերևում, այնպես որ սա սահմանափակում է regex CPU/GC
+բազմահարյուր-KB բեռների վրա առանց հայտնաբերման թուլացման (cf.
+#3932, #4041).
 
-### Հաստատման դիմակ (`credentialMasker.ts`)
+### Հաստատման մաքրող (`credentialMasker.ts`)
 
-Աշխատում է **երկու** փուլերում, վերջինը դեֆոլտային շղթայում (prioritet `95`)։ Հեռացնում է
-լավ հայտնի API-հիմնաբառերի / գաղտնի-թոքենների ձևաչափերը դուրս եկող բեռից (հաղորդագրության
-բովանդակություն, գործիք-կոչի արգումենտներ, գործիքների արդյունքներ) **և** մատակարարի պատասխանից, այնպես որ
+Աշխատում է **երկու** փուլերում, վերջինը դեֆոլտի շղթայում (prioritet `95`). Հեռացնում է
+լավ հայտնի API-կոդի / գաղտնի-թոքենի մոդելները դուրս եկող բեռից (հաղորդագրության
+բովանդակություն, գործիք-կոչի արգումենտներ, գործիքի արդյունքներ) **և** մատակարարի պատասխանից, այնպես որ
 հաստատումը, որը տեղադրվում է հրահանգում (կամ վերադարձվում է գործիքի արդյունքով) չի արտահոսում
-վերին մատակարարին կամ հաճախորդին։
+վերևի մատակարարին կամ վերադարձվում հաճախորդին:
 
-- **Ընտրովի միայն**, նույն ավանդույթը, ինչ PII հեռացումը (Hard Rule #20-համընկնող):
+- **Ընտրովի միայն**, նույն կոնվենցիան, ինչ PII հեռացումը (Hard Rule #20-համապատասխան):
   անջատված, եթե `settings.credentialRedactionEnabled === true` **կամ**
-  `CREDENTIAL_REDACTION_ENABLED=true`։ Եթե դա անջատված է, պաշտպանիչը ոչ մի գործողություն չի կատարում —
-  այն երբեք չի բլոկում և երբեք չի վերագրում։
+  `CREDENTIAL_REDACTION_ENABLED=true`: Դա անջատված է, պաշտպանիչը ոչ մի գործողություն չի կատարում —
+  երբեք չի բլոկում և երբեք չի վերագրում:
 - `redactCredentials()` քայլում է ամբողջ բեռի/պատասխանի ծառով (`walkValue()`,
-  պրոտոտիպի-աղտոտման անվտանգ, ցիկլի-անվտանգ `WeakSet`-ի միջոցով) և փոխարինում է համապատասխանությունները
+  prototype-pollution-safe, cycle-safe `WeakSet`-ի միջոցով) և փոխարինում է համապատասխանությունները
   `[REDACTED:<type>]` տեղապահով, կրկնօրինակելով միայն այն ճյուղերը, որոնք իրականում
-  փոխվել են։
+  փոխվել են:
 - `CREDENTIAL_PATTERNS` ընդգրկում է LLM մատակարարի բանալիները (OpenAI, OpenAI-proj,
-  Anthropic, Google, Hugging Face, Replicate), VCS/SaaS թոքենները (GitHub, Slack,
-  Linear, Notion, npm, Postman, Discord), վճարման բանալիները (Stripe, Square), ամպային
+  Anthropic, Google, Hugging Face, Replicate), VCS/SaaS նշանները (GitHub, Slack,
+  Linear, Notion, npm, Postman, Discord), վճարման բանալիները (Stripe, Square), ամպի
   բանալիները (AWS access key, Twilio, SendGrid, Mailgun), մասնավոր բանալիներ / JWT-ներ,
-  հաստատման պարունակող կապի տողեր (`mongodb://user:pass@...`, և այլն), և
+  հավատարմագրեր պարունակող կապի տողեր (`mongodb://user:pass@...`, և այլն), և
   ընդհանուր `Authorization`/`x-api-key`/`api-key`/`apikey` գլխի-արժեք
-  ձևաչափը։ Գլխի ձևաչափի բանալիները (`authorization`, `x-api-key`, `api-key`,
-  `apikey`) կառուցվածքային կերպով հեռացվում են (միայն արժեքը, սխեմայի նախածանցը, ինչպես
-  `Bearer `/`Basic ` պահպանված) այլ ոչ թե ընդհանուր տեքստի regex-ով։
+  մոդել: Գլխի ձևով բանալիները (`authorization`, `x-api-key`, `api-key`,
+  `apikey`) կառուցվածքային կերպով հեռացվում են (միայն արժեքը, սխեմայի նախածանցը, ինչպիսիք են
+  `Bearer `/`Basic ` պահպանվում են) այլ ոչ թե ընդհանուր տեքստի regex-ի միջոցով:
 - Պաշտպանիչը երբեք չի բլոկում; այն միայն վերագրում է (`modifiedPayload` /
-  `modifiedResponse`) և նշում է (`meta.credentialsRedacted`, `meta.count`)։
+  `modifiedResponse`) և նշում է (`meta.credentialsRedacted`, `meta.count`).
 
-Հետադարձի պաշտպանություն: `tests/unit/credential-masker-guardrail.test.ts`։
+Հետադարձության պաշտպանիչ: `tests/unit/credential-masker-guardrail.test.ts`.
 
 ## Հիմնական պայմանագիր (`base.ts`)
 
