@@ -15,6 +15,7 @@ const names = [
   "OMNIROUTE_DOCTOR_LIVENESS_URL",
   "OMNIROUTE_PROVIDER_CATALOG_PATH",
   "OMNIROUTE_PROVIDER_TEST_MODEL",
+  "CODEBUDDY_SYSTEM_PROMPT_MAX_LEN",
 ];
 const qualityPath = "open-sse/services/routing/quality.ts";
 interface State {
@@ -31,12 +32,12 @@ const locales = config.locales
   .map((locale) => locale.code)
   .filter((locale) => !(config.docsExcluded ?? ["en"]).includes(locale));
 
-test("published English sources contain the four CLI variables and cold quality-start note", () => {
+test("published English sources contain CLI and CodeBuddy variables and the cold-start note", () => {
   for (const name of names) assert(read(envDoc).includes(name));
   assert(read(qualityDoc).includes(qualityPath));
 });
 
-test("every documentation locale covers the newly published CLI and cold-start contracts", () => {
+test("every documentation locale covers the CLI, CodeBuddy and cold-start contracts", () => {
   const missing: string[] = [];
   for (const locale of locales) {
     const env = read(`docs/i18n/${locale}/${envDoc}`);
@@ -45,6 +46,21 @@ test("every documentation locale covers the newly published CLI and cold-start c
     if (!quality.includes(qualityPath)) missing.push(`${locale}: quality tracker`);
   }
   assert.equal(missing.length, 0, missing.slice(0, 8).join(", "));
+});
+
+test("CodeBuddy rows preserve the opt-in cap and replacement provenance in every locale", () => {
+  const variable = "`CODEBUDDY_SYSTEM_PROMPT_MAX_LEN`";
+  for (const locale of locales) {
+    const rows = read(`docs/i18n/${locale}/${envDoc}`)
+      .split("\n")
+      .filter((line) => line.includes(variable));
+    assert.equal(rows.length, 1, `one CodeBuddy row: ${locale}`);
+    const row = rows[0];
+    assert(row.includes("open-sse/executors/codebuddy/shared.ts"), locale);
+    assert(row.includes("∅ (∞)"), `default has no length cap: ${locale}`);
+    assert(row.includes("`0`"), `zero disables the cap: ${locale}`);
+    assert(row.includes("Tencent"), `identity-filter explanation: ${locale}`);
+  }
 });
 
 test("the two source-delta mirror records describe current source and translated bytes", () => {
