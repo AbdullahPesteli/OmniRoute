@@ -300,6 +300,7 @@ import {
   resolveComboContextLimit,
 } from "../services/contextManager.ts";
 import { resolveBackgroundTaskRedirect } from "./chatCore/backgroundRedirect.ts";
+import { applyCopilotAutoModel } from "./chatCore/copilotAutoModel.ts";
 import { emitThinkingSignatureDiagnostics } from "./chatCore/thinkingSignatureDiagnostics.ts";
 import type {
   CompressionConfig,
@@ -759,6 +760,16 @@ async function handleChatCoreInner({
       },
     });
   }
+
+  // GitHub Copilot `auto`: resolve the concrete model before routing (chatCore/copilotAutoModel.ts).
+  const copilotAuto = await applyCopilotAutoModel(provider, model, body, credentials, {
+    sessionKey: sessionAffinityKey,
+    signal: clientRawRequest?.signal,
+    onCredentialsRefreshed,
+    log,
+  });
+  if (copilotAuto.errorResult) return copilotAuto.errorResult;
+  ({ model, credentials } = copilotAuto);
 
   // Custom aliases remain explicit; lifecycle replacements are advisory and never silently routed.
   let [resolvedModel, effectiveModel, routedLifecycleError] = resolveLifecycle(
