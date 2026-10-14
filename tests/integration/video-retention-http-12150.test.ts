@@ -34,41 +34,23 @@ let upstream: typeof fetch = async () => {
 globalThis.fetch = (...args) => upstream(...args);
 
 test("retention HTTP route matrix", { timeout: 300_000 }, async (t) => {
-  console.error("RETENTION_IMPORT start");
   const core = await import("../../src/lib/db/core.ts");
-  console.error("RETENTION_IMPORT core");
   const providers = await import("../../src/lib/db/providers.ts");
-  console.error("RETENTION_IMPORT providers");
   const keys = await import("../../src/lib/db/apiKeys.ts");
-  console.error("RETENTION_IMPORT keys");
   const settings = await import("../../src/lib/db/settings.ts");
-  console.error("RETENTION_IMPORT settings");
   const readCache = await import("../../src/lib/db/readCache.ts");
-  console.error("RETENTION_IMPORT readCache");
   const logs = await import("../../src/lib/usage/callLogs.ts");
-  console.error("RETENTION_IMPORT logs");
   const pending = await import("../../src/lib/usage/usageHistory.ts");
-  console.error("RETENTION_IMPORT pending");
   const memory = await import("../../src/lib/memory/store.ts");
-  console.error("RETENTION_IMPORT memory");
   const memorySettings = await import("../../src/lib/memory/settings.ts");
-  console.error("RETENTION_IMPORT memorySettings");
   const semantic = await import("../../src/lib/semanticCache.ts");
-  console.error("RETENTION_IMPORT semantic");
   const manager = await import("../../open-sse/services/cache/semanticCacheManager.ts");
-  console.error("RETENTION_IMPORT manager");
   const idempotency = await import("../../src/lib/idempotencyLayer.ts");
-  console.error("RETENTION_IMPORT idempotency");
   const reasoning = await import("../../open-sse/services/reasoningCache.ts");
-  console.error("RETENTION_IMPORT reasoning");
   const registry = await import("../../src/lib/guardrails/registry.ts");
-  console.error("RETENTION_IMPORT registry");
   const { VideoBridgeGuardrail } = await import("../../src/lib/guardrails/videoBridge.ts");
-  console.error("RETENTION_IMPORT VideoBridgeGuardrail");
   const chatRoute = await import("../../src/app/api/v1/chat/completions/route.ts");
-  console.error("RETENTION_IMPORT chatRoute");
   const responsesRoute = await import("../../src/app/api/v1/responses/route.ts");
-  console.error("RETENTION_IMPORT responsesRoute");
   const pressure = await import("../../open-sse/utils/resourcePressure.ts");
   const loggerResource = await import("../../src/shared/utils/loggerResource.ts");
   // Importing proxyFetch installs its global wrapper. Install the synthetic seam
