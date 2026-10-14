@@ -1,6 +1,6 @@
 # OmniRoute MCP Server Documentation (Lietuvių)
 
-🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
+🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
 ---
 
@@ -291,8 +291,106 @@ SSE ir srautinis HTTP transportas blokuojami, kol MCP serveris neįjungtas nusta
 
 ## Autentifikavimas ir aprėptys
 
-MCP įrankiai autentifikuojami naudojant API rakto aprėptis. Aprėpčių taikymas centralizuotas
-`open-sse/mcp-server/scopeEnforcement.ts`. Kiekvienam įrankiui reikalingos konkrečios aprėptys:
+MCP įrankių iškvietimai nuskaito aprėpties eilutes iš iškvietėjo. Ši patikra yra viena iš trijų nepriklausomų vardų sričių. Vienos tikrintuvo patikros sėkmė nereiškia kitų patikrų sėkmės. Taisyklės aprašytos skyriuje [Trys aprėpčių vardų sritys](#three-scope-namespaces).
+Įrankių katalogas pateiktas skyriuje [MCP įrankių aprėptys](#mcp-tool-scopes).
+
+### Trys aprėpčių vardų sritys
+
+`manage` API rakte, `read:compression` MCP įrankyje ir `read` prieigos prieigos rakte
+`oma_live_…` yra trys skirtingi leidimai. Iškvietėjai, siunčiantys `read`
+prieigos raktą į valdymo maršrutą, kuris keičia duomenis, gauna HTTP 403
+`Access token scope 'read' is insufficient; 'write' required.`
+Šį rangą tikrina `scopeSatisfies`. Ji nesikreipia į MCP lentelę, o MCP
+atitikties tikrintuvas nesikreipia į ją.
+
+| Vardų sritis                 | Kredencialas                                                                  | Tikrintuvas                         | Sėkminga patikra leidžia                                     |
+| :--------------------------- | :---------------------------------------------------------------------------- | :---------------------------------- | :----------------------------------------------------------- |
+| API rakto valdymas           | `api_keys.scopes`                                                             | `hasManageScope`                    | Valdymo REST užklausas naudojant tą Bearer raktą             |
+| API rakto papildoma aprėptis | tas pats masyvas, viena tiksli eilutė                                         | toliau nurodytas pagalbinis metodas | Tik tą vieną galimybę                                        |
+| MCP įrankių aprėptys         | tas pats masyvas, kitu atveju MCP `_meta`, kitu atveju `OMNIROUTE_MCP_SCOPES` | `scopeMatches`                      | Tą įrankį, kai aprėpčių taikymas įjungtas                    |
+| Prieigos raktas              | `oma_live_…`                                                                  | `scopeSatisfies`                    | Valdymo maršrutą, kurio metodui ir keliui būtinas tas rangas |
+
+Kiekvieno kredencialo išdavimas aprašytas skyriuje
+[Valdymo autentifikavimas](../guides/MANAGEMENT-AUTH.md).
+
+#### API rakto aprėptys
+
+Vienas `api_keys.scopes` masyvas naudojamas dviem užduotims. Joms naudojamos skirtingos funkcijos.
+
+**Valdymo REST.** `manage` ir `admin` yra
+`MANAGEMENT_API_KEY_SCOPES` (`src/shared/constants/managementScopes.ts`) nariai.
+`hasManageScope` autorizuoja valdymo maršrutus tam raktui. `admin` suteikia
+valdymo galimybes tuose maršrutuose. Žodis `admin` čia nėra
+prieigos rakto rangas ir nėra išplečiamas į MCP įrankių aprėptis.
+
+**Papildomos eilutės.** Kiekvienai jų atliekama tikslios narystės patikra, ir kiekviena jų lieka
+už `MANAGEMENT_API_KEY_SCOPES` ribų.
+
+| Aprėptis                       | Sėkminga patikra leidžia                                                                                                                                                |
+| :----------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `mcp:connect`                  | Tik ne grįžtamosios sąsajos `/api/mcp/` išimtį iš LOCAL_ONLY (`hasMcpConnectOrManageScope`). Raktas su `manage` arba `admin` taip pat atitinka šią išimtį.              |
+| `self:usage`                   | `GET /api/v1/me/status` šiam raktui (`src/app/api/v1/me/status/route.ts`). Kuriant per `POST /api/keys`, ši aprėptis pridedama (`normalizeSelfServiceScopesForCreate`). |
+| `self:account-quota`           | Išorinės paskyros kvotas tame būsenos atsake (`src/lib/usage/apiKeySelfService.ts`). Būsenos maršrutui vis tiek būtina `self:usage`.                                    |
+| `policy:bypass-provider-quota` | Šio rakto išvadų užklausoms netaikoma teikėjo kvotos politika (`hasProviderQuotaBypassScope` faile `src/sse/handlers/chat.ts`).                                         |
+
+#### Atitikties tikrinimas
+
+Katalogas yra lentelė, pateikta skyriuje [MCP įrankių aprėptys](#mcp-tool-scopes). Nelaikykite
+`MCP_SCOPE_LIST`, esančio `src/shared/constants/mcpScopes.ts`, tuo katalogu:
+tai pradinis tipizuotas poaibis. Vėliau pridėti įrankiai deklaruoja papildomas aprėptis šalia jo
+(`read:notion`, `read:skills`, `read:local-corpus` ir likusią lentelės dalį).
+
+`evaluateToolScopes`, esanti `open-sse/mcp-server/scopeEnforcement.ts`, leidžia iškvietimą,
+kai kiekviena būtina aprėptis atitinka kurią nors suteiktą aprėptį:
+
+- `*` atitinka kiekvieną būtiną aprėptį.
+- Suteikta aprėptis, kuri baigiasi `*`, atitinka būtiną aprėptį, prasidedančią
+  prieš žvaigždutę esančiu prefiksu. `read:*` atitinka `read:compression`.
+- Kiekviena kita suteikta aprėptis atitinka tik identišką būtiną eilutę.
+
+Raktas, kurio aprėptys yra `["manage"]`, neatitinka `scopeMatches` tikrinant `read:compression`.
+Tas pats iškvietimas neatitinka ir su `admin`, `mcp:connect`, `read` bei `write`, kai tai
+yra vienintelės suteiktos eilutės. Tarp MCP įrankių aprėpčių nėra jokios hierarchijos,
+išskyrus pabaigoje esančią `*`.
+
+Aprėpčių taikymas išjungtas, nebent `OMNIROUTE_MCP_ENFORCE_SCOPES=true` (numatytoji reikšmė
+`false`). Kol jis išjungtas, `evaluateToolScopes` leidžia iškvietimą ir praleidžia
+katalogą. Kai jis įjungtas, HTTP naudoja Bearer rakto `api_keys.scopes` kaip
+`authInfo` (žr. [HTTP aprėpčių susiejimas pagal raktą](#per-key-http-scope-binding-7895)).
+Kai nepavyksta nustatyti jokių rakto aprėpčių, suteiktų aprėpčių rinkinys pirmiausia imamas iš MCP `_meta`, o tada iš
+`OMNIROUTE_MCP_SCOPES`.
+
+#### Prieigos rakto aprėptys
+
+`oma_live_…` prieigos raktai (`src/lib/accessTokens/scopes.ts`) turi `read`, `write`
+arba `admin`. `scopeSatisfies` naudoja rangus: `admin` apima `write` ir `read`, o
+`write` apima `read`. Nežinomos aprėptys nieko neapima.
+
+`evaluateAccessTokenAuth` (`src/server/authz/accessTokenAuth.ts`) palygina šį
+rangą su `inferRequiredScope` (`src/server/authz/accessScopes.ts`):
+
+- `GET`, `HEAD` ir `OPTIONS` būtina `read`.
+- Kiekvienam kitam metodui būtina `write`.
+- Keliams, esantiems `ADMIN_SCOPE_PREFIXES`, kiekvienam metodui būtina `admin`. `/api/mcp`
+  yra šiame sąraše, todėl `write` prieigos raktas vis tiek negali iškviesti MCP HTTP
+  sąsajos.
+- Keliams, esantiems `ADMIN_MUTATION_PREFIXES`, `admin` būtina tik duomenis keičiančioms operacijoms.
+
+`PATCH /api/keys/{id}` yra keitimo operacija ir nėra įtraukta į šiuos administratoriaus sąrašus, todėl
+`read` prieigos raktas gauna 403
+`Access token scope 'read' is insufficient; 'write' required.`
+`write` arba `admin` prieigos raktas atitinka šio maršruto reikalavimus. Valdymo skydelio JWT,
+CLI atgalinio ryšio machine-id prieigos raktas ir API raktas su `manage` arba `admin` patenka į
+kitas šakas ir šis rangas jų neapriboja.
+
+Prieigos raktas, kuriam `/api/mcp` atveju `scopeSatisfies` grąžina teigiamą rezultatą, įveikė tik
+valdymo patikrą. Įrankių iškvietimams vis tiek vykdomas `scopeMatches` tikrinimas pagal API rakto
+aprėptis. Prieigos rakto rangas nėra `scopeMatches` įvesties duomuo.
+
+### MCP įrankių aprėptys
+
+Aprėpčių kontrolė centralizuota faile `open-sse/mcp-server/scopeEnforcement.ts`.
+Kiekvienam įrankiui reikalingos konkrečios aprėptys:
 
 | Aprėptis              | Įrankiai                                                                                                                                                                           |
 | :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -330,53 +428,66 @@ MCP įrankiai autentifikuojami naudojant API rakto aprėptis. Aprėpčių taikym
 | `write:obsidian`      | 9 rašymo įrankiai — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                 |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                  |
 
-Palaikomos aprėptys su pakaitos simboliais: `read:*` suteikia visas skaitymo aprėptis, o `*` suteikia visišką prieigą.
+Palaikomos apibendrinamosios aprėptys: `read:*` suteikia visas skaitymo aprėptis, o `*` suteikia visišką prieigą.
 
-### `mcp:connect` — siaura maršruto galimybė (#7895)
+### `mcp:connect` — siaurai apibrėžta maršruto teisė (#7895)
 
-Norint pasiekti HTTP/SSE MCP transportą (`/api/mcp/*`) ne iš vietinio grįžtamojo ryšio
-adreso, reikalinga `/api/mcp/` LOCAL_ONLY išimtis (žr. `docs/security/ROUTE_GUARD_TIERS.md`). Anksčiau
-ši išimtis priimdavo tik visą `manage`/`admin` aprėptį turintį API raktą — tai pernelyg plačios
-teisės kvietėjui, kuriam reikia tik palaikyti ryšį su MCP. `src/shared/constants/managementScopes.ts` dabar
-eksportuoja `MCP_CONNECT_SCOPE = "mcp:connect"`: papildomą siaurą aprėptį (pagal tą patį precedentą kaip
-`SELF_USAGE_SCOPE`), kuri autorizuoja TIK `/api/mcp/` apėjimą faile
+Norint pasiekti HTTP/SSE MCP transportą (`/api/mcp/*`) ne iš grįžtamojo ryšio sąsajos, reikalinga
+`/api/mcp/` LOCAL_ONLY išimtis (žr. `docs/security/ROUTE_GUARD_TIERS.md`). Anksčiau
+ši išimtis priimdavo tik API raktą su visa `manage`/`admin` aprėptimi — tai pernelyg plačios teisės
+kviečiančiajai šaliai, kuriai reikia tik susisiekti su MCP. Dabar `src/shared/constants/managementScopes.ts`
+eksportuoja `MCP_CONNECT_SCOPE = "mcp:connect"`: papildomą, siaurai apibrėžtą aprėptį (pagal tą patį precedentą kaip
+`SELF_USAGE_SCOPE`), kuri suteikia teisę TIK apeiti `/api/mcp/` apribojimą faile
 `src/server/authz/policies/management.ts` — ji nesuteikia prieigos prie jokių kitų valdymo maršrutų
-ir sąmoningai NĖRA įtraukta į `MANAGEMENT_API_KEY_SCOPES`. `manage`/`admin` aprėptį turintis raktas
-vis tiek be pakeitimų atitinka išimties sąlygas; `mcp:connect` yra mažiau privilegijų turinti alternatyva
-nuotoliniams, tik MCP naudojantiems kvietėjams, tikrinama naudojant `hasMcpConnectOrManageScope()`.
+ir sąmoningai NĖRA įtraukta į `MANAGEMENT_API_KEY_SCOPES`. Raktas, turintis `manage`/`admin`,
+vis dar gali naudotis šia išimtimi be pakeitimų; `mcp:connect` yra mažesnių privilegijų alternatyva
+nuotolinėms, tik MCP naudojančioms kviečiančiosioms šalims, tikrinama naudojant `hasMcpConnectOrManageScope()`.
 
 ### HTTP aprėpčių susiejimas su konkrečiu raktu (#7895)
 
-Naudojant HTTP/SSE, `open-sse/mcp-server/httpTransport.ts` dabar nustato tikrąsias kvietėjo
-`api_keys.scopes` per `resolveMcpCallerAuthInfo()` (`open-sse/mcp-server/httpAuthContext.ts`)
+Naudojant HTTP/SSE, `open-sse/mcp-server/httpTransport.ts` dabar nustato tikrąsias kviečiančiosios šalies
+`api_keys.scopes` naudodamas `resolveMcpCallerAuthInfo()` (`open-sse/mcp-server/httpAuthContext.ts`)
 ir perduoda jas MCP SDK metodui `transport.handleRequest(req, { authInfo })`, todėl
-kiekvieną įrankio iškvietimą pasiekiančios `extra.authInfo.scopes` atspindi paties „Bearer“ rakto aprėptis.
+kiekvieną įrankio iškvietimą pasiekiančios `extra.authInfo.scopes` atspindi paties Bearer rakto aprėptis.
 `scopeEnforcement.ts` funkcija `resolveCallerScopeContext()` jau teikė pirmenybę `authInfo`, o ne
-`_meta` ir `OMNIROUTE_MCP_SCOPES` aplinkos kintamojo atsarginiams šaltiniams — šis pakeitimas tik užpildo tą pirmąjį,
-aukščiausio prioriteto šaltinį, kuriam anksčiau naudojant HTTP duomenys nebuvo perduodami. Kai nepavyksta nustatyti
-jokio API rakto (nėra antraštės arba raktas negalioja), `authInfo` lieka `undefined`, o nustatymas be pakeitimų
-pereina prie esamos `meta` / aplinkos šaltinių grandinės. Tai NEPAKEIČIA `OMNIROUTE_MCP_ENFORCE_SCOPES`
-numatytosios reikšmės — taikymą vis tiek reikia aiškiai įjungti; šis pakeitimas tik užtikrina, kad
-jį įjungus konkretaus rakto kelias turėtų pirmenybę. stdio neturi konkretaus kvietėjo tapatybės (žr.
-`mcpCallerIdentity.ts`) ir šis pakeitimas jam įtakos neturi — jis ir toliau naudoja `_meta` / aplinkos atsarginių šaltinių grandinę.
+`_meta` ir `OMNIROUTE_MCP_SCOPES` aplinkos kintamojo atsarginiams šaltiniams — šiuo pakeitimu tik užpildomas pirmasis,
+aukščiausio prioriteto šaltinis, kuris anksčiau nebuvo pateikiamas per HTTP. Kai nepavyksta nustatyti jokio API rakto
+(nėra antraštės arba raktas netinkamas), `authInfo` lieka `undefined`, o nustatymas be pakeitimų pereina prie
+esamos `meta` / aplinkos kintamojo grandinės. stdio neturi konkrečios kviečiančiosios šalies tapatybės (žr.
+`mcpCallerIdentity.ts`) ir šis pakeitimas jo neveikia — jis ir toliau naudoja `_meta` / aplinkos kintamojo atsarginę grandinę.
+
+**Siauras aprėptis turinčioms HTTP/SSE kviečiančiosioms šalims vykdymo užtikrinimas įjungiamas priverstinai,
+neatsižvelgiant į `OMNIROUTE_MCP_ENFORCE_SCOPES`.** Numatytoji `OMNIROUTE_MCP_ENFORCE_SCOPES` reikšmė `false` yra
+saugi tik vietiniam / stdio vieno operatoriaus darbo režimui, kuriame nėra konkrečios kviečiančiosios šalies tapatybės,
+pagal kurią būtų galima taikyti aprėptis. `open-sse/mcp-server/server.ts::withScopeEnforcement()` besąlygiškai įjungia
+aprėpčių tikrinimą kiekvienam įrankiui (`shouldForceScopeEnforcement()` faile `scopeEnforcement.ts`),
+kai `resolveCallerScopeContext()` nustato
+`source === "authInfo"` (t. y. tikrą konkretaus rakto HTTP Authorization antraštę, naudojamą tik per HTTP/SSE) IR tas
+raktas neturi visos `manage`/`admin` aprėpties. Taip pašalinama spraga, dėl kurios raktas, turintis TIK
+siaurąją `mcp:connect` apėjimo aprėptį — pirmiau aprašytą kaip suteikiančią teisę tik pasinaudoti
+`/api/mcp/` LOCAL_ONLY išimtimi — kitu atveju galėtų iškviesti kiekvieną MCP įrankį, kai operatorius
+įjungia nuotolinę / ne grįžtamojo ryšio MCP prieigą, vien todėl, kad numatytoji
+`OMNIROUTE_MCP_ENFORCE_SCOPES` reikšmė yra `false`. HTTP ryšiu naudojamam raktui su visa `manage`/`admin`
+aprėptimi ir kiekvienai stdio / vietinei kviečiančiajai šaliai esamas, nuo `OMNIROUTE_MCP_ENFORCE_SCOPES`
+priklausantis veikimas išlieka nepakitęs.
 
 ---
 
 ## Aplinkos kintamieji
 
-| Kintamasis                              | Numatytoji reikšmė             | Paskirtis                                                                                                                                                             |
-| :-------------------------------------- | :----------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`       | Bazinis URL, kurį MCP serveris naudoja iškviesdamas vidines OmniRoute API                                                                                             |
-| `OMNIROUTE_API_KEY`                     | (tuščia)                       | API raktas, persiunčiamas kaip `Authorization: Bearer` vidinėms API užklausoms                                                                                        |
-| `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (įjungia tik `"true"`) | Kai įjungta, trūkstamos aprėptys neleidžia iškviesti įrankių, o audito žurnale įrašoma `scope_denied:<reason>`                                                        |
-| `OMNIROUTE_MCP_SCOPES`                  | (tuščia)                       | Kableliais atskirtas aprėpčių, kurios pagal numatytąją nuostatą laikomos „pasiekiamomis“, leidžiamasis sąrašas (naudojamas, kai iškvietėjas nepateikia savo aprėpčių) |
-| `OMNIROUTE_MCP_COMPRESS_DESCRIPTIONS`   | (nenustatyta = įjungta)        | Nustačius `0/false/off/no`, išjungiamas MCP aprašų glaudinimas registracijos metu                                                                                     |
-| `OMNIROUTE_MCP_DESCRIPTION_COMPRESSION` | (nenustatyta = įjungta)        | Alternatyvus pirmiau nurodyto perjungiklio pseudonimas                                                                                                                |
-| `OMNIROUTE_MCP_FETCH_TIMEOUT_MS`        | `10000`                        | Nutraukimo laiko limitas vidinėms valdymo skaitymo operacijoms (būklė, atsparumas, deriniai, kvota, naudojimas)                                                       |
-| `OMNIROUTE_MCP_UPSTREAM_TIMEOUT_MS`     | `60000`                        | Nutraukimo laiko limitas etapams, kurie laukia paslaugų teikėjo (`route_request`, `web_search`, `web_fetch`)                                                          |
-| `MCP_TOOL_DENY`                         | (nenustatyta = nėra filtro)    | Kableliais atskirti įrankių pavadinimai, kuriuos reikia pašalinti iš `tools/list` (įrankių kardinalumo mažinimas — žr. toliau)                                        |
-| `MCP_TOOL_ALLOW`                        | (nenustatyta = nėra filtro)    | Kableliais atskirti įrankių pavadinimai, kuriuos reikia išimtinai palikti (leidžiamojo sąrašo režimas — žr. toliau)                                                   |
-| `DATA_DIR`                              | `~/.omniroute`                 | Gyvybingumo signalų failas įrašomas į `${DATA_DIR}/runtime/mcp-heartbeat.json`                                                                                        |
+| Kintamasis                              | Numatytoji reikšmė             | Paskirtis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| :-------------------------------------- | :----------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`       | Bazinis URL, kurį MCP serveris naudoja kreipdamasis į vidines OmniRoute API                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `OMNIROUTE_API_KEY`                     | (tuščia)                       | API raktas, persiunčiamas kaip `Authorization: Bearer` vidinėms API užklausoms                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (įjungia tik `"true"`) | Kai įjungta, trūkstant sričių įrankių iškvietimai atmetami, o audito žurnale įrašoma `scope_denied:<reason>`. Vykdymas TAIP PAT priverstinai įjungiamas neatsižvelgiant į šią žymą bet kuriam HTTP/SSE kvietėjui, nustatytam pagal konkrečiam raktui skirtą Authorization antraštę (`source === "authInfo"`), kuris neturi visos `manage`/`admin` srities, pvz., raktui, turinčiam tik siaurąją `mcp:connect` apėjimo sritį, todėl ši numatytoji reikšmė yra saugi tik vietiniam/stdio vieno operatoriaus srautui ir niekada nėra saugi nuotolinei ne grįžtamojo ryšio sąsajos prieigai |
+| `OMNIROUTE_MCP_SCOPES`                  | (tuščia)                       | Kableliais atskirtas sričių, pagal numatytąsias nuostatas laikomų „prieinamomis“, leidžiamųjų reikšmių sąrašas (naudojamas, kai kvietėjas nepateikia savo sričių)                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `OMNIROUTE_MCP_COMPRESS_DESCRIPTIONS`   | (nenustatyta = įjungta)        | Nustačius `0/false/off/no`, išjungiamas MCP aprašų glaudinimas registracijos metu                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `OMNIROUTE_MCP_DESCRIPTION_COMPRESSION` | (nenustatyta = įjungta)        | Alternatyvus tos pačios pirmiau nurodytos perjungimo nuostatos pseudonimas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `OMNIROUTE_MCP_FETCH_TIMEOUT_MS`        | `10000`                        | Nutraukimo laiko limitas vidiniams valdymo nuskaitymams (būklės, atsparumo, derinių, kvotos, naudojimo)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `OMNIROUTE_MCP_UPSTREAM_TIMEOUT_MS`     | `60000`                        | Nutraukimo laiko limitas etapams, kuriuose laukiama paslaugų teikėjo (`route_request`, `web_search`, `web_fetch`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `MCP_TOOL_DENY`                         | (nenustatyta = nėra filtro)    | Kableliais atskirti įrankių pavadinimai, pašalintini iš `tools/list` (įrankių kardinalumo mažinimas — žr. toliau)                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `MCP_TOOL_ALLOW`                        | (nenustatyta = nėra filtro)    | Kableliais atskirti įrankių pavadinimai, kuriuos išimtinai palikti (leidžiamų sąrašų režimas — žr. toliau)                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `DATA_DIR`                              | `~/.omniroute`                 | Periodinio būsenos signalo failas įrašomas į `${DATA_DIR}/runtime/mcp-heartbeat.json`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 ---
 

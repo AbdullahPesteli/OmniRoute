@@ -1,6 +1,6 @@
 # OmniRoute MCP Server Documentation (Русский)
 
-🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
+🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
 ---
 
@@ -289,10 +289,108 @@ OmniRoute через ту же модель соединения, которая
 
 ---
 
-## Аутентификация и области доступа
+## Аутентификация и области действия
 
-Инструменты MCP проходят аутентификацию с помощью областей доступа ключа API. Проверка областей доступа централизована в
-`open-sse/mcp-server/scopeEnforcement.ts`. Для каждого инструмента требуются определённые области доступа:
+Вызовы инструментов MCP считывают строки областей действия из данных вызывающей стороны. Эта проверка относится к одному из трёх
+независимых пространств имён. Успешное прохождение одной проверки не означает успешного прохождения остальных.
+Правила описаны в разделе [Три пространства имён областей действия](#три-пространства-имён-областей-действия).
+Каталог инструментов приведён в разделе [Области действия инструментов MCP](#области-действия-инструментов-mcp).
+
+### Три пространства имён областей действия
+
+`manage` для ключа API, `read:compression` для инструмента MCP и `read` для
+токена доступа `oma_live_…` — это три разных разрешения. Вызывающие стороны, отправляющие токен доступа `read`
+в изменяющий маршрут управления, получают HTTP 403:
+`Access token scope 'read' is insufficient; 'write' required.`
+Этот уровень проверяется функцией `scopeSatisfies`. Она не обращается к таблице MCP, а механизм
+сопоставления MCP не обращается к ней.
+
+| Пространство имён                | Учётные данные                                                 | Проверяющая функция                      | Что разрешает успешная проверка                                    |
+| :------------------------------- | :------------------------------------------------------------- | :--------------------------------------- | :----------------------------------------------------------------- |
+| Управление через API-ключ        | `api_keys.scopes`                                              | `hasManageScope`                         | Доступ к REST API управления для этого Bearer-ключа                |
+| Дополнительные области API-ключа | тот же массив, одна точная строка                              | указанный ниже вспомогательный компонент | Только эту конкретную возможность                                  |
+| Области инструментов MCP         | тот же массив, иначе `_meta` MCP, иначе `OMNIROUTE_MCP_SCOPES` | `scopeMatches`                           | Доступ к этому инструменту после включения принудительной проверки |
+| Токен доступа                    | `oma_live_…`                                                   | `scopeSatisfies`                         | Маршрут управления, для которого метод и путь требуют этот уровень |
+
+Выпуск каждого типа учётных данных описан в разделе
+[Аутентификация управления](../guides/MANAGEMENT-AUTH.md).
+
+#### Области действия API-ключей
+
+Один массив `api_keys.scopes` используется для двух задач. Для них применяются разные функции.
+
+**REST API управления.** `manage` и `admin` входят в
+`MANAGEMENT_API_KEY_SCOPES` (`src/shared/constants/managementScopes.ts`).
+Именно `hasManageScope` авторизует для этого ключа доступ к маршрутам управления. `admin`
+предоставляет возможности управления на этих маршрутах. Здесь слово `admin` не обозначает
+уровень токена доступа и не разворачивается в области действия инструментов MCP.
+
+**Дополнительные строки.** Для каждой выполняется точная проверка принадлежности, и каждая остаётся
+за пределами `MANAGEMENT_API_KEY_SCOPES`.
+
+| Область действия               | Что разрешает успешная проверка                                                                                                                                                            |
+| :----------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `mcp:connect`                  | Только исключение из ограничения LOCAL_ONLY для не-loopback-подключений к `/api/mcp/` (`hasMcpConnectOrManageScope`). Ключ с `manage` или `admin` также проходит эту проверку.             |
+| `self:usage`                   | `GET /api/v1/me/status` для этого ключа (`src/app/api/v1/me/status/route.ts`). При создании через `POST /api/keys` эта область добавляется функцией `normalizeSelfServiceScopesForCreate`. |
+| `self:account-quota`           | Квоты вышестоящей учётной записи в данных ответа о состоянии (`src/lib/usage/apiKeySelfService.ts`). Маршрут состояния по-прежнему требует `self:usage`.                                   |
+| `policy:bypass-provider-quota` | Вызовы инференса с этим ключом обходят политику квот поставщика (`hasProviderQuotaBypassScope` в `src/sse/handlers/chat.ts`).                                                              |
+
+#### Сопоставление
+
+Каталогом является таблица в разделе [Области действия инструментов MCP](#области-действия-инструментов-mcp). Не
+считайте `MCP_SCOPE_LIST` в `src/shared/constants/mcpScopes.ts` этим каталогом:
+это исходное типизированное подмножество. Более поздние инструменты объявляют рядом с ним дополнительные области действия
+(`read:notion`, `read:skills`, `read:local-corpus` и остальные элементы таблицы).
+
+`evaluateToolScopes` в `open-sse/mcp-server/scopeEnforcement.ts` разрешает вызов,
+когда каждая требуемая область действия соответствует какой-либо предоставленной области:
+
+- `*` соответствует любой требуемой области действия.
+- Предоставленная область действия, оканчивающаяся на `*`, соответствует требуемой области действия, которая начинается
+  с префикса перед звёздочкой. `read:*` соответствует `read:compression`.
+- Любая другая предоставленная область действия соответствует только идентичной требуемой строке.
+
+Ключ с областями действия `["manage"]` не проходит `scopeMatches` для `read:compression`.
+Тот же вызов не проходит проверку для `admin`, `mcp:connect`, `read` и `write`, если это
+единственные предоставленные строки. Между областями действия инструментов MCP нет иерархии,
+кроме шаблона с завершающим `*`.
+
+Принудительная проверка отключена, если только не задано `OMNIROUTE_MCP_ENFORCE_SCOPES=true` (по умолчанию
+`false`). Пока она отключена, `evaluateToolScopes` разрешает вызов и не использует
+каталог. Пока она включена, HTTP использует `api_keys.scopes` Bearer-ключа как
+`authInfo` (см. [Привязка области действия HTTP для отдельных ключей](#привязка-области-действия-http-для-отдельных-ключей-7895)).
+Если области действия ключа определить не удаётся, предоставленный набор последовательно берётся из `_meta` MCP, а затем
+из `OMNIROUTE_MCP_SCOPES`.
+
+#### Области действия токенов доступа
+
+Токены `oma_live_…` (`src/lib/accessTokens/scopes.ts`) содержат `read`, `write`
+или `admin`. `scopeSatisfies` использует иерархию уровней: `admin` включает `write` и `read`, а
+`write` включает `read`. Неизвестные области действия не предоставляют никаких разрешений.
+
+`evaluateAccessTokenAuth` (`src/server/authz/accessTokenAuth.ts`) сопоставляет этот
+уровень с результатом `inferRequiredScope` (`src/server/authz/accessScopes.ts`):
+
+- `GET`, `HEAD` и `OPTIONS` требуют `read`.
+- Любой другой метод требует `write`.
+- Пути из `ADMIN_SCOPE_PREFIXES` требуют `admin` для любого метода. `/api/mcp`
+  входит в этот список, поэтому токен доступа `write` всё равно не может обращаться к HTTP-интерфейсу
+  MCP.
+- Пути из `ADMIN_MUTATION_PREFIXES` требуют `admin` только для изменяющих операций.
+
+`PATCH /api/keys/{id}` — это мутация, и она не входит в эти списки административных операций, поэтому токен
+`read` получает ответ 403:
+`Access token scope 'read' is insufficient; 'write' required.`
+Токен доступа `write` или `admin` удовлетворяет требованиям этого маршрута. JWT панели управления, токен machine-id CLI для loopback и API-ключ с областью действия `manage` или `admin` обрабатываются
+другими ветвями, и этот ранг на них не распространяется.
+
+Токен доступа, прошедший проверку `scopeSatisfies` для `/api/mcp`, преодолел
+только шлюз управления. При вызове инструментов по-прежнему выполняется проверка `scopeMatches` для областей действия API-ключа. Ранг токена доступа не передаётся в `scopeMatches`.
+
+### Области действия инструментов MCP
+
+Проверка областей действия централизована в `open-sse/mcp-server/scopeEnforcement.ts`.
+Для каждого инструмента требуются определённые области действия:
 
 | Область доступа       | Инструменты                                                                                                                                                                           |
 | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -330,60 +428,73 @@ OmniRoute через ту же модель соединения, которая
 | `write:obsidian`      | 9 инструментов записи — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                     |
 
-Поддерживаются шаблонные области доступа: `read:*` предоставляет все области доступа на чтение, `*` предоставляет полный доступ.
+Поддерживаются области действия с подстановочными знаками: `read:*` предоставляет все области чтения, а `*` — полный доступ.
 
 ### `mcp:connect` — узкая возможность доступа к маршруту (#7895)
 
 Для доступа к HTTP/SSE-транспорту MCP (`/api/mcp/*`) не с loopback-интерфейса требуется
 исключение LOCAL_ONLY для `/api/mcp/` (см. `docs/security/ROUTE_GUARD_TIERS.md`). Ранее
-это исключение принимало только API-ключ с полной областью доступа `manage`/`admin`, что
-было избыточно для вызывающей стороны, которой требуется только взаимодействие с MCP.
-`src/shared/constants/managementScopes.ts` теперь экспортирует
-`MCP_CONNECT_SCOPE = "mcp:connect"`: дополнительную узкую область доступа (по аналогии с
-`SELF_USAGE_SCOPE`), которая разрешает ТОЛЬКО обход ограничений для `/api/mcp/` в
-`src/server/authz/policies/management.ts` — она не предоставляет доступ к каким-либо
-другим маршрутам управления и намеренно НЕ включена в `MANAGEMENT_API_KEY_SCOPES`. Ключ
-с областью доступа `manage`/`admin` по-прежнему проходит это исключение без изменений;
-`mcp:connect` — альтернатива с меньшими привилегиями для удалённых вызывающих сторон,
-работающих только с MCP, проверяемая через `hasMcpConnectOrManageScope()`.
+это исключение принимало только ключ API с полной областью действия `manage`/`admin`, что было
+избыточно для клиента, которому требуется только взаимодействие с MCP. Теперь
+`src/shared/constants/managementScopes.ts` экспортирует `MCP_CONNECT_SCOPE = "mcp:connect"`:
+дополнительную узкую область действия (по тому же принципу, что и `SELF_USAGE_SCOPE`), которая
+разрешает ТОЛЬКО обход ограничения для `/api/mcp/` в
+`src/server/authz/policies/management.ts` — она не предоставляет доступ к каким-либо другим
+маршрутам управления и намеренно НЕ включена в `MANAGEMENT_API_KEY_SCOPES`. Ключ с областью
+действия `manage`/`admin` по-прежнему проходит через это исключение без изменений;
+`mcp:connect` служит менее привилегированной альтернативой для удалённых клиентов, использующих
+только MCP, и проверяется посредством `hasMcpConnectOrManageScope()`.
 
-### Привязка областей доступа HTTP для каждого ключа (#7895)
+### Привязка областей действия HTTP для каждого ключа (#7895)
 
-При работе через HTTP/SSE `open-sse/mcp-server/httpTransport.ts` теперь получает реальные
-`api_keys.scopes` вызывающей стороны через `resolveMcpCallerAuthInfo()`
+При работе через HTTP/SSE `open-sse/mcp-server/httpTransport.ts` теперь определяет фактические
+`api_keys.scopes` вызывающей стороны посредством `resolveMcpCallerAuthInfo()`
 (`open-sse/mcp-server/httpAuthContext.ts`) и передаёт их в
-`transport.handleRequest(req, { authInfo })` из MCP SDK, благодаря чему
-`extra.authInfo.scopes`, поступающие при каждом вызове инструмента, отражают собственные
-области доступа Bearer-ключа. `resolveCallerScopeContext()` из `scopeEnforcement.ts` уже
-отдавал приоритет `authInfo` перед `_meta` и резервным значением из переменной окружения
-`OMNIROUTE_MCP_SCOPES` — это изменение лишь заполняет первый, наиболее приоритетный
-источник, который ранее не заполнялся при работе через HTTP. Если определить API-ключ
-не удаётся (заголовок отсутствует или ключ недействителен), `authInfo` остаётся
-`undefined`, а разрешение продолжается по существующей цепочке `meta`/переменная
-окружения без изменений. Это НЕ меняет значение по умолчанию для
-`OMNIROUTE_MCP_ENFORCE_SCOPES`: контроль по-прежнему необходимо явно включить; данное
-изменение лишь обеспечивает приоритет пути для конкретного ключа после его включения.
-stdio не имеет идентификатора отдельной вызывающей стороны (см.
-`mcpCallerIdentity.ts`) и не затронут — он продолжает использовать резервную цепочку
-`_meta`/переменная окружения.
+`transport.handleRequest(req, { authInfo })` из SDK MCP, поэтому
+`extra.authInfo.scopes`, поступающие при каждом вызове инструмента, отражают области действия
+самого Bearer-ключа. Функция `resolveCallerScopeContext()` из `scopeEnforcement.ts` уже отдавала
+приоритет `authInfo` перед `_meta` и резервным вариантом из переменной окружения
+`OMNIROUTE_MCP_SCOPES` — это изменение лишь заполняет первый источник с наивысшим приоритетом,
+который ранее не заполнялся при работе через HTTP. Если определить ключ API не удаётся
+(заголовок отсутствует или ключ недействителен), `authInfo` остаётся `undefined`, и разрешение
+областей действия без изменений переходит к существующей цепочке `meta`/переменная окружения.
+У stdio нет идентификатора для каждого вызывающего клиента (см. `mcpCallerIdentity.ts`), поэтому
+он не затронут — для него по-прежнему используется резервная цепочка `_meta`/переменная окружения.
+
+**Принудительное применение ограничений включено для HTTP/SSE-клиентов с узкими областями
+действия независимо от `OMNIROUTE_MCP_ENFORCE_SCOPES`.** Значение `false` по умолчанию для
+`OMNIROUTE_MCP_ENFORCE_SCOPES` безопасно только для локального однопользовательского сценария
+с использованием stdio, где нет идентификатора каждого вызывающего клиента, к которому можно
+применить области действия. `open-sse/mcp-server/server.ts::withScopeEnforcement()` безусловно
+включает проверку областей действия для каждого инструмента (`shouldForceScopeEnforcement()`
+в `scopeEnforcement.ts`), когда `resolveCallerScopeContext()` определяет
+`source === "authInfo"` (то есть реальный HTTP-заголовок Authorization для конкретного ключа,
+только при HTTP/SSE) И этот ключ не имеет полной области действия `manage`/`admin`. Это устраняет
+уязвимость, при которой ключ, имеющий ТОЛЬКО узкую область действия обхода `mcp:connect` —
+описанную выше как разрешающую исключительно обход ограничения LOCAL_ONLY для `/api/mcp/`, —
+в противном случае мог бы вызывать любой инструмент MCP после включения оператором удалённого
+доступа к MCP или доступа не через loopback-интерфейс просто потому, что
+`OMNIROUTE_MCP_ENFORCE_SCOPES` по умолчанию поставляется со значением `false`. Для HTTP-ключа
+с полной областью действия `manage`/`admin`, а также для всех клиентов stdio/локальных клиентов
+существующее поведение, зависящее от `OMNIROUTE_MCP_ENFORCE_SCOPES`, остаётся без изменений.
 
 ---
 
 ## Переменные окружения
 
-| Переменная                              | Значение по умолчанию              | Назначение                                                                                                                                                         |
-| :-------------------------------------- | :--------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`           | Базовый URL-адрес, используемый сервером MCP при вызове внутренних API OmniRoute                                                                                   |
-| `OMNIROUTE_API_KEY`                     | (пусто)                            | Ключ API, передаваемый внутренним вызовам API в виде `Authorization: Bearer`                                                                                       |
-| `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (включает только `"true"`) | Если включено, отсутствие областей доступа блокирует вызовы инструментов и записывает `scope_denied:<reason>` в журнал аудита                                      |
-| `OMNIROUTE_MCP_SCOPES`                  | (пусто)                            | Разделённый запятыми список разрешённых областей доступа, считающихся «доступными» по умолчанию (если вызывающая сторона не указывает собственные области доступа) |
-| `OMNIROUTE_MCP_COMPRESS_DESCRIPTIONS`   | (не задано = включено)             | Если задано значение `0/false/off/no`, отключает сжатие описаний MCP во время регистрации                                                                          |
-| `OMNIROUTE_MCP_DESCRIPTION_COMPRESSION` | (не задано = включено)             | Альтернативный псевдоним для указанного выше переключателя                                                                                                         |
-| `OMNIROUTE_MCP_FETCH_TIMEOUT_MS`        | `10000`                            | Лимит времени до отмены внутренних управляющих запросов на чтение (работоспособность, отказоустойчивость, комбинации, квота, использование)                        |
-| `OMNIROUTE_MCP_UPSTREAM_TIMEOUT_MS`     | `60000`                            | Лимит времени до отмены переходов, ожидающих ответа поставщика (`route_request`, `web_search`, `web_fetch`)                                                        |
-| `MCP_TOOL_DENY`                         | (не задано = без фильтра)          | Разделённые запятыми имена инструментов, исключаемых из `tools/list` (сокращение количества инструментов — см. ниже)                                               |
-| `MCP_TOOL_ALLOW`                        | (не задано = без фильтра)          | Разделённые запятыми имена инструментов, которые следует оставить исключительно (режим списка разрешений — см. ниже)                                               |
-| `DATA_DIR`                              | `~/.omniroute`                     | Файл пульса записывается в `${DATA_DIR}/runtime/mcp-heartbeat.json`                                                                                                |
+| Переменная                              | Значение по умолчанию                          | Назначение                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| :-------------------------------------- | :--------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                       | Базовый URL-адрес, который сервер MCP использует при обращении к внутренним API OmniRoute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `OMNIROUTE_API_KEY`                     | (пусто)                                        | API-ключ, передаваемый внутренним вызовам API в виде `Authorization: Bearer`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (включается только значением `"true"`) | Если параметр включён, отсутствие областей доступа приводит к отклонению вызовов инструментов и записи `scope_denied:<reason>` в журнал аудита. Принудительная проверка ТАКЖЕ выполняется независимо от этого флага для любого вызывающего клиента HTTP/SSE, определённого по индивидуальному заголовку Authorization (`source === "authInfo"`), у которого нет полной области доступа `manage`/`admin`, — например, для ключа, имеющего только узкую область обхода `mcp:connect`, — поэтому это значение по умолчанию безопасно только для локального однопользовательского режима/stdio и никогда не должно использоваться для удалённого доступа не через loopback-интерфейс |
+| `OMNIROUTE_MCP_SCOPES`                  | (пусто)                                        | Разделённый запятыми список разрешённых областей доступа, которые по умолчанию считаются «доступными» (используется, когда вызывающий клиент не предоставляет собственные области доступа)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `OMNIROUTE_MCP_COMPRESS_DESCRIPTIONS`   | (не задано = включено)                         | Если задано значение `0/false/off/no`, сжатие описаний MCP при регистрации отключается                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `OMNIROUTE_MCP_DESCRIPTION_COMPRESSION` | (не задано = включено)                         | Альтернативный псевдоним для того же переключателя, что указан выше                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `OMNIROUTE_MCP_FETCH_TIMEOUT_MS`        | `10000`                                        | Лимит времени до прерывания внутренних управляющих запросов на чтение (состояние, отказоустойчивость, комбинации, квота, использование)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `OMNIROUTE_MCP_UPSTREAM_TIMEOUT_MS`     | `60000`                                        | Лимит времени до прерывания переходов, ожидающих ответа провайдера (`route_request`, `web_search`, `web_fetch`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `MCP_TOOL_DENY`                         | (не задано = без фильтра)                      | Разделённые запятыми имена инструментов, которые следует исключить из `tools/list` (уменьшение количества инструментов — см. ниже)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `MCP_TOOL_ALLOW`                        | (не задано = без фильтра)                      | Разделённые запятыми имена инструментов, которые следует оставить исключительно (режим списка разрешённых — см. ниже)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `DATA_DIR`                              | `~/.omniroute`                                 | Файл пульса записывается в `${DATA_DIR}/runtime/mcp-heartbeat.json`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 ---
 

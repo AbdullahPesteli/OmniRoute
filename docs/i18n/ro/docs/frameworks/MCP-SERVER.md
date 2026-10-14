@@ -1,6 +1,6 @@
 # OmniRoute MCP Server Documentation (Română)
 
-🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
+🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
 ---
 
@@ -291,8 +291,106 @@ Atât transportul SSE, cât și transportul HTTP cu streaming sunt blocate pân�
 
 ## Autentificare și domenii de acces
 
-Instrumentele MCP sunt autentificate prin domeniile de acces ale cheii API. Aplicarea domeniilor de acces este centralizată în
-`open-sse/mcp-server/scopeEnforcement.ts`. Fiecare instrument necesită anumite domenii de acces:
+Apelurile instrumentelor MCP citesc șirurile domeniilor de acces de la apelant. Această verificare este unul dintre cele trei
+spații de nume independente. Trecerea unei verificări nu înseamnă trecerea celorlalte.
+Regulile sunt descrise în [Trei spații de nume pentru domeniile de acces](#three-scope-namespaces).
+Catalogul instrumentelor este în [Domeniile de acces ale instrumentelor MCP](#mcp-tool-scopes).
+
+### Trei spații de nume pentru domeniile de acces
+
+`manage` pe o cheie API, `read:compression` pe un instrument MCP și `read` pe un
+token de acces `oma_live_…` reprezintă trei permisiuni diferite. Apelanții care trimit un token de acces
+`read` către o rută de administrare care efectuează modificări primesc HTTP 403
+`Access token scope 'read' is insufficient; 'write' required.`
+Această ierarhie este gestionată de `scopeSatisfies`. Aceasta nu consultă tabelul MCP, iar mecanismul de
+potrivire MCP nu o consultă.
+
+| Spațiu de nume                   | Credențială                                                        | Verificatorul                        | Ce permite trecerea verificării                                       |
+| :------------------------------- | :----------------------------------------------------------------- | :----------------------------------- | :-------------------------------------------------------------------- |
+| Administrarea cheilor API        | `api_keys.scopes`                                                  | `hasManageScope`                     | REST de administrare pentru cheia Bearer respectivă                   |
+| Permisiuni aditive ale cheii API | aceeași matrice, un șir exact                                      | funcția auxiliară menționată mai jos | Numai acea capabilitate                                               |
+| Domeniile instrumentelor MCP     | aceeași matrice, altfel `_meta` MCP, altfel `OMNIROUTE_MCP_SCOPES` | `scopeMatches`                       | Instrumentul respectiv, după activarea aplicării regulilor            |
+| Token de acces                   | `oma_live_…`                                                       | `scopeSatisfies`                     | Ruta de administrare a cărei metodă și cale necesită rangul respectiv |
+
+Emiterea fiecărei credențiale este descrisă în
+[Autentificarea pentru administrare](../guides/MANAGEMENT-AUTH.md).
+
+#### Domeniile de acces ale cheilor API
+
+O singură matrice `api_keys.scopes` este utilizată pentru două scopuri. Acestea folosesc funcții diferite.
+
+**REST de administrare.** `manage` și `admin` sunt membrii
+`MANAGEMENT_API_KEY_SCOPES` (`src/shared/constants/managementScopes.ts`).
+`hasManageScope` este funcția care autorizează rutele de administrare pentru cheia respectivă. `admin` oferă
+capabilități de administrare pe acele rute. Cuvântul `admin` de aici nu reprezintă
+rangul tokenului de acces și nu se extinde în domenii de acces pentru instrumentele MCP.
+
+**Șiruri aditive.** Fiecare este verificat printr-un test de apartenență exactă și fiecare rămâne
+în afara `MANAGEMENT_API_KEY_SCOPES`.
+
+| Domeniu de acces               | Ce permite trecerea verificării                                                                                                                                                     |
+| :----------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `mcp:connect`                  | Numai excepția LOCAL_ONLY pentru `/api/mcp/` din afara interfeței loopback (`hasMcpConnectOrManageScope`). O cheie cu `manage` sau `admin` trece în continuare de această excepție. |
+| `self:usage`                   | `GET /api/v1/me/status` pentru această cheie (`src/app/api/v1/me/status/route.ts`). `POST /api/keys` adaugă acest domeniu la creare (`normalizeSelfServiceScopesForCreate`).        |
+| `self:account-quota`           | Cotele conturilor din amonte din cadrul acelui răspuns de stare (`src/lib/usage/apiKeySelfService.ts`). Ruta de stare necesită în continuare `self:usage`.                          |
+| `policy:bypass-provider-quota` | Apelurile de inferență ale acestei chei ignoră politica privind cota furnizorului (`hasProviderQuotaBypassScope` în `src/sse/handlers/chat.ts`).                                    |
+
+#### Potrivirea
+
+Catalogul este tabelul din secțiunea [Domeniile de acces ale instrumentelor MCP](#mcp-tool-scopes). Nu
+considerați `MCP_SCOPE_LIST` din `src/shared/constants/mcpScopes.ts` drept acel catalog:
+acesta este subsetul tipizat inițial. Instrumentele adăugate ulterior declară alte domenii alături de acesta
+(`read:notion`, `read:skills`, `read:local-corpus` și restul tabelului).
+
+`evaluateToolScopes` din `open-sse/mcp-server/scopeEnforcement.ts` permite un apel
+atunci când fiecare domeniu necesar corespunde unui domeniu acordat:
+
+- `*` corespunde fiecărui domeniu necesar.
+- Un domeniu acordat care se termină cu `*` corespunde unui domeniu necesar care începe cu
+  prefixul dinaintea asteriscului. `read:*` corespunde lui `read:compression`.
+- Orice alt domeniu acordat corespunde numai șirului necesar identic.
+
+O cheie ale cărei domenii sunt `["manage"]` nu trece verificarea `scopeMatches` pentru `read:compression`.
+Același apel eșuează pentru `admin`, `mcp:connect`, `read` și `write` atunci când acestea
+sunt singurele șiruri acordate. Nu există nicio ierarhie între domeniile instrumentelor MCP
+în afara caracterului `*` de la final.
+
+Aplicarea regulilor este dezactivată dacă `OMNIROUTE_MCP_ENFORCE_SCOPES=true` nu este setat (valoarea implicită este
+`false`). Cât timp este dezactivată, `evaluateToolScopes` permite apelul și omite
+catalogul. Când este activată, HTTP utilizează `api_keys.scopes` ale cheii Bearer drept
+`authInfo` (consultați [Asocierea domeniilor HTTP per cheie](#per-key-http-scope-binding-7895)).
+Când nu poate fi determinat niciun domeniu al cheii, setul acordat recurge la `_meta` MCP, apoi la
+`OMNIROUTE_MCP_SCOPES`.
+
+#### Domeniile de acces ale tokenurilor de acces
+
+Tokenurile `oma_live_…` (`src/lib/accessTokens/scopes.ts`) conțin `read`, `write`
+sau `admin`. `scopeSatisfies` reprezintă o ierarhie: `admin` include `write` și `read`, iar
+`write` include `read`. Domeniile necunoscute nu includ nimic.
+
+`evaluateAccessTokenAuth` (`src/server/authz/accessTokenAuth.ts`) compară această
+ierarhie cu `inferRequiredScope` (`src/server/authz/accessScopes.ts`):
+
+- `GET`, `HEAD` și `OPTIONS` necesită `read`.
+- Orice altă metodă necesită `write`.
+- Căile din `ADMIN_SCOPE_PREFIXES` necesită `admin` pentru fiecare metodă. `/api/mcp`
+  se află pe acea listă, astfel încât nici măcar un token de acces `write` nu poate apela interfața HTTP MCP.
+- Căile din `ADMIN_MUTATION_PREFIXES` necesită `admin` numai pentru operațiunile care efectuează modificări.
+
+`PATCH /api/keys/{id}` este o operație de modificare și nu se află în acele liste de administrare, astfel încât un token cu
+`read` primește 403
+`Access token scope 'read' is insufficient; 'write' required.`
+Un token de acces cu `write` sau `admin` îndeplinește cerințele acelei rute. Un JWT al panoului de control, tokenul machine-id al CLI-ului prin loopback și o cheie API cu `manage` sau `admin` urmează
+alte ramuri și nu sunt restricționate de acest rang.
+
+Un token de acces care trece de `scopeSatisfies` pentru `/api/mcp` a trecut doar de
+controlul de gestionare. Apelurile instrumentelor execută în continuare `scopeMatches` în raport cu scope-urile
+cheii API. Rangul tokenului de acces nu este un parametru de intrare pentru `scopeMatches`.
+
+### Scope-urile instrumentelor MCP
+
+Aplicarea scope-urilor este centralizată în `open-sse/mcp-server/scopeEnforcement.ts`.
+Fiecare instrument necesită anumite scope-uri:
 
 | Domeniu               | Instrumente                                                                                                                                                                             |
 | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -330,53 +428,65 @@ Instrumentele MCP sunt autentificate prin domeniile de acces ale cheii API. Apli
 | `write:obsidian`      | 9 instrumente de scriere — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …               |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                       |
 
-Sunt acceptate domenii wildcard: `read:*` acordă toate domeniile de citire, iar `*` acordă acces deplin.
+Sunt acceptate domenii wildcard: `read:*` acordă toate domeniile de citire, iar `*` acordă acces complet.
 
 ### `mcp:connect` — capabilitate restrânsă pentru rută (#7895)
 
-Accesarea transportului HTTP/SSE MCP (`/api/mcp/*`) din afara interfeței loopback necesită
-excepția LOCAL_ONLY pentru `/api/mcp/` (consultați `docs/security/ROUTE_GUARD_TIERS.md`). În trecut,
-această excepție accepta doar o cheie API cu domeniul complet `manage`/`admin` — prea permisivă pentru un
+Accesarea transportului HTTP/SSE MCP (`/api/mcp/*`) dintr-o adresă non-loopback necesită
+excepția LOCAL_ONLY pentru `/api/mcp/` (consultați `docs/security/ROUTE_GUARD_TIERS.md`). Istoric,
+acea excepție accepta doar o cheie API cu domeniu complet `manage`/`admin` — prea larg pentru un
 apelant care trebuie doar să comunice cu MCP. `src/shared/constants/managementScopes.ts` exportă acum
-`MCP_CONNECT_SCOPE = "mcp:connect"`: un domeniu suplimentar și restrâns (după același precedent ca
-`SELF_USAGE_SCOPE`) care autorizează NUMAI ocolirea pentru `/api/mcp/` în
-`src/server/authz/policies/management.ts` — acesta nu acordă acces la nicio altă rută de administrare
+`MCP_CONNECT_SCOPE = "mcp:connect"`: un domeniu suplimentar, restrâns (urmând același precedent ca
+`SELF_USAGE_SCOPE`), care autorizează NUMAI ocolirea pentru `/api/mcp/` în
+`src/server/authz/policies/management.ts` — nu acordă acces la nicio altă rută de administrare
 și este menținut în mod deliberat ÎN AFARA `MANAGEMENT_API_KEY_SCOPES`. O cheie care deține `manage`/`admin`
-trece în continuare neschimbată de această excepție; `mcp:connect` este o alternativă cu privilegii mai reduse pentru
-apelanții de la distanță care folosesc exclusiv MCP, verificată prin `hasMcpConnectOrManageScope()`.
+trece în continuare prin excepție fără modificări; `mcp:connect` este o alternativă cu privilegii mai reduse pentru
+apelanții exclusiv MCP de la distanță, verificată prin `hasMcpConnectOrManageScope()`.
 
 ### Asocierea domeniilor HTTP per cheie (#7895)
 
-Prin HTTP/SSE, `open-sse/mcp-server/httpTransport.ts` determină acum valorile reale
+Prin HTTP/SSE, `open-sse/mcp-server/httpTransport.ts` rezolvă acum valorile reale
 `api_keys.scopes` ale apelantului prin `resolveMcpCallerAuthInfo()` (`open-sse/mcp-server/httpAuthContext.ts`)
 și le transmite către `transport.handleRequest(req, { authInfo })` din SDK-ul MCP, astfel încât
 `extra.authInfo.scopes` care ajunge la fiecare apel de instrument reflectă domeniile proprii ale cheii Bearer.
 `resolveCallerScopeContext()` din `scopeEnforcement.ts` prioritiza deja `authInfo` față de
-`_meta` și alternativa bazată pe variabila de mediu `OMNIROUTE_MCP_SCOPES` — această modificare doar completează acea primă
-sursă, cu cea mai mare prioritate, care anterior nu era alimentată prin HTTP. Atunci când nu este identificată nicio cheie API
-(lipsește antetul sau cheia este nevalidă), `authInfo` rămâne `undefined`, iar determinarea continuă prin
-lanțul existent `meta`/variabilă de mediu, fără modificări. Această schimbare NU inversează valoarea implicită a
-`OMNIROUTE_MCP_ENFORCE_SCOPES` — aplicarea trebuie în continuare activată explicit; modificarea doar face ca
-mecanismul per cheie să aibă prioritate odată ce este activat. stdio nu are o identitate per apelant (consultați
-`mcpCallerIdentity.ts`) și nu este afectat — continuă să utilizeze lanțul alternativ `_meta`/variabilă de mediu.
+`_meta` și alternativa bazată pe variabila de mediu `OMNIROUTE_MCP_SCOPES` — această modificare doar populează prima sursă,
+cu cea mai mare prioritate, care anterior nu era alimentată prin HTTP. Atunci când nu este rezolvată nicio cheie API
+(fără antet sau cu o cheie nevalidă), `authInfo` rămâne `undefined`, iar rezolvarea continuă prin
+lanțul existent `meta`/mediu, fără modificări. stdio nu are identitate per apelant (consultați
+`mcpCallerIdentity.ts`) și nu este afectat — continuă să utilizeze lanțul alternativ `_meta`/mediu.
+
+**Aplicarea este activată forțat pentru apelanții HTTP/SSE cu domenii restrânse, indiferent de
+`OMNIROUTE_MCP_ENFORCE_SCOPES`.** Faptul că `OMNIROUTE_MCP_ENFORCE_SCOPES` are implicit valoarea `false` este sigur doar
+pentru fluxul local/stdio cu un singur operator, unde nu există o identitate per apelant în raport cu care să fie aplicate domeniile.
+`open-sse/mcp-server/server.ts::withScopeEnforcement()` activează necondiționat aplicarea domeniilor
+per instrument (`shouldForceScopeEnforcement()` în `scopeEnforcement.ts`)
+ori de câte ori `resolveCallerScopeContext()` a rezolvat
+`source === "authInfo"` (adică un antet HTTP Authorization real, per cheie, exclusiv HTTP/SSE) ȘI cheia
+respectivă nu deține domeniul complet `manage`/`admin`. Aceasta elimină breșa prin care o cheie ce deținea DOAR
+domeniul restrâns de ocolire `mcp:connect` — documentat mai sus ca neautorizând nimic altceva decât
+excepția LOCAL_ONLY pentru `/api/mcp/` — ar fi putut altfel invoca fiecare instrument MCP după ce un operator
+activa accesul MCP de la distanță/non-loopback, pur și simplu deoarece `OMNIROUTE_MCP_ENFORCE_SCOPES` este distribuit
+implicit cu valoarea `false`. O cheie cu drepturi complete `manage`/`admin` prin HTTP și fiecare apelant stdio/local păstrează
+neschimbat comportamentul existent condiționat de `OMNIROUTE_MCP_ENFORCE_SCOPES`.
 
 ---
 
 ## Variabile de mediu
 
-| Variabilă                               | Valoare implicită                    | Scop                                                                                                                                                    |
-| :-------------------------------------- | :----------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`             | URL-ul de bază utilizat de serverul MCP când apelează API-urile interne OmniRoute                                                                       |
-| `OMNIROUTE_API_KEY`                     | (gol)                                | Cheia API transmisă ca `Authorization: Bearer` către apelurile API interne                                                                              |
-| `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (doar `"true"` îl activează) | Când este activată, absența domeniilor de acces refuză apelurile instrumentelor și înregistrează `scope_denied:<reason>` în jurnalul de audit           |
-| `OMNIROUTE_MCP_SCOPES`                  | (gol)                                | Lista de domenii de acces permise, separate prin virgule, considerate implicit „disponibile” (utilizată când apelantul nu furnizează propriile domenii) |
-| `OMNIROUTE_MCP_COMPRESS_DESCRIPTIONS`   | (nesetat = activat)                  | Când este setată la `0/false/off/no`, dezactivează comprimarea descrierilor MCP în momentul înregistrării                                               |
-| `OMNIROUTE_MCP_DESCRIPTION_COMPRESSION` | (nesetat = activat)                  | Alias alternativ pentru aceeași opțiune de mai sus                                                                                                      |
-| `OMNIROUTE_MCP_FETCH_TIMEOUT_MS`        | `10000`                              | Intervalul până la anulare pentru citirile interne de administrare (stare, reziliență, combinații, cotă, utilizare)                                     |
-| `OMNIROUTE_MCP_UPSTREAM_TIMEOUT_MS`     | `60000`                              | Intervalul până la anulare pentru etapele care așteaptă un furnizor (`route_request`, `web_search`, `web_fetch`)                                        |
-| `MCP_TOOL_DENY`                         | (nesetat = fără filtru)              | Numele instrumentelor, separate prin virgule, care trebuie eliminate din `tools/list` (reducerea cardinalității instrumentelor — vezi mai jos)          |
-| `MCP_TOOL_ALLOW`                        | (nesetat = fără filtru)              | Numele instrumentelor, separate prin virgule, care trebuie păstrate exclusiv (mod listă de permisiuni — vezi mai jos)                                   |
-| `DATA_DIR`                              | `~/.omniroute`                       | Fișierul de semnalizare periodică este scris în `${DATA_DIR}/runtime/mcp-heartbeat.json`                                                                |
+| Variabilă                               | Valoare implicită                   | Scop                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| :-------------------------------------- | :---------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`            | URL-ul de bază utilizat de serverul MCP când apelează API-urile interne OmniRoute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `OMNIROUTE_API_KEY`                     | (gol)                               | Cheia API transmisă ca `Authorization: Bearer` către apelurile API interne                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (doar `"true"` o activează) | Când este activată, lipsa domeniilor de acces determină respingerea apelurilor instrumentelor și înregistrează `scope_denied:<reason>` în jurnalul de audit. Aplicarea este DE ASEMENEA impusă indiferent de acest indicator pentru orice apelant HTTP/SSE identificat pe baza unui antet Authorization specific fiecărei chei (`source === "authInfo"`) care nu are domeniul complet `manage`/`admin` — de exemplu, o cheie care deține doar domeniul restrâns de ocolire `mcp:connect` — astfel încât această valoare implicită este sigură numai pentru fluxul local/stdio cu un singur operator, niciodată pentru accesul de la distanță din afara interfeței loopback |
+| `OMNIROUTE_MCP_SCOPES`                  | (gol)                               | Lista de domenii de acces, separate prin virgule, considerate implicit „disponibile” (utilizată când apelantul nu furnizează propriile domenii de acces)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `OMNIROUTE_MCP_COMPRESS_DESCRIPTIONS`   | (nesetat = activat)                 | Când este setată la `0/false/off/no`, dezactivează comprimarea descrierilor MCP în momentul înregistrării                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `OMNIROUTE_MCP_DESCRIPTION_COMPRESSION` | (nesetat = activat)                 | Alias alternativ pentru aceeași opțiune de mai sus                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `OMNIROUTE_MCP_FETCH_TIMEOUT_MS`        | `10000`                             | Limita de timp înainte de anulare pentru citirile interne de administrare (stare, reziliență, combinații, cotă, utilizare)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `OMNIROUTE_MCP_UPSTREAM_TIMEOUT_MS`     | `60000`                             | Limita de timp înainte de anulare pentru etapele care așteaptă răspunsul unui furnizor (`route_request`, `web_search`, `web_fetch`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `MCP_TOOL_DENY`                         | (nesetat = fără filtru)             | Nume de instrumente separate prin virgule care trebuie eliminate din `tools/list` (reducerea cardinalității instrumentelor — consultați mai jos)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `MCP_TOOL_ALLOW`                        | (nesetat = fără filtru)             | Nume de instrumente separate prin virgulă care vor fi păstrate exclusiv (mod listă de permisiuni — consultați mai jos)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `DATA_DIR`                              | `~/.omniroute`                      | Fișierul heartbeat este scris în `${DATA_DIR}/runtime/mcp-heartbeat.json`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 ---
 

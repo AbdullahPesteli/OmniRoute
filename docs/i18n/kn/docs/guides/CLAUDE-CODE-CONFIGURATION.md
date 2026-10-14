@@ -1,6 +1,6 @@
 # Claude Code CLI — Configuration with OmniRoute (ಕನ್ನಡ)
 
-🌐 **Languages:** 🇺🇸 [English](../../../../guides/CLAUDE-CODE-CONFIGURATION.md) · 🇪🇹 [am](../../../am/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇦 [ar](../../../ar/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇦🇿 [az](../../../az/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇬 [bg](../../../bg/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇩 [bn](../../../bn/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇨🇿 [cs](../../../cs/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇩🇰 [da](../../../da/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇩🇪 [de](../../../de/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇬🇷 [el](../../../el/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇪🇸 [es](../../../es/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇪🇪 [et](../../../et/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇷 [fa](../../../fa/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇫🇮 [fi](../../../fi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇫🇷 [fr](../../../fr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇪 [ga](../../../ga/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [gu](../../../gu/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇬 [ha](../../../ha/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇱 [he](../../../he/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [hi](../../../hi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇭🇷 [hr](../../../hr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇭🇺 [hu](../../../hu/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇦🇲 [hy](../../../hy/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇩 [id](../../../id/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇬 [ig](../../../ig/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇹 [it](../../../it/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇯🇵 [ja](../../../ja/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇬🇪 [ka](../../../ka/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇰🇭 [km](../../../km/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇰🇷 [ko](../../../ko/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇱🇹 [lt](../../../lt/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇱🇻 [lv](../../../lv/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [ml](../../../ml/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [mr](../../../mr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇲🇾 [ms](../../../ms/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇲🇹 [mt](../../../mt/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇲🇲 [my](../../../my/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇵 [ne](../../../ne/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇱 [nl](../../../nl/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇴 [no](../../../no/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [or](../../../or/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [pa](../../../pa/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇭 [phi](../../../phi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇱 [pl](../../../pl/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇹 [pt](../../../pt/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇷🇴 [ro](../../../ro/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇷🇺 [ru](../../../ru/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇱🇰 [si](../../../si/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇰 [sk](../../../sk/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇮 [sl](../../../sl/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇷🇸 [sr](../../../sr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇪 [sv](../../../sv/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇰🇪 [sw](../../../sw/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [ta](../../../ta/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [te](../../../te/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇹🇭 [th](../../../th/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇹🇷 [tr](../../../tr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇰 [ur](../../../ur/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇺🇿 [uz](../../../uz/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇻🇳 [vi](../../../vi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇬 [yo](../../../yo/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/CLAUDE-CODE-CONFIGURATION.md)
+🌐 **Languages:** 🇺🇸 [English](../../../../guides/CLAUDE-CODE-CONFIGURATION.md) · 🇪🇹 [am](../../../am/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇦 [ar](../../../ar/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇦🇿 [az](../../../az/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇬 [bg](../../../bg/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇩 [bn](../../../bn/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇦 [bs](../../../bs/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇨🇿 [cs](../../../cs/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇩🇰 [da](../../../da/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇩🇪 [de](../../../de/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇬🇷 [el](../../../el/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇪🇸 [es](../../../es/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇪🇪 [et](../../../et/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇷 [fa](../../../fa/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇫🇮 [fi](../../../fi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇫🇷 [fr](../../../fr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇪 [ga](../../../ga/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [gu](../../../gu/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇬 [ha](../../../ha/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇱 [he](../../../he/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [hi](../../../hi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇭🇷 [hr](../../../hr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇭🇺 [hu](../../../hu/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇦🇲 [hy](../../../hy/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇩 [id](../../../id/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇬 [ig](../../../ig/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇹 [it](../../../it/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇯🇵 [ja](../../../ja/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇬🇪 [ka](../../../ka/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇰🇭 [km](../../../km/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇰🇷 [ko](../../../ko/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇱🇹 [lt](../../../lt/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇱🇻 [lv](../../../lv/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [ml](../../../ml/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [mr](../../../mr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇲🇾 [ms](../../../ms/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇲🇹 [mt](../../../mt/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇲🇲 [my](../../../my/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇵 [ne](../../../ne/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇱 [nl](../../../nl/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇴 [no](../../../no/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [or](../../../or/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [pa](../../../pa/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇭 [phi](../../../phi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇱 [pl](../../../pl/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇹 [pt](../../../pt/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇷🇴 [ro](../../../ro/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇷🇺 [ru](../../../ru/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇱🇰 [si](../../../si/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇰 [sk](../../../sk/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇮 [sl](../../../sl/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇷🇸 [sr](../../../sr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇪 [sv](../../../sv/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇰🇪 [sw](../../../sw/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [ta](../../../ta/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [te](../../../te/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇹🇭 [th](../../../th/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇹🇷 [tr](../../../tr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇰 [ur](../../../ur/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇺🇿 [uz](../../../uz/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇻🇳 [vi](../../../vi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇬 [yo](../../../yo/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/CLAUDE-CODE-CONFIGURATION.md)
 
 ---
 
@@ -116,9 +116,13 @@ Claude ಟೂಲ್ ಕಾರ್ಡ್ (**ಡ್ಯಾಶ್ಬೋರ್ಡ್ �
 
 ## ಪ್ರೊಫೈಲ್ಗಳು (`CLAUDE_CONFIG_DIR`)
 
-Claude Code ನಲ್ಲಿ **ಸ್ಥಳೀಯ ಪ್ರೊಫೈಲ್ ಫೈಲ್ಗಳಿಲ್ಲ** (Codex ನ `~/.codex/<name>.config.toml` ಗಿಂತ ಭಿನ್ನವಾಗಿ). ಸಾಂಪ್ರದಾಯಿಕ ವಿಧಾನವೆಂದರೆ `CLAUDE_CONFIG_DIR` — ಪ್ರತಿ ಪ್ರೊಫೈಲ್ಗೆ ಪ್ರತ್ಯೇಕ ಕಾನ್ಫಿಗ್ ಡೈರೆಕ್ಟರಿ; ಪ್ರತಿಯೊಂದೂ ತನ್ನದೇ ಆದ `settings.json`, ಕ್ರೆಡೆನ್ಶಿಯಲ್ಗಳು, ಇತಿಹಾಸ ಮತ್ತು ಕ್ಯಾಶ್ ಹೊಂದಿರುತ್ತದೆ.
+Claude Code ನಲ್ಲಿ **ಸ್ಥಳೀಯ ಪ್ರೊಫೈಲ್ ಫೈಲ್ಗಳಿಲ್ಲ** (Codex ನ `~/.codex/<name>.config.toml` ಗಿಂತ ಭಿನ್ನವಾಗಿ).
+ರೂಢಿಗತ ಕಾರ್ಯವಿಧಾನವೆಂದರೆ `CLAUDE_CONFIG_DIR` — ಪ್ರತಿ ಪ್ರೊಫೈಲ್ಗೆ ಪ್ರತ್ಯೇಕ ಕಾನ್ಫಿಗ್ ಡೈರೆಕ್ಟರಿ,
+ಪ್ರತಿಯೊಂದೂ ತನ್ನದೇ ಆದ `settings.json`, ರುಜುವಾತುಗಳು, ಇತಿಹಾಸ ಮತ್ತು ಕ್ಯಾಶ್ ಹೊಂದಿರುತ್ತದೆ.
 
-`omniroute setup-claude` ಲೈವ್ `/v1/models` ಕ್ಯಾಟಲಾಗ್ ಅನ್ನು ಪಡೆದು, ಪ್ರತಿ ಮಾಡೆಲ್ಗಾಗಿ `~/.claude/profiles/<name>/settings.json` ನಲ್ಲಿ ಒಂದು ಪ್ರೊಫೈಲ್ ಬರೆಯುತ್ತದೆ ಮತ್ತು **`setup-codex` ನಲ್ಲಿರುವ ಅದೇ ಹೆಸರುಗಳನ್ನು** (`glm52`, `kimi-k27`, `deepseek-pro`, …) ಮರುಬಳಕೆ ಮಾಡುತ್ತದೆ:
+`omniroute setup-claude` ಲೈವ್ `/v1/models` ಕ್ಯಾಟಲಾಗ್ ಅನ್ನು ಪಡೆದು, ಪ್ರತಿ ಮಾಡೆಲ್ಗೆ
+ಒಂದು ಪ್ರೊಫೈಲ್ ಅನ್ನು `~/.claude/profiles/<name>/settings.json` ನಲ್ಲಿ ಬರೆಯುತ್ತದೆ ಮತ್ತು
+**`setup-codex` ನಲ್ಲಿರುವ ಅದೇ ಹೆಸರುಗಳನ್ನು** (`glm52`, `kimi-k27`, `deepseek-pro`, …) ಮರುಬಳಕೆ ಮಾಡುತ್ತದೆ:
 
 ```jsonc
 // ~/.claude/profiles/glm52/settings.json
@@ -135,9 +139,20 @@ Claude Code ನಲ್ಲಿ **ಸ್ಥಳೀಯ ಪ್ರೊಫೈಲ್ ಫೈ
 }
 ```
 
-> **ಆಥ್ ಟೋಕನ್ ಅನ್ನು ಪ್ರೊಫೈಲ್ಗೆ ಎಂದಿಗೂ ಬರೆಯಲಾಗುವುದಿಲ್ಲ.** `omniroute launch --profile <name>` ಮೂಲಕ ಪ್ರಾರಂಭಿಸಿ (ಇದು ಸಕ್ರಿಯ ಕಾಂಟೆಕ್ಸ್ಟ್ನಿಂದ `ANTHROPIC_AUTH_TOKEN` ಅನ್ನು ಸೇರಿಸುತ್ತದೆ), ಅಥವಾ ನೀವೇ `ANTHROPIC_AUTH_TOKEN` ಅನ್ನು ಎಕ್ಸ್ಪೋರ್ಟ್ ಮಾಡಿ `CLAUDE_CONFIG_DIR=~/.claude/profiles/<name> claude` ಅನ್ನು ರನ್ ಮಾಡಿ.
+> **ದೃಢೀಕರಣ ಟೋಕನ್ ಅನ್ನು ಪ್ರೊಫೈಲ್ಗೆ ಎಂದಿಗೂ ಬರೆಯಲಾಗುವುದಿಲ್ಲ.** `omniroute launch --profile <name>`
+> ಮೂಲಕ ಪ್ರಾರಂಭಿಸಿ (ಇದು ಸಕ್ರಿಯ ಕಾಂಟೆಕ್ಸ್ಟ್ನಿಂದ `ANTHROPIC_AUTH_TOKEN` ಅನ್ನು ಸೇರಿಸುತ್ತದೆ), ಅಥವಾ
+> `ANTHROPIC_AUTH_TOKEN` ಅನ್ನು ನೀವೇ ಎಕ್ಸ್ಪೋರ್ಟ್ ಮಾಡಿ
+> `CLAUDE_CONFIG_DIR=~/.claude/profiles/<name> claude` ಅನ್ನು ಚಲಾಯಿಸಿ.
 
-**ಮಾಡೆಲ್ ಡಿಸ್ಕವರಿಯ ನಂತರ ಸ್ವಯಂ-ಸಿಂಕ್ (ಆಪ್ಟ್-ಇನ್).** ಪ್ರೊವೈಡರ್ ಮಾಡೆಲ್ ಸಿಂಕ್ ಲೈವ್ ಕ್ಯಾಟಲಾಗ್ ಅನ್ನು ಬದಲಾಯಿಸಿದಾಗಲೆಲ್ಲಾ OmniRoute ಇದೇ `~/.claude/profiles/<name>/settings.json` ಫೈಲ್ಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಮರುರಚಿಸಬಹುದು — ಆದ್ದರಿಂದ ಹೊಸದಾಗಿ ಸೇರಿಸಲಾದ ಅಥವಾ ಮರುಹೆಸರಿಸಲಾದ ಮಾಡೆಲ್ಗಳು ಕಮಾಂಡ್ ಅನ್ನು ಮತ್ತೆ ರನ್ ಮಾಡದೆಯೇ ಪ್ರೊಫೈಲ್ಗಳನ್ನು ಪಡೆಯುತ್ತವೆ. ಇದು **ಡೀಫಾಲ್ಟ್ ಆಗಿ ಆಫ್ ಆಗಿರುತ್ತದೆ**: ಇದನ್ನು **CLI Code ಡ್ಯಾಶ್ಬೋರ್ಡ್**ನಿಂದ ("CLI ಪ್ರೊಫೈಲ್ ಸ್ವಯಂ-ಸಿಂಕ್" → Claude Code) ಟಾಗಲ್ ಮಾಡಿ, ಅಥವಾ `OMNIROUTE_AUTO_SYNC_CLAUDE_PROFILES=true` ಹೊಂದಿಸಿ (ಇದು ಡೀಫಾಲ್ಟ್ ಆಗಿ ಆನ್ ಇರುವ `CLI_ALLOW_CONFIG_WRITES` ಅನ್ನೂ ಗೌರವಿಸುತ್ತದೆ). ಸಕ್ರಿಯಗೊಳಿಸಿದಾಗ ಇದು ಪ್ರೊಫೈಲ್ ಫೈಲ್ಗಳನ್ನು ಮಾತ್ರ ಬರೆಯುತ್ತದೆ; ನಿಮ್ಮ ಸಕ್ರಿಯ/ಡೀಫಾಲ್ಟ್ Claude ಕಾನ್ಫಿಗ್, ಆಥ್ ಅಥವಾ `~/.claude/settings.json` ಅನ್ನು ಎಂದಿಗೂ ಬದಲಾಯಿಸುವುದಿಲ್ಲ.
+**ಮಾಡೆಲ್ ಅನ್ವೇಷಣೆಯ ನಂತರ ಸ್ವಯಂ-ಸಿಂಕ್ (ಐಚ್ಛಿಕ).** ಪ್ರೊವೈಡರ್ ಮಾಡೆಲ್ ಸಿಂಕ್ ಲೈವ್
+ಕ್ಯಾಟಲಾಗ್ ಅನ್ನು ಬದಲಾಯಿಸಿದಾಗಲೆಲ್ಲ OmniRoute ಇದೇ `~/.claude/profiles/<name>/settings.json`
+ಫೈಲ್ಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಮರುರಚಿಸಬಹುದು — ಇದರಿಂದ ಕಮಾಂಡ್ ಅನ್ನು ಪುನಃ ಚಲಾಯಿಸದೆಯೇ ಹೊಸ/ಮರುಹೆಸರಿಸಲಾದ
+ಮಾಡೆಲ್ಗಳಿಗೆ ಪ್ರೊಫೈಲ್ಗಳು ದೊರೆಯುತ್ತವೆ. ಇದು **ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಆಫ್ ಆಗಿರುತ್ತದೆ**: ಇದನ್ನು
+**CLI Code ಡ್ಯಾಶ್ಬೋರ್ಡ್**ನಿಂದ ("CLI ಪ್ರೊಫೈಲ್ ಸ್ವಯಂ-ಸಿಂಕ್" → Claude Code) ಟಾಗಲ್ ಮಾಡಿ, ಅಥವಾ
+`OMNIROUTE_AUTO_SYNC_CLAUDE_PROFILES=true` ಅನ್ನು ಹೊಂದಿಸಿ (ಇದು ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಆನ್ ಆಗಿರುವ
+`CLI_ALLOW_CONFIG_WRITES` ಅನ್ನೂ ಗೌರವಿಸುತ್ತದೆ). ಸಕ್ರಿಯಗೊಳಿಸಿದಾಗ ಇದು ಪ್ರೊಫೈಲ್ ಫೈಲ್ಗಳನ್ನು ಮಾತ್ರ
+ಬರೆಯುತ್ತದೆ; ನಿಮ್ಮ ಸಕ್ರಿಯ/ಪೂರ್ವನಿಯೋಜಿತ Claude ಕಾನ್ಫಿಗ್, ದೃಢೀಕರಣ ಅಥವಾ `~/.claude/settings.json`
+ಅನ್ನು ಎಂದಿಗೂ ಬದಲಾಯಿಸುವುದಿಲ್ಲ.
 
 ### ಪ್ರೊಫೈಲ್ಗಳನ್ನು ರಚಿಸುವುದು + ಬಳಸುವುದು
 
@@ -145,13 +160,17 @@ Claude Code ನಲ್ಲಿ **ಸ್ಥಳೀಯ ಪ್ರೊಫೈಲ್ ಫೈ
 # ಸ್ಥಳೀಯ OmniRoute
 omniroute setup-claude
 
-# ರಿಮೋಟ್ VPS (ಪ್ರತಿ ಪ್ರೊಫೈಲ್ನಲ್ಲೂ VPS URL ಅನ್ನು ಸೇರಿಸುತ್ತದೆ)
+# ರಿಮೋಟ್ VPS (ಪ್ರತಿ ಪ್ರೊಫೈಲ್ನಲ್ಲಿ VPS URL ಅನ್ನು ಅಳವಡಿಸುತ್ತದೆ)
 omniroute setup-claude --remote http://192.168.0.15:20128 --api-key oma_live_xxx
 
 # ಕೆಲವು ಪ್ರೊವೈಡರ್ಗಳು ಮಾತ್ರ
 omniroute setup-claude --only glm,kimi
 
-# ಬರೆಯದೆಯೇ ಪೂರ್ವವೀಕ್ಷಣೆ
+# ಈ ಹೋಸ್ಟ್ನಲ್ಲಿ ಪತ್ತೆಯಾಗದ ಸ್ಥಳೀಯ-CLI ಪ್ರೊವೈಡರ್ಗಳಿಗೂ (zcode, auggie, devin-cli-agentic,
+# codex-app-server) ಪ್ರೊಫೈಲ್ಗಳನ್ನು ಬರೆಯಿರಿ (ಸ್ಥಳೀಯ ಗುರಿಗಾಗಿ ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಬಿಟ್ಟುಬಿಡಲಾಗುತ್ತದೆ)
+omniroute setup-claude --include-local
+
+# ಬರೆಯದೆಯೇ ಪೂರ್ವವೀಕ್ಷಿಸಿ
 omniroute setup-claude --dry-run
 
 # ಪ್ರೊಫೈಲ್ ಅನ್ನು ಪ್ರಾರಂಭಿಸಿ

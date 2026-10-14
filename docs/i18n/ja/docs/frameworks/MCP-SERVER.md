@@ -1,6 +1,6 @@
 # OmniRoute MCP Server Documentation (日本語)
 
-🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
+🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
 ---
 
@@ -279,8 +279,104 @@ SSEとストリーミング可能なHTTPトランスポートはどちらも、�
 
 ## 認証とスコープ
 
-MCP ツールは、API キーのスコープを通じて認証されます。スコープの適用は
-`open-sse/mcp-server/scopeEnforcement.ts` に集約されています。各ツールには特定のスコープが必要です。
+MCP ツール呼び出しは、呼び出し元からスコープ文字列を読み取ります。このチェックは、互いに独立した 3 つの名前空間のうちの 1 つです。あるチェッカーに合格しても、ほかのチェッカーに合格したことにはなりません。
+ルールについては、[3 つのスコープ名前空間](#three-scope-namespaces)を参照してください。
+ツールカタログについては、[MCP ツールのスコープ](#mcp-tool-scopes)を参照してください。
+
+### 3 つのスコープ名前空間
+
+API キーの `manage`、MCP ツールの `read:compression`、および
+`oma_live_…` アクセストークンの `read` は、互いに異なる 3 つの権限です。`read`
+アクセストークンを変更系の管理ルートに送信した呼び出し元には、HTTP 403
+`Access token scope 'read' is insufficient; 'write' required.`
+が返されます。このランクを扱うのは `scopeSatisfies` です。これは MCP テーブルを参照せず、MCP
+マッチャーもこのランクを参照しません。
+
+| 名前空間           | 認証情報                                                      | チェッカー       | 合格した場合に許可されるもの                     |
+| :----------------- | :------------------------------------------------------------ | :--------------- | :----------------------------------------------- |
+| API キー管理       | `api_keys.scopes`                                             | `hasManageScope` | その Bearer キーによる管理 REST                  |
+| API キー追加権限   | 同じ配列内の完全一致する 1 つの文字列                         | 下記のヘルパー   | その 1 つの機能のみ                              |
+| MCP ツールスコープ | 同じ配列、なければ MCP `_meta`、さらに `OMNIROUTE_MCP_SCOPES` | `scopeMatches`   | 適用が有効になっている場合の、そのツール         |
+| アクセストークン   | `oma_live_…`                                                  | `scopeSatisfies` | メソッドとパスがそのランクを必要とする管理ルート |
+
+各認証情報の発行については、
+[管理認証](../guides/MANAGEMENT-AUTH.md)を参照してください。
+
+#### API キーのスコープ
+
+1 つの `api_keys.scopes` 配列が 2 つの用途に使われます。それぞれ異なる関数を使用します。
+
+**管理 REST。** `manage` と `admin` は、
+`MANAGEMENT_API_KEY_SCOPES`（`src/shared/constants/managementScopes.ts`）のメンバーです。
+そのキーに対して管理ルートを認可するのが `hasManageScope` です。これらのルートでは `admin` に
+管理権限があります。ここでの `admin` という語はアクセストークンのランクではなく、MCP ツールスコープへ
+展開されることもありません。
+
+**追加文字列。** それぞれが完全一致によるメンバーシップテストであり、いずれも
+`MANAGEMENT_API_KEY_SCOPES` の外部に置かれます。
+
+| スコープ                       | 合格した場合に許可されるもの                                                                                                                                                    |
+| :----------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `mcp:connect`                  | 非ループバックの `/api/mcp/` に対する LOCAL_ONLY の例外のみ（`hasMcpConnectOrManageScope`）。`manage` または `admin` を持つキーも、この例外を通過します。                       |
+| `self:usage`                   | このキーに対する `GET /api/v1/me/status`（`src/app/api/v1/me/status/route.ts`）。`POST /api/keys` は作成時にこのスコープを追加します（`normalizeSelfServiceScopesForCreate`）。 |
+| `self:account-quota`           | そのステータスペイロード内のアップストリームアカウントクォータ（`src/lib/usage/apiKeySelfService.ts`）。ステータスルートには引き続き `self:usage` が必要です。                  |
+| `policy:bypass-provider-quota` | このキーによる推論呼び出しは、プロバイダークォータポリシーをスキップします（`src/sse/handlers/chat.ts` の `hasProviderQuotaBypassScope`）。                                     |
+
+#### マッチング
+
+カタログは、[MCP ツールのスコープ](#mcp-tool-scopes)にある表です。
+`src/shared/constants/mcpScopes.ts` の `MCP_SCOPE_LIST` をそのカタログとして
+扱わないでください。これは元の型付きサブセットです。後から追加されたツールは、その横で追加のスコープを
+宣言しています（`read:notion`、`read:skills`、`read:local-corpus`、および表内の残りのスコープ）。
+
+`open-sse/mcp-server/scopeEnforcement.ts` の `evaluateToolScopes` は、
+必要なすべてのスコープが、付与されたスコープのいずれかに一致する場合に呼び出しを許可します。
+
+- `*` は必要なすべてのスコープに一致します。
+- `*` で終わる付与済みスコープは、必要なスコープがアスタリスクより前の
+  プレフィックスで始まる場合に一致します。`read:*` は `read:compression` に一致します。
+- それ以外の付与済みスコープは、完全に同一の必須文字列にのみ一致します。
+
+スコープが `["manage"]` のキーは、`read:compression` に対する `scopeMatches` に失敗します。
+同様に、`admin`、`mcp:connect`、`read`、`write` のいずれかだけが
+付与されている場合も、この呼び出しは失敗します。末尾の `*` を除き、MCP ツールスコープ間に
+階層関係はありません。
+
+`OMNIROUTE_MCP_ENFORCE_SCOPES=true` でない限り、適用は無効です（デフォルトは
+`false`）。無効な間は、`evaluateToolScopes` は呼び出しを許可し、
+カタログを参照しません。有効な間は、HTTP が Bearer キーの `api_keys.scopes` を
+`authInfo` として使用します（[キーごとの HTTP スコープバインディング](#per-key-http-scope-binding-7895)を参照）。
+キーのスコープを解決できない場合、付与済みセットは MCP `_meta`、次に
+`OMNIROUTE_MCP_SCOPES` へフォールスルーします。
+
+#### アクセストークンのスコープ
+
+`oma_live_…` トークン（`src/lib/accessTokens/scopes.ts`）は、`read`、`write`、
+または `admin` を保持します。`scopeSatisfies` はランクとして機能します。`admin` は
+`write` と `read` を包含し、`write` は `read` を包含します。不明なスコープは何も包含しません。
+
+`evaluateAccessTokenAuth`（`src/server/authz/accessTokenAuth.ts`）は、そのランクを
+`inferRequiredScope`（`src/server/authz/accessScopes.ts`）と比較します。
+
+- `GET`、`HEAD`、`OPTIONS` には `read` が必要です。
+- それ以外のすべてのメソッドには `write` が必要です。
+- `ADMIN_SCOPE_PREFIXES` 内のパスでは、すべてのメソッドに `admin` が必要です。`/api/mcp`
+  はこのリストに含まれるため、`write` アクセストークンでも MCP HTTP
+  サーフェスを呼び出すことはできません。
+- `ADMIN_MUTATION_PREFIXES` 内のパスでは、変更系操作に限り `admin` が必要です。
+
+`PATCH /api/keys/{id}` はミューテーションであり、これらの管理者リストには含まれていないため、
+`read` トークンには 403
+`Access token scope 'read' is insufficient; 'write' required.`
+が返されます。
+`write` または `admin` アクセストークンは、このルートの要件を満たします。ダッシュボード JWT、ループバック CLI の machine-id トークン、および `manage` または `admin` を持つ API キーは別の分岐を通るため、このランクによる制限を受けません。
+
+`/api/mcp` に対する `scopeSatisfies` を通過したアクセストークンは、管理ゲートを通過したにすぎません。ツール呼び出しでは、引き続き API キーのスコープに対して `scopeMatches` が実行されます。アクセストークンのランクは `scopeMatches` の入力ではありません。
+
+### MCP ツールのスコープ
+
+スコープの適用は `open-sse/mcp-server/scopeEnforcement.ts` に集約されています。
+各ツールには特定のスコープが必要です:
 
 | スコープ              | ツール                                                                                                                                                                               |
 | :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -311,61 +407,74 @@ MCP ツールは、API キーのスコープを通じて認証されます。ス
 | `read:tools`          | `omniroute_tool_search`                                                                                                                                                              |
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                            |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                     |
-| `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                       |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                   |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                      |
-| `read:obsidian`       | 13 個の読み取りツール — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
-| `write:obsidian`      | 9 個の書き込みツール — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
-| `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                    |
+| `write:gamification`  | `gamification_invite`、`gamification_transfer`                                                                                                                                       |
+| `read:plugins`        | `plugin_list`、`plugin_executions`                                                                                                                                                   |
+| `write:plugins`       | `plugin_scan`、`plugin_install`、`plugin_uninstall`、`plugin_activate`、`plugin_deactivate`、`plugin_configure`                                                                      |
+| `read:obsidian`       | 13 個の読み取りツール — `obsidian_list_vault`、`obsidian_read_note`、`obsidian_search_simple`、`obsidian_search_structured`、`obsidian_get_periodic_note`、`obsidian_sync_status`、… |
+| `write:obsidian`      | 9 個の書き込みツール — `obsidian_write_note`、`obsidian_append_note`、`obsidian_patch_note`、`obsidian_move_note`、`obsidian_delete_note`、`obsidian_sync_trigger`、…                |
+| `read:local-corpus`   | `local_corpus_search`、`local_corpus_read`、`local_corpus_status`                                                                                                                    |
 
 ワイルドカードスコープがサポートされています。`read:*` はすべての読み取りスコープを付与し、`*` は完全なアクセス権を付与します。
 
-### `mcp:connect` — 限定的なルート権限 (#7895)
+### `mcp:connect` — 限定的なルート機能（#7895）
 
-非ループバックから HTTP/SSE MCP トランスポート (`/api/mcp/*`) にアクセスするには、
-`/api/mcp/` の LOCAL_ONLY 適用除外が必要です (`docs/security/ROUTE_GUARD_TIERS.md` を参照)。従来、
-この適用除外で受け入れられるのは、完全な `manage`/`admin` スコープを持つ API キーだけでした。これは、
-MCP との通信のみを必要とする呼び出し元にとって権限が広すぎます。`src/shared/constants/managementScopes.ts` は現在、
-`MCP_CONNECT_SCOPE = "mcp:connect"` をエクスポートしています。これは (`SELF_USAGE_SCOPE` と同じ先例に基づく)
-追加的かつ限定的なスコープであり、`src/server/authz/policies/management.ts` における
-`/api/mcp/` のバイパスのみを認可します。他の管理ルートへのアクセス権は一切付与せず、
-意図的に `MANAGEMENT_API_KEY_SCOPES` の対象外とされています。`manage`/`admin` を持つキーは、
-これまでどおり変更なく適用除外を通過します。`mcp:connect` は、リモートの MCP 専用呼び出し元向けの
+ループバック以外から HTTP/SSE MCP トランスポート（`/api/mcp/*`）にアクセスするには、
+`/api/mcp/` の LOCAL_ONLY 例外処理が必要です（`docs/security/ROUTE_GUARD_TIERS.md` を参照）。従来、
+この例外処理で受け付けられるのは完全な `manage`/`admin` スコープを持つ API キーのみでしたが、これは
+MCP との通信だけが必要な呼び出し元には権限が広すぎました。`src/shared/constants/managementScopes.ts` は現在、
+`MCP_CONNECT_SCOPE = "mcp:connect"` をエクスポートしています。これは追加可能な限定スコープ（
+`SELF_USAGE_SCOPE` と同じ前例）であり、`src/server/authz/policies/management.ts` における
+`/api/mcp/` のバイパスのみを許可します。他の管理ルートへのアクセス権は一切付与せず、
+意図的に `MANAGEMENT_API_KEY_SCOPES` の対象外とされています。`manage`/`admin` を持つキーは
+従来どおりこの例外処理を通過します。`mcp:connect` は、リモートの MCP 専用呼び出し元向けの
 低権限な代替手段であり、`hasMcpConnectOrManageScope()` によってチェックされます。
 
-### キー単位の HTTP スコープのバインド (#7895)
+### キーごとの HTTP スコープバインディング（#7895）
 
 HTTP/SSE では、`open-sse/mcp-server/httpTransport.ts` が
-`resolveMcpCallerAuthInfo()` (`open-sse/mcp-server/httpAuthContext.ts`) を介して呼び出し元の実際の
+`resolveMcpCallerAuthInfo()`（`open-sse/mcp-server/httpAuthContext.ts`）を介して呼び出し元の実際の
 `api_keys.scopes` を解決し、それを MCP SDK の `transport.handleRequest(req, { authInfo })` に渡すようになりました。
-これにより、各ツール呼び出しに渡される `extra.authInfo.scopes` には、Bearer キー自体のスコープが反映されます。
+これにより、各ツール呼び出しに渡される `extra.authInfo.scopes` は Bearer キー自身のスコープを反映します。
 `scopeEnforcement.ts` の `resolveCallerScopeContext()` は、すでに `_meta` および
-`OMNIROUTE_MCP_SCOPES` 環境変数のフォールバックよりも `authInfo` を優先していました。この変更では、
-HTTP 経由では以前提供されていなかった、その最初の最優先ソースを設定するだけです。API キーを解決できない場合
-(ヘッダーなし、無効なキー)、`authInfo` は `undefined` のままとなり、解決処理は従来どおり既存の
-`meta`/環境変数チェーンへフォールスルーします。この変更によって `OMNIROUTE_MCP_ENFORCE_SCOPES` の
-デフォルトが切り替わることはありません。適用は引き続き明示的に有効化する必要があります。この変更は、
-有効化された場合にキー単位のパスを優先させるだけです。stdio には呼び出し元ごとの ID がないため
-(`mcpCallerIdentity.ts` を参照)、影響を受けません。stdio は引き続き `_meta`/環境変数の
-フォールバックチェーンを使用します。
+`OMNIROUTE_MCP_SCOPES` 環境変数へのフォールバックよりも `authInfo` を優先していました。
+今回の変更では、これまで HTTP 経由では提供されていなかった、この最優先の情報源を設定するだけです。
+API キーを解決できない場合（ヘッダーなし、無効なキー）、`authInfo` は `undefined` のままとなり、
+解決処理は従来どおり既存の `meta`/環境変数チェーンへフォールバックします。stdio には呼び出し元ごとの
+識別情報がないため（`mcpCallerIdentity.ts` を参照）、影響はありません。引き続き `_meta`/環境変数の
+フォールバックチェーンが使用されます。
+
+**限定スコープの HTTP/SSE 呼び出し元では、`OMNIROUTE_MCP_ENFORCE_SCOPES` に関係なく、
+スコープの適用が強制的に有効になります。** `OMNIROUTE_MCP_ENFORCE_SCOPES` のデフォルトが `false` でも
+安全なのは、スコープを照合する呼び出し元ごとの識別情報が存在しない、ローカル/stdio の単一オペレーターフローに限られます。
+`open-sse/mcp-server/server.ts::withScopeEnforcement()` は、
+`resolveCallerScopeContext()` が `source === "authInfo"` を解決した場合
+（すなわち、キーごとの実際の HTTP Authorization ヘッダーを持つ HTTP/SSE 専用の呼び出し）かつ、そのキーが
+完全な `manage`/`admin` スコープを持たない場合に、`scopeEnforcement.ts` の
+`shouldForceScopeEnforcement()` を通じて、ツールごとのスコープ適用を無条件で有効にします。
+これにより、限定的な `mcp:connect` バイパススコープのみを持つキーが、オペレーターによって
+リモート/非ループバックの MCP アクセスが有効化された後、`OMNIROUTE_MCP_ENFORCE_SCOPES` のデフォルト値が
+`false` であるという理由だけで、すべての MCP ツールを呼び出せてしまうという問題が解消されます。
+前述のとおり、`mcp:connect` が許可するのは `/api/mcp/` の LOCAL_ONLY 例外処理のみです。
+HTTP 経由で完全な `manage`/`admin` を持つキー、およびすべての stdio/ローカル呼び出し元については、
+従来の `OMNIROUTE_MCP_ENFORCE_SCOPES` によって制御される動作がそのまま維持されます。
 
 ---
 
 ## 環境変数
 
-| 変数                                    | デフォルト                     | 用途                                                                                                                     |
-| :-------------------------------------- | :----------------------------- | :----------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`       | MCP サーバーが OmniRoute の内部 API を呼び出す際に使用するベース URL                                                     |
-| `OMNIROUTE_API_KEY`                     | （空）                         | 内部 API 呼び出しに `Authorization: Bearer` として転送される API キー                                                    |
-| `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false`（`"true"` のみ有効化） | 有効にすると、必要なスコープがない場合はツール呼び出しを拒否し、監査ログに `scope_denied:<reason>` を記録                |
-| `OMNIROUTE_MCP_SCOPES`                  | （空）                         | デフォルトで「利用可能」とみなされるスコープのカンマ区切り許可リスト（呼び出し元が独自のスコープを指定しない場合に使用） |
-| `OMNIROUTE_MCP_COMPRESS_DESCRIPTIONS`   | （未設定 = オン）              | `0/false/off/no` に設定すると、登録時の MCP 説明圧縮を無効化                                                             |
-| `OMNIROUTE_MCP_DESCRIPTION_COMPRESSION` | （未設定 = オン）              | 上記と同じ切り替え機能の代替エイリアス                                                                                   |
-| `OMNIROUTE_MCP_FETCH_TIMEOUT_MS`        | `10000`                        | 内部管理情報の読み取り（ヘルス、レジリエンス、コンボ、クォータ、使用量）を中断するまでの時間                             |
-| `OMNIROUTE_MCP_UPSTREAM_TIMEOUT_MS`     | `60000`                        | プロバイダーからの応答を待つホップ（`route_request`、`web_search`、`web_fetch`）を中断するまでの時間                     |
-| `MCP_TOOL_DENY`                         | （未設定 = フィルターなし）    | `tools/list` から除外するツール名のカンマ区切りリスト（ツール数の削減 — 下記参照）                                       |
-| `MCP_TOOL_ALLOW`                        | （未設定 = フィルターなし）    | 排他的に保持するツール名のカンマ区切りリスト（許可リストモード — 下記参照）                                              |
-| `DATA_DIR`                              | `~/.omniroute`                 | ハートビートファイルは `${DATA_DIR}/runtime/mcp-heartbeat.json` に書き込まれる                                           |
+| 変数                                    | デフォルト                         | 用途                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| :-------------------------------------- | :--------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`           | MCP サーバーが OmniRoute の内部 API を呼び出す際に使用するベース URL                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `OMNIROUTE_API_KEY`                     | （空）                             | 内部 API 呼び出しに `Authorization: Bearer` として転送される API キー                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false`（`"true"` の場合のみ有効） | 有効にすると、必要なスコープがない場合はツール呼び出しを拒否し、監査ログに `scope_denied:<reason>` を記録します。また、このフラグに関係なく、キーごとの Authorization ヘッダーから解決された HTTP/SSE 呼び出し元（`source === "authInfo"`）が完全な `manage`/`admin` スコープを持たない場合（たとえば、限定的な `mcp:connect` バイパススコープしか持たないキー）にも、適用が強制されます。そのため、このデフォルト設定が安全なのはローカル/stdio の単一オペレーター構成のみであり、リモートの非ループバックアクセスには決して使用しないでください |
+| `OMNIROUTE_MCP_SCOPES`                  | （空）                             | デフォルトで「利用可能」と見なされるスコープのカンマ区切り許可リスト（呼び出し元が独自のスコープを指定しない場合に使用）                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `OMNIROUTE_MCP_COMPRESS_DESCRIPTIONS`   | （未設定 = オン）                  | `0/false/off/no` に設定すると、登録時の MCP 説明圧縮を無効にします                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `OMNIROUTE_MCP_DESCRIPTION_COMPRESSION` | （未設定 = オン）                  | 上記と同じ切り替え設定の代替エイリアス                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `OMNIROUTE_MCP_FETCH_TIMEOUT_MS`        | `10000`                            | 内部管理情報の読み取り（ヘルス、レジリエンス、組み合わせ、クォータ、使用量）に対する中断までの時間                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `OMNIROUTE_MCP_UPSTREAM_TIMEOUT_MS`     | `60000`                            | プロバイダーからの応答を待つホップ（`route_request`、`web_search`、`web_fetch`）に対する中断までの時間                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `MCP_TOOL_DENY`                         | （未設定 = フィルターなし）        | `tools/list` から除外するツール名のカンマ区切りリスト（ツール数の削減 — 以下を参照）                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `MCP_TOOL_ALLOW`                        | （未設定 = フィルターなし）        | 排他的に保持するツール名のカンマ区切りリスト（許可リストモード — 下記参照）                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `DATA_DIR`                              | `~/.omniroute`                     | ハートビートファイルは `${DATA_DIR}/runtime/mcp-heartbeat.json` に書き込まれます                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 ---
 

@@ -1,6 +1,6 @@
 # OmniRoute MCP Server Documentation (اردو)
 
-🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
+🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
 ---
 
@@ -289,93 +289,206 @@ SSE اور اسٹریم ایبل HTTP، دونوں ٹرانسپورٹس اس و�
 
 ## توثیق اور اسکوپس
 
-MCP ٹولز کی توثیق API کلید کے اسکوپس کے ذریعے کی جاتی ہے۔ اسکوپ کا نفاذ
-`open-sse/mcp-server/scopeEnforcement.ts` میں مرکزی طور پر کیا جاتا ہے۔ ہر ٹول کے لیے مخصوص اسکوپس درکار ہوتے ہیں:
+MCP ٹول کالز کالر سے اسکوپ اسٹرنگز پڑھتی ہیں۔ یہ جانچ تین
+آزاد نیم اسپیسز میں سے ایک ہے۔ ایک چیکر سے کامیابی دوسرے چیکرز سے کامیابی نہیں ہے۔
+قواعد [تین اسکوپ نیم اسپیسز](#three-scope-namespaces) میں ہیں۔
+ٹول کیٹلاگ [MCP ٹول اسکوپس](#mcp-tool-scopes) میں ہے۔
 
-| دائرۂ کار             | ٹولز                                                                                                                                                                       |
-| :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `read:health`         | `get_health`, `get_provider_metrics`, `simulate_route`, `explain_route`, `best_combo_for_task`, `db_health_check`                                                          |
-| `read:combos`         | `list_combos`, `get_combo_metrics`, `simulate_route`, `best_combo_for_task`, `test_combo`                                                                                  |
-| `write:combos`        | `switch_combo`, `set_routing_strategy`                                                                                                                                     |
-| `read:quota`          | `check_quota`                                                                                                                                                              |
-| `read:usage`          | `cost_report`, `get_session_snapshot`, `explain_route`                                                                                                                     |
-| `read:models`         | `list_models_catalog`                                                                                                                                                      |
-| `execute:completions` | `route_request`, `test_combo`                                                                                                                                              |
-| `execute:search`      | `web_search`, `x_search`, `web_fetch`                                                                                                                                      |
-| `write:budget`        | `set_budget_guard`                                                                                                                                                         |
-| `write:resilience`    | `set_resilience_profile`, `db_health_check`                                                                                                                                |
-| `pricing:write`       | `sync_pricing`                                                                                                                                                             |
-| `read:cache`          | `cache_stats`                                                                                                                                                              |
-| `write:cache`         | `cache_flush`                                                                                                                                                              |
-| `read:compression`    | `compression_status`, `list_compression_combos`, `compression_combo_stats`                                                                                                 |
-| `write:compression`   | `compression_configure`, `set_compression_engine`                                                                                                                          |
-| `read:proxies`        | `oneproxy_fetch`, `oneproxy_rotate`, `oneproxy_stats`                                                                                                                      |
-| `read:notion`         | `notion_search`, `notion_get_page`, `notion_list_block_children`, `notion_query_database`, `notion_get_database`                                                           |
-| `write:notion`        | `notion_append_blocks`                                                                                                                                                     |
-| `read:memory`         | `memory_search`                                                                                                                                                            |
-| `write:memory`        | `memory_add`, `memory_clear`                                                                                                                                               |
-| `read:skills`         | `skills_list`, `skills_executions`                                                                                                                                         |
-| `write:skills`        | `skills_enable`                                                                                                                                                            |
-| `execute:skills`      | `skills_execute`                                                                                                                                                           |
-| `read:catalog`        | `agent_skills_list`, `agent_skills_get`, `agent_skills_coverage`                                                                                                           |
-| `read:tools`          | `omniroute_tool_search`                                                                                                                                                    |
-| `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                  |
-| `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                           |
-| `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                             |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                         |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                            |
-| `read:obsidian`       | 13 ریڈ ٹولز — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
-| `write:obsidian`      | 9 رائٹ ٹولز — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …               |
-| `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                          |
+### تین اسکوپ نیم اسپیسز
 
-وائلڈ کارڈ اسکوپس معاونت یافتہ ہیں: `read:*` تمام ریڈ اسکوپس فراہم کرتا ہے، جبکہ `*` مکمل رسائی فراہم کرتا ہے۔
+API کلید پر `manage`، MCP ٹول پر `read:compression`، اور
+`oma_live_…` رسائی ٹوکن پر `read` تین مختلف اجازتیں ہیں۔ وہ کالرز جو کسی تبدیلی
+کرنے والے مینجمنٹ روٹ کو `read` رسائی ٹوکن بھیجتے ہیں، انہیں HTTP 403 ملتا ہے:
+`Access token scope 'read' is insufficient; 'write' required.`
+یہ درجہ بندی `scopeSatisfies` ہے۔ یہ MCP ٹیبل سے رجوع نہیں کرتی، اور MCP
+میچر بھی اس سے رجوع نہیں کرتا۔
 
-### `mcp:connect` — محدود روٹ صلاحیت (#7895)
+| نیم اسپیس       | اسناد                                                                | چیکر                | کامیابی جس کی اجازت دیتی ہے                                |
+| :-------------- | :------------------------------------------------------------------- | :------------------ | :--------------------------------------------------------- |
+| API-key مینجمنٹ | `api_keys.scopes`                                                    | `hasManageScope`    | اس Bearer کلید کے لیے مینجمنٹ REST                         |
+| API-key اضافی   | وہی ارے، ایک عین مطابق اسٹرنگ                                        | ذیل میں نامزد ہیلپر | صرف وہی ایک صلاحیت                                         |
+| MCP ٹول اسکوپس  | وہی ارے، بصورتِ دیگر MCP `_meta`، بصورتِ دیگر `OMNIROUTE_MCP_SCOPES` | `scopeMatches`      | نفاذ فعال ہونے کے بعد، وہ ٹول                              |
+| رسائی ٹوکن      | `oma_live_…`                                                         | `scopeSatisfies`    | وہ مینجمنٹ روٹ جس کے میتھڈ اور پاتھ کو اس درجے کی ضرورت ہو |
 
-غیر لوپ بیک سے HTTP/SSE MCP ٹرانسپورٹ (`/api/mcp/*`) تک پہنچنے کے لیے
+ہر اسناد بنانے کا طریقہ
+[مینجمنٹ توثیق](../guides/MANAGEMENT-AUTH.md) میں بیان کیا گیا ہے۔
+
+#### API-key اسکوپس
+
+ایک `api_keys.scopes` ارے دو کام انجام دیتا ہے۔ وہ مختلف فنکشنز استعمال کرتے ہیں۔
+
+**مینجمنٹ REST۔** `manage` اور `admin`،
+`MANAGEMENT_API_KEY_SCOPES` (`src/shared/constants/managementScopes.ts`) کے ارکان ہیں۔
+`hasManageScope` ہی اس کلید کے لیے مینجمنٹ روٹس کو مجاز بناتا ہے۔ ان روٹس پر `admin`
+مینجمنٹ کی صلاحیت رکھتا ہے۔ یہاں لفظ `admin`
+رسائی ٹوکن کا درجہ نہیں ہے اور یہ MCP ٹول اسکوپس میں توسیع نہیں کرتا۔
+
+**اضافی اسٹرنگز۔** ہر ایک عین مطابق رکنیت کی جانچ ہے، اور ہر ایک
+`MANAGEMENT_API_KEY_SCOPES` سے باہر رہتی ہے۔
+
+| اسکوپ                          | کامیابی جس کی اجازت دیتی ہے                                                                                                                                                |
+| :----------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `mcp:connect`                  | صرف غیر loopback `/api/mcp/` کے لیے LOCAL_ONLY استثنا (`hasMcpConnectOrManageScope`)۔ `manage` یا `admin` والی کلید بھی اس استثنا میں کامیاب ہوتی ہے۔                      |
+| `self:usage`                   | اس کلید کے لیے `GET /api/v1/me/status` (`src/app/api/v1/me/status/route.ts`)۔ `POST /api/keys` تخلیق کے وقت یہ اسکوپ شامل کرتا ہے (`normalizeSelfServiceScopesForCreate`)۔ |
+| `self:account-quota`           | اس اسٹیٹس پے لوڈ کے اندر upstream اکاؤنٹ کوٹاز (`src/lib/usage/apiKeySelfService.ts`)۔ اسٹیٹس روٹ کو پھر بھی `self:usage` درکار ہے۔                                        |
+| `policy:bypass-provider-quota` | اس کلید کی inference کالز provider-quota پالیسی کو نظر انداز کرتی ہیں (`src/sse/handlers/chat.ts` میں `hasProviderQuotaBypassScope`)۔                                      |
+
+#### مماثلت
+
+کیٹلاگ [MCP ٹول اسکوپس](#mcp-tool-scopes) کے تحت موجود ٹیبل ہے۔
+`src/shared/constants/mcpScopes.ts` میں `MCP_SCOPE_LIST` کو وہ کیٹلاگ نہ سمجھیں:
+یہ اصل typed subset ہے۔ بعد کے ٹولز اس کے ساتھ مزید اسکوپس کا اعلان کرتے ہیں
+(`read:notion`، `read:skills`، `read:local-corpus`، اور ٹیبل کا باقی حصہ)۔
+
+`open-sse/mcp-server/scopeEnforcement.ts` میں `evaluateToolScopes` کسی کال کی
+اجازت اس وقت دیتا ہے جب ہر مطلوبہ اسکوپ کسی دیے گئے اسکوپ سے مماثل ہو:
+
+- `*` ہر مطلوبہ اسکوپ سے مماثل ہوتا ہے۔
+- `*` پر ختم ہونے والا دیا گیا اسکوپ ایسے مطلوبہ اسکوپ سے مماثل ہوتا ہے جو
+  ستارے سے پہلے موجود سابقے سے شروع ہو۔ `read:*`، `read:compression` سے مماثل ہے۔
+- ہر دوسرا دیا گیا اسکوپ صرف عین اسی مطلوبہ اسٹرنگ سے مماثل ہوتا ہے۔
+
+جس کلید کے اسکوپس `["manage"]` ہوں، وہ `read:compression` کے لیے `scopeMatches`
+میں ناکام ہوتی ہے۔ یہی کال `admin`، `mcp:connect`، `read`، اور `write` کے لیے بھی
+ناکام ہوتی ہے، جب صرف یہی اسٹرنگز دی گئی ہوں۔ آخری `*` کے علاوہ MCP ٹول اسکوپس
+کے درمیان کوئی درجہ بندی نہیں ہے۔
+
+نفاذ اس وقت تک بند رہتا ہے جب تک `OMNIROUTE_MCP_ENFORCE_SCOPES=true` نہ ہو (پہلے سے طے شدہ
+`false`)۔ اس کے بند ہونے کے دوران، `evaluateToolScopes` کال کی اجازت دیتا ہے اور
+کیٹلاگ کو نظر انداز کرتا ہے۔ اس کے فعال ہونے کے دوران، HTTP، Bearer کلید کے
+`api_keys.scopes` کو `authInfo` کے طور پر استعمال کرتا ہے (دیکھیے
+[فی کلید HTTP اسکوپ بائنڈنگ](#per-key-http-scope-binding-7895))۔
+جب کلید کے کوئی اسکوپس حل نہ ہوں تو دیے گئے اسکوپس پہلے MCP `_meta`، اور پھر
+`OMNIROUTE_MCP_SCOPES` کی طرف منتقل ہوتے ہیں۔
+
+#### رسائی ٹوکن اسکوپس
+
+`oma_live_…` ٹوکنز (`src/lib/accessTokens/scopes.ts`) میں `read`، `write`،
+یا `admin` ہوتا ہے۔ `scopeSatisfies` ایک درجہ بندی ہے: `admin`، `write` اور `read`
+دونوں کا احاطہ کرتا ہے، اور `write`، `read` کا احاطہ کرتا ہے۔ نامعلوم اسکوپس
+کسی چیز کا احاطہ نہیں کرتے۔
+
+`evaluateAccessTokenAuth` (`src/server/authz/accessTokenAuth.ts`) اس درجے کا
+`inferRequiredScope` (`src/server/authz/accessScopes.ts`) سے موازنہ کرتا ہے:
+
+- `GET`، `HEAD`، اور `OPTIONS` کو `read` درکار ہے۔
+- ہر دوسرے میتھڈ کو `write` درکار ہے۔
+- `ADMIN_SCOPE_PREFIXES` میں شامل پاتھز کو ہر میتھڈ کے لیے `admin` درکار ہے۔ `/api/mcp`
+  اس فہرست میں ہے، اس لیے `write` رسائی ٹوکن پھر بھی MCP HTTP
+  سطح کو کال نہیں کر سکتا۔
+- `ADMIN_MUTATION_PREFIXES` میں شامل پاتھز کو صرف mutations کے لیے `admin` درکار ہے۔
+
+`PATCH /api/keys/{id}` ایک mutation ہے اور ان admin فہرستوں میں شامل نہیں ہے، اس لیے
+`read` token کو 403 موصول ہوتا ہے:
+`Access token scope 'read' is insufficient; 'write' required.`
+ایک `write` یا `admin` access token اس route کی ضرورت پوری کرتا ہے۔ ایک dashboard JWT،
+loopback CLI machine-id token، اور `manage` یا `admin` والی API key
+دوسری branches اختیار کرتے ہیں اور اس rank کی وجہ سے محدود نہیں ہوتے۔
+
+ایک access token جو `/api/mcp` کے لیے `scopeSatisfies` کو پاس کرتا ہے، اس نے صرف
+management gate عبور کیا ہے۔ Tool calls اب بھی API-key
+scopes کے مقابلے میں `scopeMatches` چلاتی ہیں۔ Access-token rank، `scopeMatches` کا input نہیں ہے۔
+
+### MCP tool scopes
+
+Scope enforcement کو `open-sse/mcp-server/scopeEnforcement.ts` میں مرکزی حیثیت دی گئی ہے۔
+ہر tool کے لیے مخصوص scopes درکار ہوتے ہیں:
+
+| دائرۂ کار             | اوزار                                                                                                                                                                           |
+| :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `read:health`         | `get_health`, `get_provider_metrics`, `simulate_route`, `explain_route`, `best_combo_for_task`, `db_health_check`                                                               |
+| `read:combos`         | `list_combos`, `get_combo_metrics`, `simulate_route`, `best_combo_for_task`, `test_combo`                                                                                       |
+| `write:combos`        | `switch_combo`, `set_routing_strategy`                                                                                                                                          |
+| `read:quota`          | `check_quota`                                                                                                                                                                   |
+| `read:usage`          | `cost_report`, `get_session_snapshot`, `explain_route`                                                                                                                          |
+| `read:models`         | `list_models_catalog`                                                                                                                                                           |
+| `execute:completions` | `route_request`, `test_combo`                                                                                                                                                   |
+| `execute:search`      | `web_search`, `x_search`, `web_fetch`                                                                                                                                           |
+| `write:budget`        | `set_budget_guard`                                                                                                                                                              |
+| `write:resilience`    | `set_resilience_profile`, `db_health_check`                                                                                                                                     |
+| `pricing:write`       | `sync_pricing`                                                                                                                                                                  |
+| `read:cache`          | `cache_stats`                                                                                                                                                                   |
+| `write:cache`         | `cache_flush`                                                                                                                                                                   |
+| `read:compression`    | `compression_status`, `list_compression_combos`, `compression_combo_stats`                                                                                                      |
+| `write:compression`   | `compression_configure`, `set_compression_engine`                                                                                                                               |
+| `read:proxies`        | `oneproxy_fetch`, `oneproxy_rotate`, `oneproxy_stats`                                                                                                                           |
+| `read:notion`         | `notion_search`, `notion_get_page`, `notion_list_block_children`, `notion_query_database`, `notion_get_database`                                                                |
+| `write:notion`        | `notion_append_blocks`                                                                                                                                                          |
+| `read:memory`         | `memory_search`                                                                                                                                                                 |
+| `write:memory`        | `memory_add`, `memory_clear`                                                                                                                                                    |
+| `read:skills`         | `skills_list`, `skills_executions`                                                                                                                                              |
+| `write:skills`        | `skills_enable`                                                                                                                                                                 |
+| `execute:skills`      | `skills_execute`                                                                                                                                                                |
+| `read:catalog`        | `agent_skills_list`, `agent_skills_get`, `agent_skills_coverage`                                                                                                                |
+| `read:tools`          | `omniroute_tool_search`                                                                                                                                                         |
+| `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                       |
+| `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                |
+| `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                  |
+| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                              |
+| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                 |
+| `read:obsidian`       | پڑھنے کے 13 ٹولز — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
+| `write:obsidian`      | لکھنے کے 9 ٹولز — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
+| `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                               |
+
+وائلڈ کارڈ اسکوپس معاونت یافتہ ہیں: `read:*` تمام ریڈ اسکوپس دیتا ہے، جبکہ `*` مکمل رسائی دیتا ہے۔
+
+### `mcp:connect` — محدود روٹ کی صلاحیت (#7895)
+
+نان لوپ بیک سے HTTP/SSE MCP ٹرانسپورٹ (`/api/mcp/*`) تک پہنچنے کے لیے
 `/api/mcp/` LOCAL_ONLY استثنا درکار ہے (`docs/security/ROUTE_GUARD_TIERS.md` دیکھیں)۔ تاریخی طور پر
 یہ استثنا صرف مکمل `manage`/`admin` اسکوپ والی API کلید قبول کرتا تھا — جو ایسے
-کالر کے لیے ضرورت سے زیادہ وسیع تھا جسے صرف MCP سے رابطہ کرنا ہو۔ `src/shared/constants/managementScopes.ts` اب
-`MCP_CONNECT_SCOPE = "mcp:connect"` ایکسپورٹ کرتا ہے: ایک اضافی، محدود اسکوپ (`SELF_USAGE_SCOPE`
-جیسی نظیر کے مطابق) جو صرف `src/server/authz/policies/management.ts` میں
-`/api/mcp/` بائی پاس کی اجازت دیتا ہے — یہ کسی دوسرے مینجمنٹ روٹ تک رسائی نہیں دیتا
-اور اسے جان بوجھ کر `MANAGEMENT_API_KEY_SCOPES` سے باہر رکھا گیا ہے۔ `manage`/`admin`
-رکھنے والی کلید اب بھی اس استثنا سے بغیر کسی تبدیلی کے گزر جاتی ہے؛ `mcp:connect`
-دور دراز کے صرف MCP کالرز کے لیے کم مراعات والا متبادل ہے، جسے `hasMcpConnectOrManageScope()` کے ذریعے
-چیک کیا جاتا ہے۔
+کالر کے لیے ضرورت سے کہیں زیادہ وسیع تھا جسے صرف MCP سے رابطہ کرنا ہو۔ `src/shared/constants/managementScopes.ts` اب
+`MCP_CONNECT_SCOPE = "mcp:connect"` ایک اضافی، محدود اسکوپ کے طور پر ایکسپورٹ کرتا ہے (`SELF_USAGE_SCOPE` جیسی نظیر)
+جو صرف
+`src/server/authz/policies/management.ts` میں `/api/mcp/` بائی پاس کی اجازت دیتا ہے — یہ کسی دوسرے مینجمنٹ روٹ تک رسائی
+نہیں دیتا اور اسے جان بوجھ کر `MANAGEMENT_API_KEY_SCOPES` سے باہر رکھا گیا ہے۔ `manage`/`admin`
+رکھنے والی کلید اب بھی بغیر کسی تبدیلی کے اس استثنا سے گزر جاتی ہے؛ `mcp:connect` صرف
+ریموٹ MCP کالرز کے لیے کم مراعات والا متبادل ہے، جسے `hasMcpConnectOrManageScope()` کے ذریعے چیک کیا جاتا ہے۔
 
 ### فی کلید HTTP اسکوپ بائنڈنگ (#7895)
 
-HTTP/SSE پر، `open-sse/mcp-server/httpTransport.ts` اب `resolveMcpCallerAuthInfo()`
-(`open-sse/mcp-server/httpAuthContext.ts`) کے ذریعے کالر کے اصل `api_keys.scopes`
-حل کرتا ہے اور اسے MCP SDK کے `transport.handleRequest(req, { authInfo })` کو بھیجتا ہے، تاکہ
-ہر ٹول کال تک پہنچنے والا `extra.authInfo.scopes` بیئرر کلید کے اپنے اسکوپس کی عکاسی کرے۔
-`scopeEnforcement.ts` کا `resolveCallerScopeContext()` پہلے ہی `_meta` اور
-`OMNIROUTE_MCP_SCOPES` env فال بیک پر `authInfo` کو ترجیح دیتا تھا — یہ تبدیلی صرف اس پہلے،
-سب سے زیادہ ترجیحی ماخذ کو پُر کرتی ہے، جسے پہلے HTTP پر کوئی ڈیٹا فراہم نہیں کیا جاتا تھا۔ جب کوئی API کلید
-حل نہیں ہوتی (ہیڈر موجود نہ ہو، کلید غیر معتبر ہو)، تو `authInfo` بدستور `undefined` رہتا ہے اور ریزولیوشن
-بغیر کسی تبدیلی کے موجودہ `meta`/env سلسلے پر منتقل ہو جاتی ہے۔ یہ `OMNIROUTE_MCP_ENFORCE_SCOPES` کی
-ڈیفالٹ قدر کو تبدیل نہیں کرتا — انفورسمنٹ کو اب بھی واضح طور پر فعال کرنا ضروری ہے؛ یہ تبدیلی صرف
-فعال ہونے کے بعد فی کلید راستے کو ترجیح دیتی ہے۔ stdio کی کوئی فی کالر شناخت نہیں ہے
-(`mcpCallerIdentity.ts` دیکھیں) اور اس پر کوئی اثر نہیں پڑتا — یہ `_meta`/env فال بیک سلسلے پر ہی رہتا ہے۔
+HTTP/SSE پر، `open-sse/mcp-server/httpTransport.ts` اب کالر کے حقیقی
+`api_keys.scopes` کو `resolveMcpCallerAuthInfo()` (`open-sse/mcp-server/httpAuthContext.ts`)
+کے ذریعے حل کرتا ہے اور اسے MCP SDK کے `transport.handleRequest(req, { authInfo })` کو بھیجتا ہے، تاکہ
+ہر ٹول کال تک پہنچنے والا `extra.authInfo.scopes` خود Bearer کلید کے اسکوپس کی عکاسی کرے۔
+`scopeEnforcement.ts` کا `resolveCallerScopeContext()` پہلے ہی
+`_meta` اور `OMNIROUTE_MCP_SCOPES` env فال بیک کے مقابلے میں `authInfo` کو ترجیح دیتا تھا — یہ صرف اس پہلے،
+سب سے زیادہ ترجیحی ماخذ کو پُر کرتا ہے، جسے پہلے HTTP پر کوئی ڈیٹا فراہم نہیں کیا جاتا تھا۔ جب کوئی API کلید حل نہ ہو
+(کوئی ہیڈر نہ ہو، یا کلید غیر معتبر ہو)، تو `authInfo` بدستور `undefined` رہتا ہے اور ریزولیوشن بغیر کسی تبدیلی کے
+موجودہ `meta`/env سلسلے پر منتقل ہو جاتی ہے۔ stdio میں فی کالر شناخت موجود نہیں ہے
+(`mcpCallerIdentity.ts` دیکھیں) اور یہ اس تبدیلی سے متاثر نہیں ہوتا — یہ `_meta`/env فال بیک سلسلے ہی پر قائم رہتا ہے۔
+
+**محدود اسکوپ والے HTTP/SSE کالرز کے لیے نفاذ کو
+`OMNIROUTE_MCP_ENFORCE_SCOPES` سے قطع نظر لازماً فعال کیا جاتا ہے۔** `OMNIROUTE_MCP_ENFORCE_SCOPES` کا بطور ڈیفالٹ `false` ہونا صرف
+مقامی/stdio واحد آپریٹر بہاؤ کے لیے محفوظ ہے، جہاں اسکوپ نافذ کرنے کے لیے کوئی فی کالر شناخت موجود نہیں ہوتی۔
+`open-sse/mcp-server/server.ts::withScopeEnforcement()` فی ٹول اسکوپ
+نفاذ کو غیر مشروط طور پر فعال کرتا ہے (`scopeEnforcement.ts` میں `shouldForceScopeEnforcement()`)
+جب بھی `resolveCallerScopeContext()` نے
+`source === "authInfo"` حل کیا ہو (یعنی ایک حقیقی فی کلید HTTP Authorization ہیڈر، صرف HTTP/SSE) اور وہ
+کلید مکمل `manage`/`admin` اسکوپ نہ رکھتی ہو۔ یہ اس خلا کو بند کرتا ہے جس میں صرف
+محدود `mcp:connect` بائی پاس اسکوپ رکھنے والی کلید — جسے اوپر صرف
+`/api/mcp/` LOCAL_ONLY استثنا کی اجازت دینے والا قرار دیا گیا ہے — بصورتِ دیگر، آپریٹر کی جانب سے
+ریموٹ/نان لوپ بیک MCP رسائی فعال کیے جانے کے بعد، ہر MCP ٹول کو چلا سکتی تھی، صرف اس لیے کہ `OMNIROUTE_MCP_ENFORCE_SCOPES`
+بطور ڈیفالٹ `false` فراہم ہوتا ہے۔ HTTP پر مکمل `manage`/`admin` کلید، اور ہر stdio/مقامی کالر کے لیے
+موجودہ `OMNIROUTE_MCP_ENFORCE_SCOPES` سے مشروط طرزِ عمل بغیر کسی تبدیلی کے برقرار رہتا ہے۔
 
 ---
 
 ## ماحولیاتی متغیرات
 
-| متغیر                                   | ڈیفالٹ                                  | مقصد                                                                                                                                       |
-| :-------------------------------------- | :-------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                | وہ بنیادی URL جسے MCP سرور OmniRoute کی داخلی APIs کو کال کرتے وقت استعمال کرتا ہے                                                         |
-| `OMNIROUTE_API_KEY`                     | (خالی)                                  | داخلی API کالز کو `Authorization: Bearer` کے طور پر فارورڈ کی جانے والی API کلید                                                           |
-| `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (صرف `"true"` اسے فعال کرتا ہے) | فعال ہونے پر، غیر موجود scopes ٹول کالز کو مسترد کرتے ہیں اور آڈٹ لاگ میں `scope_denied:<reason>` درج کرتے ہیں                             |
-| `OMNIROUTE_MCP_SCOPES`                  | (خالی)                                  | scopes کی کوما سے جدا کردہ اجازت فہرست جنہیں ڈیفالٹ طور پر "دستیاب" تصور کیا جاتا ہے (جب کالر اپنے scopes فراہم نہ کرے تو استعمال ہوتی ہے) |
-| `OMNIROUTE_MCP_COMPRESS_DESCRIPTIONS`   | (غیر متعین = فعال)                      | `0/false/off/no` پر سیٹ ہونے کی صورت میں، رجسٹریشن کے وقت MCP تفصیل کی کمپریشن کو غیر فعال کرتا ہے                                         |
-| `OMNIROUTE_MCP_DESCRIPTION_COMPRESSION` | (غیر متعین = فعال)                      | مذکورہ بالا اسی ٹوگل کا متبادل عرف                                                                                                         |
-| `OMNIROUTE_MCP_FETCH_TIMEOUT_MS`        | `10000`                                 | داخلی انتظامی ریڈز (صحت، لچک، کمبینیشنز، کوٹا، استعمال) کے لیے اسقاط کا وقت                                                                |
-| `OMNIROUTE_MCP_UPSTREAM_TIMEOUT_MS`     | `60000`                                 | کسی فراہم کنندہ کا انتظار کرنے والے ہاپس (`route_request`، `web_search`، `web_fetch`) کے لیے اسقاط کا وقت                                  |
-| `MCP_TOOL_DENY`                         | (غیر متعین = کوئی فلٹر نہیں)            | `tools/list` سے خارج کرنے کے لیے ٹول ناموں کی کوما سے جدا کردہ فہرست (ٹول کارڈینیلیٹی میں کمی — ذیل میں دیکھیں)                            |
-| `MCP_TOOL_ALLOW`                        | (غیر متعین = کوئی فلٹر نہیں)            | صرف برقرار رکھنے کے لیے ٹول ناموں کی کوما سے جدا کردہ فہرست (اجازت فہرست موڈ — ذیل میں دیکھیں)                                             |
-| `DATA_DIR`                              | `~/.omniroute`                          | ہارٹ بیٹ فائل `${DATA_DIR}/runtime/mcp-heartbeat.json` میں لکھی جاتی ہے                                                                    |
+| متغیر                                   | طے شدہ قدر                              | مقصد                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| :-------------------------------------- | :-------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                | وہ بنیادی URL جسے MCP سرور OmniRoute کی اندرونی APIs کو کال کرتے وقت استعمال کرتا ہے                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `OMNIROUTE_API_KEY`                     | (خالی)                                  | اندرونی API کالز کے لیے `Authorization: Bearer` کے طور پر فارورڈ کی جانے والی API کلید                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (صرف `"true"` اسے فعال کرتا ہے) | فعال ہونے پر، مفقود scopes ٹول کالز کو مسترد کرتے ہیں اور آڈٹ لاگ میں `scope_denied:<reason>` درج کرتے ہیں۔ اس فلیگ سے قطع نظر، ہر ایسے HTTP/SSE کالر کے لیے نفاذ لازماً فعال کیا جاتا ہے جس کی شناخت فی کلید Authorization ہیڈر (`source === "authInfo"`) سے ہوئی ہو اور جس کے پاس مکمل `manage`/`admin` scope نہ ہو — مثلاً ایسی کلید جس کے پاس صرف محدود `mcp:connect` بائی پاس scope ہو — لہٰذا یہ طے شدہ ترتیب صرف مقامی/stdio واحد آپریٹر فلو کے لیے محفوظ ہے، ریموٹ نان لوپ بیک رسائی کے لیے کبھی نہیں |
+| `OMNIROUTE_MCP_SCOPES`                  | (خالی)                                  | بطور ڈیفالٹ "دستیاب" تصور کیے جانے والے scopes کی کوما سے جدا کردہ اجازت فہرست (اس وقت استعمال ہوتی ہے جب کالر اپنے scopes فراہم نہ کرے)                                                                                                                                                                                                                                                                                                                                                                      |
+| `OMNIROUTE_MCP_COMPRESS_DESCRIPTIONS`   | (غیر متعین = فعال)                      | `0/false/off/no` پر سیٹ کیے جانے کی صورت میں، رجسٹریشن کے وقت MCP وضاحتوں کی کمپریشن غیر فعال کر دیتا ہے                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `OMNIROUTE_MCP_DESCRIPTION_COMPRESSION` | (غیر متعین = فعال)                      | اوپر دیے گئے اسی ٹوگل کے لیے متبادل عرف                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `OMNIROUTE_MCP_FETCH_TIMEOUT_MS`        | `10000`                                 | اندرونی انتظامی ریڈز (صحت، لچک پذیری، مجموعے، کوٹا، استعمال) کے لیے منسوخی کی مہلت                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `OMNIROUTE_MCP_UPSTREAM_TIMEOUT_MS`     | `60000`                                 | ان مراحل کے لیے منسوخی کی مہلت جو کسی فراہم کنندہ (`route_request`، `web_search`، `web_fetch`) کا انتظار کرتے ہیں                                                                                                                                                                                                                                                                                                                                                                                             |
+| `MCP_TOOL_DENY`                         | (غیر متعین = کوئی فلٹر نہیں)            | `tools/list` سے حذف کیے جانے والے ٹول ناموں کی کوما سے جدا کردہ فہرست (ٹولز کی تعداد میں کمی — ذیل میں دیکھیں)                                                                                                                                                                                                                                                                                                                                                                                                |
+| `MCP_TOOL_ALLOW`                        | (غیر سیٹ شدہ = کوئی فلٹر نہیں)          | صرف برقرار رکھنے کے لیے ٹول نام، کاما سے علیحدہ کردہ (اجازت فہرست موڈ — ذیل میں دیکھیں)                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `DATA_DIR`                              | `~/.omniroute`                          | ہارٹ بیٹ فائل `${DATA_DIR}/runtime/mcp-heartbeat.json` میں لکھی جاتی ہے                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 ---
 

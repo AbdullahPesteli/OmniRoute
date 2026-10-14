@@ -1,6 +1,6 @@
 # OmniRoute MCP Server Documentation (বাংলা)
 
-🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
+🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
 ---
 
@@ -288,8 +288,109 @@ REST সারফেসের (`/api/v1/agents/*`) মাধ্যমে উন�
 
 ## প্রমাণীকরণ ও স্কোপসমূহ
 
-MCP টুলগুলো API key স্কোপের মাধ্যমে প্রমাণীকৃত হয়। স্কোপ প্রয়োগ কেন্দ্রীয়ভাবে
-`open-sse/mcp-server/scopeEnforcement.ts`-এ পরিচালিত হয়। প্রতিটি টুলের জন্য নির্দিষ্ট স্কোপ প্রয়োজন:
+MCP টুল কলগুলো কলারের কাছ থেকে স্কোপ স্ট্রিং পড়ে। সেই যাচাইটি তিনটি
+স্বাধীন নেমস্পেসের একটি। একটি পরীক্ষকের অনুমোদন অন্যগুলোর অনুমোদন নয়।
+নিয়মগুলো দেখুন [তিনটি স্কোপ নেমস্পেস](#three-scope-namespaces)-এ।
+টুল ক্যাটালগটি দেখুন [MCP টুল স্কোপসমূহ](#mcp-tool-scopes)-এ।
+
+### তিনটি স্কোপ নেমস্পেস
+
+একটি API কীতে `manage`, একটি MCP টুলে `read:compression`, এবং একটি
+`oma_live_…` অ্যাক্সেস টোকেনে `read`—এই তিনটি ভিন্ন অনুমোদন। যেসব কলার
+পরিবর্তনকারী ম্যানেজমেন্ট রুটে একটি `read` অ্যাক্সেস টোকেন পাঠায়, তারা HTTP 403
+`Access token scope 'read' is insufficient; 'write' required.` পায়।
+এই র্যাঙ্কটি হলো `scopeSatisfies`। এটি MCP টেবিল বিবেচনা করে না, এবং MCP
+ম্যাচারও এটিকে বিবেচনা করে না।
+
+| নেমস্পেস            | ক্রেডেনশিয়াল                                                    | পরীক্ষক               | অনুমোদন পেলে যা করা যায়                                    |
+| :------------------ | :--------------------------------------------------------------- | :-------------------- | :---------------------------------------------------------- |
+| API-কী ম্যানেজমেন্ট | `api_keys.scopes`                                                | `hasManageScope`      | ওই Bearer কীটির জন্য ম্যানেজমেন্ট REST                      |
+| API-কী অ্যাডিটিভ    | একই অ্যারে, একটি হুবহু স্ট্রিং                                   | নিচে উল্লিখিত হেল্পার | শুধু ওই একটি সক্ষমতা                                        |
+| MCP টুল স্কোপসমূহ   | একই অ্যারে, অন্যথায় MCP `_meta`, অন্যথায় `OMNIROUTE_MCP_SCOPES` | `scopeMatches`        | এনফোর্সমেন্ট চালু হলে ওই টুলটি                              |
+| অ্যাক্সেস টোকেন     | `oma_live_…`                                                     | `scopeSatisfies`      | যে ম্যানেজমেন্ট রুটের মেথড ও পাথের জন্য ওই র্যাঙ্ক প্রয়োজন |
+
+প্রতিটি ক্রেডেনশিয়াল মিন্ট করার পদ্ধতি
+[ম্যানেজমেন্ট প্রমাণীকরণ](../guides/MANAGEMENT-AUTH.md)-এ বর্ণিত হয়েছে।
+
+#### API-কী স্কোপসমূহ
+
+একটি `api_keys.scopes` অ্যারে দুটি কাজে ব্যবহৃত হয়। এগুলো ভিন্ন ফাংশন ব্যবহার করে।
+
+**ম্যানেজমেন্ট REST।** `manage` এবং `admin` হলো
+`MANAGEMENT_API_KEY_SCOPES`-এর সদস্য (`src/shared/constants/managementScopes.ts`)।
+ওই কীটির জন্য ম্যানেজমেন্ট রুট অনুমোদন করে `hasManageScope`। ওই রুটগুলোতে `admin`
+ম্যানেজমেন্ট-সক্ষম। এখানে `admin` শব্দটি অ্যাক্সেস-টোকেন র্যাঙ্ক নয় এবং এটি
+MCP টুল স্কোপে সম্প্রসারিত হয় না।
+
+**অ্যাডিটিভ স্ট্রিংসমূহ।** প্রতিটির ক্ষেত্রে হুবহু সদস্যতা পরীক্ষা করা হয়, এবং প্রতিটিই
+`MANAGEMENT_API_KEY_SCOPES`-এর বাইরে থাকে।
+
+| স্কোপ                          | অনুমোদন পেলে যা করা যায়                                                                                                                                                 |
+| :----------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `mcp:connect`                  | শুধু নন-লুপব্যাক `/api/mcp/` LOCAL_ONLY ব্যতিক্রম (`hasMcpConnectOrManageScope`)। `manage` বা `admin`-সহ একটি কীও ওই ব্যতিক্রমে অনুমোদিত হয়।                            |
+| `self:usage`                   | এই কীটির জন্য `GET /api/v1/me/status` (`src/app/api/v1/me/status/route.ts`)। তৈরি করার সময় `POST /api/keys` এই স্কোপটি যোগ করে (`normalizeSelfServiceScopesForCreate`)। |
+| `self:account-quota`           | ওই স্ট্যাটাস পেলোডের মধ্যে আপস্ট্রিম অ্যাকাউন্ট কোটা (`src/lib/usage/apiKeySelfService.ts`)। স্ট্যাটাস রুটটির জন্য তবুও `self:usage` প্রয়োজন।                           |
+| `policy:bypass-provider-quota` | এই কীটির ইনফারেন্স কলগুলো প্রোভাইডার-কোটা নীতি এড়িয়ে যায় (`src/sse/handlers/chat.ts`-এ `hasProviderQuotaBypassScope`)।                                                |
+
+#### ম্যাচিং
+
+ক্যাটালগটি হলো [MCP টুল স্কোপসমূহ](#mcp-tool-scopes)-এর অধীনে থাকা টেবিল। ওই
+ক্যাটালগ হিসেবে `src/shared/constants/mcpScopes.ts`-এর `MCP_SCOPE_LIST`-কে
+বিবেচনা করবেন না: এটি মূল টাইপড উপসেট। পরবর্তী টুলগুলো এর পাশাপাশি আরও স্কোপ
+ঘোষণা করে (`read:notion`, `read:skills`, `read:local-corpus`, এবং টেবিলের বাকি স্কোপগুলো)।
+
+`open-sse/mcp-server/scopeEnforcement.ts`-এর `evaluateToolScopes` তখনই একটি কল
+অনুমোদন করে, যখন প্রতিটি প্রয়োজনীয় স্কোপ কোনো না কোনো মঞ্জুর করা স্কোপের সঙ্গে মেলে:
+
+- `*` প্রতিটি প্রয়োজনীয় স্কোপের সঙ্গে মেলে।
+- `*` দিয়ে শেষ হওয়া কোনো মঞ্জুর করা স্কোপ, তারার আগের প্রিফিক্স দিয়ে শুরু হওয়া
+  প্রয়োজনীয় স্কোপের সঙ্গে মেলে। `read:*`, `read:compression`-এর সঙ্গে মেলে।
+- অন্য প্রতিটি মঞ্জুর করা স্কোপ শুধু হুবহু একই প্রয়োজনীয় স্ট্রিংয়ের সঙ্গে মেলে।
+
+যে কীটির স্কোপ `["manage"]`, সেটি `read:compression`-এর জন্য `scopeMatches`-এ
+ব্যর্থ হয়। একই কলের ক্ষেত্রে শুধু `admin`, `mcp:connect`, `read`, বা `write`
+মঞ্জুর করা থাকলেও কলটি ব্যর্থ হয়। শেষে `*` থাকা নিয়মটি ছাড়া MCP টুল
+স্কোপগুলোর মধ্যে কোনো স্তরক্রম নেই।
+
+`OMNIROUTE_MCP_ENFORCE_SCOPES=true` না হলে এনফোর্সমেন্ট বন্ধ থাকে (ডিফল্ট
+`false`)। এটি বন্ধ থাকা অবস্থায় `evaluateToolScopes` কলটি অনুমোদন করে এবং
+ক্যাটালগ এড়িয়ে যায়। এটি চালু থাকা অবস্থায় HTTP, Bearer কীটির `api_keys.scopes`-কে
+`authInfo` হিসেবে ব্যবহার করে (দেখুন [প্রতি-কী HTTP স্কোপ বাইন্ডিং](#per-key-http-scope-binding-7895))।
+কোনো কী স্কোপ নির্ধারিত না হলে মঞ্জুর করা সেটটি প্রথমে MCP `_meta`, তারপর
+`OMNIROUTE_MCP_SCOPES`-এ ফলব্যাক করে।
+
+#### অ্যাক্সেস-টোকেন স্কোপসমূহ
+
+`oma_live_…` টোকেনগুলো (`src/lib/accessTokens/scopes.ts`) `read`, `write`,
+বা `admin` বহন করে। `scopeSatisfies` একটি র্যাঙ্ক: `admin`, `write` ও `read`
+উভয়কেই অন্তর্ভুক্ত করে, এবং `write`, `read`-কে অন্তর্ভুক্ত করে। অজানা স্কোপ
+কোনো কিছুকেই অন্তর্ভুক্ত করে না।
+
+`evaluateAccessTokenAuth` (`src/server/authz/accessTokenAuth.ts`) ওই র্যাঙ্ককে
+`inferRequiredScope`-এর (`src/server/authz/accessScopes.ts`) সঙ্গে তুলনা করে:
+
+- `GET`, `HEAD`, এবং `OPTIONS`-এর জন্য `read` প্রয়োজন।
+- অন্য প্রতিটি মেথডের জন্য `write` প্রয়োজন।
+- `ADMIN_SCOPE_PREFIXES`-এর পাথগুলোর প্রতিটি মেথডের জন্য `admin` প্রয়োজন। `/api/mcp`
+  ওই তালিকায় রয়েছে, তাই একটি `write` অ্যাক্সেস টোকেন দিয়েও MCP HTTP
+  সারফেস কল করা যায় না।
+- `ADMIN_MUTATION_PREFIXES`-এর পাথগুলোর ক্ষেত্রে শুধু মিউটেশনের জন্য `admin` প্রয়োজন।
+
+`PATCH /api/keys/{id}` একটি মিউটেশন এবং এটি ওই অ্যাডমিন তালিকাগুলোতে নেই, তাই একটি
+`read` টোকেন 403 পায়:
+`Access token scope 'read' is insufficient; 'write' required.`
+একটি `write` বা `admin` অ্যাক্সেস টোকেন ওই রুটের প্রয়োজনীয়তা পূরণ করে। একটি ড্যাশবোর্ড JWT,
+লুপব্যাক CLI machine-id টোকেন এবং `manage` বা `admin`-সহ একটি API কী
+অন্য শাখা অনুসরণ করে এবং এই র্যাঙ্ক দ্বারা সীমিত হয় না।
+
+যে অ্যাক্সেস টোকেন `/api/mcp`-এর জন্য `scopeSatisfies` পাস করে, সেটি কেবল
+ম্যানেজমেন্ট গেট অতিক্রম করেছে। টুল কলগুলো তখনও API-কী স্কোপের বিপরীতে
+`scopeMatches` চালায়। অ্যাক্সেস-টোকেন র্যাঙ্ক `scopeMatches`-এর ইনপুট নয়।
+
+### MCP টুল স্কোপ
+
+স্কোপ প্রয়োগ `open-sse/mcp-server/scopeEnforcement.ts`-এ কেন্দ্রীভূত।
+প্রতিটি টুলের জন্য নির্দিষ্ট স্কোপ প্রয়োজন:
 
 | পরিধি                 | টুলসমূহ                                                                                                                                                                     |
 | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -323,57 +424,69 @@ MCP টুলগুলো API key স্কোপের মাধ্যমে �
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                              |
 | `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                          |
 | `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                             |
-| `read:obsidian`       | ১৩টি রিড টুল — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
-| `write:obsidian`      | ৯টি রাইট টুল — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …               |
+| `read:obsidian`       | 13টি রিড টুল — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
+| `write:obsidian`      | 9টি রাইট টুল — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …               |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                           |
 
-ওয়াইল্ডকার্ড স্কোপ সমর্থিত: `read:*` সব রিড-স্কোপ প্রদান করে, `*` পূর্ণ অ্যাক্সেস প্রদান করে।
+ওয়াইল্ডকার্ড স্কোপ সমর্থিত: `read:*` সব রিড-স্কোপ প্রদান করে, `*` পূর্ণাঙ্গ অ্যাক্সেস প্রদান করে।
 
 ### `mcp:connect` — সীমিত রুট সক্ষমতা (#7895)
 
-নন-লুপব্যাক থেকে HTTP/SSE MCP ট্রান্সপোর্টে (`/api/mcp/*`) পৌঁছাতে
-`/api/mcp/` LOCAL_ONLY ব্যতিক্রমটি প্রয়োজন (`docs/security/ROUTE_GUARD_TIERS.md` দেখুন)। ঐতিহাসিকভাবে,
-ওই ব্যতিক্রমটি শুধু পূর্ণ `manage`/`admin`-স্কোপের API কী গ্রহণ করত—যে কলারের কেবল
-MCP-এর সঙ্গে যোগাযোগ করা প্রয়োজন, তার জন্য এটি অত্যন্ত বিস্তৃত। `src/shared/constants/managementScopes.ts` এখন
+নন-লুপব্যাক থেকে HTTP/SSE MCP ট্রান্সপোর্টে (`/api/mcp/*`) পৌঁছানোর জন্য
+`/api/mcp/` LOCAL_ONLY ব্যতিক্রম প্রয়োজন (`docs/security/ROUTE_GUARD_TIERS.md` দেখুন)। ঐতিহাসিকভাবে
+এই ব্যতিক্রমটি শুধু পূর্ণ `manage`/`admin`-স্কোপের API key গ্রহণ করত—যা কেবল MCP-এর সঙ্গে
+যোগাযোগ করতে চাওয়া কোনো কলারের জন্য অতিরিক্ত বিস্তৃত। `src/shared/constants/managementScopes.ts` এখন
 `MCP_CONNECT_SCOPE = "mcp:connect"` এক্সপোর্ট করে: একটি সংযোজনমূলক, সীমিত স্কোপ (`SELF_USAGE_SCOPE`-এর
-একই নজির অনুসারে), যা শুধু
-`src/server/authz/policies/management.ts`-এ `/api/mcp/` বাইপাস অনুমোদন করে—এটি অন্য কোনো ম্যানেজমেন্ট-রুটে
-অ্যাক্সেস দেয় না এবং ইচ্ছাকৃতভাবে `MANAGEMENT_API_KEY_SCOPES`-এর বাইরে রাখা হয়েছে। `manage`/`admin`
-ধারণকারী কোনো কী এখনও অপরিবর্তিতভাবে ব্যতিক্রমটি অতিক্রম করে; দূরবর্তী, শুধু-MCP কলারদের জন্য
-`mcp:connect` একটি নিম্ন-সুবিধাপ্রাপ্ত বিকল্প, যা `hasMcpConnectOrManageScope()`-এর মাধ্যমে যাচাই করা হয়।
+একই নজির অনুসরণ করে), যা শুধু `src/server/authz/policies/management.ts`-এ `/api/mcp/` বাইপাসকে
+অনুমোদন করে—এটি অন্য কোনো ম্যানেজমেন্ট-রুট অ্যাক্সেস দেয় না এবং ইচ্ছাকৃতভাবে
+`MANAGEMENT_API_KEY_SCOPES`-এর বাইরে রাখা হয়েছে। `manage`/`admin` ধারণকারী একটি key এখনও অপরিবর্তিতভাবে
+এই ব্যতিক্রম পার করতে পারে; দূরবর্তী, কেবল-MCP কলারদের জন্য `mcp:connect` একটি নিম্ন-সুবিধার বিকল্প,
+যা `hasMcpConnectOrManageScope()`-এর মাধ্যমে যাচাই করা হয়।
 
-### প্রতি-কী HTTP স্কোপ বাইন্ডিং (#7895)
+### প্রতি-key HTTP স্কোপ বাইন্ডিং (#7895)
 
 HTTP/SSE-এর মাধ্যমে, `open-sse/mcp-server/httpTransport.ts` এখন
-`resolveMcpCallerAuthInfo()` (`open-sse/mcp-server/httpAuthContext.ts`)-এর মাধ্যমে কলারের প্রকৃত
-`api_keys.scopes` নির্ধারণ করে এবং সেটি MCP SDK-এর `transport.handleRequest(req, { authInfo })`-এ পাঠায়, ফলে
-প্রতিটি টুল কলে পৌঁছানো `extra.authInfo.scopes` Bearer কীটির নিজস্ব স্কোপ প্রতিফলিত করে।
-`scopeEnforcement.ts`-এর `resolveCallerScopeContext()` ইতিমধ্যেই
-`_meta` এবং `OMNIROUTE_MCP_SCOPES` env ফলব্যাকের তুলনায় `authInfo`-কে অগ্রাধিকার দিত—এটি শুধু সেই প্রথম,
-সর্বোচ্চ-অগ্রাধিকারের উৎসটিকে পূরণ করে, যা আগে HTTP-এর মাধ্যমে পূরণ করা হতো না। কোনো API কী নির্ধারিত না হলে
-(হেডার অনুপস্থিত, কী অবৈধ), `authInfo` `undefined` থাকে এবং রেজোলিউশন অপরিবর্তিতভাবে বিদ্যমান
-`meta`/env শৃঙ্খলে ফলব্যাক করে। এটি `OMNIROUTE_MCP_ENFORCE_SCOPES`-এর
-ডিফল্ট পরিবর্তন করে না—এনফোর্সমেন্ট এখনও স্পষ্টভাবে সক্রিয় করতে হবে; এই পরিবর্তন কেবল
-প্রতি-কী পাথটি সক্রিয় হওয়ার পর সেটিকে অগ্রাধিকার দেয়। stdio-তে প্রতি-কলার পরিচয় নেই
-(`mcpCallerIdentity.ts` দেখুন) এবং এটি প্রভাবিত হয়নি—এটি `_meta`/env ফলব্যাক শৃঙ্খলেই থাকে।
+`resolveMcpCallerAuthInfo()` (`open-sse/mcp-server/httpAuthContext.ts`) ব্যবহার করে কলারের প্রকৃত
+`api_keys.scopes` নির্ণয় করে এবং সেটি MCP SDK-এর `transport.handleRequest(req, { authInfo })`-এ
+পাস করে, ফলে প্রতিটি টুল কলে পৌঁছানো `extra.authInfo.scopes` Bearer key-এর নিজস্ব স্কোপগুলো
+প্রতিফলিত করে। `scopeEnforcement.ts`-এর `resolveCallerScopeContext()` আগে থেকেই `_meta` এবং
+`OMNIROUTE_MCP_SCOPES` env ফলব্যাকের চেয়ে `authInfo`-কে অগ্রাধিকার দিত—এটি শুধু সেই প্রথম,
+সর্বোচ্চ-অগ্রাধিকারের উৎসটিকে পূরণ করে, যা আগে HTTP-এর মাধ্যমে পূরণ করা হতো না। যখন কোনো API key
+নির্ণীত হয় না (হেডার নেই, অবৈধ key), তখন `authInfo` `undefined` থাকে এবং রেজোলিউশন অপরিবর্তিতভাবে
+বিদ্যমান `meta`/env শৃঙ্খলে ফলব্যাক করে। stdio-তে প্রতি-কলার পরিচয় নেই
+(`mcpCallerIdentity.ts` দেখুন) এবং এটি প্রভাবিত হয় না—এটি `_meta`/env ফলব্যাক শৃঙ্খলেই থাকে।
+
+**সীমিত-স্কোপযুক্ত HTTP/SSE কলারদের জন্য `OMNIROUTE_MCP_ENFORCE_SCOPES` নির্বিশেষে
+এনফোর্সমেন্ট বাধ্যতামূলকভাবে চালু থাকে।** `OMNIROUTE_MCP_ENFORCE_SCOPES`-এর ডিফল্ট মান `false` হওয়া
+শুধু স্থানীয়/stdio একক-অপারেটর প্রবাহের জন্য নিরাপদ, যেখানে স্কোপ প্রয়োগের জন্য কোনো প্রতি-কলার
+পরিচয় নেই। যখনই `resolveCallerScopeContext()` থেকে
+`source === "authInfo"` নির্ণীত হয় (অর্থাৎ একটি প্রকৃত প্রতি-key HTTP Authorization হেডার,
+শুধু HTTP/SSE-এর ক্ষেত্রে) এবং সেই key-এর পূর্ণ `manage`/`admin` স্কোপ না থাকে, তখন
+`open-sse/mcp-server/server.ts::withScopeEnforcement()` প্রতি-টুল স্কোপ এনফোর্সমেন্ট নিঃশর্তভাবে
+চালু করে (`scopeEnforcement.ts`-এর `shouldForceScopeEnforcement()`)। এটি সেই ফাঁকটি বন্ধ করে, যেখানে
+শুধু সীমিত `mcp:connect` বাইপাস স্কোপধারী কোনো key—যা উপরে `/api/mcp/` LOCAL_ONLY ব্যতিক্রম ছাড়া
+আর কিছু অনুমোদন করে না বলে নথিভুক্ত—অপারেটর দূরবর্তী/নন-লুপব্যাক MCP অ্যাক্সেস সক্রিয় করার পরও
+প্রতিটি MCP টুল ব্যবহার করতে পারত, কেবল এই কারণে যে `OMNIROUTE_MCP_ENFORCE_SCOPES` ডিফল্টভাবে
+`false` হিসেবে সরবরাহ করা হয়। HTTP-এর মাধ্যমে একটি পূর্ণ `manage`/`admin` key এবং প্রতিটি
+stdio/স্থানীয় কলারের ক্ষেত্রে বিদ্যমান `OMNIROUTE_MCP_ENFORCE_SCOPES`-নিয়ন্ত্রিত আচরণ অপরিবর্তিত থাকে।
 
 ---
 
 ## এনভায়রনমেন্ট ভেরিয়েবলসমূহ
 
-| ভেরিয়েবল                               | ডিফল্ট                                  | উদ্দেশ্য                                                                                                                  |
-| :-------------------------------------- | :-------------------------------------- | :------------------------------------------------------------------------------------------------------------------------ |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                | অভ্যন্তরীণ OmniRoute API-তে কল করার সময় MCP সার্ভার যে বেস URL ব্যবহার করে                                               |
-| `OMNIROUTE_API_KEY`                     | (খালি)                                  | অভ্যন্তরীণ API কলে `Authorization: Bearer` হিসেবে ফরওয়ার্ড করা API কী                                                    |
-| `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (শুধু `"true"` এটি সক্রিয় করে) | সক্রিয় থাকলে, অনুপস্থিত স্কোপ টুল কল প্রত্যাখ্যান করে এবং অডিট লগে `scope_denied:<reason>` লগ করে                        |
-| `OMNIROUTE_MCP_SCOPES`                  | (খালি)                                  | ডিফল্টভাবে "উপলভ্য" হিসেবে বিবেচিত স্কোপগুলোর কমা-বিভাজিত অনুমোদন-তালিকা (কলকারী নিজস্ব স্কোপ প্রদান না করলে ব্যবহৃত হয়) |
-| `OMNIROUTE_MCP_COMPRESS_DESCRIPTIONS`   | (সেট না করা = চালু)                     | `0/false/off/no`-তে সেট করা হলে, নিবন্ধনের সময় MCP বর্ণনা সংকোচন নিষ্ক্রিয় করে                                          |
-| `OMNIROUTE_MCP_DESCRIPTION_COMPRESSION` | (সেট না করা = চালু)                     | উপরের একই টগলের বিকল্প উপনাম                                                                                              |
-| `OMNIROUTE_MCP_FETCH_TIMEOUT_MS`        | `10000`                                 | অভ্যন্তরীণ ব্যবস্থাপনা-সংক্রান্ত রিডের (স্বাস্থ্য, স্থিতিস্থাপকতা, কম্বো, কোটা, ব্যবহার) জন্য বাতিলকরণের সময়সীমা         |
-| `OMNIROUTE_MCP_UPSTREAM_TIMEOUT_MS`     | `60000`                                 | কোনো প্রোভাইডারের জন্য অপেক্ষারত হপগুলোর (`route_request`, `web_search`, `web_fetch`) বাতিলকরণের সময়সীমা                 |
-| `MCP_TOOL_DENY`                         | (সেট না করা = কোনো ফিল্টার নেই)         | `tools/list` থেকে বাদ দেওয়ার জন্য কমা-বিভাজিত টুলের নাম (টুল-কার্ডিনালিটি হ্রাস — নিচে দেখুন)                            |
-| `MCP_TOOL_ALLOW`                        | (সেট না করা = কোনো ফিল্টার নেই)         | একচেটিয়াভাবে রাখার জন্য কমা-বিভাজিত টুলের নাম (অনুমোদন-তালিকা মোড — নিচে দেখুন)                                          |
-| `DATA_DIR`                              | `~/.omniroute`                          | হার্টবিট ফাইলটি `${DATA_DIR}/runtime/mcp-heartbeat.json`-এ লেখা হয়                                                       |
+| ভেরিয়েবল                               | ডিফল্ট                                  | উদ্দেশ্য                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| :-------------------------------------- | :-------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                | অভ্যন্তরীণ OmniRoute API কল করার সময় MCP সার্ভার যে বেস URL ব্যবহার করে                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `OMNIROUTE_API_KEY`                     | (খালি)                                  | অভ্যন্তরীণ API কলে `Authorization: Bearer` হিসেবে ফরওয়ার্ড করা API কী                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (শুধু `"true"` এটি সক্রিয় করে) | সক্রিয় থাকলে, প্রয়োজনীয় স্কোপ না থাকলে টুল কল প্রত্যাখ্যান করা হয় এবং অডিট লগে `scope_denied:<reason>` লেখা হয়। এই ফ্ল্যাগ নির্বিশেষে এমন যেকোনো HTTP/SSE কলারের জন্য প্রয়োগও বাধ্যতামূলক করা হয়, যাকে প্রতি-কী Authorization হেডার (`source === "authInfo"`) থেকে শনাক্ত করা হয়েছে এবং যার পূর্ণ `manage`/`admin` স্কোপ নেই—যেমন, শুধু সংকীর্ণ `mcp:connect` বাইপাস স্কোপধারী একটি কী—তাই এই ডিফল্টটি কেবল স্থানীয়/stdio একক-অপারেটর প্রবাহের জন্য নিরাপদ, দূরবর্তী নন-লুপব্যাক অ্যাক্সেসের জন্য কখনোই নয় |
+| `OMNIROUTE_MCP_SCOPES`                  | (খালি)                                  | ডিফল্টভাবে "উপলভ্য" হিসেবে বিবেচিত স্কোপগুলোর কমা-বিচ্ছিন্ন অনুমোদন-তালিকা (কলার নিজস্ব স্কোপ না দিলে ব্যবহৃত হয়)                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `OMNIROUTE_MCP_COMPRESS_DESCRIPTIONS`   | (সেট না করা = চালু)                     | `0/false/off/no` হিসেবে সেট করা হলে, নিবন্ধনের সময় MCP বিবরণ সংকোচন নিষ্ক্রিয় করে                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `OMNIROUTE_MCP_DESCRIPTION_COMPRESSION` | (সেট না করা = চালু)                     | উপরের একই টগলের বিকল্প উপনাম                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `OMNIROUTE_MCP_FETCH_TIMEOUT_MS`        | `10000`                                 | অভ্যন্তরীণ ব্যবস্থাপনা রিডের (স্বাস্থ্য, স্থিতিস্থাপকতা, কম্বো, কোটা, ব্যবহার) জন্য বাতিলকরণ সময়সীমা                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `OMNIROUTE_MCP_UPSTREAM_TIMEOUT_MS`     | `60000`                                 | কোনো প্রোভাইডারের জন্য অপেক্ষারত হপগুলোর (`route_request`, `web_search`, `web_fetch`) জন্য বাতিলকরণ সময়সীমা                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `MCP_TOOL_DENY`                         | (সেট না করা = কোনো ফিল্টার নেই)         | `tools/list` থেকে বাদ দেওয়ার জন্য কমা-বিচ্ছিন্ন টুলের নাম (টুল-কার্ডিনালিটি হ্রাস—নিচে দেখুন)                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `MCP_TOOL_ALLOW`                        | (সেট না করা = কোনো ফিল্টার নেই)         | একচেটিয়াভাবে রাখার জন্য কমা দ্বারা পৃথক করা টুলের নামসমূহ (অনুমোদন-তালিকা মোড — নিচে দেখুন)                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `DATA_DIR`                              | `~/.omniroute`                          | হার্টবিট ফাইলটি `${DATA_DIR}/runtime/mcp-heartbeat.json`-এ লেখা হয়                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 ---
 

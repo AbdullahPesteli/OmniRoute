@@ -17,6 +17,7 @@ import type {
   ProviderExecutionOutcome,
   ProviderExecutionPolicy,
 } from "./providerExecutionPipeline.ts";
+import { bufferedResponsesFailure } from "./bufferedResponsesFailure.ts";
 import { translateNonStreamingClientResponse } from "./nonStreamingClientTranslate.ts";
 import { parseNonStreamingResponseBody, isJsonRecord } from "./nonStreamingResponseParse.ts";
 import { restoreNonStreamingToolNames } from "./passthroughToolNames.ts";
@@ -34,6 +35,7 @@ import {
   getModelFamily,
 } from "../../services/modelFamilyFallback.ts";
 import { isEmptyContentResponse } from "../../services/errorClassifier.ts";
+import { hasTrustedEmptyTurn } from "../../utils/emptyTurnPolicy.ts";
 import { FORMATS } from "../../translator/formats.ts";
 import { hasActiveClaudeThinking } from "../../utils/thinkingBudget.ts";
 
@@ -45,6 +47,7 @@ export interface ChatCoreExecutorResult {
   headers: Record<string, string>;
   transformedBody: unknown;
   transport?: string;
+  upstreamDiagnostic?: Record<string, unknown>;
   _executionCredentials?: Record<string, unknown>;
   _accountSemaphoreRelease?: () => void;
 }
@@ -91,6 +94,7 @@ export interface ProviderLegInput {
   customToolNames?: ReadonlySet<string>;
   requestToolIdentityMap?: Map<string, { namespace?: string; name: string }> | null;
   reasoningCacheScope?: string | null;
+  videoTranscriptSensitive?: boolean;
   /** Normalized OpenAI transcript reported by translateRequest for Responses-API
    *  targets (their body has `input`, not `messages`) — the replay-cache write
    *  side must digest the same transcript the read side keyed plain turns on. */
@@ -261,6 +265,8 @@ function finishOk(
     requestUrl?: string;
   }
 ): NonStreamingProviderLegResult {
+  const failed = bufferedResponsesFailure(input, params, { legError, extractUsage, buildReceipt });
+  if (failed) return failed;
   // F-02: restore + sanitize + translate is the only success tail.
   // Fallback/retry must not skip this with responseToolNameMap: null.
   const restoreClaudeNames = params.sourceFormat === "claude" && params.targetFormat === "claude";
@@ -286,6 +292,7 @@ function finishOk(
     provider: params.provider,
     model: params.model,
     requestBody: params.requestBody,
+    clientRequestBody: input.sourceBody ?? null,
     historyMessages:
       (input.translatedBody as { messages?: unknown[] } | null | undefined)?.messages ??
       input.reasoningReplayHistory ??
@@ -294,6 +301,7 @@ function finishOk(
     customToolNames: input.customToolNames,
     requestToolIdentityMap: input.requestToolIdentityMap ?? null,
     reasoningCacheScope: input.reasoningCacheScope ?? null,
+    videoTranscriptSensitive: input.videoTranscriptSensitive,
     clientHeaders: input.clientHeaders ?? null,
     isClaudeCodeCompatible: input.isClaudeCodeCompatible ?? false,
     // Same intent the streaming path computes in chatCore before building the
@@ -453,6 +461,7 @@ export async function runNonStreamingProviderLeg(
             upstreamErrorBody: outcome.result.upstreamErrorBody,
             upstreamHeaders: outcome.result.upstreamHeaders ?? outcome.result.response?.headers,
           },
+          upstreamDiagnostic: outcome.upstreamDiagnostic,
           receipt,
           usage: outcome.providerUsage,
         };
@@ -462,6 +471,7 @@ export async function runNonStreamingProviderLeg(
         url: outcome.url,
         headers: outcome.headers,
         transformedBody: outcome.transformedBody,
+        upstreamDiagnostic: outcome.upstreamDiagnostic,
       };
     } else {
       executorResult = await input.executeProviderRequest(
@@ -781,6 +791,7 @@ export async function runNonStreamingProviderLeg(
     return {
       kind: "error",
       result: errorResult as ChatCoreErrorResult,
+      upstreamDiagnostic: executorResult.upstreamDiagnostic,
       receipt,
       usage,
     };
@@ -969,7 +980,15 @@ export async function runNonStreamingProviderLeg(
   responseBody = unwrapClineNonStreamingEnvelope(provider, responseBody) as typeof responseBody;
 
   // -- Empty content -> family fallback (initial only) -------------------------
-  if (isEmptyContentResponse(responseBody)) {
+  // #14160: pass the provider so first-party APIs (antigravity) keep empty
+  // completions with a normal stop reason as valid 200s instead of synthetic
+  // 502s feeding model lockout.
+  if (
+    isEmptyContentResponse(responseBody, {
+      provider,
+      trustedEmptyTurn: hasTrustedEmptyTurn(executorResult.response),
+    })
+  ) {
     const errMsg = "Provider returned empty content";
     if (allowModelFallback) {
       const triedModels = new Set<string>([currentModel]);

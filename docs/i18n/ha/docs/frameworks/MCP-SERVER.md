@@ -1,6 +1,6 @@
 # OmniRoute MCP Server Documentation (Hausa)
 
-🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
+🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
 ---
 
@@ -289,10 +289,109 @@ Ana toshe dukkan jigilar SSE da Streamable HTTP har sai an kunna sabar MCP a cik
 
 ---
 
-## Tantancewa & Scopes
+## Tabbatar da Shaida & Iyakokin Izini
 
-Ana tantance kayan aikin MCP ta hanyar scopes na API key. An tattara tilasta scopes a wuri guda cikin
-`open-sse/mcp-server/scopeEnforcement.ts`. Kowane kayan aiki yana buƙatar takamaiman scopes:
+Kiran kayan aikin MCP suna karanta kirtanin iyakokin izini daga mai kira. Wannan binciken yana ɗaya daga cikin
+wuraren suna guda uku masu zaman kansu. Samun izini daga mai bincike ɗaya ba yana nufin an samu daga sauran ba.
+Dokokin suna cikin [Wuraren suna uku na iyakokin izini](#three-scope-namespaces).
+Kasidar kayan aikin tana cikin [Iyakokin izinin kayan aikin MCP](#mcp-tool-scopes).
+
+### Wuraren suna uku na iyakokin izini
+
+`manage` a kan maɓallin API, `read:compression` a kan kayan aikin MCP, da `read` a kan
+alamar samun dama ta `oma_live_…` izini ne guda uku mabambanta. Masu kira da suka aika alamar samun dama ta `read`
+zuwa hanyar gudanarwa mai yin canji suna samun HTTP 403
+`Access token scope 'read' is insufficient; 'write' required.`
+Wannan matsayi shi ne `scopeSatisfies`. Ba ya duba teburin MCP, haka kuma mai daidaita MCP
+ba ya duba shi.
+
+| Wurin suna                      | Shaidar shiga                                                                 | Mai bincike                     | Abin da samun izini yake ba da dama                                         |
+| :------------------------------ | :---------------------------------------------------------------------------- | :------------------------------ | :-------------------------------------------------------------------------- |
+| Gudanarwar maɓallin API         | `api_keys.scopes`                                                             | `hasManageScope`                | REST na gudanarwa don wannan maɓallin Bearer                                |
+| Ƙarin maɓallin API              | wannan jerin, kirtani guda ɗaya da ya yi daidai                               | mataimakin da aka ambata a ƙasa | Wannan damar guda ɗaya kawai                                                |
+| Iyakokin izinin kayan aikin MCP | wannan jerin, in ba haka ba MCP `_meta`, in ba haka ba `OMNIROUTE_MCP_SCOPES` | `scopeMatches`                  | Wannan kayan aikin, da zarar an kunna tilastawa                             |
+| Alamar samun dama               | `oma_live_…`                                                                  | `scopeSatisfies`                | Hanyar gudanarwa wadda hanyar aikinta da hanyarta ke buƙatar wannan matsayi |
+
+An bayyana samar da kowace shaidar shiga a cikin
+[Tabbatar da Shaidar Gudanarwa](../guides/MANAGEMENT-AUTH.md).
+
+#### Iyakokin izinin maɓallin API
+
+Jerin `api_keys.scopes` guda ɗaya yana aiwatar da ayyuka biyu. Suna amfani da ayyuka mabambanta.
+
+**REST na gudanarwa.** `manage` da `admin` su ne mambobin
+`MANAGEMENT_API_KEY_SCOPES` (`src/shared/constants/managementScopes.ts`).
+`hasManageScope` ne ke ba da izinin hanyoyin gudanarwa ga wannan maɓalli. `admin` yana
+da ikon gudanarwa a waɗannan hanyoyin. Kalmar `admin` a nan ba matsayi ba ce na
+alamar samun dama, kuma ba ta faɗaɗa zuwa iyakokin izinin kayan aikin MCP.
+
+**Kirtanin ƙari.** Kowannensu gwajin kasancewa daidai ne, kuma kowannensu yana nan
+a wajen `MANAGEMENT_API_KEY_SCOPES`.
+
+| Iyakacin izini                 | Abin da samun izini yake ba da dama                                                                                                                                                           |
+| :----------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `mcp:connect`                  | Keɓewar LOCAL_ONLY ta `/api/mcp/` wadda ba loopback ba kawai (`hasMcpConnectOrManageScope`). Maɓalli mai `manage` ko `admin` har yanzu yana wuce wannan keɓewar.                              |
+| `self:usage`                   | `GET /api/v1/me/status` don wannan maɓalli (`src/app/api/v1/me/status/route.ts`). `POST /api/keys` yana ƙara wannan iyakacin izini lokacin ƙirƙirawa (`normalizeSelfServiceScopesForCreate`). |
+| `self:account-quota`           | Ƙayyadaddun asusun upstream a cikin wannan bayanan matsayin (`src/lib/usage/apiKeySelfService.ts`). Har yanzu hanyar matsayin tana buƙatar `self:usage`.                                      |
+| `policy:bypass-provider-quota` | Kiran inference na wannan maɓalli suna tsallake manufar ƙayyadadden mai samarwa (`hasProviderQuotaBypassScope` a cikin `src/sse/handlers/chat.ts`).                                           |
+
+#### Daidaitawa
+
+Kasidar ita ce teburin da ke ƙarƙashin [Iyakokin izinin kayan aikin MCP](#mcp-tool-scopes). Kada a
+ɗauki `MCP_SCOPE_LIST` da ke cikin `src/shared/constants/mcpScopes.ts` a matsayin wannan kasidar:
+shi ne asalin ƙaramin rukuni mai nau'i. Kayan aikin da aka ƙara daga baya suna ayyana ƙarin iyakokin izini a gefensa
+(`read:notion`, `read:skills`, `read:local-corpus`, da sauran abubuwan teburin).
+
+`evaluateToolScopes` da ke cikin `open-sse/mcp-server/scopeEnforcement.ts` yana ba da damar kira
+idan kowane iyakacin izini da ake buƙata ya dace da wani iyakacin izini da aka bayar:
+
+- `*` yana dacewa da kowane iyakacin izini da ake buƙata.
+- Iyakacin izini da aka bayar wanda ya ƙare da `*` yana dacewa da iyakacin izini da ake buƙata wanda ya fara da
+  prefix ɗin da ke gaban tauraron. `read:*` yana dacewa da `read:compression`.
+- Duk wani iyakacin izini da aka bayar yana dacewa ne kawai da kirtanin da ake buƙata mai kama da shi daidai.
+
+Maɓalli wanda iyakokin izininsa suke `["manage"]` ba ya wuce `scopeMatches` don `read:compression`.
+Haka kiran yake gaza don `admin`, `mcp:connect`, `read`, da `write` idan waɗannan
+su ne kawai kirtanin da aka bayar. Babu wani tsarin matsayi tsakanin iyakokin izinin kayan aikin MCP
+sai dai `*` da ke ƙarshe.
+
+Tilastawa a kashe take sai idan `OMNIROUTE_MCP_ENFORCE_SCOPES=true` (tsoho
+`false`). Yayin da take kashe, `evaluateToolScopes` yana ba da damar kiran kuma yana tsallake
+kasidar. Yayin da take kunne, HTTP yana amfani da `api_keys.scopes` na maɓallin Bearer a matsayin
+`authInfo` (duba [Ɗaure iyakokin izinin HTTP bisa kowane maɓalli](#per-key-http-scope-binding-7895)).
+Idan ba a samo iyakokin izinin maɓalli ba, saitin da aka bayar yana koma wa MCP `_meta`, sannan
+`OMNIROUTE_MCP_SCOPES`.
+
+#### Iyakokin izinin alamar samun dama
+
+Alamomin `oma_live_…` (`src/lib/accessTokens/scopes.ts`) suna ɗauke da `read`, `write`,
+ko `admin`. `scopeSatisfies` matsayi ne: `admin` yana rufe `write` da `read`, kuma
+`write` yana rufe `read`. Iyakokin izini da ba a sani ba ba sa rufe komai.
+
+`evaluateAccessTokenAuth` (`src/server/authz/accessTokenAuth.ts`) yana kwatanta wannan
+matsayi da `inferRequiredScope` (`src/server/authz/accessScopes.ts`):
+
+- `GET`, `HEAD`, da `OPTIONS` suna buƙatar `read`.
+- Kowace hanya ta dabam tana buƙatar `write`.
+- Hanyoyin da ke cikin `ADMIN_SCOPE_PREFIXES` suna buƙatar `admin` ga kowace hanyar aiki. `/api/mcp`
+  yana cikin wannan jeri, don haka alamar samun dama ta `write` har yanzu ba za ta iya kiran farfajiyar HTTP ta MCP ba.
+- Hanyoyin da ke cikin `ADMIN_MUTATION_PREFIXES` suna buƙatar `admin` ne kawai don canje-canje.
+
+`PATCH /api/keys/{id}` aiki ne na sauyi kuma baya cikin waɗancan jerin admin, don haka token mai
+`read` yana karɓar 403
+`Faɗin izinin access token na 'read' bai isa ba; ana buƙatar 'write'.`
+Access token mai `write` ko `admin` yana biyan buƙatar wannan route. JWT na dashboard,
+token na machine-id na loopback CLI, da API key mai `manage` ko `admin` suna bi ta
+wasu rassan kuma wannan matsayi ba ya taƙaita su.
+
+Access token da ya wuce `scopeSatisfies` don `/api/mcp` ya tsallake
+shingen gudanarwa ne kawai. Har yanzu kiran tools yana gudanar da `scopeMatches` a kan scopes na API-key.
+Matsayin access-token ba ya cikin abubuwan shigarwa na `scopeMatches`.
+
+### Scopes na tools na MCP
+
+Ana gudanar da tabbatar da scopes a wuri guda a `open-sse/mcp-server/scopeEnforcement.ts`.
+Kowane tool yana buƙatar takamaiman scopes:
 
 | Iyaka                 | Kayan aiki                                                                                                                                                                              |
 | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -330,54 +429,66 @@ Ana tantance kayan aikin MCP ta hanyar scopes na API key. An tattara tilasta sco
 | `write:obsidian`      | Kayan aikin rubutawa 9 — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                 |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                       |
 
-Ana goyon bayan wildcard scopes: `read:*` yana ba da dukkan read-scopes, `*` kuma yana ba da cikakkiyar dama.
+Ana goyon bayan faɗin izini na wildcard: `read:*` yana ba da dukkan izinin karantawa, `*` yana ba da cikakkiyar dama.
 
-### `mcp:connect` — takamaiman ikon route (#7895)
+### `mcp:connect` — takamaiman damar hanya (#7895)
 
-Isa ga HTTP/SSE MCP transport (`/api/mcp/*`) daga wajen loopback yana buƙatar keɓancewar
-LOCAL_ONLY ta `/api/mcp/` (duba `docs/security/ROUTE_GUARD_TIERS.md`). A tarihi,
-wannan keɓancewar tana karɓar API key mai cikakken scope na `manage`/`admin` ne kawai — wanda ya yi faɗi fiye da kima ga
-mai kira da ke buƙatar sadarwa da MCP kawai. Yanzu
-`src/shared/constants/managementScopes.ts` tana fitar da
-`MCP_CONNECT_SCOPE = "mcp:connect"`: ƙarin takamaiman scope (daidai da tsarin da
-`SELF_USAGE_SCOPE` ya kafa) wanda ke ba da izini ga kewaye kariyar `/api/mcp/` KAWAI a cikin
-`src/server/authz/policies/management.ts` — ba ya ba da damar shiga wata management-route
-kuma da gangan BA a saka shi cikin `MANAGEMENT_API_KEY_SCOPES` ba. Key mai `manage`/`admin`
-har yanzu yana wuce wannan keɓancewar ba tare da canji ba; `mcp:connect` madadi ne mai
-ƙaramin izini ga masu kiran MCP kawai daga nesa, wanda ake dubawa ta hanyar `hasMcpConnectOrManageScope()`.
+Isa ga jigilar HTTP/SSE MCP (`/api/mcp/*`) daga adireshin da ba loopback ba yana buƙatar
+keɓancewar LOCAL_ONLY ta `/api/mcp/` (duba `docs/security/ROUTE_GUARD_TIERS.md`). A baya,
+wannan keɓancewar tana karɓar maɓallin API mai cikakken izinin `manage`/`admin` ne kawai — wanda ya yi faɗi sosai ga
+mai kira da kawai yake buƙatar sadarwa da MCP. Yanzu `src/shared/constants/managementScopes.ts`
+yana fitar da `MCP_CONNECT_SCOPE = "mcp:connect"`: ƙarin takamaiman izini (mai bin irin tsarin
+`SELF_USAGE_SCOPE`) wanda ke ba da izini ga kaucewar `/api/mcp/` KAWAI a cikin
+`src/server/authz/policies/management.ts` — ba ya ba da damar shiga wata hanyar gudanarwa
+kuma da gangan BA a saka shi cikin `MANAGEMENT_API_KEY_SCOPES` ba. Maɓallin da ke ɗauke da `manage`/`admin`
+har yanzu yana wuce keɓancewar ba tare da canji ba; `mcp:connect` madadi ne mai ƙarancin gata ga
+masu kiran MCP na nesa kawai, wanda ake bincikawa ta `hasMcpConnectOrManageScope()`.
 
-### Ɗaure HTTP scope ga kowane key (#7895)
+### Ɗaure izinin HTTP ga kowane maɓalli (#7895)
 
-Ta HTTP/SSE, yanzu `open-sse/mcp-server/httpTransport.ts` tana gano ainihin
-`api_keys.scopes` na mai kira ta hanyar `resolveMcpCallerAuthInfo()` (`open-sse/mcp-server/httpAuthContext.ts`)
-kuma tana miƙa shi zuwa `transport.handleRequest(req, { authInfo })` na MCP SDK, don haka
-`extra.authInfo.scopes` da ke isa ga kowane tool call yana nuna scopes na Bearer key ɗin kansa.
-`resolveCallerScopeContext()` na `scopeEnforcement.ts` tun farko tana ba `authInfo` fifiko a kan
-fallback na `_meta` da env na `OMNIROUTE_MCP_SCOPES` — wannan kawai yana cike tushen farko
-mai fifiko mafi girma, wanda a baya ba a cike shi ta HTTP ba. Idan ba a gano API key ba
-(babu header, key ba daidai ba), `authInfo` zai ci gaba da kasancewa `undefined`, sannan ganowa ta koma ga
-sarkar `meta`/env da ake da ita ba tare da canji ba. Wannan BA ya sauya tsohon ƙimar `OMNIROUTE_MCP_ENFORCE_SCOPES` —
-har yanzu dole ne a kunna enforcement a sarari; wannan canjin kawai yana sa hanyar
-kowane key ta samu fifiko da zarar an kunna shi. stdio ba shi da wata shaida ta musamman ga kowane mai kira (duba
-`mcpCallerIdentity.ts`) kuma wannan bai shafe shi ba — zai ci gaba da amfani da sarkar fallback ta `_meta`/env.
+Ta HTTP/SSE, yanzu `open-sse/mcp-server/httpTransport.ts` yana gano ainihin
+`api_keys.scopes` na mai kira ta `resolveMcpCallerAuthInfo()` (`open-sse/mcp-server/httpAuthContext.ts`)
+kuma yana miƙa shi zuwa `transport.handleRequest(req, { authInfo })` na MCP SDK, don haka
+`extra.authInfo.scopes` da ke isa ga kowane kiran kayan aiki yana nuna izinin maɓallin Bearer ɗin kansa.
+`resolveCallerScopeContext()` na `scopeEnforcement.ts` ya riga ya fifita `authInfo` a kan
+madadin `_meta` da env na `OMNIROUTE_MCP_SCOPES` — wannan kawai yana cika wannan tushe na farko,
+mafi fifiko, wanda a baya ba a samar masa da bayanai ta HTTP ba. Idan ba a gano wani maɓallin API ba
+(babu header, ko maɓallin ba daidai ba ne), `authInfo` zai ci gaba da kasancewa `undefined` kuma ganowa zai koma ga
+jerin madadin `meta`/env da ake da shi ba tare da canji ba. stdio ba shi da shaidar kowane mai kira (duba
+`mcpCallerIdentity.ts`) kuma wannan bai shafe shi ba — zai ci gaba da amfani da jerin madadin `_meta`/env.
+
+**Ana tilasta aiwatar da izini ga masu kiran HTTP/SSE masu takamaiman izini ba tare da la’akari da
+`OMNIROUTE_MCP_ENFORCE_SCOPES` ba.** Kasancewar tsoffin ƙimar `OMNIROUTE_MCP_ENFORCE_SCOPES` ita ce `false` yana da
+aminci ne kawai ga tsarin mai aiki guda ɗaya na gida/stdio, inda babu shaidar kowane mai kira da za a daidaita
+da izini. `open-sse/mcp-server/server.ts::withScopeEnforcement()` yana kunna aiwatar da izinin
+kowane kayan aiki ba tare da sharadi ba (`shouldForceScopeEnforcement()` a cikin `scopeEnforcement.ts`)
+duk lokacin da `resolveCallerScopeContext()` ya gano
+`source === "authInfo"` (wato ainihin header na HTTP Authorization na kowane maɓalli, na HTTP/SSE kawai) KUMA
+wannan maɓallin ba ya ɗauke da cikakken izinin `manage`/`admin`. Wannan yana rufe giɓin da maɓallin da ke ɗauke da izinin
+kaucewa na `mcp:connect` KAWAI — wanda aka bayyana a sama cewa ba ya ba da izini ga komai sai
+keɓancewar LOCAL_ONLY ta `/api/mcp/` — zai iya kiran kowane kayan aikin MCP bayan mai gudanarwa
+ya kunna damar MCP ta nesa/wadda ba loopback ba, kawai saboda tsohuwar ƙimar
+`OMNIROUTE_MCP_ENFORCE_SCOPES` ita ce `false`. Cikakken maɓallin `manage`/`admin` ta HTTP, da duk wani
+mai kiran stdio/na gida, za su ci gaba da amfani da halayen da ake da su wanda
+`OMNIROUTE_MCP_ENFORCE_SCOPES` ke sarrafawa ba tare da canji ba.
 
 ---
 
 ## Sauye-sauyen Muhalli
 
-| Sauyi                                   | Tsoho                                 | Manufa                                                                                                                                           |
-| :-------------------------------------- | :------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`              | Babban URL da sabar MCP ke amfani da shi lokacin kiran API na cikin gida na OmniRoute                                                            |
-| `OMNIROUTE_API_KEY`                     | (babu komai)                          | Mabudin API da ake turawa a matsayin `Authorization: Bearer` zuwa kiraye-kirayen API na cikin gida                                               |
-| `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (`"true"` kaɗai ke kunna shi) | Idan an kunna, rashin scopes zai hana kiran kayan aiki kuma ya rubuta `scope_denied:<reason>` a kundin binciken tsaro                            |
-| `OMNIROUTE_MCP_SCOPES`                  | (babu komai)                          | Jerin scopes da aka raba da waƙafi waɗanda ake ɗauka a matsayin “akwai” ta tsohuwa (ana amfani da shi idan mai kira bai bayar da nasa scopes ba) |
-| `OMNIROUTE_MCP_COMPRESS_DESCRIPTIONS`   | (ba a saita ba = a kunne)             | Idan aka saita zuwa `0/false/off/no`, yana kashe matse bayanin MCP a lokacin rajista                                                             |
-| `OMNIROUTE_MCP_DESCRIPTION_COMPRESSION` | (ba a saita ba = a kunne)             | Wani madadin suna na wannan maɓallin da ke sama                                                                                                  |
-| `OMNIROUTE_MCP_FETCH_TIMEOUT_MS`        | `10000`                               | Iyakar lokacin sokewa don karatun gudanarwa na cikin gida (lafiya, juriya, haɗe-haɗe, ƙayyadadden amfani, amfani)                                |
-| `OMNIROUTE_MCP_UPSTREAM_TIMEOUT_MS`     | `60000`                               | Iyakar lokacin sokewa don matakan da ke jiran mai samarwa (`route_request`, `web_search`, `web_fetch`)                                           |
-| `MCP_TOOL_DENY`                         | (ba a saita ba = babu tacewa)         | Sunayen kayan aiki da aka raba da waƙafi waɗanda za a cire daga `tools/list` (rage yawan nau'ikan kayan aiki — duba ƙasa)                        |
-| `MCP_TOOL_ALLOW`                        | (ba a saita ba = babu tacewa)         | Sunayen kayan aiki da aka raba da waƙafi waɗanda za a riƙe su kaɗai (yanayin jerin-izini — duba ƙasa)                                            |
-| `DATA_DIR`                              | `~/.omniroute`                        | Ana rubuta fayil ɗin heartbeat zuwa `${DATA_DIR}/runtime/mcp-heartbeat.json`                                                                     |
+| Sauye-sauye                             | Tsoho                                 | Manufa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| :-------------------------------------- | :------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`              | Asalin URL da sabar MCP ke amfani da shi lokacin kiran API na cikin gida na OmniRoute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `OMNIROUTE_API_KEY`                     | (babu komai)                          | Maballin API da ake turawa a matsayin `Authorization: Bearer` zuwa kiran API na cikin gida                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (`"true"` kaɗai ke kunna shi) | Idan an kunna, rashin scopes zai hana kiran kayan aiki kuma ya rubuta `scope_denied:<reason>` a rajistar binciken tsaro. Haka kuma, ana tilasta aiwatar da wannan ba tare da la’akari da wannan alama ba ga duk wani mai kira ta HTTP/SSE da aka tantance daga taken Authorization na kowane maballi (`source === "authInfo"`) wanda ba shi da cikakken scope na `manage`/`admin` — misali, maballin da ke da scope na tsallakewa mai iyaka na `mcp:connect` kawai — don haka wannan tsohon saitin yana da aminci ne kawai ga tsarin gida/stdio na mai gudanarwa guda ɗaya, ba ga samun dama daga nesa wanda ba na loopback ba |
+| `OMNIROUTE_MCP_SCOPES`                  | (babu komai)                          | Jerin scopes da aka raba da waƙafi waɗanda ake ɗauka a matsayin “akwai” ta tsohuwa (ana amfani da su idan mai kira bai samar da nasa scopes ba)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `OMNIROUTE_MCP_COMPRESS_DESCRIPTIONS`   | (ba a saita ba = a kunne)             | Idan aka saita zuwa `0/false/off/no`, yana kashe matse bayanin MCP a lokacin rajista                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `OMNIROUTE_MCP_DESCRIPTION_COMPRESSION` | (ba a saita ba = a kunne)             | Wani madadin suna ga wannan maɓallin sauyawa da ke sama                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `OMNIROUTE_MCP_FETCH_TIMEOUT_MS`        | `10000`                               | Iyakar lokacin katsewa don karatun gudanarwa na cikin gida (lafiya, juriya, haɗe-haɗe, ƙayyadadden amfani, amfani)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `OMNIROUTE_MCP_UPSTREAM_TIMEOUT_MS`     | `60000`                               | Iyakar lokacin katsewa don matakan da ke jiran mai samarwa (`route_request`, `web_search`, `web_fetch`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `MCP_TOOL_DENY`                         | (ba a saita ba = babu tacewa)         | Sunayen kayan aiki da aka raba da waƙafi waɗanda za a cire daga `tools/list` (rage yawan nau’ikan kayan aiki — duba ƙasa)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `MCP_TOOL_ALLOW`                        | (ba a saita ba = babu tacewa)         | Sunayen kayan aiki da aka raba da waƙafi waɗanda za a riƙe su kaɗai (yanayin jerin izini — duba ƙasa)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `DATA_DIR`                              | `~/.omniroute`                        | Ana rubuta fayil ɗin heartbeat zuwa `${DATA_DIR}/runtime/mcp-heartbeat.json`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 ---
 

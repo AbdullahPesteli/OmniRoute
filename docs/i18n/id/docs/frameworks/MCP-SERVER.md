@@ -1,6 +1,6 @@
 # OmniRoute MCP Server Documentation (Bahasa Indonesia)
 
-🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
+🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
 ---
 
@@ -291,8 +291,87 @@ Transport SSE dan HTTP yang dapat dialirkan sama-sama diblokir hingga server MCP
 
 ## Autentikasi & Cakupan
 
-Alat MCP diautentikasi melalui cakupan kunci API. Penerapan cakupan dipusatkan di
-`open-sse/mcp-server/scopeEnforcement.ts`. Setiap alat memerlukan cakupan tertentu:
+Pemanggilan alat MCP membaca string cakupan dari pemanggil. Pemeriksaan tersebut merupakan salah satu dari tiga namespace independen. Lolos dari satu pemeriksa tidak berarti lolos dari pemeriksa lainnya. Aturannya dijelaskan dalam [Tiga namespace cakupan](#three-scope-namespaces).
+Katalog alat tersedia di [Cakupan alat MCP](#mcp-tool-scopes).
+
+### Tiga namespace cakupan
+
+`manage` pada kunci API, `read:compression` pada alat MCP, dan `read` pada token akses `oma_live_…` merupakan tiga izin yang berbeda. Pemanggil yang mengirim token akses `read` ke rute manajemen yang melakukan mutasi akan menerima HTTP 403
+`Access token scope 'read' is insufficient; 'write' required.`
+Peringkat tersebut ditangani oleh `scopeSatisfies`. Fungsi itu tidak menggunakan tabel MCP, dan pencocok MCP juga tidak menggunakannya.
+
+| Namespace           | Kredensial                                                                         | Pemeriksa                       | Kelolosan mengizinkan                                                 |
+| :------------------ | :--------------------------------------------------------------------------------- | :------------------------------ | :-------------------------------------------------------------------- |
+| Manajemen kunci API | `api_keys.scopes`                                                                  | `hasManageScope`                | REST manajemen untuk kunci Bearer tersebut                            |
+| Aditif kunci API    | array yang sama, satu string persis                                                | helper yang disebutkan di bawah | Hanya satu kapabilitas tersebut                                       |
+| Cakupan alat MCP    | array yang sama, jika tidak ada MCP `_meta`, jika tidak ada `OMNIROUTE_MCP_SCOPES` | `scopeMatches`                  | Alat tersebut, setelah penegakan diaktifkan                           |
+| Token akses         | `oma_live_…`                                                                       | `scopeSatisfies`                | Rute manajemen yang metode dan path-nya memerlukan peringkat tersebut |
+
+Penerbitan setiap kredensial dibahas dalam
+[Autentikasi Manajemen](../guides/MANAGEMENT-AUTH.md).
+
+#### Cakupan kunci API
+
+Satu array `api_keys.scopes` digunakan untuk dua tugas. Keduanya menggunakan fungsi yang berbeda.
+
+**REST Manajemen.** `manage` dan `admin` merupakan anggota
+`MANAGEMENT_API_KEY_SCOPES` (`src/shared/constants/managementScopes.ts`).
+`hasManageScope` adalah fungsi yang mengotorisasi rute manajemen untuk kunci tersebut. `admin` memiliki kapabilitas manajemen pada rute-rute tersebut. Kata `admin` di sini bukanlah peringkat token akses dan tidak diperluas menjadi cakupan alat MCP.
+
+**String aditif.** Masing-masing merupakan pengujian keanggotaan persis, dan semuanya tetap berada di luar `MANAGEMENT_API_KEY_SCOPES`.
+
+| Cakupan                        | Kelolosan mengizinkan                                                                                                                                                           |
+| :----------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `mcp:connect`                  | Hanya pengecualian LOCAL_ONLY `/api/mcp/` non-loopback (`hasMcpConnectOrManageScope`). Kunci dengan `manage` atau `admin` tetap lolos dari pengecualian tersebut.               |
+| `self:usage`                   | `GET /api/v1/me/status` untuk kunci ini (`src/app/api/v1/me/status/route.ts`). `POST /api/keys` menambahkan cakupan ini saat pembuatan (`normalizeSelfServiceScopesForCreate`). |
+| `self:account-quota`           | Kuota akun upstream di dalam payload status tersebut (`src/lib/usage/apiKeySelfService.ts`). Rute status tetap memerlukan `self:usage`.                                         |
+| `policy:bypass-provider-quota` | Pemanggilan inferensi kunci ini melewati kebijakan kuota penyedia (`hasProviderQuotaBypassScope` dalam `src/sse/handlers/chat.ts`).                                             |
+
+#### Pencocokan
+
+Katalognya adalah tabel di bawah [Cakupan alat MCP](#mcp-tool-scopes). Jangan perlakukan `MCP_SCOPE_LIST` dalam `src/shared/constants/mcpScopes.ts` sebagai katalog tersebut:
+itu adalah subset bertipe yang asli. Alat-alat yang ditambahkan kemudian mendeklarasikan cakupan tambahan di sampingnya (`read:notion`, `read:skills`, `read:local-corpus`, dan cakupan lainnya dalam tabel).
+
+`evaluateToolScopes` dalam `open-sse/mcp-server/scopeEnforcement.ts` mengizinkan pemanggilan ketika setiap cakupan yang diperlukan cocok dengan salah satu cakupan yang diberikan:
+
+- `*` cocok dengan setiap cakupan yang diperlukan.
+- Cakupan yang diberikan dan berakhiran `*` cocok dengan cakupan yang diperlukan jika cakupan tersebut dimulai dengan prefiks sebelum tanda bintang. `read:*` cocok dengan `read:compression`.
+- Setiap cakupan lain yang diberikan hanya cocok dengan string cakupan yang diperlukan jika identik.
+
+Kunci dengan cakupan `["manage"]` gagal dalam `scopeMatches` untuk `read:compression`.
+Pemanggilan yang sama gagal untuk `admin`, `mcp:connect`, `read`, dan `write` jika string tersebut adalah satu-satunya string yang diberikan. Tidak ada hierarki di antara cakupan alat MCP selain wildcard `*` di akhir.
+
+Penegakan dinonaktifkan kecuali `OMNIROUTE_MCP_ENFORCE_SCOPES=true` (nilai default
+`false`). Selama dinonaktifkan, `evaluateToolScopes` mengizinkan pemanggilan dan melewati katalog. Selama diaktifkan, HTTP menggunakan `api_keys.scopes` dari kunci Bearer sebagai `authInfo` (lihat [Pengikatan cakupan HTTP per kunci](#per-key-http-scope-binding-7895)).
+Jika tidak ada cakupan kunci yang dapat ditentukan, kumpulan cakupan yang diberikan beralih ke MCP `_meta`, lalu ke `OMNIROUTE_MCP_SCOPES`.
+
+#### Cakupan token akses
+
+Token `oma_live_…` (`src/lib/accessTokens/scopes.ts`) membawa `read`, `write`,
+atau `admin`. `scopeSatisfies` menggunakan peringkat: `admin` mencakup `write` dan `read`, sedangkan `write` mencakup `read`. Cakupan yang tidak dikenal tidak mencakup apa pun.
+
+`evaluateAccessTokenAuth` (`src/server/authz/accessTokenAuth.ts`) membandingkan peringkat tersebut dengan `inferRequiredScope` (`src/server/authz/accessScopes.ts`):
+
+- `GET`, `HEAD`, dan `OPTIONS` memerlukan `read`.
+- Setiap metode lainnya memerlukan `write`.
+- Path dalam `ADMIN_SCOPE_PREFIXES` memerlukan `admin` untuk setiap metode. `/api/mcp` berada dalam daftar tersebut, sehingga token akses `write` tetap tidak dapat memanggil permukaan HTTP MCP.
+- Path dalam `ADMIN_MUTATION_PREFIXES` hanya memerlukan `admin` untuk mutasi.
+
+`PATCH /api/keys/{id}` adalah mutasi dan tidak terdapat dalam daftar admin tersebut, sehingga
+token `read` menerima 403
+`Access token scope 'read' is insufficient; 'write' required.`
+Token akses `write` atau `admin` memenuhi persyaratan rute tersebut. JWT dasbor, token machine-id CLI
+loopback, dan kunci API dengan `manage` atau `admin` menggunakan cabang
+lain dan tidak dibatasi oleh peringkat ini.
+
+Token akses yang lolos `scopeSatisfies` untuk `/api/mcp` hanya telah melewati
+gerbang pengelolaan. Pemanggilan alat tetap menjalankan `scopeMatches` terhadap cakupan
+kunci API. Peringkat token akses bukan merupakan input bagi `scopeMatches`.
+
+### Cakupan alat MCP
+
+Penerapan cakupan dipusatkan di `open-sse/mcp-server/scopeEnforcement.ts`.
+Setiap alat memerlukan cakupan tertentu:
 
 | Cakupan               | Alat                                                                                                                                                                        |
 | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -330,53 +409,65 @@ Alat MCP diautentikasi melalui cakupan kunci API. Penerapan cakupan dipusatkan d
 | `write:obsidian`      | 9 alat tulis — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …               |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                           |
 
-Cakupan wildcard didukung: `read:*` memberikan semua cakupan baca, `*` memberikan akses penuh.
+Cakupan wildcard didukung: `read:*` memberikan semua cakupan baca, sedangkan `*` memberikan akses penuh.
 
 ### `mcp:connect` — kapabilitas rute terbatas (#7895)
 
-Mengakses transportasi HTTP/SSE MCP (`/api/mcp/*`) dari non-loopback memerlukan
-pengecualian LOCAL_ONLY `/api/mcp/` (lihat `docs/security/ROUTE_GUARD_TIERS.md`). Secara historis,
-pengecualian tersebut hanya menerima kunci API dengan cakupan penuh `manage`/`admin` — terlalu luas untuk
-pemanggil yang hanya perlu berkomunikasi dengan MCP. `src/shared/constants/managementScopes.ts` sekarang
+Mengakses transportasi HTTP/SSE MCP (`/api/mcp/*`) dari alamat non-loopback memerlukan
+pengecualian LOCAL_ONLY `/api/mcp/` (lihat `docs/security/ROUTE_GUARD_TIERS.md`). Sebelumnya,
+pengecualian tersebut hanya menerima kunci API dengan cakupan penuh `manage`/`admin` — terlalu luas bagi
+pemanggil yang hanya perlu berkomunikasi dengan MCP. `src/shared/constants/managementScopes.ts` kini
 mengekspor `MCP_CONNECT_SCOPE = "mcp:connect"`: cakupan tambahan yang terbatas (mengikuti preseden yang sama dengan
-`SELF_USAGE_SCOPE`) yang HANYA mengotorisasi bypass `/api/mcp/` di
+`SELF_USAGE_SCOPE`) yang HANYA mengotorisasi bypass `/api/mcp/` dalam
 `src/server/authz/policies/management.ts` — cakupan ini tidak memberikan akses ke rute manajemen lainnya
-dan sengaja TIDAK dimasukkan dalam `MANAGEMENT_API_KEY_SCOPES`. Kunci yang memiliki `manage`/`admin`
-tetap lolos dari pengecualian tersebut tanpa perubahan; `mcp:connect` adalah alternatif dengan hak akses lebih rendah untuk
+dan sengaja TIDAK disertakan dalam `MANAGEMENT_API_KEY_SCOPES`. Kunci yang memiliki `manage`/`admin`
+tetap lolos dari pengecualian tersebut tanpa perubahan; `mcp:connect` merupakan alternatif dengan hak istimewa lebih rendah bagi
 pemanggil jarak jauh khusus MCP, yang diperiksa melalui `hasMcpConnectOrManageScope()`.
 
 ### Pengikatan cakupan HTTP per kunci (#7895)
 
 Melalui HTTP/SSE, `open-sse/mcp-server/httpTransport.ts` kini me-resolve
 `api_keys.scopes` aktual milik pemanggil melalui `resolveMcpCallerAuthInfo()` (`open-sse/mcp-server/httpAuthContext.ts`)
-dan meneruskannya ke `transport.handleRequest(req, { authInfo })` milik SDK MCP, sehingga
-`extra.authInfo.scopes` yang sampai ke setiap pemanggilan alat mencerminkan cakupan milik kunci Bearer tersebut.
-`resolveCallerScopeContext()` milik `scopeEnforcement.ts` telah memprioritaskan `authInfo` di atas
+dan meneruskannya ke `transport.handleRequest(req, { authInfo })` milik MCP SDK, sehingga
+`extra.authInfo.scopes` yang diterima setiap pemanggilan alat mencerminkan cakupan milik kunci Bearer itu sendiri.
+`resolveCallerScopeContext()` dalam `scopeEnforcement.ts` memang sudah memprioritaskan `authInfo` di atas
 `_meta` dan fallback env `OMNIROUTE_MCP_SCOPES` — perubahan ini hanya mengisi sumber pertama
-dengan prioritas tertinggi tersebut, yang sebelumnya tidak memperoleh data melalui HTTP. Saat tidak ada kunci API yang berhasil di-resolve
-(tidak ada header, kunci tidak valid), `authInfo` tetap `undefined` dan resolusi berlanjut ke
-rantai `meta`/env yang sudah ada tanpa perubahan. Perubahan ini TIDAK mengubah nilai default `OMNIROUTE_MCP_ENFORCE_SCOPES`
-— penegakan tetap harus diaktifkan secara eksplisit; perubahan ini hanya membuat jalur per kunci
-diprioritaskan setelah diaktifkan. stdio tidak memiliki identitas per pemanggil (lihat
+dengan prioritas tertinggi tersebut, yang sebelumnya tidak diisi melalui HTTP. Ketika tidak ada kunci API yang dapat di-resolve
+(tanpa header, kunci tidak valid), `authInfo` tetap `undefined` dan resolusi dilanjutkan ke
+rantai `meta`/env yang sudah ada tanpa perubahan. stdio tidak memiliki identitas per pemanggil (lihat
 `mcpCallerIdentity.ts`) dan tidak terpengaruh — stdio tetap menggunakan rantai fallback `_meta`/env.
+
+**Penegakan diwajibkan bagi pemanggil HTTP/SSE bercakupan terbatas, terlepas dari
+`OMNIROUTE_MCP_ENFORCE_SCOPES`.** Nilai default `false` untuk `OMNIROUTE_MCP_ENFORCE_SCOPES` hanya
+aman bagi alur operator tunggal lokal/stdio, karena tidak ada identitas per pemanggil yang dapat dijadikan dasar pembatasan cakupan.
+`open-sse/mcp-server/server.ts::withScopeEnforcement()` mengaktifkan penegakan cakupan
+per alat tanpa syarat (`shouldForceScopeEnforcement()` dalam `scopeEnforcement.ts`)
+setiap kali `resolveCallerScopeContext()` me-resolve
+`source === "authInfo"` (yaitu header HTTP Authorization per kunci yang nyata, khusus HTTP/SSE) DAN
+kunci tersebut tidak memiliki cakupan penuh `manage`/`admin`. Hal ini menutup celah yang memungkinkan kunci yang HANYA memiliki
+cakupan bypass terbatas `mcp:connect` — yang didokumentasikan di atas sebagai hanya mengotorisasi
+pengecualian LOCAL_ONLY `/api/mcp/` — untuk memanggil setiap alat MCP setelah operator
+mengaktifkan akses MCP jarak jauh/non-loopback, hanya karena `OMNIROUTE_MCP_ENFORCE_SCOPES` didistribusikan
+dengan nilai default `false`. Kunci penuh `manage`/`admin` melalui HTTP, serta setiap pemanggil stdio/lokal, tetap
+mempertahankan perilaku yang dikendalikan oleh `OMNIROUTE_MCP_ENFORCE_SCOPES` tanpa perubahan.
 
 ---
 
 ## Variabel Lingkungan
 
-| Variabel                                | Default                                       | Tujuan                                                                                                                                         |
-| :-------------------------------------- | :-------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                      | URL dasar yang digunakan server MCP saat memanggil API internal OmniRoute                                                                      |
-| `OMNIROUTE_API_KEY`                     | (kosong)                                      | Kunci API yang diteruskan sebagai `Authorization: Bearer` ke panggilan API internal                                                            |
-| `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (hanya `"true"` yang mengaktifkannya) | Jika diaktifkan, scope yang tidak ada akan menolak pemanggilan alat dan mencatat `scope_denied:<reason>` dalam log audit                       |
-| `OMNIROUTE_MCP_SCOPES`                  | (kosong)                                      | Daftar scope yang diizinkan, dipisahkan koma, dan dianggap "tersedia" secara default (digunakan saat pemanggil tidak memberikan scope sendiri) |
-| `OMNIROUTE_MCP_COMPRESS_DESCRIPTIONS`   | (tidak ditetapkan = aktif)                    | Jika ditetapkan ke `0/false/off/no`, menonaktifkan kompresi deskripsi MCP pada saat pendaftaran                                                |
-| `OMNIROUTE_MCP_DESCRIPTION_COMPRESSION` | (tidak ditetapkan = aktif)                    | Alias alternatif untuk pengaturan yang sama seperti di atas                                                                                    |
-| `OMNIROUTE_MCP_FETCH_TIMEOUT_MS`        | `10000`                                       | Batas waktu pembatalan untuk pembacaan manajemen internal (kesehatan, ketahanan, kombinasi, kuota, penggunaan)                                 |
-| `OMNIROUTE_MCP_UPSTREAM_TIMEOUT_MS`     | `60000`                                       | Batas waktu pembatalan untuk hop yang menunggu penyedia (`route_request`, `web_search`, `web_fetch`)                                           |
-| `MCP_TOOL_DENY`                         | (tidak ditetapkan = tanpa filter)             | Nama alat yang dipisahkan koma untuk dihapus dari `tools/list` (pengurangan kardinalitas alat — lihat di bawah)                                |
-| `MCP_TOOL_ALLOW`                        | (tidak ditetapkan = tanpa filter)             | Nama alat yang dipisahkan koma untuk dipertahankan secara eksklusif (mode daftar yang diizinkan — lihat di bawah)                              |
-| `DATA_DIR`                              | `~/.omniroute`                                | File heartbeat ditulis ke `${DATA_DIR}/runtime/mcp-heartbeat.json`                                                                             |
+| Variabel                                | Default                                       | Tujuan                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| :-------------------------------------- | :-------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                      | URL dasar yang digunakan server MCP saat memanggil API internal OmniRoute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `OMNIROUTE_API_KEY`                     | (kosong)                                      | Kunci API yang diteruskan sebagai `Authorization: Bearer` ke panggilan API internal                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (hanya `"true"` yang mengaktifkannya) | Jika diaktifkan, cakupan yang tidak tersedia akan menolak panggilan alat dan mencatat `scope_denied:<reason>` dalam log audit. Penerapan ini JUGA dipaksakan terlepas dari flag ini untuk setiap pemanggil HTTP/SSE yang diidentifikasi dari header Authorization per kunci (`source === "authInfo"`) yang tidak memiliki cakupan penuh `manage`/`admin` — misalnya, kunci yang hanya memiliki cakupan bypass terbatas `mcp:connect` — sehingga default ini hanya aman untuk alur operator tunggal lokal/stdio, tidak pernah untuk akses jarak jauh non-loopback |
+| `OMNIROUTE_MCP_SCOPES`                  | (kosong)                                      | Daftar cakupan yang diizinkan, dipisahkan koma, dan dianggap "tersedia" secara default (digunakan ketika pemanggil tidak menyediakan cakupannya sendiri)                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `OMNIROUTE_MCP_COMPRESS_DESCRIPTIONS`   | (tidak diatur = aktif)                        | Jika diatur ke `0/false/off/no`, menonaktifkan kompresi deskripsi MCP pada saat pendaftaran                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `OMNIROUTE_MCP_DESCRIPTION_COMPRESSION` | (tidak diatur = aktif)                        | Alias alternatif untuk pengaturan yang sama seperti di atas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `OMNIROUTE_MCP_FETCH_TIMEOUT_MS`        | `10000`                                       | Batas waktu pembatalan untuk pembacaan manajemen internal (kesehatan, ketahanan, kombinasi, kuota, penggunaan)                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `OMNIROUTE_MCP_UPSTREAM_TIMEOUT_MS`     | `60000`                                       | Batas waktu pembatalan untuk hop yang menunggu penyedia (`route_request`, `web_search`, `web_fetch`)                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `MCP_TOOL_DENY`                         | (tidak diatur = tanpa filter)                 | Nama alat yang dipisahkan koma untuk dihapus dari `tools/list` (pengurangan kardinalitas alat — lihat di bawah)                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `MCP_TOOL_ALLOW`                        | (tidak disetel = tanpa filter)                | Nama alat yang dipisahkan koma untuk dipertahankan secara eksklusif (mode daftar izin — lihat di bawah)                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `DATA_DIR`                              | `~/.omniroute`                                | File heartbeat ditulis ke `${DATA_DIR}/runtime/mcp-heartbeat.json`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 ---
 

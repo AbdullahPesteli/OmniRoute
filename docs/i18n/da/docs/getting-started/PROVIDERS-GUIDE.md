@@ -1,6 +1,6 @@
 # Providers Guide: Connect AI Models to OmniRoute (Dansk)
 
-🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
+🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
@@ -173,16 +173,15 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 Disse udbydere tilbyder **gratis adgang** uden kreditkort:
 
-| Udbyder           | Gratis kvote       | Modeller                                 | Sådan opretter du forbindelse |
-| ----------------- | ------------------ | ---------------------------------------- | ----------------------------- |
-| **Kiro AI**       | 50 kreditter/måned | Claude Sonnet 4.5, Haiku 4.5, Opus 4.6   | Ingen godkendelse nødvendig   |
-| **OpenCode Free** | Ubegrænset         | GPT-4o, Claude, Gemini                   | Ingen godkendelse nødvendig   |
-| **Pollinations**  | Ingen nøgle kræves | GPT-5, Claude, Gemini, DeepSeek, Llama 4 | Ingen godkendelse nødvendig   |
-| **LongCat**       | 10M én gang        | LongCat-2.0                              | API-nøgle + KYC               |
-| **Cloudflare AI** | 10K neuroner/dag   | Mere end 50 modeller                     | Ingen godkendelse nødvendig   |
-| **NVIDIA NIM**    | ~40 RPM            | 129 modeller                             | API-nøgle nødvendig           |
-| **Cerebras**      | $5 i startkredit   | GLM 4.7, GPT-OSS 120B                    | API-nøgle + kort              |
-| **Qoder**         | Ubegrænset         | Kimi-K2, DeepSeek-R1, Qwen3-coder        | Ingen godkendelse nødvendig   |
+| Udbyder           | Gratis kvote        | Modeller                                 | Sådan opretter du forbindelse |
+| ----------------- | ------------------- | ---------------------------------------- | ----------------------------- |
+| **Kiro AI**       | 50 kreditter/måned  | Claude Sonnet 4.5, Haiku 4.5, Opus 4.6   | Ingen godkendelse nødvendig   |
+| **OpenCode Free** | Ubegrænset          | GPT-4o, Claude, Gemini                   | Ingen godkendelse nødvendig   |
+| **Pollinations**  | Ingen nøgle kræves  | GPT-5, Claude, Gemini, DeepSeek, Llama 4 | Ingen godkendelse nødvendig   |
+| **LongCat**       | 10 mio. én gang     | LongCat-2.0                              | API-nøgle + KYC               |
+| **Cloudflare AI** | 10.000 neuroner/dag | 50+ modeller                             | Ingen godkendelse nødvendig   |
+| **NVIDIA NIM**    | ~40 RPM             | 129 modeller                             | API-nøgle nødvendig           |
+| **Cerebras**      | $5 i startkredit    | GLM 4.7, GPT-OSS 120B                    | API-nøgle + kort              |
 
 **Tip**: Forbind flere gratis udbydere for at få **ubegrænset gratis AI** med automatisk fallback!
 
@@ -283,6 +282,46 @@ Brug derefter `model: "auto"`, så vælger OmniRoute automatisk den bedste til h
 1. Hent API-nøgle: https://platform.deepseek.com/
 2. I OmniRoute: Udbydere → Tilføj udbyder → DeepSeek
 3. Indsæt API-nøglen → Opret forbindelse
+
+### Qoder: vælg transportmetode for legitimationsoplysninger
+
+Qoder kræver legitimationsoplysninger. De to transportmetoder har forskellige funktioner; et modelnavn
+alene identificerer ikke, hvad en bestemt forbindelse kan gøre.
+
+| Legitimationsoplysninger              | OmniRoute-transport                         | Værktøjskald fra klienten                                | Streaming                                                       |
+| ------------------------------------- | ------------------------------------------- | -------------------------------------------------------- | --------------------------------------------------------------- |
+| PAT, der begynder med `pt-`           | Lokal `qodercli`-proces på OmniRoute-værten | Understøttes ikke                                        | Bufferet: SSE udsendes først, når CLI'en returnerer hele svaret |
+| Ikke-PAT-adgangstoken eller API-nøgle | DashScope OpenAI-kompatibelt HTTP-slutpunkt | Videresendes med forbehold for upstream-modellen/-nøglen | Upstream HTTP/SSE-sti                                           |
+
+For en PAT skal Qoder CLI installeres på samme vært eller i samme container som OmniRoute. Den eksekverbare fil
+skal kunne findes som `qodercli`, eller `CLI_QODER_BIN` skal indstilles til dens eksekverbare sti. En CLI,
+der kun er installeret på Docker-værten, er ikke automatisk tilgængelig i containeren. Manglende
+binære filer udløser en eksplicit fejl, der henviser til installationen eller stiindstillingen.
+
+PAT-chatstien har en procestimeout på 45 sekunder. Den samler samtalen til en
+prompt og kalder CLI'en i ikke-streamende udskriftstilstand. Anmodning om `stream: true` ændrer
+svarindpakningen til SSE; den giver ikke trinvis upstream-levering af tokens.
+CLI-validering/modelliste bruger en separat timeout på 20 sekunder. Dette er de aktuelle
+standardværdier i koden og ikke konfigurerbare dashboardindstillinger.
+
+Brug PAT-forbindelser til almindelig chat. Agentanmodninger, der indeholder `tools` eller ældre `functions`,
+udelukker PAT-konti under valget af legitimationsoplysninger, herunder fastgjorte kombinationsmål. En blandet
+Qoder-pulje kan stadig vælge sin HTTP-konto. Direkte kald til PAT-eksekveringskomponenten mislykkes også
+eksplicit, før CLI'en startes, i stedet for lydløst at fjerne værktøjsdefinitioner. Denne
+begrænsning vedrører værktøjer, der leveres af API-klienten, ikke eventuelle interne værktøjer, som Qoder
+CLI selv måtte bruge. En HTTP-nøgle garanterer ikke, at alle modeller understøtter værktøjer; normale
+kontroller af modelkapacitet gælder stadig.
+
+Browser-OAuth er kun tilgængelig, når administratoren konfigurerer alle fem indstillinger:
+`QODER_OAUTH_AUTHORIZE_URL`, `QODER_OAUTH_TOKEN_URL`, `QODER_OAUTH_USERINFO_URL`,
+`QODER_OAUTH_CLIENT_ID` og `QODER_OAUTH_CLIENT_SECRET`. De er som standard tomme; en
+ukonfigureret installation bør bruge en understøttet import af legitimationsoplysninger i stedet for at antage,
+at loginforløbet i browseren er klar.
+
+Implementeringsreferencer: [Qoder-eksekveringskomponent](../../open-sse/executors/qoder.ts),
+[CLI-kørselsmiljø](../../open-sse/services/qoderCli.ts) og
+[OAuth-konfiguration](../../src/lib/oauth/constants/oauth.ts). Trinvis PAT-streaming
+og en konfigurerbar timeout er separate forbedringer; denne adfærd lover dem ikke.
 
 ### Groq
 
