@@ -396,7 +396,7 @@ export async function validateProviderApiKey({
         id,
         ({ apiKey, providerSpecificData }: any) => {
           const { url, init } = configFn(apiKey, providerSpecificData);
-          return validateSearchProvider(url, init, providerSpecificData, isLocal);
+          return validateSearchProvider(url, init, providerSpecificData, isLocal, id);
         },
       ])
     ),
