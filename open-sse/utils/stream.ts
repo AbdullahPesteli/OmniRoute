@@ -61,6 +61,7 @@ import { createStreamFailureAborter } from "./streamFailureBoundary.ts";
 import { createReasoningStreamObserver } from "./responsesReasoningObservation.ts";
 import { recordToolLatency } from "../services/toolLatencyTracker.ts";
 import { extractToolSchemaMap } from "../translator/response/openai-responses/toolSchemas.ts";
+import { collectDeclaredToolNames } from "../translator/response/openai-responses/declaredToolName.ts";
 import {
   generateSessionId,
   markToolFinish,
@@ -234,6 +235,8 @@ type TranslateState = ReturnType<typeof initState> & {
   accumulatedReasoning?: string;
   /** #6951 — per-tool JSON Schema (from request `tools[]`), keyed by tool name. */
   toolSchemas?: Map<string, Record<string, unknown>> | null;
+  /** Every tool name the request declared (with or without a schema). */
+  declaredToolNames?: Set<string> | null;
   customToolNames?: ReadonlySet<string>;
   requestToolIdentityMap?: Map<string, { namespace: string; name: string }> | null;
   upstreamError?: {
@@ -871,6 +874,7 @@ export function createSSEStream(options: StreamOptions = {}) {
           accumulatedContent: "",
           accumulatedReasoning: "",
           toolSchemas: extractToolSchemaMap(body),
+          declaredToolNames: collectDeclaredToolNames(body),
           customToolNames,
           requestToolIdentityMap,
         }
