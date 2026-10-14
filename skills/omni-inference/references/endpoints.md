@@ -1207,6 +1207,24 @@ curl -X POST http://localhost:20128/api/v1/segment \
   -d '{}'
 ```
 
+### GET /api/v1/video-bridge/drilldown
+
+GET video bridge › drilldown
+
+```bash
+curl http://localhost:20128/api/v1/video-bridge/drilldown \
+  -H "Authorization: Bearer $OMNIROUTE_TOKEN"
+```
+
+### DELETE /api/v1/video-bridge/drilldown
+
+DELETE video bridge › drilldown
+
+```bash
+curl -X DELETE http://localhost:20128/api/v1/video-bridge/drilldown \
+  -H "Authorization: Bearer $OMNIROUTE_TOKEN"
+```
+
 ### GET /api/v1/videos/generations
 
 GET videos › generations
