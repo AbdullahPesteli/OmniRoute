@@ -508,7 +508,10 @@ export function composeVideoFramePrompt(
 // bypass it.
 export const VIDEO_TRANSCRIPT_REDACTION_PLACEHOLDER = "[redacted-video-transcript]";
 
-function formatTranscriptCue(cue: VideoTranscriptCue, options?: { redact?: boolean }): string {
+export function formatTranscriptCue(
+  cue: VideoTranscriptCue,
+  options?: { redact?: boolean }
+): string {
   const text = options?.redact ? VIDEO_TRANSCRIPT_REDACTION_PLACEHOLDER : cue.text;
   return `transcript[source=${cue.source};confidence=${cue.confidence.toFixed(2)};interval=${formatVideoTimestamp(cue.startSeconds)}-${formatVideoTimestamp(cue.endSeconds)}] ${text}`;
 }
