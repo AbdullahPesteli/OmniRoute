@@ -321,7 +321,9 @@ export class VideoBridgeGuardrail extends BaseGuardrail {
     if (videosReplaced === 0 && !rawTranscriptObserved) return { block: false };
 
     const modifiedPayload = replaceVideoParts(body, parts, descriptions);
-    logRedactionEntries.push(...appendVideoFallbackTranscripts(modifiedPayload, fallbackParts));
+    logRedactionEntries.push(
+      ...appendVideoFallbackTranscripts(modifiedPayload, fallbackParts, context.log)
+    );
 
     return {
       block: false,

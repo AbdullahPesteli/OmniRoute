@@ -106,12 +106,16 @@ test("raw video transcript retention through HTTP and SQLite", { timeout: 120_00
     sensitive: string[],
     failDescription: boolean,
     renderedTranscript?: string,
-    options: { supportsVideo?: false | null; responses?: boolean } = {}
+    options: { supportsVideo?: boolean | null; bridgeEnabled?: boolean; responses?: boolean } = {}
   ) {
     let descriptionCalls = 0;
     registry.guardrailRegistry.register(
       new VideoBridgeGuardrail({
         deps: {
+          getSettings: async () => ({
+            ...(await settings.getSettings()),
+            modalityBridgeVideoEnabled: options.bridgeEnabled !== false,
+          }),
           getCapabilities: () => ({ supportsVideo: options.supportsVideo ?? null }),
           describePart: async () => {
             descriptionCalls++;
@@ -406,6 +410,67 @@ test("raw video transcript retention through HTTP and SQLite", { timeout: 120_00
       }
     }
   );
+
+  for (const budget of ["count", "bytes"]) {
+    await t.test(`duplicate cues cannot bypass the combined ${budget} budget`, async () => {
+      const text = budget === "count" ? "PRIVATE_DUPLICATE" : "PRIVATE_" + "x".repeat(4088);
+      const track = {
+        cues: Array.from({ length: budget === "count" ? 129 : 16 }, () => ({
+          text,
+          start: 0,
+          end: 1,
+          source: "client",
+        })),
+      };
+      const result = await exercise(
+        [
+          {
+            type: "video_url",
+            video_url: { url: "data:video/mp4;base64,QUJD" },
+            transcript: track,
+            audioTranscript: track,
+          },
+        ],
+        [],
+        true
+      );
+      assert.equal(result.wireContent.length, 1, "no over-budget fallback text is forwarded");
+      assert.equal(result.row.video_content_removed, 1);
+      for (const sink of [result.snapshot, result.detail, result.artifact])
+        assert(!sink.includes("PRIVATE_"));
+    });
+  }
+
+  for (const options of [{ supportsVideo: true }, { bridgeEnabled: false }]) {
+    await t.test(
+      `native/disabled bypass does not perform fallback conversion: ${JSON.stringify(options)}`,
+      async () => {
+        const ordinary = "BYPASS_TRANSCRIPT_NOT_BRIDGED_12430";
+        const result = await exercise(
+          [
+            {
+              type: "video_url",
+              video_url: { url: "data:video/mp4;base64,QUJD" },
+              transcript: { cues: [{ text: ordinary, start: 0, end: 1, source: "client" }] },
+            },
+          ],
+          [],
+          true,
+          undefined,
+          options
+        );
+        assert.equal(result.descriptionCalls, 0);
+        assert.deepEqual(result.wireContent, [
+          { type: "video_url", video_url: { url: "data:video/mp4;base64,QUJD" } },
+        ]);
+        assert.equal(result.row.video_content_removed, 0);
+        assert(
+          result.detail.includes(ordinary),
+          "bypassed requests retain the ordinary logging policy"
+        );
+      }
+    );
+  }
 
   for (const responses of [false, true]) {
     await t.test(
