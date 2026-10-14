@@ -10,6 +10,7 @@ import {
   createDefaultClaudeCacheControl,
 } from "../helpers/claudeHelper.ts";
 import { DEFAULT_THINKING_CLAUDE_SIGNATURE } from "../../config/defaultThinkingSignature.ts";
+import { restoreClaudeThinkingBlocks } from "../../services/claudeThinkingStore.ts";
 import {
   getDefaultThinkingBudget,
   isAdaptiveThinkingOnly,
@@ -352,6 +353,11 @@ export function openaiToClaudeRequest(model, body, stream, credentials = null) {
         disableToolPrefix,
         thinkingEnabledForRequest,
         isKimiCoding,
+        {
+          provider: routedProvider,
+          model,
+          disabled: credentials?._videoTranscriptSensitive === true,
+        },
         pendingToolUseIds
       );
       if (newRole === "assistant") {
@@ -586,6 +592,7 @@ function getContentBlocksFromMessage(
   disableToolPrefix = false,
   thinkingEnabledForRequest = false,
   isKimiCoding = false,
+  thinkingBinding: { provider?: unknown; model?: unknown; disabled?: boolean } = {},
   pendingToolUseIds: string[] = []
 ) {
   const blocks = [];
@@ -759,10 +766,33 @@ function getContentBlocksFromMessage(
     // the "Pi" harness) detect the extra block and refuse the turn as prompt injection.
     // Drop reasoning_content silently when it is not required by the schema, mirroring
     // how other echo-only fields are dropped (see OPENAI_INCOMPATIBLE_ECHO_FIELDS).
-    const hasThinkingBlock = blocks.some(
+    let hasThinkingBlock = blocks.some(
       (b) => b.type === "thinking" || b.type === "redacted_thinking"
     );
     const hasToolUseBlock = blocks.some((b) => b.type === "tool_use");
+    // Signed-thinking continuity: the client (OpenAI Chat / Responses) never held the
+    // signed blocks Claude produced for this tool turn, but claude-to-openai stored them
+    // keyed by the tool_use ids. Restore them verbatim before the owning tool_use —
+    // only for the same provider + model, only when this request has thinking on and
+    // the client sent no thinking block of its own, never for a video-derived request.
+    // A miss keeps the #5312 placeholder.
+    if (
+      !isKimiCoding &&
+      !thinkingBinding.disabled &&
+      thinkingEnabledForRequest &&
+      hasToolUseBlock &&
+      !hasThinkingBlock
+    ) {
+      const restored = restoreClaudeThinkingBlocks({
+        toolUseIds: blocks.filter((b) => b.type === "tool_use").map((b) => b.id),
+        provider: thinkingBinding.provider,
+        model: thinkingBinding.model,
+      });
+      if (restored) {
+        blocks.unshift(...restored);
+        hasThinkingBlock = true;
+      }
+    }
     if (isKimiCoding && typeof msg.reasoning_content === "string" && !hasThinkingBlock) {
       blocks.unshift({ type: "thinking", thinking: msg.reasoning_content });
     } else if (
