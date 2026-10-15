@@ -58,6 +58,7 @@ import {
   type StreamFailurePayload,
 } from "./streamErrorFormat.ts";
 import { createStreamFailureAborter } from "./streamFailureBoundary.ts";
+import { nativeFinishFailure, readPassthroughChatId } from "./streamPassthroughFinish.ts";
 import { createReasoningStreamObserver } from "./responsesReasoningObservation.ts";
 import { recordToolLatency } from "../services/toolLatencyTracker.ts";
 import { extractToolSchemaMap } from "../translator/response/openai-responses/toolSchemas.ts";
@@ -94,11 +95,6 @@ import { collectClaudeDelta } from "./streamClaudeDelta.ts";
 import { createStreamTiming, registerStreamTiming, type StreamTiming } from "./streamTiming.ts";
 import { buildUsageOnlyChunk } from "./usageOnlyChunk.ts";
 import { normalizeArrayContentChunk } from "./arrayContentDelta.ts";
-
-// OpenRouter-style gateways report an upstream failure behind an HTTP 200 by
-// closing the stream with a normal finish_reason plus one of these
-// `native_finish_reason` values (and no content).
-const NATIVE_FINISH_ERROR_REASONS = new Set(["network_error", "error", "server_error", "timeout"]);
 
 /**
  * Race a response body read against a timeout.
@@ -2022,8 +2018,7 @@ export function createSSEStream(options: StreamOptions = {}) {
                   // Typed content-part arrays are folded into strings by
                   // sanitizeStreamingChunk, so the raw line must not be forwarded.
                   const hadArrayContent = Array.isArray(rawDelta?.content);
-                  // sanitizeStreamingChunk drops non-standard choice fields, so read it first.
-                  const rawNativeFinishReason = parsed.choices?.[0]?.native_finish_reason;
+                  const nativeFailure = nativeFinishFailure(parsed); // before sanitize drops it
 
                   if (!projectedFailure) {
                     parsed = sanitizeStreamingChunk(parsed);
@@ -2190,50 +2185,13 @@ export function createSSEStream(options: StreamOptions = {}) {
 
                   const isFinishChunk = parsed.choices?.[0]?.finish_reason;
 
-                  // Remember the upstream's chat-completion id so synthetic chunks
-                  // emitted at flush (e.g. the estimated usage-only chunk) carry the
-                  // stream's real string id instead of null on the chat path
-                  // (passthroughResponsesId is only ever set on the Responses path).
-                  if (typeof parsed.id === "string" && parsed.id) {
-                    passthroughLastChatId = parsed.id;
-                  } else if (typeof parsed.id === "number") {
-                    passthroughLastChatId = String(parsed.id);
-                  }
+                  passthroughLastChatId = readPassthroughChatId(parsed) ?? passthroughLastChatId;
 
-                  // An empty completion whose finish chunk carries an upstream error in
-                  // native_finish_reason is a failed request, not a blank answer.
-                  if (
-                    isFinishChunk &&
-                    !passthroughSawFinishReason &&
-                    totalContentLength === 0 &&
-                    !passthroughHasToolCalls &&
-                    typeof rawNativeFinishReason === "string" &&
-                    NATIVE_FINISH_ERROR_REASONS.has(rawNativeFinishReason)
-                  ) {
-                    const nativeFailureMessage = `Upstream stream failed: ${rawNativeFinishReason}`;
-                    abortStreamFailure(
-                      controller,
-                      {
-                        status: HTTP_STATUS.BAD_GATEWAY,
-                        message: nativeFailureMessage,
-                        code: "upstream_native_finish_error",
-                        type: "server_error",
-                      },
-                      nativeFailureMessage
-                    );
-                    return;
-                  }
-
-                  // Some gateways repeat the finish chunk (the copy usually carries only
-                  // usage). A second finish_reason breaks strict clients ("content after
-                  // finish reason"), so drop it. Its usage was already captured by
-                  // extractUsage above; flush() forwards it as the trailing usage-only
-                  // chunk when the first finish chunk did not carry usage.
-                  if (isFinishChunk && passthroughSawFinishReason) {
-                    continue;
-                  }
-
+                  // Empty native-error finish → 502; repeated finish chunk → dropped.
                   if (isFinishChunk) {
+                    if (passthroughSawFinishReason) continue;
+                    if (nativeFailure && !totalContentLength && !passthroughHasToolCalls)
+                      return abortStreamFailure(controller, nativeFailure, nativeFailure.message);
                     passthroughSawFinishReason = true;
                   }
 
