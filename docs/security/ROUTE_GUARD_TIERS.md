@@ -184,6 +184,17 @@ the Obsidian REST API token. GHSA-62vw only masked the `GET` password reveal; th
 still on the fail-open tier (GHSA-7pq4-8pvv-rx7r). `enableObsidianVaultSync()` additionally
 refuses a vault that is, sits inside, or contains the data directory.
 
+#### Credential exports are operator-only
+
+The tier above only decides whether _some_ credential is required. The routes that download
+stored credentials add a second check in the handler: `GET /api/settings/export-json` (decrypted
+provider connections and raw API keys), `GET /api/db-backups/export` (the SQLite file) and
+`GET /api/db-backups/exportAll` (the full archive) call `requireOperatorCredential()`
+(`src/lib/api/operatorCredential.ts`). It accepts a dashboard session, the local CLI subject, or
+an instance with login disabled, and answers `403` to API keys of any scope (including `manage`
+and `admin`) and to `oma_` access tokens. Sync token issuance (`POST /api/sync/tokens`) uses the
+same helper, plus the trusted loopback internal-service token.
+
 ### Fresh-install bootstrap is loopback-only — by real peer, not `Host`
 
 With no management password configured (and no `INITIAL_PASSWORD`), `isAuthRequired()` in
