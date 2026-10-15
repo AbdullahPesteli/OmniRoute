@@ -1662,14 +1662,8 @@ async function handleSingleModelChat(
       ? runtimeOptions.forcedConnectionId.trim()
       : "";
   const hasForcedConnection = forcedConnectionId.length > 0;
-  const restrictions = resolveConnectionRestrictions(
-    apiKeyInfo,
-    {
-      connectionId: forcedConnectionId,
-      allowedConnectionIds: runtimeOptions.allowedConnectionIds,
-    },
-    isCombo
-  );
+  const pinTarget = { ...runtimeOptions, connectionId: forcedConnectionId };
+  const restrictions = resolveConnectionRestrictions(apiKeyInfo, pinTarget, isCombo);
   let effectiveAllowedConnections = restrictions.allowedConnections;
 
   // A4: quota-exclusive keys must only use the pool's connection(s).
