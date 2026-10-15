@@ -56,6 +56,24 @@ export function readStreamPartialUsage(
   }
 }
 
+/**
+ * Wire `createSSEStream` to the side table: `read` returns the transform's live
+ * `[reportedUsage, streamedContentLength]` pair (translate mode accumulates provider usage on
+ * `state.usage`, passthrough on `usage`). Nothing is computed until the failure finalizer
+ * reads it, so a stream that ends before `flush()` (client disconnect / mid-stream failure)
+ * still reports the tokens it already generated.
+ */
+export function trackStreamPartialUsage<T extends object>(
+  stream: T,
+  body: unknown,
+  read: () => readonly [reported: unknown, contentLength: number]
+): T {
+  return registerStreamPartialUsage(stream, () => {
+    const [reported, contentLength] = read();
+    return resolvePartialStreamUsage({ reported, contentLength, body });
+  });
+}
+
 function positive(value: unknown): number {
   const numeric = typeof value === "number" ? value : Number(value);
   return Number.isFinite(numeric) && numeric > 0 ? numeric : 0;

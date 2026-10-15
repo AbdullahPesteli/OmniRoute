@@ -92,7 +92,7 @@ import { restoreClaudeToolName } from "../services/claudeCodeToolRemapper.ts";
 import { normalizeFinalOpenAIStreamChunk } from "./openAIStreamChunk.ts";
 import { collectClaudeDelta } from "./streamClaudeDelta.ts";
 import { createStreamTiming, registerStreamTiming, type StreamTiming } from "./streamTiming.ts";
-import { registerStreamPartialUsage, resolvePartialStreamUsage } from "./streamPartialUsage.ts";
+import { trackStreamPartialUsage } from "./streamPartialUsage.ts";
 import { buildUsageOnlyChunk } from "./usageOnlyChunk.ts";
 import { normalizeArrayContentChunk } from "./arrayContentDelta.ts";
 
@@ -3241,22 +3241,11 @@ export function createSSEStream(options: StreamOptions = {}) {
           console.log(`[STREAM] Error in flush (${model || "unknown"}):`, error.message || error);
         }
       },
-      cancel(reason) {
-        clearIdleTimer();
-      },
+      cancel: () => clearIdleTimer(),
     },
     ...createByteLengthQueueStrategies(streamBufferBytes)
   );
-  // Partial usage for a stream that ends before flush (client disconnect / mid-stream failure):
-  // read lazily by the failure finalizer, never computed per chunk. Translate mode accumulates
-  // provider usage on `state.usage`, passthrough on `usage`.
-  registerStreamPartialUsage(sseStream, () =>
-    resolvePartialStreamUsage({
-      reported: state?.usage ?? usage,
-      contentLength: totalContentLength,
-      body,
-    })
-  );
+  trackStreamPartialUsage(sseStream, body, () => [state?.usage ?? usage, totalContentLength]);
   return registerStreamTiming(sseStream, timing);
 }
 

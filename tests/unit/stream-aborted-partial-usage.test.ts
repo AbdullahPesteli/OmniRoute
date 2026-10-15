@@ -17,6 +17,7 @@ import { createStreamFailureFinalizers } from "../../open-sse/utils/streamFailur
 import {
   readStreamPartialUsage,
   resolvePartialStreamUsage,
+  trackStreamPartialUsage,
 } from "../../open-sse/utils/streamPartialUsage.ts";
 
 const encoder = new TextEncoder();
@@ -354,4 +355,25 @@ test("readStreamPartialUsage: unknown / missing streams read as null", () => {
   assert.equal(readStreamPartialUsage(null), null);
   assert.equal(readStreamPartialUsage(undefined), null);
   assert.equal(readStreamPartialUsage({}), null);
+});
+
+test("trackStreamPartialUsage: reads the live usage/length lazily, only when finalized", () => {
+  const stream = {};
+  let reads = 0;
+  let reported: unknown = null;
+  let contentLength = 0;
+  const returned = trackStreamPartialUsage(stream, REQUEST_BODY, () => {
+    reads += 1;
+    return [reported, contentLength];
+  });
+  assert.equal(returned, stream, "returns the same stream for chaining");
+  assert.equal(reads, 0, "nothing is computed at registration time");
+
+  reported = { prompt_tokens: 12, completion_tokens: 34 };
+  contentLength = 200;
+  const usage = readStreamPartialUsage(stream);
+  assert.equal(reads, 1);
+  assert.equal(usage?.prompt_tokens, 12);
+  assert.equal(usage?.completion_tokens, 34);
+  assert.equal(usage?.estimated, undefined, "provider-reported usage is not flagged");
 });
