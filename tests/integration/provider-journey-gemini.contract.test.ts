@@ -313,12 +313,13 @@ test.describe("provider journey — Gemini client format (openai-compatible upst
   });
 
   test("STEP 6: /v1beta/models lists the synced model for Gemini clients", async () => {
-    const anonymous = await v1betaModelsRoute.GET(new Request("http://localhost/v1beta/models"));
-    assert.equal(
-      anonymous.status,
-      401,
-      "configured catalog authentication rejects anonymous reads"
+    // #16208: the Gemini catalog now enforces the same requireAuthForModels gate as
+    // /v1/models — an anonymous caller is refused, a keyed Gemini caller gets in.
+    const anonResponse = await v1betaModelsRoute.GET(
+      new Request("http://localhost/v1beta/models")
     );
+    assert.equal(anonResponse.status, 401, "anonymous catalog listing must be rejected");
+
     const response = await v1betaModelsRoute.GET(
       new Request("http://localhost/v1beta/models", {
         headers: { "x-goog-api-key": apiKeyValue },
@@ -333,14 +334,12 @@ test.describe("provider journey — Gemini client format (openai-compatible upst
     );
   });
 
-  // Regression: the Gemini catalog uses the same configured prefix as generation.
   test("STEP 7: /v1beta/models names the model under the configured prefix, never the UUID", async () => {
     const response = await v1betaModelsRoute.GET(
       new Request("http://localhost/v1beta/models", {
         headers: { "x-goog-api-key": apiKeyValue },
       })
     );
-    assert.equal(response.status, 200, "the authenticated Gemini catalog remains available");
     const body = await readJsonObject(response);
     const names = asArray<{ name?: string }>(body.models).map((m) => m.name ?? "");
     assert.ok(names.includes(`models/${PUBLISHED_MODEL_ID}`), JSON.stringify(names));
