@@ -67,7 +67,7 @@ async function resolveTranslationCredentials(
   provider: string,
   providerConfig: { authType?: string; credentialProviderId?: string } | null,
   allowedConnections: string[] | null
-): Promise<{ credentials: TranslationCredentials; response?: undefined } | { response: Response }> {
+): Promise<{ credentials: TranslationCredentials } | { response: Response }> {
   if (!providerConfig) return { credentials: null };
   const credentialKey = providerConfig.credentialProviderId || provider;
   if (providerConfig.authType === "none") {
@@ -133,8 +133,11 @@ async function translateWithModel(
     providerConfig,
     allowedConnections
   );
-  if (selection.response) return selection.response;
-  const credentials = selection.credentials;
+  if (!("credentials" in selection)) return selection.response;
+  // The DB connection row is wider than the handler's credentials shape (it reads a subset).
+  const credentials = selection.credentials as Parameters<
+    typeof handleAudioTranslation
+  >[0]["credentials"];
 
   let response = await handleAudioTranslation({
     formData,
