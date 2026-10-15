@@ -25,9 +25,8 @@ import {
 } from "@/sse/services/auth";
 import { isAllRateLimitedCredentials } from "@/app/api/v1/_shared/rateLimit";
 import {
-  comboTargetsNotAllowedResponse,
-  filterComboTargetsForKey,
   isKeyScopeBlockedCredentials,
+  scopeComboTargetsForKey,
   type ComboKeyScope,
 } from "@/sse/services/keyConnectionScope";
 import { handleVideoGeneration } from "@omniroute/open-sse/handlers/videoGeneration.ts";
@@ -73,9 +72,9 @@ export async function executeVideoCombo(
   if (!resolvedTargets || resolvedTargets.length === 0) {
     return errorResponse(HTTP_STATUS.BAD_REQUEST, `Combo "${comboName}" has no usable targets`);
   }
-  const allowedConnections = auth.keyScope?.allowedConnections ?? null;
-  const targets = await filterComboTargetsForKey(resolvedTargets, auth.keyScope?.isTargetAllowed);
-  if (targets.length === 0) return comboTargetsNotAllowedResponse(comboName);
+  const scoped = await scopeComboTargetsForKey(resolvedTargets, auth.keyScope, comboName);
+  if (scoped.rejection) return scoped.rejection;
+  const { targets, allowedConnections } = scoped;
 
   // Resolve every target once — built-in registry first, then custom
   // OpenAI-compatible provider nodes tagged with the "videos" endpoint —

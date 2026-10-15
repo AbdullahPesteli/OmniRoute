@@ -209,6 +209,25 @@ export function comboTargetsNotAllowedResponse(comboName: string): Response {
 }
 
 /**
+ * A combo executor's view of the caller key: the targets the key's model policy
+ * admits (order preserved), the connection scope for their credential lookups,
+ * and the 403 when the key refuses every target. No scope = unchanged.
+ */
+export async function scopeComboTargetsForKey<T extends { modelStr?: string | null }>(
+  targets: T[],
+  keyScope: ComboKeyScope | null | undefined,
+  comboName: string
+): Promise<{ targets: T[]; allowedConnections: string[] | null; rejection: Response | null }> {
+  const admitted = await filterComboTargetsForKey(targets, keyScope?.isTargetAllowed);
+  const refusedAll = targets.length > 0 && admitted.length === 0;
+  return {
+    targets: admitted,
+    allowedConnections: keyScope?.allowedConnections ?? null,
+    rejection: refusedAll ? comboTargetsNotAllowedResponse(comboName) : null,
+  };
+}
+
+/**
  * Whether the key may reach a provider without using any connection — chat's
  * #9057 rule for the synthetic keyless connection: always for an unscoped key,
  * otherwise only when the allowlist names `noauth` explicitly.

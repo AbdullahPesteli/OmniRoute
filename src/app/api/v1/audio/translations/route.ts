@@ -15,15 +15,10 @@ import { HTTP_STATUS } from "@omniroute/open-sse/config/constants.ts";
 import { enforceApiKeyPolicy } from "@/shared/utils/apiKeyPolicy";
 import {
   createComboTargetKeyGate,
-  isKeyScopeBlockedCredentials,
-  keyScopeBlockedResponse,
   keylessProviderRejection,
   resolveKeyConnectionScope,
 } from "@/sse/services/keyConnectionScope";
-import {
-  isAllRateLimitedCredentials,
-  rateLimitedProviderResponse,
-} from "@/app/api/v1/_shared/rateLimit";
+import { unusableCredentialsResponse } from "@/app/api/v1/_shared/keyScopedRoute";
 import { attachOmniRouteMetaToResponse } from "@/domain/omnirouteResponseMeta";
 import { generateRequestId } from "@/shared/utils/requestId";
 import { getComboByName, getCombos } from "@/lib/db/combos";
@@ -59,6 +54,47 @@ export async function OPTIONS() {
   });
 }
 
+type TranslationCredentials = Awaited<
+  ReturnType<typeof getProviderCredentialsWithQuotaPreflight>
+> | null;
+
+/**
+ * Credentials for a translation provider, bounded by the caller key's connection
+ * scope (GHSA-3w2r) — or the response that refuses the request. Local providers
+ * (authType "none") need none.
+ */
+async function resolveTranslationCredentials(
+  provider: string,
+  providerConfig: { authType?: string; credentialProviderId?: string } | null,
+  allowedConnections: string[] | null
+): Promise<{ credentials: TranslationCredentials; response?: undefined } | { response: Response }> {
+  if (!providerConfig) return { credentials: null };
+  const credentialKey = providerConfig.credentialProviderId || provider;
+  if (providerConfig.authType === "none") {
+    // A keyless provider (local default or a keyless remote) is reachable by a
+    // connection-scoped key only when its allowlist admits keyless providers or
+    // an in-scope connection serves it (chat's #9057).
+    const keylessRejection = await keylessProviderRejection(provider, allowedConnections, () =>
+      getProviderCredentialsWithQuotaPreflight(credentialKey, null, allowedConnections)
+    );
+    return keylessRejection ? { response: keylessRejection } : { credentials: null };
+  }
+  // NOTE: the 2nd arg of this helper is `excludeConnectionId`, not "use this
+  // connection" — a combo target's connectionId must never be passed here.
+  const credentials = await getProviderCredentialsWithQuotaPreflight(
+    credentialKey,
+    null,
+    allowedConnections
+  );
+  if (!credentials) {
+    return {
+      response: errorResponse(HTTP_STATUS.BAD_REQUEST, `No credentials for provider: ${provider}`),
+    };
+  }
+  const unusable = unusableCredentialsResponse(provider, credentials);
+  return unusable ? { response: unusable } : { credentials };
+}
+
 /**
  * Translate with one concrete `provider/model` string. Split out of POST so combo
  * fan-out can invoke it once per target.
@@ -92,36 +128,13 @@ async function translateWithModel(
     getTranslationProvider(provider) || dynamicProviders.find((dp) => dp.id === provider) || null;
 
   // Get credentials — skip for local providers (authType: "none")
-  let credentials = null;
-  if (providerConfig && providerConfig.authType !== "none") {
-    const credentialKey = providerConfig.credentialProviderId || provider;
-    // NOTE: the 2nd arg of this helper is `excludeConnectionId`, not "use this
-    // connection" — a combo target's connectionId must never be passed here.
-    // GHSA-3w2r: the pool is bounded by the caller key's connection scope.
-    credentials = await getProviderCredentialsWithQuotaPreflight(
-      credentialKey,
-      null,
-      allowedConnections
-    );
-    if (!credentials) {
-      return errorResponse(HTTP_STATUS.BAD_REQUEST, `No credentials for provider: ${provider}`);
-    }
-    if (isKeyScopeBlockedCredentials(credentials)) {
-      return keyScopeBlockedResponse(provider, credentials);
-    }
-    if (isAllRateLimitedCredentials(credentials)) {
-      return rateLimitedProviderResponse(provider, credentials);
-    }
-  } else if (providerConfig) {
-    // GHSA-3w2r: a keyless provider (local default or a keyless remote) is
-    // reachable by a connection-scoped key only when its allowlist admits
-    // keyless providers or an in-scope connection serves it (chat's #9057).
-    const keylessCredentialKey = providerConfig.credentialProviderId || provider;
-    const keylessRejection = await keylessProviderRejection(provider, allowedConnections, () =>
-      getProviderCredentialsWithQuotaPreflight(keylessCredentialKey, null, allowedConnections)
-    );
-    if (keylessRejection) return keylessRejection;
-  }
+  const selection = await resolveTranslationCredentials(
+    provider,
+    providerConfig,
+    allowedConnections
+  );
+  if (selection.response) return selection.response;
+  const credentials = selection.credentials;
 
   let response = await handleAudioTranslation({
     formData,

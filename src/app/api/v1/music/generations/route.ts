@@ -8,17 +8,11 @@ import { parseMusicModel, getMusicProvider } from "@omniroute/open-sse/config/mu
 import { errorResponse } from "@omniroute/open-sse/utils/error.ts";
 import { HTTP_STATUS } from "@omniroute/open-sse/config/constants.ts";
 import * as log from "@/sse/utils/logger";
-import { enforceApiKeyPolicy } from "@/shared/utils/apiKeyPolicy";
 import { resolveLocalOverrideCredentials } from "@/app/api/v1/_shared/videoModelResolution";
 import {
-  isKeyScopeBlockedCredentials,
-  keyScopeBlockedResponse,
-  resolveKeyConnectionScope,
-} from "@/sse/services/keyConnectionScope";
-import {
-  isAllRateLimitedCredentials,
-  rateLimitedProviderResponse,
-} from "@/app/api/v1/_shared/rateLimit";
+  enforceApiKeyPolicyWithScope,
+  unusableCredentialsResponse,
+} from "@/app/api/v1/_shared/keyScopedRoute";
 import {
   failedMediaGenerationResponse,
   mediaGenerationOptionsResponse,
@@ -63,11 +57,9 @@ async function postHandler(request, context) {
   if (promptError) return promptError;
 
   // Enforce API key policies (model restrictions + budget limits)
-  const policy = await enforceApiKeyPolicy(request, body.model);
-  if (policy.rejection) return policy.rejection;
   // GHSA-3w2r: credential selection stays inside the key's connection scope,
   // the same scope chat applies.
-  const scope = await resolveKeyConnectionScope(policy.apiKeyInfo);
+  const scope = await enforceApiKeyPolicyWithScope(request, body.model);
   if (scope.rejection) return scope.rejection;
 
   // Parse model to get provider
@@ -96,12 +88,8 @@ async function postHandler(request, context) {
         `No credentials for music provider: ${provider}`
       );
     }
-    if (isKeyScopeBlockedCredentials(credentials)) {
-      return keyScopeBlockedResponse(provider, credentials);
-    }
-    if (isAllRateLimitedCredentials(credentials)) {
-      return rateLimitedProviderResponse(provider, credentials);
-    }
+    const unusable = unusableCredentialsResponse(provider, credentials);
+    if (unusable) return unusable;
   } else if (providerConfig?.authType === "none") {
     // #6928 + GHSA-3w2r: the shared local-override lookup (also used by the
     // video route) keeps the override and the zero-config default in scope.

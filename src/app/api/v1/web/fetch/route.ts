@@ -31,10 +31,9 @@ import {
   isValidApiKey,
   getProviderCredentialsWithQuotaPreflight,
 } from "@/sse/services/auth";
-import { enforceApiKeyPolicy } from "@/shared/utils/apiKeyPolicy";
+import { enforceApiKeyPolicyWithScope } from "@/app/api/v1/_shared/keyScopedRoute";
 import {
   keyAdmitsKeylessProviders,
-  resolveKeyConnectionScope,
   withoutKeyScopeBlocked,
 } from "@/sse/services/keyConnectionScope";
 import { isRequireApiKeyEnabled } from "@/shared/utils/featureFlags";
@@ -314,12 +313,9 @@ export async function POST(request: Request) {
     return errorResponse(HTTP_STATUS.UNAUTHORIZED, "Invalid API key");
   }
 
-  // Enforce API key policies
-  const policy = await enforceApiKeyPolicy(request, "web-fetch");
-  if (policy.rejection) return policy.rejection;
-  // GHSA-3w2r: provider credentials (and the fallback walk) stay inside the
-  // key's connection scope, the same scope chat applies.
-  const scope = await resolveKeyConnectionScope(policy.apiKeyInfo);
+  // Enforce API key policies. GHSA-3w2r: provider credentials (and the
+  // fallback walk) stay inside the key's connection scope, as in chat.
+  const scope = await enforceApiKeyPolicyWithScope(request, "web-fetch");
   if (scope.rejection) return scope.rejection;
 
   // Resolve provider + credentials (explicit provider never falls back; #8297)
