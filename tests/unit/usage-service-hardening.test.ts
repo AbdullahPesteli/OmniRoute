@@ -532,11 +532,9 @@ test("usage service covers Claude OAuth success, legacy fallback and permissions
   assert.equal(oauthUsage.modelQuotas["weekly sonnet (7d)"].remaining, 65);
   assert.deepEqual(oauthUsage.extraUsage, { queued: true });
 
-  // Only a missing OAuth usage endpoint (404/405) falls back to the legacy settings/org
-  // endpoints; other non-OK statuses (401/429/5xx) are reported without the legacy calls.
   globalThis.fetch = async (url) => {
     if (String(url).includes("/api/oauth/usage")) {
-      return new Response("fallback", { status: 404 });
+      return new Response("fallback", { status: 404 }); // only 404/405 -> legacy fallback
     }
     if (String(url).endsWith("/v1/settings")) {
       return new Response(
