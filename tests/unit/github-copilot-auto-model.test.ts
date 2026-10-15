@@ -417,9 +417,16 @@ test("chatCore routes github/auto to the selected model and records usage under 
   assert.equal(chat.body?.model, "gpt-5-mini");
   assert.equal(headerValue(chat.headers, "copilot-session-token"), "session-gpt-5-mini");
 
-  await waitForCallLogSaves(5000);
-  const rows = await getCallLogs({ limit: 5 });
-  const log = await getCallLogById(rows[0].id);
+  // Call-log writes are fire-and-forget; poll (30s ceiling) so a loaded CI worker
+  // does not race the assertion. Green runs return on the first saved row.
+  let log: Awaited<ReturnType<typeof getCallLogById>> | null = null;
+  for (const startedAt = Date.now(); !log && Date.now() - startedAt < 30_000;) {
+    await waitForCallLogSaves(5000);
+    const rows = await getCallLogs({ limit: 5 });
+    log = rows.length > 0 ? await getCallLogById(rows[0].id) : null;
+    if (!log) await new Promise((resolve) => setTimeout(resolve, 100));
+  }
+  assert.ok(log, "the request must be persisted in call logs");
   assert.equal(log.model, "gpt-5-mini", "usage is attributed to the model that served it");
   assert.match(String(log.requestedModel), /auto/, "the client's requested model stays auto");
 });
