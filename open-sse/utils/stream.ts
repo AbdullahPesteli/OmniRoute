@@ -4,6 +4,7 @@ import { appendRequestLog } from "@/lib/usageDb";
 import { clearPendingRequestOnce } from "./pendingRequestCleanup.ts";
 import { resolveTrailingUsageSummary } from "./passthroughTrailingUsage.ts";
 import { createByteLengthQueueStrategies } from "./byteQueueStrategy.ts";
+import { initTranslateStreamState } from "./streamTranslateState.ts";
 import {
   extractUsage,
   hasValidUsage,
@@ -11,6 +12,7 @@ import {
   logUsage,
   addBufferToUsage,
   filterUsageForFormat,
+  carryCacheCreationMarker,
   normalizeUsage as normalizeTokenUsage,
   sanitizeUsagePayloadForRequest,
   type UsageLike,
@@ -860,10 +862,9 @@ export function createSSEStream(options: StreamOptions = {}) {
   const state: TranslateState | null =
     mode === STREAM_MODE.TRANSLATE
       ? {
-          ...(initState(sourceFormat) as TranslateState),
+          ...(initTranslateStreamState(sourceFormat, connectionId, model) as TranslateState),
           provider,
           toolNameMap,
-          signatureNamespace: connectionId,
           copilotCompatibleReasoning,
           suppressThinkClose,
           requestedThinking,
@@ -1203,7 +1204,9 @@ export function createSSEStream(options: StreamOptions = {}) {
       if (hasValidUsage(estimated)) translateForwardedUsage = true; // finish chunk carries it
     } else if (state?.finishReason && isFinishChunk && state.usage) {
       const buffered = addBufferToUsage(state.usage);
-      itemSanitized.usage = timing.withTps(filterUsageForFormat(buffered, sourceFormat));
+      itemSanitized.usage = timing.withTps(
+        carryCacheCreationMarker(itemSanitized.usage, filterUsageForFormat(buffered, sourceFormat))
+      );
       translateForwardedUsage = true;
     }
 
@@ -2225,7 +2228,10 @@ export function createSSEStream(options: StreamOptions = {}) {
                   if (isFinishChunk && hasValidUsage(usage) && !passthroughForwardedUsage) {
                     const buffered = addBufferToUsage(usage);
                     parsed.usage = timing.withTps(
-                      filterUsageForFormat(buffered, sourceFormat || FORMATS.OPENAI)
+                      carryCacheCreationMarker(
+                        parsed.usage,
+                        filterUsageForFormat(buffered, sourceFormat || FORMATS.OPENAI)
+                      )
                     );
                     output = `data: ${JSON.stringify(parsed)}\n\n`;
                     passthroughForwardedUsage = true;

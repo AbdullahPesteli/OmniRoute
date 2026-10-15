@@ -59,6 +59,14 @@ export const opencode_goProvider: RegistryEntry = {
     },
     { id: "mimo-v2.5-high", name: "MiMo-V2.5 (high effort)", supportsReasoning: true },
     { id: "mimo-v2.5-max", name: "MiMo-V2.5 (max effort)", supportsReasoning: true },
+    // MiMo V2.6 Flash Free ships a 1M window upstream; without this row it
+    // falls through to the 200000 provider default and clients compact early.
+    {
+      id: "mimo-v2.6-flash-free",
+      name: "MiMo V2.6 Flash Free",
+      contextLength: 1048576,
+      maxOutputTokens: 131072,
+    },
     // #3110: MiniMax M3 via OpenCode Go tier
     {
       id: "minimax-m3",
@@ -327,15 +335,47 @@ export const opencode_goProvider: RegistryEntry = {
       targetFormat: "openai-responses",
     },
     // #8353: Grok 4.5 + effort tiers from the OpenCode Go registry.
+    // The Go endpoint table (opencode.ai/docs/go) serves the Grok family on
+    // /responses only; without targetFormat:"openai-responses" these rows fall
+    // through to /chat/completions, which the upstream rejects ("Model grok-4.6
+    // is not supported for format oa-compat") — same class as #12196. The effort
+    // aliases need the declaration too: resolveOpencodeTargetFormat() looks the
+    // requested id up verbatim.
     {
       id: "grok-4.5",
       name: "Grok 4.5",
       supportsReasoning: true,
       supportedThinkingEfforts: ["low", "medium", "high"],
+      targetFormat: "openai-responses",
     },
-    { id: "grok-4.5-low", name: "Grok 4.5 (low effort)", supportsReasoning: true },
-    { id: "grok-4.5-medium", name: "Grok 4.5 (medium effort)", supportsReasoning: true },
-    { id: "grok-4.5-high", name: "Grok 4.5 (high effort)", supportsReasoning: true },
+    {
+      id: "grok-4.5-low",
+      name: "Grok 4.5 (low effort)",
+      supportsReasoning: true,
+      targetFormat: "openai-responses",
+    },
+    {
+      id: "grok-4.5-medium",
+      name: "Grok 4.5 (medium effort)",
+      supportsReasoning: true,
+      targetFormat: "openai-responses",
+    },
+    {
+      id: "grok-4.5-high",
+      name: "Grok 4.5 (high effort)",
+      supportsReasoning: true,
+      targetFormat: "openai-responses",
+    },
+    // Grok 4.6: effort vocabulary from the models.dev catalog OpenCode reads
+    // (reasoning_options low/medium/high/xhigh), declared on the base row like
+    // gpt-6-luna so sanitizeReasoningEffortForProvider clamps off-vocabulary values.
+    {
+      id: "grok-4.6",
+      name: "Grok 4.6",
+      supportsReasoning: true,
+      supportedThinkingEfforts: ["low", "medium", "high", "xhigh"],
+      targetFormat: "openai-responses",
+    },
     {
       id: "deepseek-v4-pro",
       name: "DeepSeek V4 Pro",
