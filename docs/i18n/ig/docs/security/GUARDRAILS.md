@@ -19,70 +19,70 @@ arịrịọ ahụ daa. Igbochi bụ mkpebi doro anya (`block: true`), ọ bụg
 
 ## Nchedo Ndụ
 
-Nchedo ndọrọndọrọ na-ebudata onwe ya na usoro ihe omume isii n'usoro ihe omume mgbe a na-ebudata
+Nchedo ndọrọndọrọ na-ebudata onwe ya n'usoro ihe dị mkpa isii mgbe a na-ebubata
 (lee `registry.ts` → `registerDefaultGuardrails()`):
 
-| Nchedo | Aha                 | Ọnọdụ(s)       | Faịlụ                 |
-| ------ | ------------------- | -------------- | --------------------- |
-| `5`    | `vision-bridge`     | `preCall`      | `visionBridge.ts`     |
-| `6`    | `audio-bridge`      | `preCall`      | `audioBridge.ts`      |
-| `7`    | `video-bridge`      | `preCall`      | `videoBridge.ts`      |
-| `10`   | `pii-masker`        | `pre` + `post` | `piiMasker.ts`        |
-| `20`   | `prompt-injection`  | `preCall`      | `promptInjection.ts`  |
-| `95`   | `credential-masker` | `pre` + `post` | `credentialMasker.ts` |
+| Ihe Ndụ | Aha                 | Ọnọdụ(s)       | Faịlụ                 |
+| ------- | ------------------- | -------------- | --------------------- |
+| `5`     | `vision-bridge`     | `preCall`      | `visionBridge.ts`     |
+| `6`     | `audio-bridge`      | `preCall`      | `audioBridge.ts`      |
+| `7`     | `video-bridge`      | `preCall`      | `videoBridge.ts`      |
+| `10`    | `pii-masker`        | `pre` + `post` | `piiMasker.ts`        |
+| `20`    | `prompt-injection`  | `preCall`      | `promptInjection.ts`  |
+| `95`    | `credential-masker` | `pre` + `post` | `credentialMasker.ts` |
 
-Nọmba nchedo dị ala na-agba **mbụ**.
+Nọmba ndị dị ala na-arụ ọrụ **mbu**.
 
 ### Vision Bridge (`visionBridge.ts`) — Modality Bridge PR-1
 
 Na-ejide arịrịọ ndị nwere onyonyo nke na-ezube **ụdị na-enweghị ọhụụ** ma ọ bụ
-na-eweghachite arịrịọ niile na ụdị nwere ọhụụ ma ọ bụ dochie akụkụ onyonyo
-na nkọwa ederede nke ụdị ọhụụ nwere ike ịhazigharị tupu
-arịrịọ nke elu. Nke a na-enye ndị na-enye naanị ederede ohere ịchịkwa
+na-agbanwe arịrịọ niile ka ọ bụrụ ụdị nwere ọhụụ ma ọ bụ na-anọchi onyonyo
+nke na-eme ka nkọwa ederede nke a na-emepụta site na ụdị ọhụụ nwere ike ịhazigharị tupu
+kpọọ elu. Nke a na-enye ndị na-enye naanị ederede ohere ịchịkwa
 ngwugwu multimodal n'enweghị nsogbu.
 
 Usoro:
 
-1. Hapụ ma ọ bụrụ na ụdị ebumnuche ahụ na-akwado ọhụụ (ma ọ bụrụ na ọ bụghị na
-   ndepụta nke a na-eme ka `isVisionBridgeForcedModel`).
+1. Hapụ ma ọ bụrụ na ụdị ebumnuche ahụ nwere ọhụụ (ma ọ bụ na ọ na-apụta na
+   ndepụta nke a na-eme ka ọ bụrụ `isVisionBridgeForcedModel`).
 2. Wepụ akụkụ onyonyo site na `extractImageParts(messages)`
-   (`visionBridgeHelpers.ts`), nke na-enye ọrụ na **nchedo mgbakwunye
+   (`visionBridgeHelpers.ts`), nke na-enye ọrụ na **nnyocha mgbakọ
    media** `detectMediaParts()` na `open-sse/utils/mediaParts.ts` — isi
    otu isiokwu nke a na-ekekọrịta na ng фильтр ngwá ọrụ.
-   Wepụ na-anabata naanị akụkụ nke elu nke ụdị
+   Wepụ bụ nke a na-anabata na akụkụ kachasị elu nke ụdị
    `replaceImageParts` nwere ike ịgbakwunye (nkwekọrịta wepụ↔dochie): OpenAI
    `image_url`, Anthropic base64 `source.type:"base64"`, Anthropic URL
    `source.type:"url"`, na Responses API `input_image`. Ncheta na
-   ụdị naanị ihe na-egosi bụ ihe ngwá ọrụ ngwá ọrụ na a na-ewepụghị ha.
-   Hapụ ma ọ bụrụ na e nweghị nke a chọpụtara.
-3. Kpebie nhazi oge site na `resolveVisionBridgeRuntimeSettings()`
+   ụdị naanị na-egosi bụ ihe ngwá ọrụ ngwá ọrụ ma a naghị ewepụ ha.
+   Hapụ ma ọ bụrụ na enweghi ihe ọ bụla.
+3. Dozie ntọala oge site na `resolveVisionBridgeRuntimeSettings()`
    (`src/shared/constants/modalityBridgeDefaults.ts`): ọhụrụ `modalityBridge*`
-   igodo ntọala na-emeri; ochie `visionBridge*` igodo na-anọgide na **otu
-   usoro nkwụsị** (ogige nkwụsị). Hapụ tupu ọ bụla media traversal mgbe
+   igodo ntọala na-emeri; ochie `visionBridge*` igodo na-anọgide na **otu-oge
+   ndabere** (ndebere mgbatị). Hapụ tupu njem media ọ bụla mgbe
    a na-egbochi mgbakwunye.
 4. Nhọrọ ụdị (`modalityBridgeVisionMode`, lee tebụl dị n'okpuru) na-ekpebi
    ịgbanwe ma ọ bụ kọwaa. Ịgbanwe na-eweghachite `modifiedPayload` na naanị `model`
    gbanwere, tinyere meta `{ rerouted, fromModel, toModel, imagesKept }`.
-5. Kọwaa ụzọ: gbochie onyonyo na `maxImages`, hazie arịrịọ nke na-ahụ maka ọrụ,
-   jụọ cache kọwaa, kpọọ ụdị ọhụụ **n'ozuzu**
-   (`Promise.allSettled`), ma tinye `[Image N]: <description>` akụkụ ederede na
-   ebe ha nọ. A na-echekwa `null` ma ọ bụrụ na kọwaa na-adịghị mma na akụkụ onyonyo mbụ
-   bụ **nchekwa** (#4012) — ma e wezụga na ụzọ kọwaa ngwá ọrụ mgbe
-   kọwaa niile dara, ebe a na-enweta ụdị na-enweghị ọhụụ na
+5. Kọwaa ụzọ: gbochie onyonyo na `maxImages`, hazie arịrịọ nke na-eme ka
+   nkọwa, jụọ cache nkọwa, kpọọ ụdị ọhụụ **n'ozuzu**
+   (`Promise.allSettled`), ma tinye `[Image N]: <description>` ederede na
+   ebe ha nọ. Nkọwa na-adịghị mma na-enye `null` na akụkụ onyonyo mbụ
+   **na-echekwa** (#4012) — ma e wezụga na ụzọ nkọwa ngwá ọrụ mgbe
+   nkọwa niile dara, ebe a na-enweta ụdị na-enweghị ọhụụ na
    `(unavailable — no vision-capable provider connected)` stub kama (#8430).
 6. Weghachite `modifiedPayload` + meta (`imagesProcessed`, `descriptions`,
    `processingTimeMs`, `visionModel`).
 
 #### Nhọrọ ụdị (`modalityBridgeVisionMode`)
 
-| Ụdị        | Ndabere | Ọrụ                                                                                                                                                                                                                                                     |
-| ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `auto`     | ✔       | Nchedo ochie, na-enweghị mmetọ (#6640/#7204): ụdị na-enweghị ngwá ọrụ/`auto/` na-agbanwe na ụdị ọhụụ kacha mma ma ọ bụrụ na ụdị mbụ nwere ikike eji eme ihe (ya mere kọwaa); ebumnuche ngwá ọrụ na-agbanwe mgbe niile.                                  |
-| `describe` |         | Kọwaa mgbe niile — a na-ewepụ ngbanwe na-enweghị atụ; ụdị onye ọrụ họọrọ na-aza mgbe niile.                                                                                                                                                             |
-| `reroute`  |         | Gbaa ọsọ na-agbanwe: a na-ewepụ nchedo nke ụdị nwere ikike. Nchedo nke **ebumnuche** na-agbanwe ka na-arụ ọrụ — mgbe e nweghị ụdị ọhụụ eji eme ihe, arịrịọ ahụ na-apụ na kọwaa ka onyonyo ndị a na-enweghị atụ na-erute azụmahịa naanị ederede (#8430). |
+| Ụdị        | Ndabere | Ọrụ                                                                                                                                                                                                                                                      |
+| ---------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `auto`     | ✔       | Nchedo ochie, na-enweghị mmetọ (#6640/#7204): ụdị na-enweghị ngwá ọrụ/`auto/` na-agbanwe na ụdị ọhụụ kacha mma ma ọ bụrụ na ụdị mbụ nwere ikike eji eme ihe (nke ahụ na kọwaa); ebumnuche ngwá ọrụ na-adị mgbe niile.                                    |
+| `describe` |         | Kọwaa mgbe niile — a na-ewepụ blọk ịgbanwe kpamkpam; ụdị nke onye ọrụ họọrọ na-eme ka ọ bụrụ nzaghachi.                                                                                                                                                  |
+| `reroute`  |         | Kpọrọ ịgbanwe: a na-ewepụ nchedo nke ụdị nwere ikike. Nchedo nke **ebumnuche** na-agbanwe ka na-arụ ọrụ — mgbe enweghi ụdị ọhụụ eji eme ihe, arịrịọ ahụ na-apụ na kọwaa ka onyonyo ndị a na-enweghị ederede agaghị erute azụ na-enweghị ederede (#8430). |
 
-Ụdị a na-eme ka ọ bụrụ **tupu** usoro ochie na-agba; omume `auto`
-bụ byte-ndị na-ejide na nchedo mbụ-PR-1.
+Ụdị ndị a na-eme ka ọ bụrụ na **tupu** heuristics auto na-arụ ọrụ; omume `auto`
+dị ka byte na-enweghị mgbanwe na nchedo ndọrọndọrọ pre-PR-1.
 
 #### API-key scope (`visionBridgeKeyScope.ts`)
 
@@ -90,40 +90,40 @@ Mgbe igodo API nke onye na-akpọ na-achịkọta `allowedConnections`, pools qu
 (`allowedQuotas`) ma ọ bụ ụdị (`allowedModels` / `blockedModels` /
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), mgbakwunye na-ahọrọ
 na-agbanwe na kọwaa ụdị ndị igodo nwere ike iji, na njikọ ndị igodo nwere ike
-iji. A na-eme ka arịrịọ kọwaa mgbe niile na-aga site na OmniRoute self-loop na
-`x-omniroute-self-loop-key-id` header, ya mere arịrịọ chat na-anata
-na-eme ka njikọ na iwu ụdị nke igodo ahụ ọzọ. `enforceApiKeyPolicy()`
-na-akwanyere header ahụ naanị na njikọ nke self-loop, ya mere ọ nwere ike naanị
-ime ka ohere dịkwuo, na id nke na-adịghị edozi na-anaghị anabata.
+iji. Arịrịọ nkọwa ahụ na-aga site na OmniRoute self-loop na
+`x-omniroute-self-loop-key-id` header, ya mere arịrịọ chat na-enweta
+na-achịkwa njikọ na iwu ụdị nke igodo ahụ ọzọ. `enforceApiKeyPolicy()`
+na-eme ka header ahụ bụrụ naanị na ya na self-loop bearer, ya mere ọ nwere ike
+nwepụ ohere, na id nke na-adịghị edozi na-anaghị anabata.
 
-Ọ bụrụ na e nweghị ụdị ọhụụ kwere ka igodo, ụzọ kọwaa na-apụ na
-arịrịọ ahụ na-apụ na-enweghị mgbanwe, omume fail-open yiri ka a na-egbochi
+Ọ bụrụ na enweghi ụdị ọhụụ a na-anabata maka igodo ahụ, ụzọ nkọwa na-apụ na
+arịrịọ ahụ na-aga n'ihu na-enweghị mgbanwe, omume fail-open yiri nke a na-egbochi
 nchedo (meta `{ skipped: true, reason: "no_permitted_vision_model" }`).
-Arịrịọ na-enweghị igodo, na igodo na-enweghị ihe ndị a na-achịkọta, na-eme ka
-ọ bụrụ na mbụ.
+Arịrịọ na-enweghị igodo, na igodo na-enweghị ihe ndị a na-achịkọta, na-arụ ọrụ n'ụzọ ziri ezi dịka
+oge gara aga.
 
-#### Kọwaa arịrịọ nke na-ahụ maka ọrụ (`modalityBridgeVisionTaskAware`)
+#### Nkọwa nkọwa nke na-eme ka ọrụ mara (`modalityBridgeVisionTaskAware`)
 
 Default **true**. `composeVisionPrompt()` (`visionBridgeHelpers.ts`) na-agbakwunye
 okwu nke **n'ikpeazụ ozi onye ọrụ** (nke a na-ewepụ na 500 chars) na
-isi kọwara prompt, na-eduga nkọwa na ihe onye ọrụ jụrụ n'ezie
-(codex-vision-proxy pattern) na-arịọ ụdị ọhụụ ka o dekọọ
-okwu ndị a na-ahụ. Na flag gbanyere — ma ọ bụ na-enweghị ozi onye ọrụ — a na-eji
-isi prompt na-enweghị mgbanwe.
+isi kwuo, na-eduga nkọwa na ihe onye ọrụ jụrụ n'ezie
+(codex-vision-proxy pattern) na-arịọ ụdị ọhụụ ka o dee
+okwu ndị a na-ahụ. Mgbe a na-ewepụ flag — ma ọ bụ na-enweghị
+okwu onye ọrụ — a na-eji isi kwuo na-enweghị mgbanwe.
 
 Nkọwa nke self-loop nke OpenAI-compatible arịrịọ (`callVisionModelSingle()`
 na `visionBridgeHelpers.ts`) na-arịọ mgbe niile `image_url.detail: "high"` —
-n'enweghị ọnọdụ, maka onye ọ bụla na-akpọ/na-enye, ọ bụghị na-ejide
-n'ọnọdụ ọ bụla nke onye ahịa. Sampling nke nkọwa dị ala na-emebi
-nchekwa OCR maka ọrụ dekọọ okwu nke a na-arịọ na prompt a, ya mere
-nkọwa arịrịọ na-achọ mgbe niile nkọwa dị elu n'agbanyeghị ihe nkọwa
-nke arịrịọ mbụ si na-abịa. Nke a na-emetụta naanị ahụ nke arịrịọ
-nkọwa; ọ naghị agbanwe otu OmniRoute si ebugharị `image_url.detail`
-nke onye na-akpọ na arịrịọ mbụ — a na-etinye default a n'ụzọ
-nke ọzọ, na naanị maka ndị ahịa OpenCode a chọpụtara, na
+na-enweghị ọnọdụ, maka onye ọ bụla na-akpọ/na-enye, ọ bụghị na-egbochi
+n'ịbụ onye ahịa. Sampling nke nkọwa dị ala na-emebi
+nchekwa OCR maka ọrụ nke a na-arịọ maka, ya mere, arịrịọ nkọwa
+na-arịọ mgbe niile maka nkọwa dị elu n'agbanyeghị nke nkọwa
+nke arịrịọ mbụ. Nke a na-emetụta naanị ahụ nke arịrịọ nkọwa; ọ
+na-agbanwe agbanwe otú OmniRoute si zipu `image_url.detail` nke onye
+na-akpọ na arịrịọ mbụ — a na-etinye default a n'ụzọ dị iche,
+na naanị maka ndị ahịa OpenCode a chọpụtara, na
 `defaultImageDetail()` (`open-sse/handlers/chatCore/upstreamBody.ts`).
 Anthropic wire-format branch nke nkọwa self-loop enweghị `detail` field
-ma na-adịghị emetụta ma ọ bụ default.
+ma ọ bụ na-emetụta site na default ọ bụla.
 
 #### Nkọwa output cap (`modalityBridgeVisionMaxChars`)
 
@@ -131,29 +131,29 @@ ma na-adịghị emetụta ma ọ bụ default.
 | ------------------------------ | ------- | --------------------- |
 | `modalityBridgeVisionMaxChars` | `0`     | `0` ma ọ bụ 100–50000 |
 
-`0` (default) pụtara **enweghị cap** — nkọwa a na-eweghachite site na
+`0` (default) pụtara **enweghị cap** — nkọwa a na-enweta site na
 `callVisionModel()` na-aga n'ihu na-enweghị mgbanwe, na-echekwa
-omume dị ugbu a. Ọ bụla uru dị na 100–50000 na-ewepụ nkọwa na
-`…` suffix tupu e weghachite ya dịka `[Image N]: <description>`
+omume dị ugbu a. Ọnụahịa ọ bụla n'ime 100–50000 na-ewepụ nkọwa
+na `…` suffix tupu e wepụ ya dịka `[Image N]: <description>`
 (`VisionBridgeGuardrail.preCall()` na `src/lib/guardrails/visionBridge.ts`).
 Gbaa mbọ hụ na nke a maka ọrụ OCR nke nwere nkọwa dị arọ ebe
-ụdị dị n'okpuru chọrọ dekọọ zuru ezu; belata ya iji gbochie
+ụdị dị n'okpuru chọrọ nkọwa zuru ezu; belata ya iji chekwaa
 iji token na ụdị ọhụụ na-ekwu okwu. Ụlọ dashboard dị na
 Vision tab's Advanced panel (`modality-bridge-max-chars` na
-`ModalityBridgeVisionTab.tsx`) ma na-ejide uru ọ bụla n'etiti 1 na 99
-na 100 floor mgbe a na-ahapụ `0` doro anya — `0` bụ ezigbo Zod
-uru n'onwe ya (`z.union([z.literal(0), z.number().int().min(100).max(50000)])`),
-ọ bụghị naanị "unset" default.
+`ModalityBridgeVisionTab.tsx`) na-ejide ọnụahịa ọ bụla n'etiti 1 na 99
+na 100 floor mgbe a na-ahapụ `0` doro anya — `0` bụ
+nke ziri ezi Zod value n'onwe ya
+(`z.union([z.literal(0), z.number().int().min(100).max(50000)])`), ọ bụghị naanị
+"unset" default.
 
 #### Nkọwa cache (`modalityBridge/bridgeCache.ts`)
 
 In-memory LRU + TTL cache maka nkọwa outputs, nke a na-ekekọrịta
-na usoro niile. Key = `sha256(imageRef + composedPrompt + configuredBridgeModel)`
-na framing nke ogologo-prefix (enweghị njikọ mpaghara). Ụdị
-nke a bụ **nke a haziri** bridge model, ọ bụghị ụdị nke zara n'ezie —
-`callVisionModel` nwere ike ịlaghachi n'ime, na ịkpọ per
-nwughari ga-eme ka cache bụrụ nke a na-agbasa. Nkọwa ndị na-adịghị
-eme nke ọma anaghị echekwa. Ntọala:
+n'ozuzu usoro. Key = `sha256(imageRef + composedPrompt + configuredBridgeModel)` na
+ogologo-prefix framing (enweghị field-boundary collisions). Ụdị
+nke a bụ **configured** bridge model, ọ bụghị ụdị nke zara n'ezie —
+`callVisionModel` nwere ike ịlaghachi n'ime, na ịkpọ aha kwa
+nwoke ga-emebi cache. A naghị echekwa nkọwa ndị dara. Ntọala:
 
 | Key                             | Default | Range   |
 | ------------------------------- | ------- | ------- |
@@ -161,64 +161,64 @@ eme nke ọma anaghị echekwa. Ntọala:
 | `modalityBridgeCacheTtlMinutes` | `60`    | 1–1440  |
 | `modalityBridgeCacheMaxEntries` | `200`   | 10–5000 |
 
-#### Nchekwa onyonyo dịpụrụ adịpụ (self-loop describe/base64 fetch)
+#### Remote image normalization (self-loop describe/base64 fetch)
 
-Mgbe bridge na-enweta **onyonyo dịpụrụ adịpụ** n'onwe ya — nkọwa
+Mgbe bridge na-enweta **remote** image n'onwe ya — nkọwa
 self-call nke Anthropic na claude-wire-format base64 conversion
-(`ensureBase64ImagesForClaudeWire`), abụọ site na
-`fetchRemoteImageAsDataUri()` na `visionBridgeHelpers.ts` — data URI
-nke na-esote na-aga site na `normalizeDataUri()`
+(`ensureBase64ImagesForClaudeWire`), ma abụọ site na
+`fetchRemoteImageAsDataUri()` na `visionBridgeHelpers.ts` — data
+URI nke na-esote na-aga site na `normalizeDataUri()`
 (`open-sse/utils/imageNormalize.ts`) tupu etinye ya na arịrịọ
-nke ụdị ọhụụ. Onyonyo ndị buru ibu na-ebelata na **2048px ogologo
-oche** (na-ezute nkọwa resize nke OpenAI/Anthropic etinyere
-na sava), nke na-ewepụ byte/latency na-enweghị ịgbanwe ihe
-nke ụdị ọhụụ na-ahụ. Resizing na-eji `sharp`, nke a na-ebudata
-site na mbido dynamic: na ikpo okwu ebe binary ya na-emebi
-ibu, `normalizeDataUri()` **agaghị ewere** — ọ na-alaghachi
-na passthrough nke byte mbụ, ya mere ụzọ nkọwa/base64-conversion
-na-ejide mgbe niile. Byte ndị na-abụghị onyonyo (nnyocha nke
-na-adịghị eweghachite onyonyo a na-agaghị ekwu) na-agafe
-na-enweghị mgbanwe. Nchekwa a bụ nke a na-ejide onyonyo
-bridge na-enweta maka onwe ya — a na-apụghị itinye ya na
-payload passthrough nke onye na-akpọ, nke na-eme ka
-nke a bụrụ iwu na-achọghị mgbanwe (Hard Rule #20).
+nke ụdị ọhụụ. A na-ebelata onyonyo ndị buru ibu na **2048px ogologo
+oche** (na-ezute resize cap OpenAI/Anthropic na-etinye na
+server-side), nke na-ewepụ bytes/latency na-enweghị
+ịgbanwe ihe ụdị ọhụụ na-ahụ. Resizing na-eji `sharp`, nke a na-ebudata
+site na dynamic import: na ikpo okwu ebe binary ya
+na-adịghị arụ ọrụ, `normalizeDataUri()` **agaghị ewere** — ọ na-alaghachi
+na passthrough nke bytes mbụ, ya mere, ụzọ nkọwa/base64-conversion
+na-anọgide na-arụ ọrụ. Non-image bytes (fetch nke na-adịghị
+wepụta onyonyo a na-agụ) na-agafe na-enweghị mgbanwe. A na-ejide
+normalization a na onyonyo bridge na-enweta maka
+nke ya self-call — a naghị etinye ya na raw passthrough payload nke onye
+na-akpọ, nke na-eme ka ọ bụrụ na a na-eme mgbanwe naanị na
+nke a na-ahọrọ (Hard Rule #20).
 
-#### Ntọala schema + mgbasa
+#### Settings schema + migration
 
-Ụfọdụ ọhụrụ `modalityBridge*` keys bụ Zod-validated na
-`updateSettingsSchema` (`src/shared/validation/settingsSchemas.ts`):
-`modalityBridgeVisionEnabled`, `modalityBridgeVisionMode`,
-`modalityBridgeVisionModel`, `modalityBridgeVisionTaskAware`,
-`modalityBridgeVisionPrompt`, `modalityBridgeVisionTimeout`,
-`modalityBridgeVisionMaxImages`, `modalityBridgeVisionMaxChars`,
-`modalityBridgeCache*` trio, na `modalityBridgeAudio*` group
-ji Audio Bridge. Mgbasa `141_modality_bridge_settings.sql`
-na-ewepụta uru ndị dị ugbu a `visionBridge*` na
+Ndị ọhụrụ `modalityBridge*` keys bụ Zod-validated na `updateSettingsSchema`
+(`src/shared/validation/settingsSchemas.ts`): `modalityBridgeVisionEnabled`,
+`modalityBridgeVisionMode`, `modalityBridgeVisionModel`,
+`modalityBridgeVisionTaskAware`, `modalityBridgeVisionPrompt`,
+`modalityBridgeVisionTimeout`, `modalityBridgeVisionMaxImages`,
+`modalityBridgeVisionMaxChars`, trio `modalityBridgeCache*`, na
+`modalityBridgeAudio*` otu a na-eji site na Audio Bridge. Migration
+`141_modality_bridge_settings.sql` na-ewepụta
+nke dị ugbu a legacy `visionBridge*` values na
 nke ọhụrụ na-ezute (idempotent, anaghị overwrite
-uru `modalityBridge*` nke onye ọrụ set); a na-anabata
-ụdị ochie dị ka nzaghachi na-agba ọsọ maka otu
-mgbasa.
+nke onye ọrụ-set `modalityBridge*` value); a na-anabata
+legacy keys dị ka fallback na-agụ maka otu
+release cycle.
 
 #### Transparency header + stats
 
-Nkọwa a gbanwere azịza na-ewepụta
+Nkọwa a na-agbanwe agbanwe na-ebu
 `x-omniroute-modality-bridge: image->text;model=<visionModel>;parts=<n>`
 (nke a na-ewu site na `buildModalityBridgeHeader()` na
-`modalityBridge/bridgeStats.ts`, na-ejide site na
-`withModalityBridgeHeader()` na `src/sse/handlers/chatHelpers.ts`).
-Arịrịọ ndị a na-eziga na **enweghị** header — payload ahụ
-adịghị agbanwe na mgbanwe ụdị ahụ na-apụta na
-`model` field nke azịza.
+`modalityBridge/bridgeStats.ts`, na-ejide site na `withModalityBridgeHeader()`
+na `src/sse/handlers/chatHelpers.ts`). A na-enweta arịrịọ
+na-enyefe **no** header — payload ahụ adịghị agbanwe na
+ndị na-agbanwe model ahụ na-adị na `model` field nke
+ahụ nke nzaghachi.
 
-`GET /api/modality-bridge/stats` (njikwa nchịkwa, otu ọkwa dị ka
-`GET /api/settings`) na-eweghachite ndị na-agba ọsọ per-modality
+`GET /api/modality-bridge/stats` (njikwa ikike, otu ọkwa dị ka
+`GET /api/settings`) na-eweghachi ndị na-agba ọsọ per-modality
 `{ attempts, successes, bridged, cacheHits, failures, totalLatencyMs,
 latencySamples, averageLatencyMs, lastUsedAt }` maka `vision`, `audio`, na
 `video`. `averageLatencyMs` na-eji `latencySamples`, ọ bụghị niile attempts, dị ka
 nke ya; ọrụ na-enweghị oge anaghị emepụta sample nke zero-millisecond.
-`bridged` na-anọgide na-abụ alias nke na-akwado nkwụsịtụ maka ihe ịga nke ọma;
-n attempts na-adịghị mma anaghị agbakwunye ya.
-Counters na-eweghachite na mmalite usoro site na imewe
+`bridged` na-anọgide na-abụ alias nke na-akwado azụ maka ihe ịga nke ọma
+ndị na-agbanwe; attempts na-adịghị mma anaghị agbakwunye ya.
+Counters na-eweghachi na mmalite usoro site na imewe
 (telemetry, ọ bụghị accounting).
 
 #### Nhazi Dashboard
@@ -226,33 +226,36 @@ Counters na-eweghachite na mmalite usoro site na imewe
 Ihu dashboard a na-ejide bụ
 `/dashboard/settings/modality-bridge`. URL ya na-adọrọ adọrọ `Vision`, `Audio`,
 na `Video` tabs na-echekwa parameters ajụjụ mgbe ha na-agbanwe `tab` value.
-Tab Vision na-egosi ikike, ọnọdụ, nhọrọ model (gụnyere ndabara
-ndabara), ịkpọ oku na-adabere na ọrụ, oge a na-emezigharị/image/description-length/cache
-nchekwa, runtime
+Tab Vision na-egosi enablement, mode, nhọrọ model (gụnyere nke a na-emeghe
+ndabere), ịkpọ oku na-adabere na ọrụ, oge advanced/image/description-length/cache
+ogo, runtime
 counters, na arịrịọ sample echekwara. Tab Audio na-arụ ọrụ: ọ na-egosi
-ikike, onye na-ahọrọ model STT naanị na Auto, oge/nchekwa max-clip, audio
-counters, na arịrịọ sample `input_audio`. Tab Video na-arụ ọrụ: ọ na-akọ
-ọnọdụ runtime FFmpeg/ffprobe — otu n'ime anọ UI doro anya (`unknown` mgbe
-probe nọ na flight ma ọ bụ enweghị ike ịmecha, `restricted` na host dashboard na-abụghị loopback ebe probe na-apụghị imecha na akụkụ onye ahịa, `unavailable` mgbe probe na-enyocha na ekwenyere na ọ na-efu, ma ọ bụ `available` na FFmpeg/ffprobe versions) — na-echekwa
-ikike/model/frame/video/oge, na filters onye na-ahọrọ model ka ọ bụrụ
-models nwere ike ịhụ, na na-egosi video counters.
+enablement, STT-nke naanị model picker na Auto, timeout/max-clip ogo, audio
+counters, na `input_audio` sample test. Tab Video na-arụ ọrụ: ọ na-akọwa
+ọnọdụ runtime FFmpeg/ffprobe — otu n'ime anọ UI states doro anya (`unknown` mgbe
+probe nọ na ụgbọ elu ma ọ bụ enweghị ike ịmecha, `restricted` na host dashboard
+na-abụghị loopback ebe probe na-apụghị imecha na akụkụ onye ahịa, `unavailable` mgbe
+probe na-enyocha na kwadoro na ọ na-efu, ma ọ bụ `available` na FFmpeg/ffprobe
+versions) — na-echekwa
+enable/model/frame/video/timeout ogo, na filters model picker ka models nwere
+vision-capable, na-egosi video counters.
 
 Card Vision Bridge gara aga n'okpuru AI settings bụ njikọ nkwado na
-peeji ọhụrụ; ọ naghị enwekwa otu mkpụrụedemede nke fọm. Ndị na-enye mgbasa ozi na-ejikọta
+peeji ọhụrụ; ọ na-adịghị enwe ọzọ copy nke fọm ahụ. Media Providers na-ejikọta
 Image-to-Text na Speech-to-Text workflows na tabs Modality
-Bridge kwekọrọ na ya na-enweghị iwepụ egwuregwu Speech-to-Text dị.
+Bridge kwekọrọ na-enweghị iwepụ egwuregwu Speech-to-Text dị.
 
-**Nkwado nnabata self-loop:** mgbe akpọrọ akpọrọ na-agafe na
-OmniRoute's `/v1` self-loop (model onye na-enye na-abụghị ọkọlọtọ), sub-arịrịọ na-eziga
+**Nkwado admission bypass:** mgbe akpọrọ describe na-agafe na
+OmniRoute's nke `/v1` self-loop (non-standard provider model), sub-request na-eziga
 `x-omniroute-admission-bypass: internal` ma na-enyocha ya na
-nkwenye self-loop a kpebiri — sentinel `sk_omniroute` na mpaghara mpaghara, ma ọ bụ
-nkwenye `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` nke onye na-arụ ọrụ (#1350) ka
-`REQUIRE_API_KEY=true` deployments ka nwere ike ịrụ ọrụ na akpọrọ akpọrọ. Nkwado a
-na-anabata naanị maka ndị nkwenye ahụ, ya mere ndị ahịa mpụga enweghị ike iji
-header ahụ gbanwee nnabata.
+nkwado self-loop nke a kpebiri — local `sk_omniroute` sentinel na local mode, ma ọ bụ
+nkwado onye ọrụ `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` env key (#1350) ka
+`REQUIRE_API_KEY=true` deployments ka nwere ike ịrụ ọrụ na akpọrọ describe. Nkwado
+a na-anabata naanị maka ndị nkwado ahụ, ya mere ndị ahịa mpụga enweghị ike iji
+header ahụ gbanwee admission.
 
-Nkwenye ochie dị na `src/shared/constants/visionBridgeDefaults.ts`;
-nkwenye ọhụrụ/mode/task-aware/cache na nkwenye resolver dị na
+Legacy defaults nọ na `src/shared/constants/visionBridgeDefaults.ts`;
+ọhụrụ mode/task-aware/cache defaults na settings resolver nọ na
 `src/shared/constants/modalityBridgeDefaults.ts`. The guardrail na-egosi
 `deps` constructor option ka ule nwee ike itinye ụgha `getSettings` na
 `callVisionModel` implementations.
@@ -260,50 +263,50 @@ nkwenye ọhụrụ/mode/task-aware/cache na nkwenye resolver dị na
 ### Audio Bridge (`audioBridge.ts`) — Modality Bridge PR-3
 
 Na-ejide arịrịọ chat nwere audio tupu ha erute ebe a na-amaghị
-na-anabata audio input. Ọ naghị agbanwe arịrịọ chat: akụkụ audio na-
-edekọ na ụzọ OpenAI kwekọrọ na multipart endpoint na
-model chat a họọrọ na-aga n'ihu na transcripts ederede.
+na-anabata audio input. Ọ na-adịghị reroute arịrịọ chat: akụkụ audio
+na-edegharị site na OpenAI-compatible multipart endpoint dị ugbu a na
+model chat a họọrọ na-aga n'ihu na text transcripts.
 
 Flow:
 
 1. Kpebie `supportsAudio` site na `getResolvedModelCapabilities()`. Metadata
-   nke onye na-enye na ndekọ na-emeri, mgbe ahụ metadata model static, mgbe ahụ
-   `modalities_input` synchronized. Ndepụta input a kọrọ na-enweghị `audio` bụ `false`;
-   enweghị ihe àmà ikike na-anọ `null`. Ma `false` na `null` na-eme ka
-   bridge na-echekwa, mgbe `true` na-agbapụ ya.
+   provider-registry doro anya na-emeri, mgbe ahụ static model metadata, mgbe ahụ
+   synced `modalities_input`. A kọwara ndepụta input na-enweghị `audio` bụ `false`;
+   enweghị ihe akaebe ikike na-anọ `null`. Ma `false` na `null` na-eme ka
+   bridge na-echekwa, ebe `true` na-agbapụ ya.
 2. Kpebie `modalityBridgeAudio*` settings ma wepụ akụkụ audio
-   nke nwere ike ịkpụ site na ozi ọ bụla site na `detectMediaParts()`
-   detector. A na-akwado ụdị waya bụ OpenAI `input_audio`, `audio_url`, na
-   `source.media_type: "audio/*"`. A na-enyocha audio nested maka routing ma ọ bụ
-   wepụ ya site na ụzọ splice. A na-ejide ọrụ site na `modalityBridgeAudioMaxClips`;
+   spliceable top-level site na ozi ọ bụla site na `detectMediaParts()`
+   detector. A na-akwado wire shapes bụ OpenAI `input_audio`, `audio_url`, na
+   `source.media_type: "audio/*"`. A na-enyocha audio nested maka routing ma ọ bụghị
+   wepụ site na splice path. A na-ejide ọrụ site na `modalityBridgeAudioMaxClips`;
    akụkụ ndị ọzọ na-anọ untouched.
-3. Kwanyere `provider/model` a haziri, ma ọ bụ ka `selectAudioBridgeModel()` na-agagharị
-   `AUDIO_TRANSCRIPTION_PROVIDERS` na usoro catalog kwụsiri ike ma họrọ model mbụ
-   nwere ike iji credential onye na-enye.
+3. Kwanyere `provider/model` a haziri, ma ọ bụ ka `selectAudioBridgeModel()`
+   na-agagharị `AUDIO_TRANSCRIPTION_PROVIDERS` na usoro catalog kwụsiri ike ma họrọ
+   model mbụ nwere usable active provider credential.
 4. `callAudioTranscription()` na-agbanwe base64/data-URI audio ka multipart
    `file`, ma ọ bụ na-ebudata `audio_url` dịpụrụ adịpụ site na
-   nchedo naanị maka ọha na eze na DNS pinning na 25 MB bound. Ọ na-eso POST
-   faịlụ na model a họọrọ na `/v1/audio/transcriptions` self-loop, na-enyocha ya na
-   `resolveSelfLoopBearer()`. Ụzọ transcription dị ugbu a na-eme nchọpụta
-   credential nkịtị, cooldown/rate-limit handling, na dispatch onye na-enye.
-5. Arịrịọ ndị gara nke ọma na-anọchi akụkụ ha na `[Audio N]: <transcript>`. Arịrịọ
-   na-agba ọsọ na `Promise.allSettled`: mmejọ nke onye ọ bụla na-echekwa
-   akụkụ audio mbụ (#4012 contract). Ọ bụrụ na arịrịọ niile na-ada ma
-   ebe a na-enyocha na-egosi `supportsAudio === false`, akụkụ ahụ na-abụ
+   public-only outbound guard na DNS pinning na 25 MB bound. Ọ na-eso POST
+   faịlụ na model a họọrọ na local `/v1/audio/transcriptions` self-loop, na-enyocha
+   ya na `resolveSelfLoopBearer()`. Ụzọ transcription dị ugbu a na-eme nchọpụta
+   credential nkịtị, cooldown/rate-limit handling, na provider dispatch.
+5. Akpọrọ nke ọma na-anọchi akụkụ ha na `[Audio N]: <transcript>`. Akpọrọ
+   na-agba ọsọ na `Promise.allSettled`: njehie nke onye ọ bụla na-echekwa
+   akụkụ audio mbụ (#4012 contract). Ọ bụrụ na akpọrọ niile na-ada ma
+   ebe a na-enyocha `supportsAudio === false`, akụkụ ahụ na-agbanwe
    `[Audio N]: (unavailable — no STT provider connected)` (#8430 contract). Maka
-   ebe a na-amaghị (`null`), nsonaazụ niile na-ada na-anọ untouched. Ebe a na-enyocha
-   ebe a na-enyocha ederede naanị na-enweghị credential STT nwere ike iji na-enweta
-   stub doro anya otu a na-enweghị ịkpọ oku netwọk.
+   ebe a na-amaghị (`null`), nsonaazụ niile na-ada na-anọ untouched. Ebe a
+   na-enyocha text-only target na-enweghị usable STT credential na-enweta
+   otu stub doro anya na-enweghị ịkpọ oku netwọk.
 
-Transcripts ndị gara nke ọma na-eji Modality Bridge LRU/TTL cache nke
-usoro. Igodo na-ejikọta audio reference, label ọrụ `audio-transcription` kwụsiri ike,
-na model STT a họọrọ; a na-ejighị cache mmejọ. Audio attempts na-emelite
+Transcripts nke ọma na-eji Modality Bridge LRU/TTL cache nke na-arụ ọrụ.
+Key na-ejikọta audio reference, stable `audio-transcription` operation
+label, na model STT a họọrọ; failures anaghị echekwa. Audio attempts na-emelite
 `bridged`, `cacheHits`, `failures`, na `lastUsedAt` counters.
-Azịza a gbanwere na-ejide
-`x-omniroute-modality-bridge: audio->text;model=<sttModel>;parts=<n>`; arịrịọ ndị na-anaghị agbanwe enweghi
-Audio Bridge segment.
+Azịza a gbanwere na-eburu
+`x-omniroute-modality-bridge: audio->text;model=<sttModel>;parts=<n>`; arịrịọ
+na-anọghị na-enwetaghị Audio Bridge segment.
 
-Ntọala runtime bụ DB-backed na Zod-validated:
+Runtime settings bụ DB-backed na Zod-validated:
 
 | Igodo                         | Ndabere | Ogo            |
 | ----------------------------- | ------- | -------------- |
@@ -312,347 +315,365 @@ Ntọala runtime bụ DB-backed na Zod-validated:
 | `modalityBridgeAudioTimeout`  | `60000` | 1000–300000    |
 | `modalityBridgeAudioMaxClips` | `3`     | 1–10           |
 
-Cache a na-ekekọrịta ka a na-achịkwa site na `modalityBridgeCacheEnabled`,
+Cache nke a na-ekekọrịta ka na-achịkwa site na `modalityBridgeCacheEnabled`,
 `modalityBridgeCacheTtlMinutes`, na `modalityBridgeCacheMaxEntries`.
 
 ### Video Bridge (`videoBridge.ts`, `videoBridgePipeline.ts`)
 
-Na-ewepụ akụkụ vidiyo dị elu na Chat Completions `messages` na Responses
-API `input` tupu akpọọ ebumnuche na-enweghị nkwado vidiyo ama ama.
-Ụdị a na-akwado bụ `input_video`, `video_url`, `video_source`, HTTPS URLs,
-na `data:video/*;base64,...` data URIs. A naghị ele anya na faịlụ aha n'okwu
+Na-ejide akụkụ vidiyo nke dị n'elu na Chat Completions `messages` na Responses
+API `input` tupu akpọọ ebe a na-amaghị nkwado vidiyo. Ụdị a na-akwado bụ `input_video`, `video_url`, `video_source`, HTTPS URLs,
+na `data:video/*;base64,...` data URIs. A naghị ele anya na faịlụ dị mfe n'okwu
 dị ka vidiyo.
 
 `VideoBridgeGuardrail.preCall` (`videoBridge.ts`) nwere njem arịrịọ,
-nnyocha ikike/policy, nchikota arịrịọ, na payload nzaghachi.
-Ọrụ vidiyo kwa — inweta, cache nke nsonaazụ niile, ịkọwa usoro
-nke a na-ejikọta transcript ụda nke onye na-akpọ, na metrics/abort/cleanup kwa
-nke a na-ezobe n'azụ `processVideoPart` na
-`videoBridgePipeline.ts`, nke a na-akpọ otu ugboro kwa akụkụ vidiyo n'ime
-loop nke `preCall`. Modulu ahụ na-akọwa kwa oke ọdụ ụgbọ mmiri `VideoMediaBrokerPort`
-(inweta bytes na iwepụ sampled frames), `VideoAudioTranscriptionPort`
-(na-ejikọta transcript ụda nke onye na-akpọ na captions a sampled), na
-`VideoDrilldownPort` (ụdị nchekwa ọdịnala). Production STT na retention
-nke frames na-ejikọta gburugburu ọdụ ụgbọ mmiri na-akọwa site na `createVideoSttAdapter` na
-`createVideoDrilldownAdapter`; nke ikpeazụ na-eji ndụmọdụ opaque-handle a na-ekekọrịta.
+nnyocha ikike/policy, nchikota kwa arịrịọ, na payload nzaghachi.
+Ọrụ kwa vidiyo — inweta, cache nke nsonaazụ niile, na-akọwa usoro
+nke a na-ejikọta transcript ụda nke onye na-akpọ, na metrics/ịkwụsị/nhicha kwa
+nwale — na-ezobe n'azụ `processVideoPart` na
+`videoBridgePipeline.ts`, akpọrọ otu ugboro kwa akụkụ vidiyo n'ime
+loop nke `preCall`. Modulu ahụ na-akọwa kwa oke ọdụ `VideoMediaBrokerPort`
+(inweta byte na iwepụ ihe atụ nke a na-enweta), `VideoAudioTranscriptionPort`
+(na-ejikọta transcript ụda nke onye na-akpọ na ihe atụ nke a na-enweta), na
+`VideoDrilldownPort` (ụdị nchekwa ochie). Production STT na idobe
+ihe atụ na-ejikọta gburugburu ọdụ na-akọwa site na `createVideoSttAdapter` na
+`createVideoDrilldownAdapter`; nke ikpeazụ na-eji ndụmọdụ opaque-handle nke a na-ekekọrịta.
 
-Ụzọ arịrịọ ọha `/v1` anaghị ebubata ma ọ bụ kpọọ subprocess. A na-ebudata
-vidiyo dịpụrụ adịpụ n'okpuru oke 50 MiB; inline base64 vidiyo nwere
-oke 36 MiB dekọd nke a na-ejikọta kwa vidiyo ka ụdị/ozizi/nkwu
+Ụzọ arịrịọ ọha `/v1` anaghị ebubata ma ọ bụ kpọọ subprocess. Vidiyo dịpụrụ adịpụ
+na-ebudata n'okpuru oke 50 MiB; inline base64 vidiyo nwere
+oke 36 MiB nke a na-ewepụ na vidiyo ọ bụla ka ụdị/ozizi/nkwupụta
 nwere ike ịnọ n'ime oke nnabata arịrịọ JSON ọha nke 50 MiB. A na-enyocha
-ogologo inline na ndekọ nha tupu ịkekọrịta. HTTPS bụ
-a chọrọ na URL dịpụrụ adịpụ mbụ na ntụgharị ọ bụla, na-eji
-nchekwa ọha naanị na-apụ apụ na DNS pinning. Bytes ahụ na-agafe
+ogologo inline na ọnụ ọgụgụ a na-ewepụ tupu itinye. HTTPS
+na-achọsi ike na URL dịpụrụ adịpụ mbụ na ntụgharị ọ bụla, na-eji
+nchekwa ọha naanị nke dị ugbu a na DNS pinning. Byte ahụ na-agafe
 n'ókè ziri ezi nke `POST /api/modality-bridge/video/extract` broker. Ụzọ ahụ bụ
-`LOCAL_ONLY` na `SPAWN_CAPABLE`, na-anabata naanị arịrịọ nke a kwadoro,
-nkwado-loopback, na anaghị anabata URL, ụzọ faịlụ, executable,
+`LOCAL_ONLY` na `SPAWN_CAPABLE`, na-anabata naanị arịrịọ nke a kwadoro
+nke onye ọrụ, trusted-loopback, na anaghị anabata URL, ụzọ faịlụ, executable,
 ma ọ bụ ndepụta nke arguments. Pipeline nke API body-size na onye na-ahụ maka
-incremental body reader na-eme ka 50 MiB broker input cap. Queue ya
-na-ejide otu extraction n'otu oge, na-enye ohere ọrụ anọ na
-na-ejide input na-atụ anya na 100 MiB.
+incremental body reader na-achịkwa n'ụzọ dị iche 50 MiB broker input cap.
+Queue ya nwere oke na-arụ otu n'elu oge, na-enye ohere ọrụ anọ na-atụfu
+input na 100 MiB.
 
-N'ime broker, `ffprobe` na-agụ faịlụ mpaghara nkeonwe; a na-ewepụ
-format allowlist na-ewepụ playlist na manifest formats. Maka MOV-family
-containers a na-akwado, a na-ewepụ njikọ MOV data dịpụrụ adịpụ na ndabara, na
-nchịkọta a na-ewepụghị na ha. Ma `ffprobe` na `ffmpeg` na-eji
-`file`-only protocol whitelist, otu thread, fixed argument arrays, enweghị shell,
-na executables a na-achọpụta site na `PATH`. A naghị enwe ike igwu egwu
-na streams nke a na-ejikọta. Ụfọdụ streams niile ga-emezu oke, na
-a na-ahọrọ stream ndabara doro anya tupu ndabere kachasị ala.
-Vidiyo na-ejide 600 sekọnd, 8,192 pixels kwa akụkụ, na
-33,554,432 pixels isi. FFmpeg na-ewepụta 1–16 midpoint JPEG frames, na-ebelata
-n'ókè ogologo ruo 1,024 pixels na-enweghị ịkwalite inputs dị obere, na
-anaghị enweta URL. Sampling bụ `uniform` na ndabara.
-Nchekwa `scene_aware` na `segment_aware` na-eme otu FFmpeg pass ọzọ
+N'ime broker, `ffprobe` na-agụ faịlụ mpaghara nkeonwe; ndepụta
+usoro a na-ekwe ka a gbanwee ụdị playlist na manifest. Maka MOV-family
+containers a na-ekwe ka, njikọ MOV data nke mpụga ka na-anaghị arụ ọrụ
+site na ndabara, na iwu a na-adịghị ekwe ka ha. Ma `ffprobe` na `ffmpeg` na-eji
+ndị na-ekwe ka `file`-nke naanị protocol whitelist, otu thread, ndepụta
+arguments kwụsiri ike, enweghị shell,
+na executables a na-achọpụta site na `PATH`. A naghị ekwe ka
+streams nke mkpuchi foto a na-ejikọta. Ụfọdụ streams a na-egwu ga-emezu
+oke, na a na-ahọrọ stream ndabara doro anya tupu
+ndị na-anaghị atụ anya na index kachasị ala. Vidiyo nwere oke nke 600 sekọnd, 8,192 pixels kwa
+n'ogologo, na 33,554,432 pixels isi. FFmpeg na-ewepụta 1–16 midpoint JPEG frames, na-ebelata
+n'ogologo nke ogologo na 1,024 pixels na-enweghị ịkwalite inputs dị obere, na
+anaghị enweta URL. Sampling bụ `uniform` site na ndabara.
+Nchekwa `scene_aware` na `segment_aware` na-arụ ọrụ otu FFmpeg pass
 n'elu stream mpaghara a kwadoro, na-ahọrọ `showinfo` scene timestamps
 na na-eweghachi n'ụzọ doro anya na otu
-uniform midpoints na mmejọ detector, timeout, malformed output, ma ọ bụ
-set nke ndị na-emeghị ihe. Segment-aware mode na-enye midpoint samples
-n'usoro nke validated scene intervals; segment-aware evidence na
-ndabere omume a kọwara n'okpuru. A na-etinye oke 16-frame
-n'ọrụ mgbe a na-ahọrọ na policy ọ bụla. Mgbe arịrịọ na-ahụ maka
+midpoints uniform na mmejọ detector, timeout, output na-adịghị mma, ma ọ bụ
+set nke ndị na-anaghị enweta. Ụdị segment-aware na-enye samples midpoint
+n'ogologo nke a kwadoro scene intervals; ihe akaebe segment-aware na omume
+na-eweghachi bụ nke a kọwara n'okpuru. Oke 16-frame siri ike bụ
+na-etinye na nhọpụta na policy ọ bụla. Mgbe arịrịọ nke na-ahụ maka
 scene nwere naanị otu frame budget, ọ na-eji midpoint uniform nke
-vidiyo zuru ezu ma ọ bụ windo ntinye na na-akọwa `policyEffective: uniform`: a
-nke a họọrọ scene frame enweghị ike ịchekwa ma njedebe oge abụọ. Onye na-akpọ nwere ike
-inwe nhọrọ inye windo ntinye na-adịgide adịgide (`start`/`end` sekọnd); a na-ejide
-oke na ogologo media, windo a na-atụgharị ma ọ bụ na-adịghị adịgide na-anaghị anabata, na
-a na-eme sampling policies niile naanị n'ime interval a na-emezi. Windo
-nke a na-agụnye na metadata sampling na na untrusted description
-prefix ka ụdị ndị na-esote nwee ike ịmata excerpt a na-elekwasị anya site na
-n'ozuzu timeline.
+vidiyo zuru ezu ma ọ bụ windo nke a na-elekwasị anya na na-akọwa `policyEffective: uniform`: otu
+akụkụ scene a họọrọ enweghị ike idobe ma njedebe oge abụọ. Onye na-akpọ nwere ike
+inwekwu inye windo nke a na-elekwasị anya (`start`/`end` sekọnd); oke a na-ejide
+na ogologo media, windo na-agbanwe ma ọ bụ na-adịghị njedebe na-anaghị anabata, na
+a na-eme sampling policies naanị n'ime oge a kwadoro. Windo a na-abanye
+n'ime metadata sampling na na prefix nkọwa na-adịghị ntụkwasị obi ka
+ndị na-esote nwere ike ịmata excerpt a na-elekwasị anya site na
+n'ogologo zuru ezu.
 
 Nchekwa caption semantic bụ ntọala dị iche, doro anya. Ụdị ndabara `full`
-nnyocha na-echekwa prompt frame dị ugbu a ma na-anaghị ebugharị
-arịrịọ ederede na caption model. Na `focused` mode, bridge na-agụ naanị
-nke kachasị ọhụrụ na-enweghị efu onye ọrụ dere `text`/`input_text` site na
+nnyocha na-echekwa prompt frame dị ugbu a ma na-anaghị eziga
+okwu arịrịọ na model caption. Na `focused` mode, bridge na-agụ naanị
+nke kachasị ọhụrụ na-enweghị ọdịnaya nke onye ọrụ `text`/`input_text` site na
 otu Chat ma ọ bụ Responses
-container, na-emezi ya ka NFC, na-ejikọta akara njikwa na oghere,
+container, na-eme ka ọ bụrụ NFC, na-ejikọta akara njikwa na whitespace,
 na na-ejide ya na 500 Unicode code points. Nsonaazụ efu na-eweghachi
-na prompt `full` ziri ezi. A na-eme ka ihe eji eme ihe dị ka JSON na
-dedicated untrusted-user-context block ma nwee ike naanị ịkwado
-ndetails a na-ahụ; ọ pụghị ịgbanwe ihe ịrịba ama dị iche na
-na-esote ntuziaka a na-ahụ ma ọ bụ na-anụ na media. Nchekwa ederede
-anaghị atụgharị `start`/`end` ma ọ bụ gbanwee
-nchekwa oge.
+na prompt `full` ziri ezi. A na-eme ka ihe na-arụ ọrụ dị ka JSON na
+block nke onye ọrụ na-adịghị ntụkwasị obi ma nwee ike naanị ịkwado
+ndị a na-ahụ anya; ọ pụghị ịgbanwe ihe ịdọ aka na ntị dị iche
+na-anya ma ọ bụ na-anụ na media. Nchekwa ederede anaghị atụgharị `start`/`end` ma ọ bụ gbanwee
+sampler oge.
 
 #### FU-07 ihe akaebe nke akụkụ usoro
 
-`segment_aware` na-eji otu pre-analysis pass nke e mere n'elu vidiyo mpaghara nke a kwadoro. Chai nke na-adịgide adịgide na mbụ na-eme ka ọ bụrụ 320 pixels n'ogologo, na-achọpụta mgbanwe na ọnọdụ ndị kwụsịrị, mgbe ahụ na-ewe samples na 1 frame kwa nkeji maka blur, average luma, na ozi spatial/temporal. Pass a nwere oke samples 600, otu FFmpeg/filter thread, otu protocol na container allowlists nke `file`-only, 1 MiB process-output bound, na nkeji 30 n'ime broker's shared abort/deadline. Ọ naghị anabata iwu, filter, ụzọ, ma ọ bụ URL site na arịrịọ.
+`segment_aware` na-eji otu pre-analysis pass nke e mere n'elu vidiyo mpaghara a kwadoro. Chịkọta nzacha a na-eme ka ọ bụrụ na ọ bụghị karịa 320 pixels n'ogologo, na-achọpụta mgbanwe na ọnọdụ ndị kwụsịrị, mgbe ahụ na-anwale na 1 frame kwa nkeji maka blur, average luma, na ozi spatial/temporal. Pass a bụ nke a na-edobe na 600 structural samples, otu FFmpeg/filter thread, otu protocol na container allowlists nke `file`-only, 1 MiB process-output bound, na ọ bụghị karịa 30 sekọnd n'ime oge nkewa/ndeadline nke broker. Ọ naghị anabata iwu, nzacha, ụzọ, ma ọ bụ URL site na arịrịọ.
 
-Uru ndị a bụ ihe atụ nke sampling deterministic, ọ bụghị nghọta vidiyo semantic. Ha anaghị atụgharị isiokwu, omume, captions, okwu, ma ọ bụ ebumnuche onye ọrụ. Boundaries nke scene na freeze na-eme ka segments; freeze coverage, blur, exposure, spatial detail, na temporal change na-emetụta naanị otu esi etinye 1–16 frame budget dị. Segment nke zuru ezu na-ejide na otu frame, ebe segments na-adịghị akwụsị na-asọ mpi maka ego fọdụrụ. Mgbe boundaries karịrị frames, a na-edebe uniform timeline coverage ka cuts ngwa ngwa na mbụ ghara ịzoputa segment ogologo. Boundaries nke scene n'ime 1-second analysis resolution nke freeze boundary na-ejikọta.
+Uru ndị a na-eme ka ọ bụrụ na ha bụ ihe atụ nke sampling, ọ bụghị nghọta vidiyo semantic. Ha anaghị atụgharị isiokwu, omume, captions, okwu, ma ọ bụ ebumnuche onye ọrụ. Boundaries nke scene na freeze na-eme ka ọ bụrụ segments; freeze coverage, blur, exposure, spatial detail, na temporal change na-emetụta naanị otu esi etinye 1–16 frame budget dị adị. Segment nke zuru ezu na-ejide na otu frame, ebe segments ndị na-adịghị akwụsị na-asọ mpi maka ego fọdụrụ. Mgbe boundaries karịrị frames, a na-edebe uniform timeline coverage ka cuts ngwa ngwa na mbụ enweghị ike ịzụta segment ogologo. Boundaries nke scene n'ime 1-second analysis resolution nke freeze boundary na-ejikọta ọnụ.
 
-Ncheta filters na-adịghị, ihe atụ na-adịghị mma/efu, njehie detector, ma ọ bụ bounded pre-analysis timeout na-eme ka ọ bụrụ nke a na-apụghị ịgbanwe agbanwe na usoro uniform midpoint. Iwu nke onye na-akpọ ma ọ bụ deadline broker anaghị eme ka ọ bụrụ nke a na-apụghị ịgbanwe agbanwe: ọ na-akwụsị subprocess na-agba ọsọ, na-egbochi iwepụ frame n'ọdịnihu, na a na-ewepụ osisi nkeonwe na `finally`.
+Ndị na-adịghị mma, ihe atụ na-adịghị mma/n'efu, njehie detector, ma ọ bụ bounded pre-analysis timeout na-eme ka ọ bụrụ na ọ na-emeghe na usoro uniform midpoint policy. Iwu nke onye na-akpọ ma ọ bụ deadline broker anaghị eme ka ọ bụrụ na ọ na-emeghe: ọ na-akwụsị subprocess na-agba ọsọ, na-egbochi iwepụ frame n'ọdịnihu, na a na-ewepụ osisi nkeonwe na `finally`.
 
-`scripts/perf/video-bridge-fu07-eval.ts` na-emepụta ihe atụ FFmpeg ziri ezi maka post-dedup caption-call savings, dense-motion budget allocation, blur/exposure/SI-TI evidence, rapid cuts with a long tail, na gradual-fade false positives. Ọ na-edekọ pre-analysis wall time na, ebe `/usr/bin/time` dị, CPU nwa na peak RSS. Nyocha àgwà ya bụ oracles structural naanị. Àgwà caption-model ziri ezi ka nọ na `HOLD` n'ihi na harness a enweghị njedebe kwadoro ma ọ bụ onye ikpe kwụsịrị. Ego na-echekwa ka nọ na `HOLD` ma ọ bụrụ na `--caption-cost-per-call-usd` na-enye ọnụahịa doro anya kwa arịrịọ; script ahụ anaghị eme ka nsonaazụ ọ bụla.
+`scripts/perf/video-bridge-fu07-eval.ts` na-emepụta FFmpeg fixtures ziri ezi maka post-dedup caption-call savings, dense-motion budget allocation, blur/exposure/SI-TI evidence, rapid cuts with a long tail, na gradual-fade false positives. Ọ na-edekọ pre-analysis wall time na, ebe `/usr/bin/time` dị, CPU nke nwa na peak RSS. Nyocha àgwà ya bụ structural oracles naanị. Àgwà caption-model ziri ezi ka nọ na `HOLD` n'ihi na harness a enweghị njedebe kwadoro ma ọ bụ onye ikpe kwụsịrị. Ego nchekwa ka nọ na `HOLD` ma ọ bụrụ na `--caption-cost-per-call-usd` na-enye ọnụahịa doro anya kwa oku; script ahụ anaghị eme ka nsonaazụ ọ bụla.
 
-Frame ọ bụla nwere oke 4 MiB, frames niile raw na ọnụ ọgụgụ 23 MiB, na azịza broker serialized na 32 MiB. A na-ewepụ nchekwa nkeonwe na `finally`. OmniRoute anaghị etinye FFmpeg ma na-anaghị anabata ụzọ executable nkeonwe. Tupu captioning, bridge na-etinye pass visual deduplication na-echebe: JPEG ọ bụla na-ebelata na 16×16 grayscale buffer ma na-ejikọta naanị na frame ikpeazụ echekwara. Maka ego caption a rịọrọ nke karịrị otu frame, extraction na-enye pool nke ndị na-eme ihe atụ nke nwere ike ịbụ ugboro abụọ nke ego ahụ ma ọ bụghị karịa 16 frames. A na-etinye cap a rịọrọ naanị mgbe deduplication gasịrị, na ndị na-eme ihe atụ mbụ na ikpeazụ na-echekwa n'oge thinning ikpeazụ mgbe ego ahụ dịkarịa ala abụọ. Usoro `grayscale-16x16-mean-cells-v2` na-eji nke kachasị n'etiti mean luma delta na ọnụego nke thumbnail cells nke normalized delta ya dịkarịa ala 0.05. Threshold nke duplicate bụ 0.04, a họpụtara ya maka predictability kama ka a kpughee ya dị ka ntọala runtime. Nke a secondary high-contrast signal na-echekwa obere mmegharị na mgbanwe ederede nke a na-ejikọta naanị na ntụnyere mean. Njehie comparator ma ọ bụ decoder na-eme ka ọ bụrụ nke a na-apụghị ịgbanwe agbanwe ma na-edebe coverage. Metadata output na-ekewapụ ndị a na-ewepụ, frames a na-eji nke ọma, na visual duplicates a na-ewepụ.
+Frame ọ bụla nwere oke 4 MiB, frames niile raw ọnụ na 23 MiB, na nzaghachi broker serialized na 32 MiB. A na-ewepụ nchekwa nkeonwe na `finally`. OmniRoute anaghị etinye FFmpeg ma na-anaghị anabata ụzọ executable nkeonwe. Tupu captioning, bridge na-etinye pass visual deduplication na-echebe: JPEG ọ bụla na-ebelata na 16×16 grayscale buffer ma na-ejikọta naanị na frame ikpeazụ a na-edebe. Maka ego caption a rịọrọ nke karịrị otu frame, iwepụ na-enye pool nke ndị na-achọghị nke nwere ike ịbụ ugboro abụọ nke ego ahụ ma ọ bụghị karịa 16 frames. A na-etinye cap a rịọrọ naanị mgbe deduplication gasịrị, na ndị na-achọghị mbụ na ikpeazụ na-echekwa n'oge thinning ikpeazụ mgbe ego ahụ dịkarịa ala abụọ. Usoro `grayscale-16x16-mean-cells-v2` na-eji nke kachasị nke mean luma delta na ọnụego nke thumbnail cells nke normalized delta ya dịkarịa ala 0.05. Threshold nke duplicate bụ 0.04, nke a họọrọ maka predictability kama ka a kpughee dị ka ntọala runtime. Nke a secondary high-contrast signal na-echekwa obere mmegharị na mgbanwe ederede nke a na-ejighị naanị njikọ mean. Njehie comparator ma ọ bụ decoder na-eme ka ọ bụrụ na ọ na-emeghe ma na-edebe coverage. Metadata nke output na-ekewapụ ndị na-ewepụ, frames a na-eji nke ọma, na visual duplicates a na-ewepụ.
 
-A na-ejikarị akụkụ vidiyo nke a kpọrọ aha rịọ timestamped contact sheet. Bridge na-ewu grid JPEG nke nwere columns 4, 16-frame. Cell ọ bụla nke 512-pixel na-ere timestamp ya na band dị elu, ebe timestamps ndị ahụ na-anọgide na metadata ederede maka njikọ na audit. JPEG zuru ezu ka nọ na 32 MiB. Ọ bụrụ na `sharp` enweghị ike ịkọ ma ọ bụ hazie grid, bridge na-alaghachi na frames JPEG nkeonwe; a na-agbasa abort nke onye ahịa site na ọrụ sheet.
+A na-ejikarị akụkụ vidiyo nke a kpọpụtara kpọrọ arịrịọ timestamped contact sheet. Bridge na-ewu grid JPEG nke nwere columns 4, 16-frame. Cell ọ bụla nke 512-pixel na-ere timestamp ya na band dị elu, ebe timestamps ndị ahụ ka nọ na metadata ederede maka njikọ na audit. JPEG zuru ezu ka nọ na 32 MiB. Ọ bụrụ na `sharp` enweghị ike ịkọ ma ọ bụ hazie grid, bridge na-alaghachi na frames JPEG nkeonwe; abort nke onye ahịa ka na-agba ọsọ site na ọrụ sheet.
 
-Ncheta nkwado bụ nke a na-eme ka ọ bụrụ nke dị iche na synthetic composition microbenchmark. `scripts/perf/video-bridge-contact-sheet-eval.ts` na-akọwa schema-versioned A/B harness maka ezi OpenAI-compatible vision models. Ọ na-atụle tokens a na-akọ na provider, end-to-end wall latency (gụnyere sheet composition), model-call count, na manifest-defined fact retention. A naghị ede azịza model raw na akụkọ; naanị SHA-256 digests na matched fact IDs ka echekwara. Harness ahụ anaghị eme netwọk ma ọ bụ kpọọ model akwụ ụgwọ ma ọ bụrụ na `--execute-real` na-agbasa na `--model`, `OMNIROUTE_BASE_URL`, na `OMNIROUTE_API_KEY` ka a hazie. Na-enweghị arụmọrụ ziri ezi a kpọrọ, ikpe a na-agụnye na machine-readable verdict ka nọ na `HOLD`; synthetic payload/call-count measurements naanị abụghị ihe nkwado nkwado.
+Eziokwu nke mgbasa ozi bụ nke a na-eme ka ọ bụrụ na ọ dị iche na synthetic composition microbenchmark. `scripts/perf/video-bridge-contact-sheet-eval.ts` na-akọwa schema-versioned A/B harness maka ezi OpenAI-compatible vision models. Ọ na-atụle tokens a na-akọ na provider, end-to-end wall latency (gụnyere sheet composition), model-call count, na manifest-defined fact retention. A naghị ede raw model responses na akụkọ; naanị SHA-256 digests na matched fact IDs ka nọgide. Harness ahụ anaghị eme netwọk ma ọ bụ kpọrọ model na-akwụ ụgwọ ma ọ bụrụ na `--execute-real` na-agbakwunye na `--model`, `OMNIROUTE_BASE_URL`, na `OMNIROUTE_API_KEY` ka haziri. Na-enweghị ịrụ ọrụ ziri ezi a kpọpụtara, mkpebi ya nke machine-readable ka nọ na `HOLD`; synthetic payload/call-count measurements naanị abụghị eziokwu mgbasa ozi.
 
-Ncheta `scripts/perf/video-bridge-promotion-eval.ts` na-eji FU-07 ma ọ bụ FU-09 observations. Nkwado nkwado chọrọ ụdị scenario synthetic asatọ niile tinyere clip ziri ezi nke a na-eme ka ọ dị ọcha, ma ọ dịkarịa ala repetitions atọ a tụrụ na ọrụ na ikpe, metrics iri niile a kọwara, media/prompt/expected-fact/settings digests kwụsịrị, unique observation IDs na verified seeded A/B order. Receipt nke arụmọrụ na-ejikọta corpus digest, exact candidate SHA na model revision. Ncheta ma ọ bụ measurements na-adịghị mma ka nọ na `HOLD`, gụnyere CPU karịrị 30 s, peak RSS karịrị 512 MiB ma ọ bụ pre-analysis karịrị 30 s. Nke a bụ caps admission evidence, ọ bụghị nkwenye ọhụrụ nke RSS enforcement runtime.
+Ndị a na-ejikọta `scripts/perf/video-bridge-promotion-eval.ts` na-eji FU-07 ma ọ bụ FU-09 observations. Ikwado mgbasa ozi chọrọ ụdị scenario asatọ synthetic niile tinyere clip ziri ezi nke a na-eme ka ọ dị ọcha, ma ọ dịkarịa ala repetitions atọ a tụrụ na ọrụ na ikpe, metrics iri niile a kọwara, media/prompt/expected-fact/settings digests kwụsịrị, unique observation IDs na verified seeded A/B order. Receipt nke arụmọrụ na-ejikọta corpus digest, exact candidate SHA na model revision. Njehie ma ọ bụ measurements na-adịghị mma ka nọ na `HOLD`, gụnyere CPU karịrị 30 s, peak RSS karịrị 512 MiB ma ọ bụ pre-analysis karịrị 30 s. Nke a bụ caps admission evidence, ọ bụghị nkwenye ọhụrụ nke runtime RSS enforcement.
 
-FU-07 chọrọ n'ogo kachasị 98% nke ịdị mma na p95 latency na-abụghị karịa 1.2x
+FU-07 chọrọ ka o nwee ọkara 98% nke ịdị mma na p95 latency na-erughị 1.2x
 ndị bụ isi, tinyere ma ọ bụ 0.05 nkezi nke ikpe ziri ezi na-eme ka ncheta ka mma na
-nkezi nkezi nke akpọrọ, ma ọ bụ ma ọ dịkarịa ala 10% nkezi nke akpọrọ post-dedup. FU-09 chọrọ n'ogo kachasị 0.85, 95% retention, 20% p95 latency
-belata na 10% token belata. Nchekwa nke eziokwu, nkwado ntinye ma ọ bụ
-nchekwa na-adịghị adị na-egbochi ịkwalite. Otu mmegharị enweghị ike ịkwalite ihe ọ bụla:
-`--previous-report` na-egosi mmegharị abụọ dị iche, na-enweghị overlap, nke na-esote
-nkwado nke otu iwu/model nsụgharị/ndị na-eme/akụkụ. Otu
-nnyocha sampling enweghị ike ịkọwa nnyocha contact-sheet.
+nkezi nkezi nke akpọrọ, ma ọ bụ na ọ dịkarịa ala 10% nkezi nke akpọrọ post-dedup. FU-09 chọrọ ka o nwee ọkara 0.85, 95% retention, 20% p95 latency
+nchekwa na 10% token belata. Nkwụsịtụ nke eziokwu dị mkpa, nkwado ntinye ma ọ bụ
+ncheta na-adịghị adị na-egbochi ịkwalite. Otu mmegharị enweghị ike ịkwalite ihe ọ bụla:
+`--previous-report` na-ekwenye na e nwere mmegharị abụọ dị iche, na-enweghị overlap, nke na-eru eru
+nke otu iwu/model revision/candidate/corpus. Nnyocha sampling enweghị ike ikwenye
+nnyocha contact-sheet.
 
-Ndị na-anakọta kwesịrị ịkọwa nzaghachi na nchekwa ma chekwaa `responseDigest` tinyere
-metrics na njikọ nyocha, ọ bụghị ederede nzaghachi. Onye na-eri na-agụkwa
-ncheta raw ochie mana anaghị ewere ederede ahụ n'ime akụkọ ya. Otu n'ime `responseDigest` ma ọ bụ `rawResponseText` ka a na-anabata maka nyocha ọ bụla.
-Ndepụta nke a na-enye nsụgharị na-anọgide na-enweghị ihe ọ bụla na `hold` ndabara. Otu
-ndepụta kwesịrị inwe ntụaka nke ihe akaebe ya, iwu, nsụgharị model, kpọmkwem
-candidate SHA, manifest digest na ID abụọ dị iche; ọnọdụ na-emegide
-na-anaghị anabata. Metadata ndị a bụ nkwekorita nyocha, ọ bụghị ihe àmà na faịlụ a kpọtụrụ aha nwere
-n'ezie measurements. Lelee akwụkwọ ndị a tupu itinye
-ndepụta ọ bụla. Nchekwa stats njikwa na Video dashboard na-egosi
-ndị na-echekwa. Otu alias model a haziri naanị anaghị etinye nsụgharị ya ma ọ bụ
-nke na-eme candidate SHA, ya mere, dashboard ugbu a na-akọ `HOLD` kama
-iji eligibility si na ọnọdụ mmegharị ọzọ. Nhọrọ nyocha doro anya na-anọpụ iche na ịkwalite; enweghị ndabara na-agbanwe.
+Ndị na-anakọta kwesịrị ịkọwa nzaghachi na ebe nchekwa ma chekwaa `responseDigest` tinyere
+metrics na njikọ nlekota, mgbe niile na-enweghị ederede nzaghachi. Onye na-eji ya na-agụkwa
+nnyocha ndị ochie ma ọ bụghị ịkọwa ederede ahụ na akụkọ ya. Naanị otu n'ime `responseDigest` ma ọ bụ `rawResponseText` ka a na-anabata maka nnyocha ọ bụla.
+Ndepụta nke a na-enye ikike ka na-adị efu na `hold` nke na-adịghị agbanwe agbanwe. Nnyocha kwesịrị ekwesị chọrọ njikọ nke ihe akaebe ya, iwu, model revision, kpọmkwem
+candidate SHA, manifest digest na ID abụọ dị iche; ọnọdụ na-emegide na-anaghị anabata. Metadata ndị a bụ nkwekọrịta nyocha, ọ bụghị ihe akaebe na faịlụ a kpọtụrụ aha nwere
+nke ziri ezi. Lelee akwụkwọ ndị a na-egosi tupu itinye
+nnyocha ọ bụla. Njikwa stats endpoint na Video dashboard na-egosi
+nchekwa dị mma. Naanị aha model a haziri ahazi anaghị etinye ya na
+revision ya ma ọ bụ
+candidate SHA na-agba ọsọ, ya mere, dashboard ugbu a na-akọwa `HOLD` kama
+iji ohere sitere na ọnọdụ mmegharị ọzọ. Nhọrọ nyocha doro anya ka na-adị iche na ịkwalite; enweghị ndabara na-agbanwe na-akpaghị aka.
 
 Ndị na-akpọ nwere ike itinye `transcript.cues` array nke nhọrọ na akụkụ vidiyo
 nkwado mgbe ha nwere ederede kwekọrọ. Cue ọ bụla ga-enwe `text`, a
-nkeji `start`/`end` nkeji n'ime oge a na-enyocha, na `source` nke a na-enyere aka
-(`client`, `embedded`, ma ọ bụ `audio-bridge`); `confidence` na-abụkarị
-`1` ma ga-anọgide n'etiti `0` na `1`. Ederede ndị na-emegharị na-ezighị ezi na-ejide.
-OmniRoute anaghị amalite transcription site na metadata a: a na-ewepụta cues
-nke a kwadoro na nsonaazụ a kọwara na isi, ntụkwasị obi, na nkeji, na
-a na-eme ka ha bụrụ nyocha na-adịghị ntụkwasị obi na mgbakwunye na captions nke frame. Ederede na-adịghị mma,
-n'ogologo, ma ọ bụ na-enweghị provenance na-anaghị anabata kama ịkọrọ ya na
-caption stream. Ma channels transcript request-body na-emepụta provenance a na-enye
-na `client`, tinyere self-asserted `embedded` ma ọ bụ `audio-bridge`
-labels. Nanị adapter nke onye ọrụ sava nwere ike ịtọpụ ndị a kwadoro labels site na
-`trustedSource` argument naanị; a na-apụghị ịbanye na mpaghara JSON nke arịrịọ
-na argument ahụ. Ederede transcript na-anọgide na-adịghị ntụkwasị obi media-derived content,
-n'agbanyeghị provenance ya, ma ghara ịkọwa ikike.
+nkeji `start`/`end` nkeji n'ime oge a nyochara, na `source` nke a na-enye ikike
+(`client`, `embedded`, ma ọ bụ `audio-bridge`); `confidence` na-adị na
+`1` ma ga-anọgide n'etiti `0` na `1`. Cue ndị na-emegharị n'ozuzu na-ejide.
+OmniRoute anaghị amalite transcription site na metadata a: a na-ejide cues ndị a
+n'ime nsonaazụ a kọwara na `source`, `confidence`, na `interval`, ma
+na-egosi dị ka nlekota na-adịghị ntụkwasị obi na ọnụ caption. Ederede na-adịghị mma,
+na-enweghị oke, ma ọ bụ na-enweghị ihe akaebe na-anaghị anabata kama ịkọrọ na
+caption stream. Ma request-body transcript channels na-eme ka provenance a na-enye
+nke a bụrụ `client`, gụnyere self-asserted `embedded` ma ọ bụ `audio-bridge`
+labels. Naanị adapter nke onye ọrụ sava nwere ike ịnye ndị a na-enye ntụkwasị obi
+labels site na argument `trustedSource` nke naanị koodu; a request JSON field enweghị ike iru
+argument ahụ. Ederede transcript ka na-adị na-adịghị ntụkwasị obi, nke sitere na mgbasa ozi,
+n'agbanyeghị ihe akaebe ya, ma ghara ịkọwa ikike.
 
-Ndị na-akpọ dị elu nwere ike inye `audioTranscript` track maka vidiyo ahụ;
-a na-atụle ya dịka ederede nke onye ahịa nyere, ọ bụghị ihe àmà nke sava transcription.
-Nchekwa fusion na-agba ọsọ visual na audio observations n'okpuru
-otu oge ikpeazụ na mgbaàmà ịkwụsị, na-edozi ha na oge a na-ahụkarị, na-ejide
-ndị na-emegharị na-ezighị ezi, na-akọwa nsonaazụ akụkụ mgbe naanị otu akụkụ na-eme nke ọma.
-Otu `audioTranscript` na-adịghị mma na-ebelata na nsonaazụ akụkụ ahụ — a na-edebe nkọwa
-visual na akụkụ audio na-edekọ koodu mfu a na-emegharị —
-n'ikpeazụ na-emeghị ka vidiyo niile daa. N'ịbụ nke ọ bụla, flag akụkụ,
-na koodu mfu a na-emegharị na-edebe na nsonaazụ a kọwara, na
+Ndị na-akpọ dị elu nwere ike inye `audioTranscript` track maka vidiyo ahụ; a na-ejikwa ya dị ka ederede nke onye ahịa nyere, ọ bụghị ihe akaebe nke sava transcription.
+Njikọ fusion na-agba ọsọ nlekota anya na nke olu n'okpuru
+otu oge ikpeazụ na mgbaàmà nkwụsị, na-edozi ha na otu oge, na-ejide
+nkeji ndị na-emegharị n'ozuzu, ma na-akọwa nsonaazụ akụkụ mgbe naanị otu akụkụ na-eme nke ọma.
+`audioTranscript` na-adịghị mma na-ebelata na nsonaazụ akụkụ ahụ — nkọwa anya ka na-adị na
+olu na-edekọ koodu mmejọ a na-emegharị — kama ịkwụsị vidiyo niile. N'ịbụ nkeji, flag akụkụ,
+na koodu mmejọ a na-emegharị ka na-adị na nsonaazụ a kọwara, na
 metadata guardrail (`audioFusionRuns`/`audioFusionPartials`/
 `audioFusionFailureCodes`), na metadata cache nsonaazụ, na na
-counters fusion bridge. Otu ụzọ Video Bridge ndabara anaghị akpọrọ speech-to-text
-ma ọ bụ budata nke abụọ media copy; na-enweghị track doro anya ahụ, ọ na-anọgide
+counters fusion bridge. Ụzọ Video Bridge ndabara anaghị akpọrọ speech-to-text
+ma ọ bụ budata nkeji mgbasa ozi nke abụọ; na-enweghị track doro anya ahụ, ọ na-anọgide
 vidiyo naanị.
 
 **Nchekwa transcript (#12150 P1).** Nke a na-apụta na-akpaghị aka mgbe
-Video Bridge (n'onwe ya opt-in) na-eme ka cue transcript — enweghị flag nchekwa dị iche. Mgbe arịrịọ na-eme ka cue transcript ọ bụla (a kpọrọ `transcript` ma ọ bụ `audioTranscript` fused), guardrail na-eme ka ọ
-`videoBridgeObserved` ma na-emepụta shadow redacted nke nkọwa vidiyo —
-nke a na-emegharị na nke ahụ na ebe ọ bụla cue's free-text body na-anọchi anya
-`[redacted-video-transcript]`, nke a na-ewu site na ịgbanwe mpaghara cue
-tupu a na-ejikọta eriri (ọ bụghị site na parsing ederede flattened, ya mere, enweghị ọdịnaya cue
-— nke na-emegide ma ọ bụ nke nkịtị, tinyere bodies nwere `]` dịka
-`[inaudible]`/`[music]` — nwere ike ịnagide). A na-agbanwe arịrịọ call-log
-nke a na-eziga na vidiyo-derived text part maka shadow redacted ahụ, nke a na-ejikọta site na
-nkeji ọdịnaya; a na-agụ `fullText` anchor site na payload guardrail pre-call
-nke mechara, ya mere, njikọ ka na-eme nke ọma mgbe guardrails njikọ na-esote (PII na
-credential maskers, priorities 10/95) na-edegharị nkọwa ederede na ebe na
-mgbaàmà sistem/prompt/handoff/memory injection na-emegharị array ozi. A na-eziga
-n'elu na model adịghị agbanwe. A na-ahụ arịrịọ na-emepụta
-n'ozuzu Memory (ma arịrịọ na nzaghachi-derived extraction na-ezighị), ya mere, nzaghachi nke model
-n'onwe ya enweghị ike ịkpọgharị ederede transcript n'ime Memory.
+Video Bridge (nke onwe ya bụ opt-in) na-eme ka cue transcript — enweghị flag nchekwa dị iche. Mgbe a na-arịọ ka e mepụta cue transcript ọ bụla (nnyocha a kọwara `transcript` ma ọ bụ `audioTranscript` a na-ejikọta), guardrail na-eme ka ọ bụrụ
+`videoBridgeObserved` ma na-emepụta ihe omimi nke nkọwa vidiyo —
+nke a na-emegharị na nke a na-eme ka ọ bụrụ na akụkụ nke cue ọ bụla na-enweghị ụgwọ bụ
+`[redacted-video-transcript]`, nke a na-ewu site na ịgbanwe mpaghara cue a haziri tupu a
+na-ejikọta eriri (na-enweghị ịtụgharị ederede a na-emegharị, ya mere, enweghị ọdịnaya cue
+— nke na-emegide ma ọ bụ nke nkịtị, gụnyere akụkụ nwere `]` dịka
+`[inaudible]`/`[music]` — nwere ike ịnagide). A na-ejikwa
+nke a na-echekwa na-arịọ ka a na-agbanwe
+nkeji vidiyo niile maka ihe omimi ahụ, nke a na-ejikọta site na ịdị n'otu; `fullText` anchor na-agụgharị ọzọ site na
+nkeji guardrail pre-call a kwụsịrị, ya mere, njikọ ka na-eme nke ọma mgbe
+n'ịbụ nkeji guardrails (PII na
+credential maskers, mkpa 10/95) na-edegharị nkọwa ederede na ebe na
+mgbaàmà sistem/prompt/handoff/memory injection na-emegharị usoro ozi. Ederede a na-eziga n'elu na model adịghị agbanwe. A na-ahụ request a na-ejikwa
+n'ịbụ na enweghị nchekwa Memory (nnyocha na nzaghachi na-abụghị nke a na-enwetaghị),
+ya mere, nzaghachi nke model onwe ya enweghị ike ịkpọgharị ederede transcript n'ime Memory.
 
-**Raw video fields (#12430).** Mgbe a na-eme ka bridge na-arụ ọrụ ma nkwado vidiyo
-n'ozuzu ma ọ bụ na-adịghị adị, a na-eme ka `transcript`/`audioTranscript` fields na-emepụta `videoBridgeObserved`, ọbụlagodi mgbe nkọwa dara ma ọ bụ `maxVideos` limit. `null` na eriri efu na-agụ; a na-apụghị ịnabata
-ndị na-adịghị adị na metadata na-abụghị vidiyo. A na-edebe ndị a na-echekwa
-ndị a na-emegharị ma ọ bụ na-ewepụ arịrịọ, na caches/Memory na-apụghị ịbanye. A na-ejide payload provider na-enweghị mgbanwe.
+**Raw video fields (#12430).** Mgbe a na-eme ka bridge na-arụ ọrụ ma nkwado vidiyo nke a na-ahụghị ma ọ bụ na-adịghị, a na-akpọ `transcript`/`audioTranscript` fields na-eme ka `videoBridgeObserved`, ọbụlagodi mgbe nkọwa na-adịghị mma ma ọ bụ `maxVideos` limit. `null` na eriri efu na-agụ; a na-adịghị anabata fields na-adịghị ma ọ bụ metadata na-abụghị vidiyo. A na-echekwa ndị a na-emegharị na-ewepụ fields ndị a ma ọ bụ na-ewepụ arịrịọ ahụ, na caches/Memory na-apụghị ịga.
 
-Nkwupụta ndị ọzọ echedoro na-eji otu ihe ngosi a na-ahụ maka arịrịọ. Snapshot nke arịrịọ onye ahịa pre-guardrail, arịrịọ na-eche na nchekwa, na ndekọ arịrịọ a jụrụ na mbụ na-anọchi anya mpaghara transcript na akụkụ vidiyo; string prompts e mepụtara site na usoro pipeline na nkwukọrịta ọnọdụ na-ewepụ na sink nke arịrịọ echedoro. Marker `video_content_removed` echedoro na-eme ka `previous_response_id` na-aga n'ihu kwụsịrị ma ọ bụghị ịmepụta ederede nke a na-ewepụghị n'echiche. Ọ bụrụ na arịrịọ a hụrụ na-efu ihe ndabere redaction ya tupu ndekọ, ma ọ bụ ọbụna otu n'ime ọtụtụ ihe ndabere vidiyo na-efu na-esote mgbanwe arịrịọ, a na-ewepụ arịrịọ echedoro kpamkpam kama ịchekwa transcript nke e wepụtawo n'ụzọ akụkụ.
+Na ụzọ ndị a na-eweghachi, ihe ndị na-akpọ oku ziri ezi na-abụ akụkụ `text`/`input_text` nke a na-akwado kama ịbụ ebe ndị na-enyeghị ụkpụrụ. Ma tracks nke a na-enye na arịrịọ ka na-anaghị atụkwasị obi `client` nlekota, na nkwupụta doro anya na vidiyo ahụ adịghị akọwapụta ma timestamps adịghị ekwenyere na media. 256-cue/64-KiB nke dị ugbu a na ego kwa cue na-ejikọta na tracks abụọ ahụ; timestamps ga-adabara ceiling nke 600 sekọnd nke broker na window nke a na-enye. A na-ewepụ tracks na-adịghị mma, ọ bụghị na-eziga dị ka ederede na-enweghị usoro; a pụrụ iji ezigbo nwanne ma ọ bụrụ na ego ha jikọtara adịghị agafe. Null/empty fields anaghị agbakwunye ederede. Enweghị media fetch ma ọ bụ transcription a na-agbakwunye site na nke a na-eweghachi. A na-ewepụ transcript extension fields na fallback video carrier na `video_url`/`source` objects ya. Ndepụta wire OpenAI na-anọgide na-esiri ike; ndị na-ebufe vidiyo na-amaghị ama ka na-adị, na ndị na-ejide ederede naanị na-echekwa akara nchekwa. Structured redaction shadows na-echebe ederede transcript a gbakwunyere, mgbe arịrịọ nke onye na-akpọ mbụ na-anọgide na-adị ka ọ dị. Ndị na-akwado ndị na-akwado na ndị na-adịghị arụ ọrụ na-echekwa omume bypass ha dị ugbu a.
 
-Maka arịrịọ a hụrụ, azịza ụdị nwere ike ịkpọtụrụ akụkụ ọ bụla nke transcript na-enweghị ihe ngosi nhazi. N'ihi ya, `responseBody` nke ndekọ oku echedoro na-anọchi anya ya site na marker nke ewepụtawo; ihe ngosi pipeline zuru ezu (nke nwere ike ịgụnye arịrịọ ndị na-abịa/n'ịntanetị na akụkụ nke usoro) anaghị echekwa. Semantic, idempotency, na caches replay echiche na-apụ apụ na-agụ na idebe maka arịrịọ ahụ. Arịrịọ onye na-enye na azịza nke onye ahịa na-anọgide na-adị ka ọ dị. A na-ewepụ byte keepalive mbụ site na buffer nke oge mgbe a na-ewepụ ihe ngosi zuru ezu. Nkwupụta njehie Kiro nke EventStream na-akọ naanị ọnụ ọgụgụ byte nke payload, ọ bụghị ọdịnaya ya ma ọ bụ njehie raw nke JSON parser.
-Nke a anaghị ekwu na a na-enyocha nyocha nke onye na-enye/plugin na-adịghị njikọ; a na-edekọ sweeping nke echedoro-sink na #11658.
+Ndị ọzọ a na-edebe na-eji otu akara arịrịọ a na-ahụ. Snapshot arịrịọ client pre-guardrail, na-eche na arịrịọ, na log arịrịọ nke a jụrụ na mbụ na-anọchi anya transcript fields na akụkụ vidiyo; string prompts nke a na-emepụta site na pipeline stages na context handoff na-ewepụ na persisted-request-body sink. A na-eme ka `video_content_removed` marker mee ka `previous_response_id` continuation kwụsị na-emeghe kama ịmepụta ederede nke a na-ewepụ na nzube. Ọ bụrụ na arịrịọ a na-ahụ na-efu shadow redaction ya na akụkụ tupu logging, ma ọ bụ ọbụna otu n'ime ọtụtụ shadows vidiyo na-adịghị adabara mgbe arịrịọ emechara, a na-ewepụ arịrịọ ahụ kpamkpam kama ịchekwa transcript nke a na-ewepụ n'ụzọ akụkụ.
 
-Ụzọ ndụ `/api/modality-bridge/video/drilldown` bụ ihe dị iche, cache substrate nke loopback/token-authenticated. Ọrụ ọ bụla na-achọkwa ID nke onye isi opaque canonical. Tupu a kwado onye na-akpọ mmepụta, ọ ga-enweta ID ahụ site na tenant a kwadoro ma ghara ịkwado uru onye ahịa họọrọ. Igodo cache na-ejikọta onye isi ahụ na ID nke oge canonical na ID nke vidiyo, na-echekwa naanị igodo ha sitere na SHA-256, na-ejikwa agụ na ihichapụ na onye isi ahụ. Cache na-echekwa naanị 16 JPEG frames e si na ya pụta kwa ntinye, na-emecha ha mgbe nkeji iri, na-akwado agụ `start`/`end` ma ọ bụ ihichapụ oge doro anya.
+Maka arịrịọ a na-ahụ, azịza model nwere ike ịkpọtụrụ akụkụ ọ bụla nke transcript na-enweghị oke cue. A na-anọchi anya `responseBody` nke log oku ya na mkpụrụ edemede; a na-ewepụ ihe nketa pipeline (nke nwere ike ịgụnye upstream/client bodies na stream chunks). Semantic, idempotency, na reasoning-replay caches na-ewepụgụ na idebe maka arịrịọ ahụ. Arịrịọ onye na-enye na azịza nke a na-ahụ na client na-anọgide na-adị ka ọ dị. A na-ewepụ bytes keepalive mbụ site na buffer nke oge a mgbe a na-ewepụ ihe nketa. Kiro's malformed EventStream warning na-akọwa naanị ọnụ ọgụgụ byte nke payload, ọ bụghị ọdịnaya ya ma ọ bụ njehie raw nke JSON parser.
+Nke a anaghị ekwu na a na-enyocha nyocha nke onye na-enye/plugin na-enweghị njikọ; a na-edekọ sweep nke a na-edebe na #11658.
 
-Onye isi ọ bụla nwere oke nke 16 ntinye na 64 MiB nke data JPEG canonical. Oke ndị a bụ nke na-adịghị njikọ na oke 64-entry/256 MiB nke ụwa: nrụgide quota nke onye isi na-ewepụ naanị ntinye ndị a na-eji nke onye isi ahụ na-adịbeghị anya tupu a tụlee iwepụ LRU nke ụwa. A na-ewepụ ntinye ndị agwụla site na onye isi na akụrụngwa ụwa na omume cache, ebe ịkwụsị na njehie nkwenye anaghị eme ka a dochie akụkụ.
+Ụkpụrụ ndụ `/api/modality-bridge/video/drilldown` bụ substrate cache nke dị iche, loopback/token-authenticated. Ọrụ ọ bụla na-achọkwa ID principal opaque canonical. Tupu a kwado onye na-akpọ mmepụta, ọ ga-enweta ID ahụ site na tenant a kwadoro ma ghara iziga uru nke onye ahịa họọrọ. Cache keys na-ejikọta principal ahụ na canonical session na video-reference IDs, na-echekwa naanị keys ha sitere na SHA-256, na scope na-agụnye na ihichapụ na principal ahụ. Cache na-echekwa ihe kachasị 16 JPEG frames nke a na-enweta kwa ntinye, na-eme ka ha kwụsị na nkeji iri, na-akwado `start`/`end` na-agụ ma ọ bụ ihichapụ session doro anya.
 
-Cache na-anaghị anabata Base64 na-abụghị canonical, padding karịrị, media na-abụghị JPEG, JPEGs na-adịghị mma ma ọ bụ nke a na-ewepụ, na JPEGs nke na-emepụta nkwupụta mgbe a na-eme `sharp` decode zuru ezu. Ọ na-emegharị foto ọ bụla a nabatara dịka JPEG canonical, na-enweta obosara na elu site na byte ndị a kọrọ kama ịtụkwasị obi na mpaghara ndị na-akpọ, na-ewepụ byte polyglot ọ bụla na-esote kama ịchekwa ha. Naanị buffer compressed canonical nke e ji mara na-akwụ ụgwọ na quota abụọ. Oke eriri JSON gụnyere Base64 overhead maka oke 32 MiB nke decoded-input. Nkọwa ọ bụla echekwara na-edekọ usoro JPEG ya kwadoro/resolution, usoro sampling, nsụgharị derivation, oge ịmepụta, hash ọdịnaya nke server, na hash nke njikọ nne na nna nke onye na-akpọ kwadoro. A na-enyocha ịkwụsị n'etiti usoro decode/hash asynchronous tupu a kwado cache atomic.
+Onye principal ọ bụla nwere oke 16 entries na 64 MiB nke data JPEG canonical. Oke ndị a bụ nke onwe ha na ceiling global 64-entry/256 MiB: nrụgide quota principal na-ewepụ naanị entries nke principal ahụ nke a na-eji na nso nso a tupu a tụlee global LRU eviction. A na-ewepụ entries ndị kwụsịrị site na principal na global accounting na cache activity, mgbe ịkwụsị na mmejọ nkwenye anaghị eme ka a na-emegharị akụkụ.
 
-Onye na-emepụta mmepụta na-eji frames broker nke e si na ya pụta naanị mgbe nyocha anya gara nke ọma, na-enweghị mbipụta vidiyo nke abụọ/nwepụ. Ọ na-achọ `modalityBridgeVideoDrilldownEnabled=true`, `drilldown: true` nke siri ike kwa akụkụ, na ID ndekọ API-key a kwadoro. Uru ndị a na-ekwupụta nke onye ahịa na/session anaghị etinye ikike. Na-enweghị ọnọdụ atọ ahụ, ọ naghị eme hash, resize ma ọ bụ chekwaa frames ndị ọzọ. Nkwụsị na-adịghị mma na-echekwa azịza anya nke a pụrụ iji. Arịrịọ ndị a kwadoro na-apụ apụ cache nke nsonaazụ vidiyo niile ka nsonaazụ echedoro na-adịghị eme replay handles.
+Cache na-anaghị anabata Base64 na-abụghị canonical, padding nke na-abawanye, media na-abụghị JPEG, JPEGs na-adịghị mma ma ọ bụ truncated, na JPEGs nke na-emepụta ịdọ aka ná ntị n'oge `sharp` decode nke full-image. Ọ na-emegharị foto ọ bụla a nabatara dịka JPEG canonical, na-enweta obosara na elu site na bytes a kọrọ kama ịtụkwasị obi na fields nke onye na-akpọ, na-ewepụ bytes polyglot na-esote kama ịchekwa ha. Naanị buffer compressed canonical nke a na-edebe na quotas abụọ. Limit JSON wire gụnyere Base64 overhead maka ceiling 32 MiB nke decoded-input. Onye
+a na-echekwa derivation ọ bụla na-edekọ usoro JPEG ya kwadoro/resolution, iwu sampling, version derivation, oge mmepụta, hash ọdịnaya nke server, na hashed parent reference tinyere hash parent-content nke onye na-akpọ kwadoro. A na-enyocha cancellation n'etiti asynchronous decode/hash phases tupu atomic cache commit.
 
-Nsonaazụ JSON na SSE nke ọma na-egosi na ọ dịkarịa ala handles anọ opaque na `x-omniroute-video-drilldown` header. Ndị nchọgharị a kwadoro nwere ike ịgụ header ahụ na-enweghị ime ka iwu CORS nke isi gbanwee. Handles ọhụrụ na-eji `v1.<32-byte random base64url token>`, na ndekọ na-echekwa naanị hashes SHA-256 ha. Onye na-agụ/na-emegharị header na-anabatakwa 64-hex tokens ochie. Onye na-azụ ahịa a kwadoro bụ `GET /api/v1/video-bridge/drilldown?handle=...`, nke a na-enyocha n'ụzọ dị iche site na `modalityBridgeVideoDrilldownRemoteEnabled=true`. Nkwupụta a kwadoro na-adịghị mma na-ewepụ ohere ọbụna mgbe `OMNIROUTE_VIDEO_BRIDGE_DRILLDOWN_REMOTE_ENABLED` env fallback ochie na-arụ ọrụ. Nchekwa mmepụta nwere nkwupụta ochie `OMNIROUTE_VIDEO_BRIDGE_DRILLDOWN_ENABLED` fallback. Ma nkwupụta abụọ ahụ na-adị na ndabara.
+Onye na-emepụta mmepụta na-eji frames broker nke a na-enweta na mbụ naanị mgbe nyocha anya gara nke ọma, na-enweghị mbipụta/ntinye vidiyo nke abụọ. Ọ na-achọ operator `modalityBridgeVideoDrilldownEnabled=true`, `drilldown: true` nke a na-ahụ na akụkụ, na ID ndekọ API-key kwadoro. Uru principal/session nke onye ahịa na-ekwupụta anaghị etinye ikike. Na-enweghị ọnọdụ atọ ahụ, ọ naghị eme hash, resize ma ọ bụ chekwaa frames ndị ọzọ. Nkwụsị na-adịghị mma na-echekwa azịza anya bara uru. Arịrịọ ndị kwadoro na-ewepụ cache nke nsonaazụ vidiyo niile ka nsonaazụ a na-echekwa anaghị emegharị handles.
 
-Onye na-azụ ahịa na-enweta ikike site na igodo a kwadoro, na-etinye iwu igodo, na na-eweghachi 404 otu ahụ maka handles na-amaghị, agwụla na nke igodo ọzọ. Ọ na-anabata `variant=preview|standard|detail` (obere JPEG kachasị 320/640/1280, na-enweghị ịbawanye), `limit=1..8` (ma ọ bụ alias ochie `frames`, na-enweghị ma abụọ), zero-based `page`, na optional `start`/`end` nkeji. Igodo ajụjụ ndị na-emegharị na windo focus na-ezighị ezi na-anaghị anabata. Variant ọ bụla a na-eweghachi nwere hash nke ọdịnaya ya na metadata resolution ya, jikọtara na isi echedoro. A na-enweta variants na-agụ kama ịchekwa ha dịka copies echedoro. Azịza JSON, gụnyere Base64/envelope, na-ejide na 32 MiB; peeji buru ibu na-eweghachi 413 na onye ahịa ga-arịọ maka frames ole na ole. Agụ na-enyocha ịkwụsị gburugburu resize ọ bụla na-enyocha validity nke handle tupu a na-eweghachi. `DELETE` site na onye nwe bụ idempotent; ihichapụ ma ọ bụ TTL expiry na-emeghe isi echedoro na akụrụngwa iji.
+Nsonaazụ JSON na SSE nke ọma na-egosi na ọ dịkarịa ala handles anọ na-enweghị atụ na
+`x-omniroute-video-drilldown` header. Ndị nchọgharị nwere ikike nwere ike ịgụ header ahụ
+na-enweghị ịgbatị iwu CORS origin. Handles ọhụrụ na-eji `v1.<32-byte random base64url
+token>`, na ndekọ na-edebe naanị
+hashes SHA-256 ha. Onye na-agụ/header parser na-anabatakwa legacy 64-hex tokens.
+Onye na-ahụ maka ọha na eze bụ
+`GET /api/v1/video-bridge/drilldown?handle=...`, nke a na-achịkwa n'ụzọ dị iche site na
+`modalityBridgeVideoDrilldownRemoteEnabled=true`. Nkwupụta doro anya na-adịgide adịgide na-ewepụ
+nnweta ọbụna mgbe legacy `OMNIROUTE_VIDEO_BRIDGE_DRILLDOWN_REMOTE_ENABLED` env
+fallback bụ arụnyere. Nchekwa mmepụta nwere legacy
+`OMNIROUTE_VIDEO_BRIDGE_DRILLDOWN_ENABLED` fallback yiri ya. Fallback abụọ na-default off.
 
-The shared store bụ nke usoro mpaghara: njikwa na-agwụ na mmeghachi omume ma ọ bụ na-emekọrịta
-n'etiti usoro OmniRoute dị iche. Njikwa stats na-egosi njikwa dị irè/
-ndị ọzọ na-agbakwunye ihe edere/byte naanị, ọ bụghị mgbasa ozi, ntụaka,
-ndị isi ma ọ bụ njikwa. Panel ntọala Video na-egosi ụkpụrụ ndị ahụ ma nwee ike ịchekwa
-ma abụọ consent switches. Akwụkwọ ntuziaka a abụghị ihe ngosi mmeghachi omume ma ọ bụ
-nkwado; nnabata ụdị eziokwu na-enyocha nke ọma.
+Onye na-eji ya na-enweta ikike site na igodo a kwadoro, na-etinye iwu igodo, na
+na-alaghachi 404 otu maka handles na-amaghị, kwụsịrị na handles igodo ọzọ. Ọ na-anabata
+`variant=preview|standard|detail` (n'ogologo JPEG kacha elu 320/640/1280, anaghị emepụta ya),
+`limit=1..8` (ma ọ bụ legacy `frames` alias, anaghị abụ abụọ), zero-based `page`, na nhọrọ
+`start`/`end` sekọnd. A na-enyocha
+query keys na reversed focus windows. Variant ọ bụla a na-alaghachi nwere hash
+nke ọdịnaya ya na metadata nke ezi nhazi, jikọrọ na isi nke edere. A na-enweta variants na
+gụnyere kama ịchekwa ha dị ka ndị ọzọ edere. Nsonaazụ JSON,
+gụnyere Base64/envelope, bụ capped na 32 MiB; peeji nke ukwuu na-alaghachi
+413 na onye ahịa ga-arịọ maka obere frames. Gụọ na-enyocha nkwụsị gburugburu
+nke ọ bụla resize na-enyocha handle validity tupu alaghachi. `DELETE` site na onye nwe bụ idempotent;
+ihichapụ ma ọ bụ TTL expiry na-emeghe isi nke edere na nchịkọta ojiji.
 
-A na-edepụta ihe oyiyi n'usoro na usoro Video a haziri. Ọ bụrụ na
-Video override adịghị, ọ na-erite ntọala Vision; ma ọ bụrụ na ha abụọ adịghị, Vision
-auto-router na-ahọrọ ụdị nwere ike ịhụ. Ihe oyiyi gara nke ọma
-na-anọchi akụkụ mbụ na `[Video description:` prefix kwụsiri ike nke na-emekwa
-ka ederede ahụ bụrụ nyocha sitere na mgbasa ozi na-agaghị ekwe ka ụdị ndị ọzọ
-soro ntuziaka ndị dị na mgbasa ozi. Igwe njikọ cache nke ihe oyiyi
-na-agụnye byte JPEG, prompt, timestamp, na ụdị dị irè; naanị ihe oyiyi gara nke ọma
-ka a na-echekwa. Cache entries na-echekwa ụdị onye na-emepụta nke gara nke ọma,
-gụnyere ụdị ndabere; ọdụ ụgbọ mmiri na-akọ `mixed` mgbe ihe oyiyi dị iche
-nwere ụdị dị iche. Cache hit na-eji njirimara onye na-emepụta ahụ
-n'ịbụ nke a na-akpọghị ya dịka atụmatụ routing a chọrọ. Cache nke nsonaazụ
-video zuru ezu bụ nke a na-eme na ntinye ọ bụla na-agbanwe
-mmepụta — prompt, ụdị dị irè, usoro sampling, ọnụ ọgụgụ ihe oyiyi, usoro nyocha semantic, SHA-256
-fingerprint nke normalized focus hint, focus window, `transcript`,
-`audioTranscript`, na flag contact-sheet — ya mere, ịgbanwe otu n'ime
-ndị a bụ cache miss, ọ bụghị reuse ochie. Usoro dedup visual
-version, threshold, na ọnụ ọgụgụ ihe oyiyi a na-edobe bụkwa doro anya na
-nsonaazụ-cache key na metadata; mgbanwe iwu ya mere apụghị iji reuse ochie
-nkọwa video zuru ezu. Nsonaazụ-cache v4 metadata na-echekwa usoro na
-fingerprint, ọ bụghị ọrụ onye ọrụ raw. Metadata guardrail na-akọ ma
-ihe a chọrọ na usoro nyocha dị irè; usoro a chọrọ `focused` na-enweghị
-edezi ederede onye ọrụ bara uru na-akọ dịka `full`.
+Store a na-ekekọrịta bụ process-local: handles na-apụ na restart ma
+adịghị enwe ike ịkwaga n'etiti usoro OmniRoute dị iche. Nchịkọta stats na-egosi
+nchekwa dị irè/nkwupụta na nchịkọta edere entries/bytes naanị, anaghị abụ media, references,
+principal IDs ma ọ bụ handles. Panel ntọala Video na-egosi uru ndị ahụ ma nwee ike ịchekwa
+ma abụọ consent switches. Akwụkwọ ndu a na-emeghị ka ọ bụrụ ihe ngosi mmejuputa ma ọ bụ
+nkwado; nnabata nke ezi ụdị na-enyocha nke ọma.
 
-The guardrail na-ewepụ akụkụ video niile a kwadoro ma na-akọghị karịa
-`modalityBridgeVideoMaxVideos`. Maka ebumnuche a kwadoro na
-`supportsVideo === false`, vidiyo ndị dara na nke karịrị oke na-abụ
-nkọwa ederede nchekwa doro anya ka mgbasa ozi raw ghara ịnagide. Mgbe ikike adịghị
-ama, akụkụ ndị ahụ na-anọgide na-enweghị mmetọ. Ebumnuche nwere `supportsVideo === true`
-na-apụ apụ na ọdụ ụgbọ mmiri. Nkwupụta arịrịọ nke onye ahịa na-agbasa site na
-ndownload, broker queue, subprocesses, na oku caption; arịrịọ na-akwụsị n'etiti
-vidiyo ma ọ bụ na-emeghị ka mgbasa ozi raw pụta.
+Frames na-enweta caption n'usoro na nhazi Video a haziri. N'efu
+Video override na-erite site na ntọala Vision; ma ọ bụrụ na ha abụọ bụ efu, Vision
+auto-router na-ahọrọ ụdị nwere ikike vision. Captions nke ọma
+na-anọchite anya akụkụ mbụ na prefix `[Video description:` kwụsiri ike nke na-emekwa
+ka ederede ahụ bụrụ ihe na-adịghị ntụkwasị obi nke sitere na media ma na-agwa ụdị ndị ọzọ
+ka ha ghara iso ntuziaka ndị ahụ chọpụtara na media. Frame-caption cache keys
+na-agụnye JPEG bytes, prompt, timestamp, na ụdị dị irè; naanị captions nke ọma
+na-echekwa. Cache entries na-edebe ụdị mmepụta nke ọma,
+gụnyere ụdị fallback; bridge na-akọ `mixed` mgbe frames dị iche
+bụ ndị mmepụta site na ụdị dị iche. A cache hit na-eji njirimara mmepụta ahụ
+n'iji ya kama ịkpọ ya aha dịka atụmatụ routing a rịọrọ. Cache nsonaazụ vidiyo niile
+na-ejide na ntinye ọ bụla na-agbanwe output — prompt, ụdị dị irè, iwu sampling, ọnụ ọgụgụ frames,
+semantic analysis mode, SHA-256 fingerprint nke normalized focus hint, focus window,
+`transcript`, `audioTranscript`, na flag contact-sheet — ya mere, ịgbanwe otu n'ime
+ndị ahụ bụ cache miss, anaghị abụ reuse na-adịghị ọhụrụ. Version nke iwu visual dedup
+policy, threshold, na bounded candidate-frame count bụkwa doro anya na
+nsonaazụ-cache key na metadata; mgbanwe iwu ya mere enweghị ike iji
+nkọwa vidiyo niile na-adịghị ọhụrụ. Nsonaazụ-cache v4 metadata na-edebe
+mode na fingerprint, anaghị edebe ọrụ onye ọrụ raw. Metadata guardrail na-akọ
+ma ntuziaka na ụdị nyocha dị irè; a rịọrọ `focused` mode na-enweghị
+edeghị ederede onye ọrụ usable na-akọ dịka `full` n'ezie.
 
-Usoro runtime bụ DB-backed na Zod-validated:
+Guardrail na-ewepụ akụkụ vidiyo niile a kwadoro ma na-akọghị karịa
+`modalityBridgeVideoMaxVideos`. Maka ihe mgbaru ọsọ a na-egosi na
+`supportsVideo === false`, vidiyo ndị na-adịghị arụ ọrụ na ndị na-erughị oke
+na-abụ ndị na-egosi ederede nchekwa ka ọ ghara ịnwe vidiyo raw. Mgbe ikike
+amaghị, akụkụ ndị ahụ na-edebe carrier vidiyo ha; ọ bụla fallback transcript na-esochi
+nke a na-edebe ederede. Targets nwere `supportsVideo === true` na-apụ na bridge.
+Nkwupụta arịrịọ nke onye ahịa na-agbasa site na ibudata, broker queue,
+subprocesses, na oku caption; arịrịọ na-akwụsị n'etiti vidiyo ma
+anaghị emebi na vidiyo raw.
 
-| Key                                 | Default     | Range / behavior                                                                                                     |
-| ----------------------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------- |
-| `modalityBridgeVideoEnabled`        | `false`     | Optional runtime, opt-in                                                                                             |
-| `modalityBridgeVideoAnalysisMode`   | `"full"`    | `full` na-echekwa ihe oyiyi nkịtị; `focused` na-eji bounded, untrusted latest-user context                           |
-| `modalityBridgeVideoModel`          | `""`        | Inherit the Vision Bridge model                                                                                      |
-| `modalityBridgeVideoFrameCount`     | `8`         | 1–16                                                                                                                 |
-| `modalityBridgeVideoSamplingPolicy` | `"uniform"` | `uniform`, `scene_aware`, ma ọ bụ proportional `segment_aware`; na-adịghị arụ ọrụ detector na-alaghachi na `uniform` |
-| `modalityBridgeVideoMaxVideos`      | `1`         | 1–4                                                                                                                  |
-| `modalityBridgeVideoTimeout`        | `120000`    | 1000–120000 ms                                                                                                       |
+Ntọala oge bụ DB-backed na Zod-validated:
 
-Legacy persisted Video timeout values dị elu 120 sekọnd na-ejide na
-broker deadline; edemede ọhụrụ na-ede elu na oke ahụ na-anaghị anabata.
-`GET /api/modality-bridge/video/runtime` chọrọ trusted stamped loopback
-locality tupu authentication ma ọ bụ runtime probing, mgbe ahụ, chọrọ
-njikwa auth. Ọ na-alaghachi naanị `available`, sanitized FFmpeg/ffprobe versions, na
-ihe kpatara mgbe runtime adịghị. Internal extraction endpoint abụghị
-public upload API: queue saturation na-alaghachi `503` tinyere `Retry-After`, disconnect nke onye na-akpọ na-alaghachi `499`, na
-broker deadline na-alaghachi `504`. A na-agbakwunye azịza gbanwere
-`video->text;model=<visionModel>;parts=<videos>` na isi
-`x-omniroute-modality-bridge` header na-enweghị iwepụ Vision ma ọ bụ Audio segments.
+| Key                                 | Default     | Range / behavior                                                                                           |
+| ----------------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------- |
+| `modalityBridgeVideoEnabled`        | `false`     | Ntọala oge, opt-in                                                                                         |
+| `modalityBridgeVideoAnalysisMode`   | `"full"`    | `full` na-edebe captions nke ọma; `focused` na-eji bounded, untrusted latest-user context                  |
+| `modalityBridgeVideoModel`          | `""`        | Nweta ụdị Vision Bridge                                                                                    |
+| `modalityBridgeVideoFrameCount`     | `8`         | 1–16                                                                                                       |
+| `modalityBridgeVideoSamplingPolicy` | `"uniform"` | `uniform`, `scene_aware`, ma ọ bụ proportional `segment_aware`; failure detector na-alaghachi na `uniform` |
+| `modalityBridgeVideoMaxVideos`      | `1`         | 1–4                                                                                                        |
+| `modalityBridgeVideoTimeout`        | `120000`    | 1000–120000 ms                                                                                             |
+
+Legacy persisted Video timeout values above 120 seconds are clamped to the
+broker deadline; new settings writes above that limit are rejected.
+`GET /api/modality-bridge/video/runtime` requires trusted stamped loopback
+locality before authentication or runtime probing, then requires management
+auth. It returns only `available`, sanitized FFmpeg/ffprobe versions, and a fixed
+reason when the runtime is unavailable. The internal extraction endpoint is not
+a public upload API: queue saturation returns `503` plus `Retry-After`, a caller
+disconnect returns `499`, and the fixed broker deadline returns `504`. Converted responses add
+`video->text;model=<visionModel>;parts=<videos>` to the central
+`x-omniroute-modality-bridge` header without removing Vision or Audio segments.
 
 ### PII Masker (`piiMasker.ts`)
 
-Na-arụ ọrụ na **ma** ọkwa.
+Na-arụ ọrụ na **ma** ọkwa abụọ.
 
-- **`preCall`** na-emegharị payload, na-agagharị `system`, `messages`, `input`, na
+- **`preCall`** na-eme ka payload, na-agagharị `system`, `messages`, `input`, na
   `prompt` (gụnyere ihe ederede dị mfe), na-etinye `processPII()` (site na
   `@/shared/utils/inputSanitizer`) na string `content`/`text` fields. Mgbe
   `PII_REDACTION_ENABLED=true`, PII a chọpụtara na-ewepụ na outbound
-  payload. Nke a bụ nke na-adịghị emetụta `INPUT_SANITIZER_MODE` (nke na-achịkwa naanị
-  prompt-injection policy). Mgbe a na-ewepụ, oku na-edekọ ọnụ ọgụgụ nchọpụta
-  na-enweghị idegharị ọdịnaya.
-- **`postCall`** na-emegharị nzaghachi, na-agba ọsọ `sanitizePIIResponse()` tinyere
-  masker Responses-API-shape (`maskResponsesOutput` — na-cover
-  `output_text` na `output[].content[].text`). Ọ bụrụ na e nwere ihe a na-ewepụ, nzaghachi gbanwere
-  na-anọchi akụkụ mbụ.
+  payload. Nke a bụ nke na-abụghị nke `INPUT_SANITIZER_MODE` (nke na-achịkwa naanị
+  iwu prompt-injection). Mgbe a na-ewepụ, ndekọ oku na-edekọ ọnụ ọgụgụ nchọpụta
+  na-enweghị idegharịa ọdịnaya.
+- **`postCall`** na-eme ka nzaghachi, na-agba ọsọ `sanitizePIIResponse()` tinyere
+  masker Responses-API-shape (`maskResponsesOutput` — na-ekpuchi
+  `output_text` na `output[].content[].text`). Ọ bụrụ na a na-emegharị ihe ọ bụla,
+  nzaghachi a gbanwere na-anọchite anya nke mbụ.
 
-The guardrail anaghị egbochi; ọ na-anọchi naanị (`meta.detections`,
-`meta.redacted`) ma ọ bụ na-edegharị.
+The guardrail adịghị egbochi; ọ na-anọchite naanị (`meta.detections`,
+`meta.redacted`) ma ọ bụ na-edegharịa.
 
 ### Prompt Injection (`promptInjection.ts`)
 
-Na-achọpụta ihe ndị na-emegide na ọdịnaya onye ọrụ nyere ma na-eme ka iwu a haziri ahazi. Ọrụ a na-adabere na mgbanwe gburugburu na nhọrọ onye nrụpụta:
+Na-achọpụta usoro ndị na-emegide na ọdịnaya onye ọrụ nyere ma na-eme ka
+iwu a haziri. Ọrụ a na-akpata site na mgbanwe gburugburu na nhọrọ constructor:
 
-| Ntọala          | Env var                                                                                            | Ndabere | Mmetụta                                                                                                                                                                                 |
-| --------------- | -------------------------------------------------------------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Emebere         | `INPUT_SANITIZER_ENABLED`                                                                          | `true`  | Mgbe `false`, guardrail na-eme ka ọ bụrụ na ọ gaghị arụ ọrụ.                                                                                                                            |
-| Ụzọ             | `INJECTION_GUARD_MODE` / `INPUT_SANITIZER_MODE`                                                    | `warn`  | Iwu ntinye: `block`, `warn`, ma ọ bụ `log`. (`redact` a na-anabata ya maka nkwado azụ mana anaghị ewepụ ederede ntinye; arịrịọ PII rewrite na-achịkwa site na `PII_REDACTION_ENABLED`.) |
-| Block threshold | `blockThreshold` nhọrọ / `INPUT_SANITIZER_BLOCK_THRESHOLD` (aha `INJECTION_GUARD_BLOCK_THRESHOLD`) | `high`  | Ọnụ ọgụgụ kachasị mkpa chọrọ ka e mechie. Medium bụ naanị nlekota na ndabara.                                                                                                           |
+| Ntọala          | Env var                                                                                               | Default | Nsonaazụ                                                                                                                                                                                     |
+| --------------- | ----------------------------------------------------------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Emebere         | `INPUT_SANITIZER_ENABLED`                                                                             | `true`  | Mgbe `false`, guardrail na-eme ka ọ bụrụ na ọ na-emeghị.                                                                                                                                     |
+| Ụdị             | `INJECTION_GUARD_MODE` / `INPUT_SANITIZER_MODE`                                                       | `warn`  | Iwu injection: `block`, `warn`, ma ọ bụ `log`. (`redact` na-anabata maka nkwado azụ mana anaghị **ewepụ** ederede injection; arịrịọ PII rewrite na-achịkwa site na `PII_REDACTION_ENABLED`.) |
+| Block threshold | `blockThreshold` option / `INPUT_SANITIZER_BLOCK_THRESHOLD` (alias `INJECTION_GUARD_BLOCK_THRESHOLD`) | `high`  | Ọnụ ọgụgụ kachasị mkpa chọrọ iji gbochie. Medium bụ naanị nlekota na ndabara.                                                                                                                |
 
-**Ụzọ nke a na-eme** (`getMode`): onye na-akpọ `options.mode` →
-`INJECTION_GUARD_MODE` **DB atụmatụ-ndị na-eme ka ọ bụrụ** (Dashboard → Ntọala →
-Atụmatụ Flags) → `INJECTION_GUARD_MODE` env → `INPUT_SANITIZER_MODE` env →
-`warn`. N'ihi ya, mgbanwe dashboard na-emeri mgbanwe gburugburu, ya mere UI Atụmatụ
-Flags na-achịkwa guard na-arụ ọrụ n'oge (enweghị mmeghari). Nchịkọta DB bụ nke na-echebe:
+**Ụdị ndọrọndọrọ** (`getMode`): onye na-akpọ `options.mode` →
+`INJECTION_GUARD_MODE` **DB feature-flag override** (Dashboard → Settings →
+Feature Flags) → `INJECTION_GUARD_MODE` env → `INPUT_SANITIZER_MODE` env →
+`warn`. N'ihi ya, ihe ndọrọndọrọ dashboard na-emeri n'elu mgbanwe gburugburu, ya mere UI Feature
+Flags na-achịkwa guard na-arụ ọrụ n'oge (enweghị mmeghari). Ntụle DB bụ fail-safe:
 ma ọ bụrụ na ọ na-emehie, guard na-alaghachi na omume dabere na gburugburu, na mgbe enweghị
-mgbanwe a setịpụrụ, omume ahụ bụ otu na mkpebi naanị gburugburu.
+ndọrọndọrọ, omume ahụ bụ otu na mkpebi naanị gburugburu.
 
-Isi mmalite nchọpụta:
+Nchọpụta isi:
 
-1. `sanitizeRequest()` si `@/shared/utils/inputSanitizer` (nchọpụta a na-ekekọrịta
-   eji n'ebe ọzọ na pipeline).
-2. `DEFAULT_GUARD_PATTERNS` nke a na-ewere dị ka nke a na-ewere (n'oge a `system_override_inline` na
-   `markdown_system_block`, ma abụọ bụ `high` severity).
-3. `customPatterns` nke a na-enye site na nhọrọ onye nrụpụta (ahịrịokwu, regex,
+1. `sanitizeRequest()` site na `@/shared/utils/inputSanitizer` (nchọpụta a na-ekekọrịta
+   set eji n'ebe ọzọ na pipeline).
+2. Built-in `DEFAULT_GUARD_PATTERNS` (n'oge a `system_override_inline` na
+   `markdown_system_block`, abụọ `high` severity).
+3. Optional `customPatterns` a na-eziga site na nhọrọ constructor (strings, regex,
    ma ọ bụ `{ name, pattern, severity }` ndekọ).
 
-Mgbe `mode === "block"` **na** ọ dịkarịa ala otu nchọpụta na-ezute oke
-nke a, `preCall` na-alaghachi `{ block: true, message: "Arịrịọ a jụrụ:
-nkọwa na-adịghị mma achọpụtara" }`. Na `warn`/`log` Ụzọ, guardrail na-edekọ ma
-na-enye ohere ka arịrịọ ahụ. Onye enyemaka a na-ekekọrịta `evaluatePromptInjection()` na-emekwa ka ndị na-akpọ
-nwere ike ịtụle prompts na-enweghị ịga site na ndekọ.
+Mgbe `mode === "block"` **na** ọ dịkarịa ala nchọpụta otu na-ezute ọnụ ọgụgụ
+threshold, `preCall` na-ewepụta `{ block: true, message: "Arịrịọ a jụrụ:
+nchọpụta ọdịnaya na-adịghị mma" }`. Na `warn`/`log` modes, guardrail na-edekọ ma
+na-ahapụ oku. The shared helper `evaluatePromptInjection()` na-emekwa ka a na-ewepụta
+maka ndị na-achọ ịtụle prompts na-enweghị ịga site na ndekọ.
 
-**Nyocha njedebe (v3.8.20):** nchọpụta ahụ na-enyocha naanị **mbido 16 KB** nke
-edemede prompt jikọtara — `MAX_INJECTION_SCAN_BYTES = 16 * 1024` (16 384 bytes) na
+**Scan bound (v3.8.20):** nchọpụta na-enyocha **mbụ 16 KB** nke
+ejikọrọ prompt text — `MAX_INJECTION_SCAN_BYTES = 16 * 1024` (16 384 bytes) na
 `src/shared/utils/inputSanitizer.ts`. Ma `detectInjection()` na
-`evaluatePromptInjection()` `slice(0, MAX_INJECTION_SCAN_BYTES)` tupu ịrụ ọrụ
-na usoro. Ntuziaka ntinye nọ n'elu nke ntinye, ya mere nke a
-na-eme ka regex CPU/GC na ọtụtụ narị-KB payloads na-enweghị imebi nchọpụta (cf.
+`evaluatePromptInjection()` `slice(0, MAX_INJECTION_SCAN_BYTES)` tupu ịgba ọsọ
+ụkpụrụ. Nchọpụta directives nọ n'elu nke input, ya mere nke a na-eme ka regex CPU/GC na
+multi-hundred-KB payloads na-enweghị imebi nchọpụta (cf.
 #3932, #4041).
 
 ### Credential Masker (`credentialMasker.ts`)
 
-Na-arụ ọrụ na **ma** usoro abụọ, ikpeazụ na usoro ndabara (nchekwa `95`). Na-ewepụ
-ama ama API-key / secret-token patterns site na payload na-apụ (nkọwa
-ndekọ, arguments tool-call, nsonaazụ ngwá ọrụ) **na** nzaghachi onye na-enye, ya mere a
-credential e tinyere na prompt (ma ọ bụ wepụtara site na nsonaazụ ngwá ọrụ) adịghị apụta
-na onye na-enye elu ma ọ bụ laghachi na onye ahịa.
+Na-arụ ọrụ na **ma** ọkwa abụọ, ikpeazụ na usoro ndabara (priority `95`). Na-ewepụ
+ama ama API-key / secret-token patterns site na outbound payload (nke
+ndị na-eziga, arguments tool-call, nsonaazụ tool) **na** nzaghachi provider, ya mere a
+credential a na-etinye na prompt (ma ọ bụ na-eweghachite site na nsonaazụ tool) anaghị apụta
+na onye na-enye elu ma ọ bụ na onye ahịa.
 
-- **Opt-in naanị**, otu usoro dị ka PII redaction (Hard Rule #20-adjacent):
-  emechiri ma ọ bụrụ na `settings.credentialRedactionEnabled === true` **ma ọ bụ**
-  `CREDENTIAL_REDACTION_ENABLED=true`. Mgbe ọ na-adịghị arụ ọrụ, guardrail bụ no-op —
-  ọ gaghị emechi ma gaghị rewrite.
-- `redactCredentials()` na-agagharị na payload/azaghachi osisi (`walkValue()`,
-  prototype-pollution-safe, cycle-safe site na `WeakSet`) ma na-anọchi anya ihe ndị
-  zụtara na `[REDACTED:<type>]` placeholder, na-ewepụta naanị ndị na-acha na
-  mgbanwe.
-- `CREDENTIAL_PATTERNS` na-ekpuchi igodo LLM provider (OpenAI, OpenAI-proj,
+- **Nkwenye naanị**, otu usoro dị ka PII redaction (Iwu Ike #20-adjacent):
+  kwụsịrị ma ọ bụrụ na `settings.credentialRedactionEnabled === true` **ma ọ bụ**
+  `CREDENTIAL_REDACTION_ENABLED=true`. Mgbe ọ na-ewepụ, guardrail bụ no-op —
+  ọ naghị egbochi ma ọ bụ deegharị.
+- `redactCredentials()` na-agagharị n'ozuzu payload/ndepụta osisi (`walkValue()`,
+  prototype-pollution-safe, cycle-safe site na `WeakSet`) ma dochie ihe ndị
+  kwekọrọ na `[REDACTED:<type>]` placeholder, na-emepụta naanị mgbọrọgwụ ndị
+  gbanwere n'ezie.
+- `CREDENTIAL_PATTERNS` na-ekpuchi igodo ndị na-enye LLM (OpenAI, OpenAI-proj,
   Anthropic, Google, Hugging Face, Replicate), VCS/SaaS tokens (GitHub, Slack,
-  Linear, Notion, npm, Postman, Discord), igodo ịkwụ ụgwọ (Stripe, Square), igodo igwe ojii
-  (AWS access key, Twilio, SendGrid, Mailgun), igodo nzuzo / JWTs,
+  Linear, Notion, npm, Postman, Discord), igodo ịkwụ ụgwọ (Stripe, Square), igodo
+  igwe ojii (AWS access key, Twilio, SendGrid, Mailgun), igodo nzuzo / JWTs,
   njikọ na-ejide credential (`mongodb://user:pass@...`, wdg), na
-  ụdị `Authorization`/`x-api-key`/`api-key`/`apikey` header-value
+  usoro `Authorization`/`x-api-key`/`api-key`/`apikey` header-value
   pattern. Igodo nke nwere ụdị header (`authorization`, `x-api-key`, `api-key`,
-  `apikey`) na-ewepụ ya n'ụzọ usoro (nke a na-eme ka ọ bụrụ, usoro prefix dị ka
-  `Bearer `/`Basic ` na-echekwa) kama site na regex ederede nkịtị.
-- Guardrail anaghị emechi; ọ na-eme ka ọ bụrụ naanị (`modifiedPayload` /
+  `apikey`) na-ewepụ ya n'usoro (value naanị, scheme prefix dịka
+  `Bearer `/`Basic ` na-echekwa) kama site na generic text regex.
+- Guardrail anaghị egbochi; ọ na-edegharị naanị (`modifiedPayload` /
   `modifiedResponse`) ma na-akatọ (`meta.credentialsRedacted`, `meta.count`).
 
 Nchekwa regression: `tests/unit/credential-masker-guardrail.test.ts`.
