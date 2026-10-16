@@ -14,9 +14,8 @@ export const xiaomi_mimo_token_planProvider: RegistryEntry = {
   format: "openai",
   executor: "default",
   baseUrl: "https://token-plan-sgp.xiaomimimo.com/v1",
-  // Live OpenAI-compatible model list. Without it the provider stays in the
-  // "static-only" discovery class and never refreshes, so newly released
-  // models (e.g. mimo-v2.6-*) never show up even with autoSync enabled.
+  // Discovery-class metadata: modelsUrl moves getDiscoveryClass from
+  // static-only to openai-compat. Live /v1/models refresh is already #15308.
   modelsUrl: "https://token-plan-sgp.xiaomimimo.com/v1/models",
   authType: "apikey",
   authHeader: "bearer",
