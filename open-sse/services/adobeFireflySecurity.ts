@@ -54,17 +54,19 @@ export function isAdobeLoginCookieDomain(domain: string): boolean {
 }
 
 /**
- * Epoch-ms embedded in a Forter token.
- *
- * Older captures stored `…_{ms}__UDF43…`, but live colligo tokens no longer
- * guarantee the `_…__` delimiters, so a strict `/_([0-9]{13})__/` misses real
- * cookies and reports the token as ancient (age = Infinity), forcing a needless
- * re-warm. Accept any 13-digit epoch-ms in a plausible range (2020-09-13 ..
- * 2033-05-18) that is not part of a longer digit run.
+ * Epoch-ms embedded in a Forter token. Prefer the established `_ms__` marker
+ * so an unrelated earlier numeric field cannot override it, and preserve its
+ * existing 13-digit range. Some captures omit those delimiters; only for that
+ * fallback accept a standalone 13-digit run in 2020-09-13 .. 2033-05-18.
+ * This parses a timestamp heuristic, not cookie authenticity or freshness.
  */
-export const ADOBE_FORTER_TIMESTAMP_PATTERN = /(?:^|[^0-9])(1[6-9]\d{11})(?![0-9])/;
+const ADOBE_FORTER_LEGACY_TIMESTAMP_PATTERN = /_(\d{13})__/;
+const ADOBE_FORTER_TIMESTAMP_PATTERN = /(?:^|[^0-9])(1[6-9]\d{11})(?![0-9])/;
 
 export function matchAdobeForterTimestamp(value: string): number {
-  const m = String(value || "").match(ADOBE_FORTER_TIMESTAMP_PATTERN);
-  return m ? Number(m[1]) : 0;
+  const token = String(value || "");
+  const match =
+    token.match(ADOBE_FORTER_LEGACY_TIMESTAMP_PATTERN) ??
+    token.match(ADOBE_FORTER_TIMESTAMP_PATTERN);
+  return match ? Number(match[1]) : 0;
 }
